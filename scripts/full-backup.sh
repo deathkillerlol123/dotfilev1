@@ -1,4 +1,4 @@
-duplicity backup --no-encryption \
+duplicity full --no-encryption \
   --include /home/archboom/Documents \
   --include /home/archboom/Downloads \
   --include /home/archboom/Pictures/Screenshots \
