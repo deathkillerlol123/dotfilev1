@@ -1,0 +1,109 @@
+/* --- Global Styles --- */
+@import "color.css";
+
+* {
+  font-family: 'AdwaitaMono Nerd Font', 'Inter', 'Segoe UI', 'NotoSans Nerd Font', sans-serif;
+  font-size: 13px;
+  padding: 0;
+  min-height: 0;
+}
+
+/* --- Waybar Container --- */
+#waybar {
+  background: #4F77A8;
+  color: @text;
+  margin: 3px 0 0 0; /* smaller top margin */
+  font-weight: 500;
+}
+/* --- LEFT MODULES (Rounded Blocks: Workspaces, Quote) --- */
+#workspaces,
+#niri-workspaces {
+}
+#custom-quote {
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  margin: 3px 5px 3px 5px;
+  border-radius: 0px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* **This is the key part** */
+#niri-workspaces button,
+#workspaces button {
+  color: @text;           /* Bright font color */
+  background: transparent;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0px;
+  margin: 0 2px;
+  transition: all 0.2s;
+}
+
+#niri-workspaces button.active,
+#workspaces button.active {
+  color: @text;           /* Bright color when active */
+  background: rgba(153,209,219,0.15);
+  box-shadow: inset 0 0 0 1px rgba(153,209,219,0.3);
+}
+
+#niri-workspaces button:hover,
+#workspaces button:hover {
+  color: @text;            /* Optional hover color */
+  background: rgba(41,42,53,0.8);
+}
+
+/* --- CENTER MODULES (Clock, Playerctl) --- */
+#clock,
+#custom-playerctl {
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  margin: 3px 5px; /* smaller vertical gaps */
+  border-radius: 0px;
+  color: @text;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#clock:hover,
+#custom-playerctl:hover {
+  background-color: rgba(153,209,219,0.1);
+  color: @text;
+}
+
+/* --- RIGHT MODULES (Seamless Bar: Pulseaudio, CPU, Memory, Disk, Updates, Uptime, Tray) --- */
+#pulseaudio,
+#cpu,
+#memory,
+#disk,
+#custom-uptime,
+#custom-updates,
+#tray {
+  background-color: #1a1b26;
+  padding: 0.3rem 0.7rem;
+  margin: 3px 5px 3px 0; /* smaller top/bottom, spacing between modules */
+  border-radius: 0px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#custom-uptime:hover,
+#custom-updates:hover,
+#tray:hover {
+  background-color: rgb(41,42,53);
+}
+
+/* Rounded edges for the first and last right modules */
+#pulseaudio { border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
+#tray { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+
+/* --- Module Colors --- */
+#cpu { color: @text; }
+#memory { color: @text; }
+#disk { color: @text; }
+#custom-uptime { color: @text; }
+#custom-updates { color: @text; }
+

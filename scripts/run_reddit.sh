@@ -1,0 +1,2 @@
+kitty --class reddittui reddittui
+

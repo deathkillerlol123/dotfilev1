@@ -1,0 +1,22 @@
+@import url("colors1.css") screen;
+
+/* hide the tab bar */
+#TabsToolbar {
+  visibility: collapse !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+
+
+
+#nav-bar {
+  background-color: var(--color3) !important; /* your chosen color */
+
+
+#urlbar,
+#urlbar-background,
+#urlbar-input-container {
+  background-color: var(--color4) !important; /* change to your color */
+  color: var(--color5) !important; /* text color */
+}

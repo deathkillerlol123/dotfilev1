@@ -1,0 +1,65 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+/* My Mostly Used waybar config incase you wonder :) */
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules",
+  ],
+"layer": "bottom",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"spacing": 0,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 0,
+"margin-bottom": 0,
+"margin-left": 0,
+"margin-right": 0,
+
+"modules-left": [
+	"group/up"
+	],
+"modules-center": [
+	"group/middle"
+	],
+
+"modules-right": [
+  "group/down"
+	],
+
+
+"group/down":{
+    "orientation":"inherit",
+    "modules":[
+      "battery",
+      "clock",
+      "tray"
+    ]
+  },
+"group/middle":{
+    "orientation":"inherit",
+    "modules": [
+      "mpris",
+      "custom/weather"
+    ]
+  },
+
+"group/up":{
+    "orientation": "inherit",
+    "modules": [
+     "custom/dot_update",
+     "custom/trash_cleaner",
+     "network",
+     "group/motherboard",
+     "hyprland/workspaces#rw"
+    ]
+  }
+
+
+}
