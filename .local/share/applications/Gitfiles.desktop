@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Git updater
+Exec=/home/archboom/scripts/git_updater.sh
+Type=Application
+Terminal=false
