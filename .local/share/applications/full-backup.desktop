@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Full Backup
-Comment=Full backup
-Exec=/home/archboom/scripts/full-backup.sh
-Terminal=true
-Type=Application
-Categories=Utility;
