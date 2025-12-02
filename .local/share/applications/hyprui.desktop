@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=HyperSetting UI  
+Exec=python "/home/archboom/hyprsettings/src/ui.py"
+Terminal=false
+Type=Application
+Icon=Hyprland
+StartupWMClass=HyperSetting
+Comment=unofficial hyprsettings client for linux 
+MimeType=x-scheme-handler/whatsapp;
+Categories=Network;

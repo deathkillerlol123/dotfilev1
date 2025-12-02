@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Half Backup
+Comment=Incremental backup
+Exec=/home/archboom/scripts/half-backup.sh
+Terminal=true
+Type=Application
+Categories=Utility;
