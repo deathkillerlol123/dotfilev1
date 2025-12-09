@@ -14,6 +14,7 @@ eval "$(starship init zsh)"
 
 alias ls='eza -a --tree -L 1'
 alias y='yazi'
+alias pyws="~/Documents/codes/venv/bin/python"
 
 
 

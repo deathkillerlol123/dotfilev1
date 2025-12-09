@@ -1,5 +1,5 @@
-borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-%S)" \ 
---exclude '/home/archboom/Downloads/*.iso' \
+borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-%S)" \
+  --exclude '/home/archboom/Downloads/*.iso' \
   --exclude '/home/archboom/Downloads/*.tar.gz' \
   --exclude '/home/archboom/Downloads/tmp*' \
   --exclude '/home/archboom/Documents/tmp*' \
