@@ -37,6 +37,8 @@
 "group/down":{
     "orientation":"inherit",
     "modules":[
+     "hyprland/workspaces#rw",
+      "custom/pipe",
       "battery",
       "clock",
       "tray"
@@ -55,9 +57,10 @@
     "modules": [
      "custom/dot_update",
      "custom/trash_cleaner",
-     "network",
-     "group/motherboard",
-     "hyprland/workspaces#rw"
+      "network",
+      "cpu",
+      "temperature",
+      "memory",
     ]
   }
 

@@ -1,6 +1,9 @@
 //* ---- credit to https://github.com/JaKooLit 💫for making these cool plug and play modules ---- *//
-
 {
+"custom/pipe": {
+    "format": "|",
+    "interval": 999999,
+},
 "custom/dot_update": {
 	"format": "󰁈",
 	"on-click": "$HOME/dotfiles/scripts/git_updater.sh",

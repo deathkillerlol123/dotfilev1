@@ -216,7 +216,7 @@
 	"window-rewrite-default": " ",
 	"window-rewrite": {		
 		"title<.*amazon.*>": " ",
-		"title<.*reddit.*>": " ",
+		"title<*www.reddit.*>": " ",
     "title<.*Anki*>":"󱉟",
 
 		"class<firefox|org.mozilla.firefox|librewolf|floorp|mercury-browser|[Cc]achy-browser>": "🦊 ",
