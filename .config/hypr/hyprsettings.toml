@@ -17,7 +17,7 @@ show_contextmenu_label = true
 show_sidebar_icons = false
 current_theme = "Catppuccin Mocha"
 font = "FiraCode Nerd Font,FiraCode Nerd Font Light" # Please use a nerd font.
-last_tab = "workspaces"
+last_tab = "looknfeel"
 transparency = 0 				#0-1, zero is transparent(stupid, ikr)
 
 

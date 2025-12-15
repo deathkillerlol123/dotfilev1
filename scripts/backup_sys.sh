@@ -14,4 +14,4 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
 
 borg list /mnt/Backups/ArchB/BorgBackups2/
 
-sleep 30
+sleep 10
