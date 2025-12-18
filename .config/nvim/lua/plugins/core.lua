@@ -213,4 +213,15 @@ return {
     },
     cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
   },
+  {
+    "jbyuki/nabla.nvim",
+  },
+  {
+    "zk-org/zk-nvim",
+    config = function()
+      require("zk").setup({
+        -- See Setup section below
+      })
+    end,
+  },
 }
