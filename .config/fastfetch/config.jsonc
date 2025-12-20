@@ -16,7 +16,7 @@
       "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐",
     },
     {
-      "type": "host",
+//      "type": "host",
       "key": " PC",
       "keyColor": "green",
     },
@@ -26,7 +26,7 @@
       "keyColor": "green",
     },
     {
-      "type": "gpu",
+//      "type": "gpu",
       "key": "│ ├󰍛",
       "keyColor": "green",
     },
@@ -36,7 +36,7 @@
       "keyColor": "green",
     },
     {
-      "type": "disk",
+//      "type": "disk",
       "key": "└ └",
       "keyColor": "green",
     },
@@ -65,7 +65,7 @@
       "keyColor": "yellow",
     },
     {
-      "type": "packages",
+//      "type": "packages",
       "key": "│ ├󰏖",
       "keyColor": "yellow",
     },
@@ -91,12 +91,12 @@
       "keyColor": "blue",
     },
     {
-      "type": "wmtheme",
+//      "type": "wmtheme",
       "key": "│ ├󰉼",
       "keyColor": "blue",
     },
     {
-      "type": "terminal",
+//      "type": "terminal",
       "key": "└ └",
       "keyColor": "blue",
     },
@@ -116,7 +116,7 @@
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
     },
     {
-      "type": "uptime",
+//      "type": "uptime",
       "key": "│ ├ Uptime ",
       "keyColor": "magenta",
     },
@@ -130,7 +130,7 @@
       "format": "\u001b[90m└─────────────────────────────────────────────────────────┘",
     },
     {
-      "type": "colors",
+//      "type": "colors",
       "paddingLeft": 2,
       "symbol": "circle",
     },

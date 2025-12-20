@@ -22,3 +22,4 @@ export PATH=$PATH:/home/archboom/.spicetify
 export PATH="$PATH:/home/archboom/.local/bin"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/usr/bin/python3"
+
