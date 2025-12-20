@@ -88,7 +88,7 @@ output "eDP-1" {
     scale 2
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
-    position x=2040 y=1080
+    position x=1920 y=0
     focus-at-startup
     
 }
@@ -101,7 +101,7 @@ output "HDMI-1" {
     scale 2
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
-    position x=1980 y=1080
+    position x=1920 y=1080
     focus-at-startup
     
 }
@@ -350,31 +350,8 @@ binds {
     //Alt+Ctrl+Home { move-column-to-first; }
     //Alt+Ctrl+End  { move-column-to-last; }
 
-    //Alt+Shift+Left  { focus-monitor-left; }
-    //Alt+Shift+Down  { focus-monitor-down; }
-    //Alt+Shift+Up    { focus-monitor-up; }
-    //Alt+Shift+Right { focus-monitor-right; }
-    //Alt+Shift+H     { focus-monitor-left; }
-    //Alt+Shift+J     { focus-monitor-down; }
-    //Alt+Shift+K     { focus-monitor-up; }
-    //Alt+Shift+L     { focus-monitor-right; }
-
-    //Alt+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-    //Alt+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    //Alt+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-    //Alt+Shift+Ctrl+Right { move-column-to-monitor-right; }
-    //Alt+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    //Alt+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    //Alt+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    //Alt+Shift+Ctrl+L     { move-column-to-monitor-right; }
-
-    // ernatively, there are commands to move just a single window:
-    // Alt+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-    // ...
-
-    // And you can also move a whole workspace to another monitor:
-    // Alt+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
+    Alt+Ctrl+right    { focus-monitor-right; }
+    Alt+Ctrl+left     { focus-monitor-left; }
 
     Alt+down      { focus-workspace-down; }
     Alt+Up        { focus-workspace-up; }
