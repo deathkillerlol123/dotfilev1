@@ -7,7 +7,7 @@ FILE=$(find ~/Pictures/Wallpapers/ -type f -print0 | shuf -zn1 | xargs -0 echo)
 echo "$FILE"
 if [ -n "$FILE" ]; then
   echo "$FILE" >"$LAST_WALL"
-  
+
   # Set wallpaper
   #swaybg -i "$FILE" -m fill &
   swww img "$FILE" --transition-type outer --transition-step 90

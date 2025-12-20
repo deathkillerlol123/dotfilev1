@@ -1,6 +1,12 @@
+spawn-at-startup "copyq &"
+spawn-at-startup "swww-daemon &"
+spawn-at-startup "dunst &"
+spawn-at-startup "wayscriber --daemon &"
 
+spawn-sh-at-startup "~/dotfiles/scripts/colorschem/start_wall.sh"
+spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
 
-spawn-at-startup "copyq"
+spawn-at-startup "hyprpm reload"
 
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
@@ -316,9 +322,11 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
     Alt+left   { focus-column-left; }
-    Alt+right     { focus-column-right; }
-    Alt+shift+up     { move-window-up; }
+    Alt+right  { focus-column-right; }
+    
     Alt+shift+right    { move-column-right; }
+    Alt+shift+left {move-column-left;}
+
 
     // alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -366,9 +374,23 @@ binds {
     Alt+E {spawn-sh "dolphin";}
     Alt+C {spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || ~/dotfiles/scripts/waybar.sh";}
     
-    Alt+V {spawn-sh "copyq toggle";}
-    
+    Alt+V {spawn-sh "copyq toggle";} 
     Alt+G {spawn-sh "whatsdesk --ozone-platform=wayland";}
+
+    F1 {spawn-sh "~/dotfiles/.config/waybar/random_wallpaper.sh";}
+    F2 {spawn-sh "~/dotfiles/scripts/volume_decrease.sh";}
+    F3 {spawn-sh "~/dotfiles/scripts/volume_increase.sh";}
+    F4 {spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle";}
+
+    F5 {spawn "playerctl previous";}
+    F6 {spawn "playerctl next";}
+    F7 {spawn "playerctl play-pause";}
+
+    Alt+F4 {spawn-sh "~/dotfiles/scripts/wlogout.sh";}
+
+    Alt+P {spawn-sh "wayscriber --active";}
+
+    Alt+L {screenshot;}
 
 
 
