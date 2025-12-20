@@ -10,6 +10,7 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "bottom",
+"output": "eDP-1",
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
