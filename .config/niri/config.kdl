@@ -331,30 +331,23 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    Alt+left   { focus-column-left; }
-    Alt+right  { focus-column-right; }
+    Alt+A   { focus-column-left; }
+    Alt+D  { focus-column-right; }
     
-    Alt+shift+right    { move-column-right; }
-    Alt+shift+left {move-column-left;}
+    Alt+shift+D    { move-column-right; }
+    Alt+shift+A {move-column-left;}
 
-
-    // alternative commands that move across workspaces when reaching
-    // the first or last window in a column.
-    // Alt+J     { focus-window-or-workspace-down; }
-    // Alt+K     { focus-window-or-workspace-up; }
-    // Alt+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Alt+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
     //Alt+Home { focus-column-first; }
     //Alt+End  { focus-column-last; }
     //Alt+Ctrl+Home { move-column-to-first; }
     //Alt+Ctrl+End  { move-column-to-last; }
 
-    Alt+Ctrl+right    { focus-monitor-right; }
-    Alt+Ctrl+left     { focus-monitor-left; }
+    Alt+Ctrl+D    { focus-monitor-right; }
+    Alt+Ctrl+A     { focus-monitor-left; }
 
-    Alt+down      { focus-workspace-down; }
-    Alt+Up        { focus-workspace-up; }
+    Alt+S      { focus-workspace-down; }
+    Alt+W        { focus-workspace-up; }
     Alt+Shift+s { move-column-to-workspace-down; }
     Alt+Shift+w  { move-column-to-workspace-up; }
     Alt+Space {spawn-sh "rofi -show drun";}
@@ -384,13 +377,9 @@ binds {
     // ernatively, there are commands to move just a single window:
     // Alt+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
+    Alt+Shift+I   { move-workspace-up; }
+    Alt+Shift+K { move-workspace-down; }
 
-    Alt+Shift+Page_Down { move-workspace-down; }
-    Alt+Shift+Page_Up   { move-workspace-up; }
-
-    // You can bind mouse wheel scroll ticks using the following syntax.
-    // These binds will change direction based on the natural-scroll setting.
-    //
     // To avoid scrolling through workspaces really fast, you can use
     // the cooldown-ms property. The bind will be rate-limited to this value.
     // You can set a cooldown on any bind, but it's most useful for the wheel.
