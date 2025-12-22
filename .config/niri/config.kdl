@@ -1,7 +1,4 @@
-// This line starts waybar, a commonly used bar for Wayland compositors.
 //spawn-at-startup "waybar"
-
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 spawn-sh-at-startup "copyq &"
@@ -15,29 +12,22 @@ spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
 spawn-sh-at-startup "hyprpm reload"
 
 // https://yalter.github.io/niri/Configuration:-Introduction
-// https://yalter.github.io/niri/Configuration:-Input
 input{
+    //focus-follows-mouse
     keyboard{
         xkb{
           layout "us"
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
         }
 
         numlock
     }
     touchpad{
-        // off
         tap
         natural-scroll
-        // accel-speed 0.2
     }
     mouse{
     }
-
     trackpoint{
-        // scroll-method "on-button-down"
-        // middle-emulation
     }
 }
 output "eDP-1"{
@@ -57,7 +47,6 @@ output "HDMI-1"{
     focus-at-startup
 }
 layout{
-    // Set gaps around windows in logical pixels.
     gaps 0
     center-focused-column "never"
     preset-column-widths{
@@ -88,22 +77,22 @@ layout{
         color "#0007"
     }
     struts{
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
     }
 }
 
 hotkey-overlay{
-    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
 }
 animations{
-    // off
     slowdown 0.75
 }
 
+//rules
+window-rule{
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
 window-rule{
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width{}
@@ -113,15 +102,25 @@ window-rule{
     open-floating true
 }
 window-rule{
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    block-out-from "screen-capture"
+    match title="$firefox$"
+    default-column-width { proportion 0.5; }
+}
+window-rule{
+    match app-id="whatsdesk"
+    open-on-output "eDP-1"
+}
+window-rule{
+    match is-active=false
+    opacity 0.65
+}
+window-rule{
+    match is-active=true
+    opacity 1.0
 }
 window-rule{
     geometry-corner-radius 12
     clip-to-geometry true
 }
-
 
 binds{
     //Alt+Shift+Slash{ show-hotkey-overlay; }
@@ -186,8 +185,8 @@ binds{
     Alt+Ctrl+8                                     { move-column-to-workspace 8; }
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
-    Alt+Escape allow-inhibiting=false              { toggle-keyboard-shortcuts-inhibit; }
-    Alt+Shift+P                                    { power-off-monitors; }
+    //Alt+F4                                         { power-off-monitors; }
+    Alt+F4                                         {spawn-sh "swaylock";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
     Alt+WheelScrollUp                              { focus-workspace-up; }
