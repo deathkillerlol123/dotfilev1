@@ -22,7 +22,6 @@ return {
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
-            -- You could replace select_next_item() with confirm({ select = true }) to get VS Code autocompletion behavior
             cmp.select_next_item()
           elseif vim.snippet.active({ direction = 1 }) then
             vim.schedule(function()
@@ -55,7 +54,6 @@ return {
   {
     "kiyoon/python-import.nvim",
     lazy = false,
-    -- build = "pipx install . --force",
     build = "uv tool install . --force --reinstall",
     keys = {
       {
@@ -109,49 +107,18 @@ return {
       },
     },
     opts = {
-      -- Example 1:
-      -- Default behaviour for `tqdm` is `from tqdm.auto import tqdm`.
-      -- If you want to change it to `import tqdm`, you can set `import = {"tqdm"}` and `import_from = {tqdm = vim.NIL}` here.
-      -- If you want to change it to `from tqdm import tqdm`, you can set `import_from = {tqdm = "tqdm"}` here.
-
-      -- Example 2:
-      -- Default behaviour for `logger` is `import logging`, ``, `logger = logging.getLogger(__name__)`.
-      -- If you want to change it to `import my_custom_logger`, ``, `logger = my_custom_logger.get_logger()`,
-      -- you can set `statement_after_imports = {logger = {"import my_custom_logger", "", "logger = my_custom_logger.get_logger()"}}` here.
       extend_lookup_table = {
         ---@type string[]
-        import = {
-          -- "tqdm",
-        },
-
+        import = {},
         ---@type table<string, string|vim.NIL>
-        import_as = {
-          -- These are the default values. Here for demonstration.
-          -- np = "numpy",
-          -- pd = "pandas",
-        },
-
+        import_as = {},
         ---@type table<string, string|vim.NIL>
-        import_from = {
-          -- tqdm = vim.NIL,
-          -- tqdm = "tqdm",
-        },
-
+        import_from = {},
         ---@type table<string, string[]|vim.NIL>
-        statement_after_imports = {
-          -- logger = { "import my_custom_logger", "", "logger = my_custom_logger.get_logger()" },
-        },
+        statement_after_imports = {},
       },
-
-      ---Return nil to indicate no match is found and continue with the default lookup
-      ---Return a table to stop the lookup and use the returned table as the result
-      ---Return an empty table to stop the lookup. This is useful when you want to add to wherever you need to.
       ---@type fun(winnr: integer, word: string, ts_node: TSNode?): string[]?
-      custom_function = function(winnr, word, ts_node)
-        -- if vim.endswith(word, "_DIR") then
-        --   return { "from my_module import " .. word }
-        -- end
-      end,
+      custom_function = function(winnr, word, ts_node) end,
     },
   },
   {
@@ -169,9 +136,7 @@ return {
   {
     "lervag/vimtex",
     lazy = false, -- we don't want to lazy load VimTeX
-    -- tag = "v2.15", -- uncomment to pin to a specific release
     init = function()
-      -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "zathura"
       vim.g.vimtex_compiler_method = "latexmk"
     end,
@@ -188,7 +153,6 @@ return {
     event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
     opts = {
       -- your config goes here
-      -- or just leave it empty :)
     },
   },
   {
@@ -198,13 +162,8 @@ return {
     opts = {
       parser = { comments = { "#", "//" } },
       keymaps = {
-        -- Text objects for selecting fields
         textobject_field_inner = { "if", mode = { "o", "x" } },
         textobject_field_outer = { "af", mode = { "o", "x" } },
-        -- Excel-like navigation:
-        -- Use <Tab> and <S-Tab> to move horizontally between fields.
-        -- Use <Enter> and <S-Enter> to move vertically between rows and place the cursor at the end of the field.
-        -- Note: In terminals, you may need to enable CSI-u mode to use <S-Tab> and <S-Enter>.
         jump_next_field_end = { "<Tab>", mode = { "n", "v" } },
         jump_prev_field_end = { "<S-Tab>", mode = { "n", "v" } },
         jump_next_row = { "<Enter>", mode = { "n", "v" } },
@@ -237,15 +196,8 @@ return {
       vim.keymap.set("n", "<CR>", "<cmd>AutolistToggleCheckbox<cr><CR>")
       vim.keymap.set("n", "<C-r>", "<cmd>AutolistRecalculate<cr>")
 
-      -- cycle list types with dot-repeat
       vim.keymap.set("n", "<leader>cn", require("autolist").cycle_next_dr, { expr = true })
       vim.keymap.set("n", "<leader>cp", require("autolist").cycle_prev_dr, { expr = true })
-
-      -- if you don't want dot-repeat
-      -- vim.keymap.set("n", "<leader>cn", "<cmd>AutolistCycleNext<cr>")
-      -- vim.keymap.set("n", "<leader>cp", "<cmd>AutolistCycleNext<cr>")
-
-      -- functions to recalculate list on edit
       vim.keymap.set("n", ">>", ">><cmd>AutolistRecalculate<cr>")
       vim.keymap.set("n", "<<", "<<<cmd>AutolistRecalculate<cr>")
       vim.keymap.set("n", "dd", "dd<cmd>AutolistRecalculate<cr>")

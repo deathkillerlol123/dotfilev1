@@ -13,7 +13,7 @@ spawn-sh-at-startup "hyprpm reload"
 
 // https://yalter.github.io/niri/Configuration:-Introduction
 input{
-    //focus-follows-mouse
+    focus-follows-mouse
     keyboard{
         xkb{
           layout "us"
@@ -187,6 +187,7 @@ binds{
 //final
     //Alt+F4                                         { power-off-monitors; }
     Alt+F4                                         {spawn-sh "swaylock";}
+    Alt+Delete                                     {spawn-sh "shutdown now";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
     Alt+WheelScrollUp                              { focus-workspace-up; }
