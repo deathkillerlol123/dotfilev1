@@ -10,6 +10,7 @@ grep -oE -- '--[a-zA-Z0-9_-]+:[[:space:]]*#[0-9A-Fa-f]{3,6}' "$input" |
     printf '@define-color %s %s;\n' "$name" "$value"
   done >"$output"
 
+cp colors2.css ~/dotfiles/.config/wlogout/
 "$HOME/dotfiles/.config/waybar/css_to_conf.sh"
 
 mv colors2.conf ~/dotfiles/.config/kitty/
@@ -17,5 +18,5 @@ mv colors2.conf ~/dotfiles/.config/kitty/
 #killall -SIGUSR2 waybar
 
 pkill waybar
-pkill rofi 
+pkill rofi
 "$HOME/dotfiles/scripts/waybar.sh"

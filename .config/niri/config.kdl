@@ -58,7 +58,7 @@ layout{
     focus-ring{
         width 0
         active-color "#7fc8ff"
-        inactive-color "#505050"
+        inactive-color "#7fc8ff"
         // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
     }
     border{
@@ -84,7 +84,7 @@ hotkey-overlay{
     skip-at-startup
 }
 animations{
-    slowdown 0.75
+    slowdown 0.5
 }
 
 //rules
@@ -187,7 +187,7 @@ binds{
 //final
     //Alt+F4                                         { power-off-monitors; }
     Alt+F4                                         {spawn-sh "swaylock";}
-    Alt+Delete                                     {spawn-sh "shutdown now";}
+    Alt+Delete                                     {spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
     Alt+WheelScrollUp                              { focus-workspace-up; }
