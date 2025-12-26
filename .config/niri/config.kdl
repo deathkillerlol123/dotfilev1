@@ -3,13 +3,13 @@
 
 spawn-sh-at-startup "copyq &"
 spawn-sh-at-startup "swww-daemon &"
-spawn-sh-at-startup "dunst &"
 spawn-at-startup "wayscriber --daemon &"
 
 spawn-sh-at-startup "~/dotfiles/scripts/colorschem/start_wall.sh"
 spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
 
 spawn-sh-at-startup "hyprpm reload"
+spawn-sh-at-startup "dunst &"
 
 // https://yalter.github.io/niri/Configuration:-Introduction
 input{
