@@ -57,8 +57,8 @@ layout{
     default-column-width{ proportion 0.5; }
     focus-ring{
         width 0
-        active-color "#7fc8ff"
-        inactive-color "#7fc8ff"
+        //active-color "#7fc8ff"
+        //inactive-color "#7fc8ff"
         // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
     }
     border{
@@ -115,10 +115,10 @@ window-rule{
 }
 window-rule{
     match is-active=true
-    opacity 1.0
+    opacity 0.90
 }
 window-rule{
-    geometry-corner-radius 12
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
