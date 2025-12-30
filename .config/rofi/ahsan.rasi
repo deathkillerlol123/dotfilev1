@@ -28,7 +28,7 @@ configuration {
     }
 
 window {
-    width:                             24%;
+    width:                             30%;
     location:                          center;
     anchor:                            center;
     padding:                           0px;
@@ -39,11 +39,12 @@ window {
     spacing:                           0;
     children:                          [mainbox];
     orientation:                       horizontal;
+    transparent:                       1;
 }
 
 mainbox {
     spacing:                           0;
-    children:                          [ inputbar, message, listview ];
+    children:                          [inputbar,message, listview];
 }
 
 message {
@@ -84,9 +85,9 @@ listview {
     border-color:                      @color4;
     border:                            0px 2px 2px 2px;
     background-color:                  @background;
-    dynamic:                           false;
+    dynamic:                           true;
     lines:                             10;
-    columns:                           1;
+    columns:                           2;
 }
 
 element {
@@ -96,7 +97,7 @@ element {
     border-radius:                     0px;
     background-color:                  @element-bg;
     color:                             @color4;
-    font:inherit;
+    font:                              inherit;
 }
 
 element-text {
@@ -154,7 +155,7 @@ dummy0,  dummy1 {
 
 mode-switcher {
     expand:                            false;
-    orientation:                       vertical;
+    orientation:                       horizontal;
     spacing:                           0px;
     border:                            0px 0px 0px 0px;
 }
