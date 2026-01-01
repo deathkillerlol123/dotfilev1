@@ -28,7 +28,7 @@ configuration {
     }
 
 window {
-    width:                             30%;
+    width:                             20%;
     location:                          center;
     anchor:                            center;
     padding:                           0px;
@@ -86,8 +86,8 @@ listview {
     border:                            0px 2px 2px 2px;
     background-color:                  @background;
     dynamic:                           true;
-    lines:                             10;
-    columns:                           2;
+    lines:                             2;
+    columns:                           1;
 }
 
 element {
