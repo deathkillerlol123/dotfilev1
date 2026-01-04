@@ -23,3 +23,5 @@ export PATH="$PATH:/home/archboom/.local/bin"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/usr/bin/python3"
 
+
+source /home/archboom/.config/broot/launcher/bash/br
