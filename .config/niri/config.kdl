@@ -84,7 +84,7 @@ hotkey-overlay{
     skip-at-startup
 }
 animations{
-    slowdown 0.5
+    slowdown 0.2
 }
 
 //rules
@@ -146,6 +146,7 @@ binds{
     F5                                             { spawn-sh "playerctl previous";}
     F6                                             { spawn-sh "playerctl next";}
     F7                                             { spawn-sh "playerctl play-pause";}
+    F11                                            { fullscreen-window; }
 //main_keys_wasd
     Alt+A                                          { focus-column-left; }
     Alt+D                                          { focus-column-right; } 
