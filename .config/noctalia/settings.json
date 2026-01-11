@@ -29,11 +29,11 @@
         "volumeStep": 5
     },
     "bar": {
-        "backgroundOpacity": 0.31,
+        "backgroundOpacity": 1,
         "capsuleOpacity": 1,
         "density": "comfortable",
         "exclusive": true,
-        "floating": false,
+        "floating": true,
         "marginHorizontal": 0,
         "marginVertical": 0,
         "monitors": [
@@ -123,11 +123,6 @@
                     "warningThreshold": 30
                 },
                 {
-                    "displayMode": "onhover",
-                    "id": "Volume",
-                    "middleClickCommand": "pwvucontrol || pavucontrol"
-                },
-                {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
                     "customIconPath": "",
@@ -165,7 +160,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-fruit-salad",
-        "predefinedScheme": "Nord",
+        "predefinedScheme": "Cyberpunk",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -268,7 +263,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "animationDisabled": false,
         "animationSpeed": 2,
-        "avatarImage": "/home/archboom/.face",
+        "avatarImage": "/home/archboom/Pictures/Wallpapers/1287942.jpg",
         "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0,
