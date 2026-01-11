@@ -192,7 +192,7 @@ binds{
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
     //Alt+F3                                         { power-off-monitors; }
-    Alt+F4                                         { spawn-sh "playerctl pause && swaylock";}
+    Alt+F4                                         { spawn-sh "playerctl pause & swaylock";}
     Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
