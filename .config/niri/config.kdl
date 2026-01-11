@@ -89,6 +89,11 @@ animations{
 
 //rules
 window-rule{
+    match app-id="kitty"
+   // match is-active-in-column=false
+    //open-maximized true
+}
+window-rule{
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     block-out-from "screen-capture"
@@ -186,9 +191,9 @@ binds{
     Alt+Ctrl+8                                     { move-column-to-workspace 8; }
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
-    //Alt+F4                                         { power-off-monitors; }
-    Alt+F4                                         {spawn-sh "swaylock";}
-    Alt+Delete                                     {spawn-sh "wlogout";}
+    //Alt+F3                                         { power-off-monitors; }
+    Alt+F4                                         { spawn-sh "playerctl pause && swaylock";}
+    Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
     Alt+WheelScrollUp                              { focus-workspace-up; }
