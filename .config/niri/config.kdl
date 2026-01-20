@@ -134,7 +134,7 @@ binds{
     Alt+Q                                          { close-window;}
 
     Alt+Space                                      { spawn-sh "rofi -show drun";}
-    Alt+E                                          { spawn-sh "dolphin";}
+    Alt+E                                          { spawn-sh "nautilus";}
     Alt+O                                          { spawn-sh "killall niri";}
     Alt+V                                          { spawn-sh "copyq toggle";} 
     Alt+C                                          { spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || ~/dotfiles/scripts/waybar.sh";}
@@ -192,7 +192,7 @@ binds{
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
     //Alt+F3                                         { power-off-monitors; }
-    Alt+F4                                         { spawn-sh "playerctl pause & swaylock";}
+    Alt+F4                                         { spawn-sh "swaylock";}
     Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
