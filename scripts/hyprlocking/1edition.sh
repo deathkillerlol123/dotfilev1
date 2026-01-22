@@ -6,7 +6,7 @@ PLAYER=${PLAYER:-$(playerctl -l | head -n1)} # fallback
 
 # Exit if no player found
 if [[ -z "$PLAYER" ]]; then
-  echo "No MPRIS player detected."
+  echo ""
   exit 1
 fi
 
