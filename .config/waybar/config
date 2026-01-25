@@ -10,7 +10,7 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "bottom",
-"output": "eDP-1",
+"output": ["HDMI-A-1","DP-1"],
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,

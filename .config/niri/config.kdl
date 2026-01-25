@@ -146,7 +146,7 @@ binds{
     Alt+E                                          { spawn-sh "nautilus";}
     Alt+O                                          { spawn-sh "killall niri";}
     Alt+V                                          { spawn-sh "copyq toggle";} 
-    Alt+C                                          { spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || ~/dotfiles/scripts/waybar.sh";}
+    Alt+C                                          { spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || waybar";}
     Alt+G                                          { spawn-sh "whatsdesk --ozone-platform=wayland";}
     Alt+P                                          { spawn-sh "wayscriber --active";}
     Alt+L                                          { screenshot;}
