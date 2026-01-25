@@ -39,9 +39,16 @@ output "eDP-1"{
     position x=1920 y=0
     focus-at-startup   
 }
-output "HDMI-1"{
+output "DP-1"{
     mode "1920x1080@60.00"
-    scale 2
+    scale 1
+    transform "normal"
+    position x=1920 y=1080
+    focus-at-startup
+}
+output "HDMI-A-1"{
+    mode "1920x1080@60.00"
+    scale 1
     transform "normal"
     position x=1920 y=1080
     focus-at-startup
@@ -192,7 +199,7 @@ binds{
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
     //Alt+F3                                         { power-off-monitors; }
-    Alt+F4                                         { spawn-sh "playerctl pause && /home/archboom/dotfiles/scripts/hyprlocking/wallpapering.sh";}
+    Alt+F4                                         { spawn-sh "/home/archboom/dotfiles/scripts/hyprlocking/wallpapering.sh & playerctl pause";}
     Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
