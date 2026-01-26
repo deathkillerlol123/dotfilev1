@@ -12,7 +12,7 @@ spawn-sh-at-startup "hyprpm reload"
 spawn-sh-at-startup "dunst &"
 
 spawn-sh-at-startup "~/dotfiles/scripts/sys_sounds/sound_mon.sh"
-spawn-at-startup "~/dotfiles/scripts/niri_monitors/placement.sh"
+spawn-sh-at-startup "~/dotfiles/scripts/niri_monitors/placement.sh"
 // https://yalter.github.io/niri/Configuration:-Introduction
 input{
     focus-follows-mouse
