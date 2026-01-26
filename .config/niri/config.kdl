@@ -172,8 +172,8 @@ binds{
     Alt+Shift+s                                    { move-column-to-workspace-down; }
     Alt+Shift+w                                    { move-column-to-workspace-up; }
 //monitor_stuff
-    Alt+Ctrl+J                                     { focus-monitor-left; }
-    Alt+Ctrl+L                                     { focus-monitor-right; }
+    Alt+Ctrl+J                                     { focus-monitor-right; }
+    Alt+Ctrl+L                                     { focus-monitor-left; }
 
     Alt+Shift+J                                    { move-column-to-monitor-left;}
     Alt+Shift+L                                    { move-column-to-monitor-right;}
@@ -200,7 +200,7 @@ binds{
     Alt+Ctrl+8                                     { move-column-to-workspace 8; }
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
-    //Alt+F3                                         { power-off-monitors; }
+    Alt+F3                                         { power-off-monitors; }
     Alt+F4                                         { spawn-sh "/home/archboom/dotfiles/scripts/hyprlocking/wallpapering.sh & playerctl pause";}
     Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
