@@ -19,7 +19,6 @@ else
   yay -Syu --noconfirm
 fi
 
-mkdir -p ~/.cache/swww
 rm -rf ~/.cache/* ~/.var/app/*/cache ~/.mozilla/firefox/*/cache2/* || true
 
 rm -rf ~/.local/share/Trash/* || true
@@ -35,4 +34,5 @@ yay -Sc --noconfirm
 
 sudo journalctl --vacuum-time=7d
 
-~/dotfiles/scripts/tester.sh
+mkdir ~/.cache/swww/
+mkdir ~/cache/colorthief
