@@ -23,4 +23,4 @@ if [ -n "$FILE" ]; then
   "$HOME/dotfiles/.config/waybar/css_to_rasi.sh"
 fi
 
-cp ~/dotfiles/scripts/colorschem/last_wall.txt ~/dotfiles/.config/hypr/scripts/
+sudo cp "$FILE" /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
