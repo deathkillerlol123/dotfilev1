@@ -173,14 +173,14 @@ binds{
     Alt+Shift+s                                    { move-column-to-workspace-down; }
     Alt+Shift+w                                    { move-column-to-workspace-up; }
 //monitor_stuff
-    Shift+A                                        { focus-monitor-left;}
-    Shift+D                                        { focus-monitor-right; }
+    Alt+Ctrl+J                                     { focus-monitor-left;}
+    Alt+Ctrl+L                                     { focus-monitor-right; }
 
-    Alt+Shift+left                                 { move-column-to-monitor-left;}
-    Alt+Shift+right                                { move-column-to-monitor-right;}
+    Alt+Shift+J                                    { move-column-to-monitor-left;}
+    Alt+Shift+L                                    { move-column-to-monitor-right;}
 
-    Alt+Shift+up                                   { move-workspace-up; }
-    Alt+Shift+down                                 { move-workspace-down; }
+    Alt+Shift+I                                    { move-workspace-up; }
+    Alt+Shift+K                                    { move-workspace-down; }
 //workspaces
     Alt+1                                          { focus-workspace 1; }
     Alt+2                                          { focus-workspace 2; }
