@@ -13,5 +13,3 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
   "/home/archboom/.local/share/Anki2/User 1/backups"
 
 borg list /mnt/Backups/ArchB/BorgBackups2/
-
-sleep 10
