@@ -1,23 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-SHOW=false
-for arg in "$@"; do
-  case "$arg" in
-  -show)
-    SHOW=true
-    ;;
-  *) ;;
-  esac
-done
-
-if $SHOW; then
-  sudo pacman -Syu
-  yay -Syu
-else
-  sudo pacman -Syu --noconfirm
-  yay -Syu --noconfirm
-fi
+sudo pacman -Syu --noconfirm
+yay -Syu --noconfirm
 
 rm -rf ~/.cache/* ~/.var/app/*/cache ~/.mozilla/firefox/*/cache2/* || true
 
@@ -36,3 +21,5 @@ sudo journalctl --vacuum-time=7d
 
 mkdir ~/.cache/swww/
 mkdir ~/.cache/colorthief
+
+"$HOME/dotfiles/.config/waybar/random_wallpaper.sh"
