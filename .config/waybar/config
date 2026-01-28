@@ -10,6 +10,7 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "bottom",
+"output": ["DP-1","DP-2"],
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
