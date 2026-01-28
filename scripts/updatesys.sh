@@ -35,4 +35,4 @@ yay -Sc --noconfirm
 sudo journalctl --vacuum-time=7d
 
 mkdir ~/.cache/swww/
-mkdir ~/cache/colorthief
+mkdir ~/.cache/colorthief
