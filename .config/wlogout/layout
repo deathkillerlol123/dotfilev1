@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "playerctl pause && /home/archboom/dotfiles/scripts/hyprlocking/wallpapering.sh",
+    "action" : "playerctl pause & swaylock",
     "text" : "Lock",
     "keybind" : "l"
 }

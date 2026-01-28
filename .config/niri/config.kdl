@@ -2,15 +2,14 @@
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 
-spawn-sh-at-startup "copyq &"
 spawn-sh-at-startup "swww-daemon &"
-spawn-at-startup "wayscriber --daemon &"
 
 spawn-sh-at-startup "~/dotfiles/scripts/colorschem/start_wall.sh"
 spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
-
 spawn-sh-at-startup "~/dotfiles/scripts/niri_monitors/placement.sh"
 
+spawn-at-startup "wayscriber --daemon &"
+spawn-sh-at-startup "copyq &"
 spawn-sh-at-startup "hyprpm reload"
 spawn-sh-at-startup "dunst &"
 
@@ -203,7 +202,7 @@ binds{
     Alt+Ctrl+9                                     { move-column-to-workspace 9; }
 //final
     Alt+F3                                         { power-off-monitors; }
-    Alt+F4                                         { spawn-sh "/home/archboom/dotfiles/scripts/hyprlocking/wallpapering.sh & playerctl pause";}
+    Alt+F4                                         { spawn-sh "swaylock & playerctl pause";}
     Alt+Delete                                     { spawn-sh "wlogout";}
 //scrolling
     Alt+WheelScrollDown                            { focus-workspace-down; }
