@@ -23,3 +23,6 @@ mkdir ~/.cache/swww/
 mkdir ~/.cache/colorthief
 
 "$HOME/dotfiles/.config/waybar/random_wallpaper.sh"
+
+nvim &
+pkill nvim
