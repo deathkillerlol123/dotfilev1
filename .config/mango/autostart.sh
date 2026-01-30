@@ -8,5 +8,3 @@ wayscriber --daemon &
 copyq &
 hyprpm reload
 dunst &
-
-"$HOME/dotfiles/scripts/sys_sounds/sound_mon.sh"
