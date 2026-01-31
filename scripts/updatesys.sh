@@ -26,3 +26,5 @@ mkdir ~/.cache/colorthief
 
 nvim &
 pkill nvim
+
+"$HOME/dotfiles/.config/mango/autostart.sh"
