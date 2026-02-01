@@ -10,7 +10,7 @@
   "$HOME/.config/waybar/UserModules",
   ],
 "layer": "bottom",
-"output": ["DP-1","DP-2"],
+"output": ["HDMI-A-1"],
 //"mode": "dock",
 "exclusive": true,
 "passthrough": false,
@@ -20,8 +20,8 @@
 "ipc": true,
 "margin-top": 0,
 "margin-bottom": 0,
-"margin-left": 50,
-"margin-right": 50,
+"margin-left": 0,
+"margin-right": 0,
 
 "modules-left": [
 	"group/up"
