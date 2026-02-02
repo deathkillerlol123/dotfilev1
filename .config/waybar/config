@@ -11,7 +11,7 @@
   ],
 "layer": "bottom",
 "output": ["HDMI-A-1"],
-//"mode": "dock",
+"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "bottom",
@@ -38,7 +38,7 @@
 "group/down":{
     "orientation":"inherit",
     "modules":[
-     "hyprland/workspaces#rw",
+      "custom/notification",
       "custom/pipe",
       "battery",
       "custom/pipe",
@@ -50,7 +50,6 @@
     "orientation":"inherit",
     "modules": [
       "mpris",
-      "custom/weather"
     ]
   },
 
@@ -58,7 +57,6 @@
     "orientation": "inherit",
     "modules": [
      "custom/dot_update",
-     "custom/trash_cleaner",
       "network",
       "cpu",
       "temperature",

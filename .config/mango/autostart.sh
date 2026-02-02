@@ -2,7 +2,7 @@ swww-daemon &
 
 copyq &
 hyprpm reload
-dunst &
+swaync &
 
 sleep 1
 

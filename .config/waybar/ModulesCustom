@@ -1,8 +1,35 @@
 //* ---- credit to https://github.com/JaKooLit 💫for making these cool plug and play modules ---- *//
+
 {
 "custom/pipe": {
     "format": "|",
     "interval": 999999,
+},
+"custom/mpris": {
+  "exec": "python3 -u ~/dotfiles/scripts/music/scrolling_mpris.py",
+  "format": "{text}",
+  "return-type": "json",
+  "on-click": "playerctl play-pause"
+},
+"custom/notification": {
+  "tooltip": true,
+  "format": "<span size='16pt'>{0} {icon}</span>",
+  "format-icons": {
+    "notification": "󱅫 ",
+    "none": "󰂜 ",
+    "dnd-notification": "󰂠 ",
+    "dnd-none": "󰪓 ",
+    "inhibited-notification": "󰂛 ",
+    "inhibited-none": "󰪑 ",
+    "dnd-inhibited-notification": "󰂛 ",
+    "dnd-inhibited-none": "󰪑 "
+  },
+  "return-type": "json",
+  "exec-if": "which swaync-client",
+  "exec": "swaync-client -swb",
+  "on-click": "swaync-client -t -sw",
+  "on-click-right": "swaync-client -d -sw",
+  "escape": true
 },
 "custom/dot_update": {
 	"format": "󰁈",
