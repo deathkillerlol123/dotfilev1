@@ -28,3 +28,5 @@ nvim &
 pkill nvim
 
 "$HOME/dotfiles/.config/mango/autostart.sh"
+
+"$HOME/dotfiles/scripts/git_updater.sh"
