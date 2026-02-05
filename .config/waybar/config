@@ -38,12 +38,10 @@
 "group/down":{
     "orientation":"inherit",
     "modules":[
-      "custom/notification",
       "custom/pipe",
-      "battery",
+      "group/extra",
       "custom/pipe",
-      "clock",
-      "tray",
+      "group/notifytray"
     ]
   },
 "group/middle":{
@@ -56,12 +54,8 @@
 "group/up":{
     "orientation": "inherit",
     "modules": [
-     "custom/dot_update",
-      "network",
-      "cpu",
-      "temperature",
-      "memory",
-      "pulseaudio"
+     "group/git_system",
+      "clock",
     ]
   }
 

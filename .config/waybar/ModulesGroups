@@ -18,17 +18,41 @@
 		"custom/settings",
 	]
 },
-"group/motherboard": {
-	"orientation": "inherit",
+"group/extra": {
+  "orientation": "inherit",
   "drawer": {
       "transition-duration": 500,
       "transition-left-to-right": true,
     },
-	"modules": [
-		"cpu",
-		"temperature",
-    "memory"
-	]
+  "modules": [
+    "pulseaudio",
+    "network",
+    "battery"
+  ]
+},
+"group/notifytray": {
+  "orientation": "inherit",
+  "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+    },
+  "modules": [
+    "custom/notification",
+    "tray",
+  ]
+},
+"group/git_system": {
+  "orientation": "inherit",
+  "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+    },
+  "modules": [
+    "custom/dot_update",
+    "cpu",
+    "memory",
+    "temperature",
+  ]
 },
 "group/other": {
   "orientation": "inherit",
