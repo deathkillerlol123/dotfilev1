@@ -15,7 +15,7 @@ eval "$(starship init zsh)"
 alias ls='eza -a --tree -L 1'
 alias y='yazi'
 alias pyws="~/Documents/codes/venv/bin/python"
-
+alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
 
 
 export PATH=$PATH:/home/archboom/.spicetify
