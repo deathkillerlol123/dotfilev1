@@ -1,22 +1,22 @@
 /* Pywal-style CSS variables generated with haishoku algorithm */
 :root {
-  --background: #15171a;
-  --foreground: #c4c5c5;
-  --cursor: #c4c5c5;
-  --color0: #15171a;
-  --color1: #304289;
-  --color2: #285ebd;
-  --color3: #674f8f;
-  --color4: #835fa0;
-  --color5: #8774bc;
-  --color6: #e5788f;
-  --color7: #c4c5c5;
-  --color8: #4f5153;
-  --color9: #304289;
-  --color10: #285ebd;
-  --color11: #674f8f;
-  --color12: #835fa0;
-  --color13: #8774bc;
-  --color14: #e5788f;
-  --color15: #c4c5c5;
+  --background: #16191c;
+  --foreground: #c4c5c6;
+  --cursor: #c4c5c6;
+  --color0: #16191c;
+  --color1: #3b4a6d;
+  --color2: #614352;
+  --color3: #7c637f;
+  --color4: #d27e8a;
+  --color5: #f4c493;
+  --color6: #122842;
+  --color7: #c4c5c6;
+  --color8: #505254;
+  --color9: #7c637f;
+  --color10: #d27e8a;
+  --color11: #f4c493;
+  --color12: #122842;
+  --color13: #3b4a6d;
+  --color14: #614352;
+  --color15: #c4c5c6;
 }
