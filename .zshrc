@@ -25,3 +25,4 @@ export PATH="$PATH:/usr/bin/python3"
 
 
 source /home/archboom/.config/broot/launcher/bash/br
+source <(fzf --zsh)
