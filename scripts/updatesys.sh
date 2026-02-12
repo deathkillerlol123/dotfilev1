@@ -6,6 +6,8 @@ yay -Syu --noconfirm
 
 rm -rf ~/.cache/* ~/.var/app/*/cache ~/.mozilla/firefox/*/cache2/* ~/.local/share/Trash/* || true
 
+rm -rf ~/Games/Heroic/Prefixes/oldprefixes
+
 flatpak uninstall --unused -y
 flatpak repair || true
 
@@ -16,6 +18,13 @@ sudo pacman -Sc --noconfirm
 yay -Sc --noconfirm
 
 sudo journalctl --vacuum-time=7d
+
+rm -rf ~/.config/discord/Cache
+rm -rf ~/.config/discord/Code\ Cache
+rm -rf ~/.config/whatsdesk/Cache
+rm -rf ~/.config/whatsdesk/Code\ Cache
+rm -rf ~/.config/heroic/cache
+rm -rf ~/.config/Code/CachedExtensionVSIXs
 
 mkdir ~/.cache/swww/
 mkdir ~/.cache/colorthief
