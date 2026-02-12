@@ -22,11 +22,9 @@ sudo journalctl --vacuum-time=7d
 mkdir ~/.cache/swww/
 mkdir ~/.cache/colorthief
 
-"$HOME/dotfiles/.config/waybar/random_wallpaper.sh"
-
 nvim &
 pkill nvim
 
-"$HOME/dotfiles/.config/mango/autostart.sh"
-
+"$HOME/dotfiles/.config/waybar/random_wallpaper.sh"
 "$HOME/dotfiles/scripts/git_updater.sh"
+"$HOME/dotfiles/.config/mango/autostart.sh"
