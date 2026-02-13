@@ -1,5 +1,7 @@
 swww-daemon &
 
+brightnessctl s 15%
+
 copyq &
 hyprpm reload
 swaync &
