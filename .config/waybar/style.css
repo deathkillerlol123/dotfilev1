@@ -1,5 +1,6 @@
 @import "colors.css";
 
+@define-color background-color @color8;
 * {
   font-family: "FiraCode Nerd Font";
   font-weight: bold;
@@ -13,14 +14,14 @@
 window#waybar,
 window#waybar.empty,
 window#waybar.empty #window {
-  background-color: transparent;
+  background-color: @background-color;
   padding: 0px;
   border: 0px;
 }
 
 tooltip {
   color: @border;
-  background: rgba(30, 35, 38, 1);
+  background: @background-color;
   border-radius: 0px;
 }
 
@@ -31,7 +32,7 @@ tooltip label {
 .modules-right,
 .modules-center,
 .modules-left {
-  background-color: rgba(30, 35, 38, 1);
+  background-color: @background-color;
   color: @texts;
   border: 0px solid @border;
   padding-top: 0px;

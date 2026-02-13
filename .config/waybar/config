@@ -11,17 +11,14 @@
   ],
 "layer": "bottom",
 "output": ["HDMI-A-1"],
-//"mode": "dock",
+"reload_style_on_change": true,
+"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "bottom",
-"fixed-center": false,
+"fixed-center": true,
 "ipc": true,
-"spacing": 0,
-"margin-top": 0,
-"margin-bottom": 0,
-"margin-left": 0,
-"margin-right": 0,
+"margin": 0,
 
 "modules-left": [
 	"group/up"
