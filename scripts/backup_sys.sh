@@ -5,7 +5,8 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
   --exclude '/home/archboom/Documents/tmp*' \
   --exclude '/home/archboom/dotfiles/.git' \
   --exclude '/home/archboom/dotfiles/.gitignore' \
-  --exclude '/home/archboom/Documents/venv' \
+  --exclude '/home/archboom/Documents/codes/venv/' \
+  --exclude '/home/archboom/Downloads/isoss/' \
   /home/archboom/Documents \
   /home/archboom/Downloads \
   /home/archboom/Pictures/Screenshots \
