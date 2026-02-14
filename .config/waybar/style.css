@@ -33,11 +33,15 @@ tooltip label {
 .modules-left {
   background-color: @background-color;
   color: @texts;
-  border: 1px solid @border;
   padding-top: 1px;
   padding-bottom: 0px;
   padding-right: 0px;
   padding-left: 0px;
+}
+
+.modules-right,
+.modules-left {
+  border: 1px solid @border;
 }
 /*-----modules indv----*/
 #taskbar button,
