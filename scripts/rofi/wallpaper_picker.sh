@@ -1,11 +1,11 @@
-#!/bin/bash
+cd ~/dotfiles/.config/waybar/
+
+LAST_WALL="$HOME/dotfiles/scripts/colorschem/last_wall.txt"
 
 WALLPAPER_DIR="$HOME/Pictures"
 
 FILE=$(ls "$WALLPAPER_DIR" | rofi -dmenu -p "Select Directory" -lines 10 -width 30)
-
 FILE="$WALLPAPER_DIR/$FILE"
-
 FILE="$(hellpaper $FILE)"
 
 if [ -n "$FILE" ]; then
@@ -18,7 +18,6 @@ if [ -n "$FILE" ]; then
 
   "$HOME/dotfiles/.config/waybar/col_wayhbar_conv.sh"
   "$HOME/dotfiles/.config/waybar/css_to_rasi.sh"
-  "$HOME/dotfiles/.config/waybar/testmorecol/cols.sh"
 fi
 
 pkill waybar
