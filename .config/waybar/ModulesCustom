@@ -12,7 +12,7 @@
   "on-click": "playerctl play-pause"
 },
 "custom/notification": {
-  "tooltip": true,
+  "tooltip": false,
   "format": "<span size='16pt'>{0} {icon}</span>",
   "format-icons": {
     "notification": "󱅫 ",
