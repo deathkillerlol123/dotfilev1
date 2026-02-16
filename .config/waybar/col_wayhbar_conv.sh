@@ -12,9 +12,15 @@ grep -oE -- '--[a-zA-Z0-9_-]+:[[:space:]]*#[0-9A-Fa-f]{3,6}' "$input" |
 
 cp colors2.css ~/dotfiles/.config/wlogout/
 "$HOME/dotfiles/.config/waybar/css_to_conf.sh"
+"$HOME/dotfiles/.config/waybar/mango_col.sh"
 
 cp colors2.conf ~/dotfiles/.config/kitty/
-cp mangocol.conf ~/dotfiles/.config/mango/
+
+cp mangocol1.conf ~/dotfiles/.config/mango/mangocol.conf
+cd ~/dotfiles/.config/mango
+
+value=$(awk -F'=' '/color6/ {gsub(/ /,"",$2); print $2}' mangocol.conf)
+sed -i "s/^\(focuscolor *= *\).*/\1$value/" config.conf
 
 #killall -SIGUSR2 waybar
 

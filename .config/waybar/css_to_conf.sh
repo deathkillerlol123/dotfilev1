@@ -5,4 +5,4 @@ output_file="colors2.conf"
 
 sed 's/@define-color //; s/;$//' "$input_file" >"$output_file"
 
-sed 's/#/0x/g' colors2.conf >mangocol.conf
+cp colors2.conf mangocol.conf
