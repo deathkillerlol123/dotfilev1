@@ -1,6 +1,6 @@
 [drawing]
 default_color = [
-    0,
+    255,
     0,
     255,
 ]
@@ -49,7 +49,11 @@ show_floating_badge_always = false
 show_frozen_badge = false
 status_bar_position = "bottom-left"
 help_overlay_context_filter = true
+multi_monitor_enabled = true
+active_output_badge = true
+command_palette_toast_duration_ms = 1500
 xdg_fullscreen = false
+radial_menu_mouse_binding = "middle"
 
 [ui.status_bar_style]
 font_size = 21.0
@@ -121,6 +125,7 @@ layout_mode = "regular"
 top_pinned = true
 side_pinned = true
 use_icons = true
+scale = 1.0
 show_more_colors = true
 show_actions_section = true
 show_actions_advanced = false
@@ -133,6 +138,7 @@ show_text_controls = false
 show_settings_section = true
 show_delay_sliders = true
 show_marker_opacity_section = false
+context_aware_ui = true
 show_preset_toasts = true
 show_tool_preview = false
 top_offset = 0.0
@@ -278,6 +284,8 @@ board_8 = ["Ctrl+Shift+8"]
 board_9 = ["Ctrl+Shift+9"]
 board_next = ["Ctrl+Shift+ArrowRight"]
 board_prev = ["Ctrl+Shift+ArrowLeft"]
+focus_next_output = ["Ctrl+Alt+Shift+ArrowRight"]
+focus_prev_output = ["Ctrl+Alt+Shift+ArrowLeft"]
 board_new = ["Ctrl+Shift+N"]
 board_duplicate = ["Ctrl+Shift+D"]
 board_delete = ["Ctrl+Shift+Delete"]
@@ -298,6 +306,7 @@ toggle_toolbar = [
 ]
 toggle_presenter_mode = ["Ctrl+Shift+M"]
 toggle_fill = []
+toggle_radial_menu = []
 toggle_selection_properties = ["Ctrl+Alt+P"]
 open_context_menu = [
     "Shift+F10",
