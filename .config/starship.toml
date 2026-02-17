@@ -34,6 +34,24 @@ disabled = true
 [git_status]
 disabled = true
 
+[env_var]
+disabled = true
+
+[shell]
+disabled = true
+
+[rust]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[dotnet]
+disabled = true
+
 
 #[character] # The name of the module we are configuring is "character"
 #success_symbol = "[](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
