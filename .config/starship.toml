@@ -19,8 +19,8 @@ format = '[$localipv4](bold red) '
 style_user = "green bold"
 style_root = "red bold"
 format = "[$user]($style) "
-disabled = false
-show_always = true
+disabled = true
+show_always = false
 
 [hostname]
 ssh_only = false
@@ -28,108 +28,42 @@ format = '[$hostname](bold red) '
 trim_at = "."
 disabled = true
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red)"
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
+
+
+#[character] # The name of the module we are configuring is "character"
+#success_symbol = "[](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+#error_symbol = "[✗](bold red)"
 #  
 
 # configure directory
 [directory]
 #read_only = " "
-truncation_length = 2
+truncation_length = 1
 truncate_to_repo = false   # truncates directory to root folder if in github repo
 style = "bold italic blue"
+disabled = true
 
-#[cmd_duration]
-#min_time = 4
-#show_milliseconds = true
-#disabled = false
-#style = "bold italic red"
+[cmd_duration]
+min_time = 4
+show_milliseconds = true
+disabled = true
+style = "bold italic red"
 
-[aws]
-symbol = "  "
 
-[conda]
-symbol = " "
 
-[dart]
-symbol = " "
 
-[docker_context]
-symbol = " "
-format = "via [$symbol$context]($style) "
-style = "blue bold"
-only_with_files = true
-detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
-detect_folders = []
-disabled = false
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-#[git_branch]
-#symbol = " "
-
-[golang]
-symbol = " "
-
-#[hg_branch]
-#symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-#pyenv_version_name = true
-format = '$symbol'
-style = "bold yellow"
-pyenv_prefix = "venv "
-python_binary = ["./venv/bin/python", "python", "python3", "python2"]
-detect_extensions = ["py"]
-#version_format = "v${raw}"
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
+#[python]
+#symbol = " "
+#format = '$symbol'
+#style = "bold yellow"
+#pyenv_prefix = "venv "
+#python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+#detect_extensions = ["py"]
 
 [shlvl]
 symbol = " "
-
-[swift]
-symbol = "ﯣ "
-
-#[nodejs]
-#format = "via [ Node.js $version](bold green) "
-#detect_files = ["package.json", ".node-version"]
-#detect_folders = ["node_modules"]

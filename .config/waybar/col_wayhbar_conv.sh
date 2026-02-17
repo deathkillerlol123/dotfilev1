@@ -16,11 +16,6 @@ cp colors2.css ~/dotfiles/.config/wlogout/
 
 cp colors2.conf ~/dotfiles/.config/kitty/
 
-cp mangocol1.conf ~/dotfiles/.config/mango/mangocol.conf
-cd ~/dotfiles/.config/mango
-
-value=$(awk -F'=' '/color6/ {gsub(/ /,"",$2); print $2}' mangocol.conf)
-sed -i "s/^\(focuscolor *= *\).*/\1$value/" config.conf
 
 #killall -SIGUSR2 waybar
 
