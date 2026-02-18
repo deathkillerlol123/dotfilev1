@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Screen Recording
+Exec=/home/archboom/dotfiles/scripts/screen_record.sh
+Type=Application
+Terminal=true

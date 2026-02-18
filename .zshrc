@@ -13,7 +13,7 @@ bindkey "^[[6~" down-line-or-history
 eval "$(starship init zsh)"
 
 alias ls='eza -a --tree -L 1'
-alias y='yazi'
+alias z='zellij -l welcome'
 alias pyws="~/Documents/codes/venv/bin/python"
 alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
 
