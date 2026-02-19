@@ -4,7 +4,11 @@ set -euo pipefail
 sudo pacman -Syu --noconfirm
 yay -Syu --noconfirm
 
-rm -rf ~/.cache/* ~/.var/app/*/cache ~/.mozilla/firefox/*/cache2/* ~/.local/share/Trash/* || true
+mv ~/.cache/zellij/ ~/
+rm -rf ~/.cache/*
+mv ~/zellij ~/.cache/
+
+rm -rf ~/.var/app/*/cache ~/.mozilla/firefox/*/cache2/* ~/.local/share/Trash/* || true
 
 rm -rf ~/Games/Heroic/Prefixes/oldprefixes
 
