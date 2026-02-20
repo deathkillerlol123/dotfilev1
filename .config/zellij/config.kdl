@@ -266,20 +266,22 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
+  https://github.com/ndavd/zellij-cb/releases/download/v0.1.0/zellij-cb.wasm
+  https://github.com/pirafrank/zellij-what-time/releases/download/0.1.1/zellij-what-time.wasm
 }
 web_client {
     font "monospace"
 }
  
 simplified_ui true
-theme "tokyo-night-dark"
+theme "tokyo-night-storm"
 default_mode "normal"
 default_shell "zsh"
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // default_cwd "/tmp"
  
-default_layout "strider"
+default_layout "compact"
  
 // The folder in which Zellij will look for layouts
 // layout_dir "/tmp"
@@ -326,8 +328,7 @@ scrollback_lines_to_serialize 10000
  
 styled_underlines true
  
-// How often in seconds sessions are serialized
-serialization_interval 30
+serialization_interval 10
  
 disable_session_metadata false
  
