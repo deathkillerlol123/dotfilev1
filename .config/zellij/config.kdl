@@ -267,7 +267,6 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
   https://github.com/ndavd/zellij-cb/releases/download/v0.1.0/zellij-cb.wasm
-  https://github.com/pirafrank/zellij-what-time/releases/download/0.1.1/zellij-what-time.wasm
 }
 web_client {
     font "monospace"

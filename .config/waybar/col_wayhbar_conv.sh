@@ -19,5 +19,4 @@ cp colors2.conf ~/dotfiles/.config/kitty/
 
 #killall -SIGUSR2 waybar
 
-pkill waybar
 pkill rofi

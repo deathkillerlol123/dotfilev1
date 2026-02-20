@@ -16,5 +16,3 @@ if [ -n "$FILE" ]; then
   "$HOME/dotfiles/.config/waybar/col_wayhbar_conv.sh"
   "$HOME/dotfiles/.config/waybar/css_to_rasi.sh"
 fi
-
-waybar &
