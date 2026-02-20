@@ -2,7 +2,7 @@
 
 {
 "custom/pipe": {
-    "format": "|",
+    "format": "| ",
     "interval": 999999,
 },
 "custom/mpris": {
