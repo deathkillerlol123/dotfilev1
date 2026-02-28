@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "action" : "playerctl pause & swaylock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "Windows10",
+    "action" : "kitty /home/archboom/dotfiles/scripts/Boot-Windows10.sh",
+    "text" : "Windows10",
+    "keybind" : "w"
+}
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "logout",
+    "action" : "hyprctl dispatch exit",
+    "text" : "Logout",
+    "keybind" : "e"
+}
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}

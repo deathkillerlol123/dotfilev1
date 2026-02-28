@@ -1,0 +1,87 @@
+#format = """
+#[╭─user───❯](bold blue) $username
+#[┣─system─❯](bold yellow) $hostname
+#[┣─project❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+#[╰─cmd────❯](bold green) 
+#"""
+#format = '$all'
+
+right_format = """
+"""
+
+
+[localip]
+disabled = true
+ssh_only = false
+format = '[$localipv4](bold red) '
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = true
+show_always = false
+
+[hostname]
+ssh_only = false
+format = '[$hostname](bold red) '
+trim_at = "."
+disabled = true
+
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
+
+[env_var]
+disabled = true
+
+[shell]
+disabled = true
+
+[rust]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[dotnet]
+disabled = true
+
+
+#[character] # The name of the module we are configuring is "character"
+#success_symbol = "[](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+#error_symbol = "[✗](bold red)"
+#  
+
+# configure directory
+[directory]
+#read_only = " "
+truncation_length = 1
+truncate_to_repo = false   # truncates directory to root folder if in github repo
+style = "bold italic blue"
+disabled = true
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = true
+disabled = true
+style = "bold italic red"
+
+
+
+
+#[python]
+#symbol = " "
+#format = '$symbol'
+#style = "bold yellow"
+#pyenv_prefix = "venv "
+#python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+#detect_extensions = ["py"]
+
+[shlvl]
+symbol = " "

@@ -1,0 +1,7 @@
+@import "colors1.css";
+
+
+@define-color border @color2;
+@define-color background @color8;
+@define-color texts @color6;
+@define-color critical-red @color6;

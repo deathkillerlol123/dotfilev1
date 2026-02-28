@@ -1,0 +1,58 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+/* My Mostly Used waybar config incase you wonder :) */
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
+"layer": "bottom",
+"output": ["HDMI-A-1"],
+"reload_style_on_change": true,
+"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"fixed-center": true,
+"ipc": true,
+"margin": 0,
+
+"modules-left": [
+	"group/up"
+	],
+"modules-center": [
+	"group/middle"
+	],
+
+"modules-right": [
+  "group/down"
+	],
+
+
+"group/down":{
+    "orientation":"inherit",
+    "modules":[
+      "custom/pipe",
+      "group/extra",
+      "custom/pipe",
+      "group/notifytray"
+    ]
+  },
+"group/middle":{
+    "orientation":"inherit",
+    "modules": [
+      "mpris",
+    ]
+  },
+
+"group/up":{
+    "orientation": "inherit",
+    "modules": [
+     "group/git_system",
+      "clock",
+    ]
+  }
+
+
+}

@@ -1,0 +1,238 @@
+//spawn-at-startup "waybar"
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+
+spawn-sh-at-startup "swww-daemon &"
+
+spawn-sh-at-startup "~/dotfiles/scripts/colorschem/start_wall.sh"
+spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
+spawn-sh-at-startup "~/dotfiles/scripts/niri_monitors/placement.sh"
+
+spawn-at-startup "wayscriber --daemon &"
+spawn-sh-at-startup "copyq &"
+spawn-sh-at-startup "hyprpm reload"
+spawn-sh-at-startup "dunst &"
+
+spawn-sh-at-startup "~/dotfiles/scripts/sys_sounds/sound_mon.sh"
+// https://yalter.github.io/niri/Configuration:-Introduction
+input{
+    focus-follows-mouse
+    keyboard{
+        xkb{
+          layout "us"
+        }
+
+        numlock
+    }
+    touchpad{
+        tap
+        natural-scroll
+    }
+    mouse{
+    }
+    trackpoint{
+    }
+}
+output "eDP-1"{
+    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+    mode "1920x1080@60.00"
+    scale 1.5
+    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    transform "normal"
+    position x=1920 y=0
+    focus-at-startup   
+}
+output "DP-1"{
+    mode "1920x1080@60.00"
+    scale 1
+    transform "normal"
+    position x=1920 y=1080
+    focus-at-startup
+}
+output "HDMI-A-1"{
+    mode "1920x1080@60.00"
+    scale 1
+    transform "normal"
+    position x=1920 y=1080
+    focus-at-startup
+}
+layout{
+    gaps 0
+    center-focused-column "never"
+    preset-column-widths{
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    default-column-width{ proportion 0.5; }
+    focus-ring{
+        width 0
+        //active-color "#7fc8ff"
+        //inactive-color "#7fc8ff"
+        // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+    }
+    border{
+        off
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    shadow{
+        // on
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+    struts{
+    }
+}
+
+hotkey-overlay{
+    skip-at-startup
+}
+animations{
+    slowdown 0.2
+}
+
+//rules
+window-rule{
+    match app-id="kitty"
+   // match is-active-in-column=false
+    //open-maximized true
+}
+window-rule{
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+window-rule{
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width{}
+}
+window-rule{
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+window-rule{
+    match title="$firefox$"
+    default-column-width { proportion 0.5; }
+}
+window-rule{
+    match app-id="whatsdesk"
+    open-on-output "eDP-1"
+}
+window-rule{
+    match is-active=false
+    opacity 0.65
+}
+window-rule{
+    match is-active=true
+    opacity 0.90
+}
+window-rule{
+    geometry-corner-radius 0
+    clip-to-geometry true
+}
+
+binds{
+    //Alt+Shift+Slash{ show-hotkey-overlay; }
+//main_keys
+    Alt+R                                          { spawn "kitty"; }
+    Alt+Q                                          { close-window;}
+
+    Alt+Space                                      { spawn-sh "rofi -show drun";}
+    Alt+E                                          { spawn-sh "nautilus";}
+    Alt+O                                          { spawn-sh "killall niri";}
+    Alt+V                                          { spawn-sh "copyq toggle";} 
+    Alt+C                                          { spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || waybar";}
+    Alt+G                                          { spawn-sh "whatsdesk --ozone-platform=wayland";}
+    Alt+P                                          { spawn-sh "wayscriber --active";}
+    Alt+L                                          { screenshot;}
+
+    Alt+F                                          { fullscreen-window; }
+//F_keys
+    F1                                             { spawn-sh "~/dotfiles/.config/waybar/random_wallpaper.sh";}
+    F2                                             { spawn-sh "~/dotfiles/scripts/volume_decrease.sh";}
+    F3                                             { spawn-sh "~/dotfiles/scripts/volume_increase.sh";}
+    F4                                             { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle";}
+    F5                                             { spawn-sh "playerctl previous";}
+    F6                                             { spawn-sh "playerctl next";}
+    F7                                             { spawn-sh "playerctl play-pause";}
+    F11                                            { fullscreen-window; }
+//main_keys_wasd
+    Alt+A                                          { focus-column-left; }
+    Alt+D                                          { focus-column-right; } 
+    Alt+shift+D                                    { move-column-right; }
+    Alt+shift+A                                    { move-column-left;}
+
+    Alt+S                                          { focus-workspace-down; }
+    Alt+W                                          { focus-workspace-up; }
+    Alt+Shift+s                                    { move-column-to-workspace-down; }
+    Alt+Shift+w                                    { move-column-to-workspace-up; }
+//monitor_stuff
+    Alt+Ctrl+J                                     { focus-monitor-left;}
+    Alt+Ctrl+L                                     { focus-monitor-right; }
+
+    Alt+Shift+J                                    { move-column-to-monitor-left;}
+    Alt+Shift+L                                    { move-column-to-monitor-right;}
+
+    Alt+Shift+I                                    { move-workspace-up; }
+    Alt+Shift+K                                    { move-workspace-down; }
+//workspaces
+    Alt+1                                          { focus-workspace 1; }
+    Alt+2                                          { focus-workspace 2; }
+    Alt+3                                          { focus-workspace 3; }
+    Alt+4                                          { focus-workspace 4; }
+    Alt+5                                          { focus-workspace 5; }
+    Alt+6                                          { focus-workspace 6; }
+    Alt+7                                          { focus-workspace 7; }
+    Alt+8                                          { focus-workspace 8; }
+    Alt+9                                          { focus-workspace 9; }
+    Alt+Ctrl+1                                     { move-column-to-workspace 1; }
+    Alt+Ctrl+2                                     { move-column-to-workspace 2; }
+    Alt+Ctrl+3                                     { move-column-to-workspace 3; }
+    Alt+Ctrl+4                                     { move-column-to-workspace 4; }
+    Alt+Ctrl+5                                     { move-column-to-workspace 5; }
+    Alt+Ctrl+6                                     { move-column-to-workspace 6; }
+    Alt+Ctrl+7                                     { move-column-to-workspace 7; }
+    Alt+Ctrl+8                                     { move-column-to-workspace 8; }
+    Alt+Ctrl+9                                     { move-column-to-workspace 9; }
+//final
+    Alt+F3                                         { power-off-monitors; }
+    Alt+F4                                         { spawn-sh "swaylock & playerctl pause";}
+    Alt+Delete                                     { spawn-sh "wlogout";}
+//scrolling
+    Alt+WheelScrollDown                            { focus-workspace-down; }
+    Alt+WheelScrollUp                              { focus-workspace-up; }
+    Alt+Ctrl+WheelScrollDown                       { move-column-to-workspace-down; }
+    Alt+Ctrl+WheelScrollUp                         { move-column-to-workspace-up; }
+
+    Alt+WheelScrollRight                           { focus-column-right; }
+    Alt+WheelScrollLeft                            { focus-column-left; }
+    Alt+Ctrl+WheelScrollRight                      { move-column-right; }
+    Alt+Ctrl+WheelScrollLeft                       { move-column-left; }
+
+    Alt+Shift+WheelScrollDown                      { focus-column-right; }
+    Alt+Shift+WheelScrollUp                        { focus-column-left; }
+    Alt+Ctrl+Shift+WheelScrollDown                 { move-column-right; }
+    Alt+Ctrl+Shift+WheelScrollUp                   { move-column-left; }
+//screen
+    //Alt+Minus{ set-column-width "-10%"; }
+    //Alt+Equal{ set-column-width "+10%"; }
+    //Alt+Shift+Minus{ set-window-height "-10%"; }
+    //Alt+Shift+Equal{ set-window-height "+10%"; }
+//sound
+    XF86AudioRaiseVolume allow-when-locked=true    { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true    { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute        allow-when-locked=true    { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true    { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    // This will work with any MPRIS-enabled media player.
+    XF86AudioPlay        allow-when-locked=true    { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true    { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true    { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true    { spawn-sh "playerctl next"; }
+}

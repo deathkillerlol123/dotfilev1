@@ -1,0 +1,35 @@
+[global]
+
+
+font = Monospace 10
+background = "#000000"
+foreground = "#ffffff"
+frame_color = "#006666"
+separator_color = "#000000"
+indicate_hidden = yes
+show_age_threshold = 0
+
+sort=yes
+width = 300
+
+origin = bottom-left
+
+[urgency_low]
+timeout = 10
+background = "#000000"
+foreground = "#ffffff"
+frame_color = "#006666"
+
+[urgency_normal]
+timeout = 10
+background = "#000000"
+foreground = "#ffffff"
+frame_color = "#006666"
+
+[urgency_critical]
+timeout = 10
+background = "#000000"
+foreground = "#ffffff"
+frame_color = "#8DB600"
+
+

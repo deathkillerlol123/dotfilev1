@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Reddit
+Comment=Running reddit in another instance
+Exec=/home/archboom/dotfiles/scripts/run_reddit.sh
+Icon=preferences-desktop-wallpaper
+Terminal=false
+Type=Application
+Categories=Utility;
