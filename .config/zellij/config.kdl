@@ -280,7 +280,7 @@ default_shell "zsh"
 // Choose the path to override cwd that zellij will use for opening new panes
 // default_cwd "/tmp"
  
-default_layout "compact"
+default_layout "strider"
  
 // The folder in which Zellij will look for layouts
 // layout_dir "/tmp"
