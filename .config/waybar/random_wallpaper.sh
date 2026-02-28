@@ -9,8 +9,9 @@ FILE=$(find ~/Pictures/Wallpapers/ -type f -print0 | shuf -zn1 | xargs -0 echo)
 echo "$FILE"
 if [ -n "$FILE" ]; then
   echo "$FILE" >"$LAST_WALL"
-  swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 5
-  wal -i "$FILE" -n
+
+  swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7
+  wal -i "$FILE" -n 
 
   pkill -f rofi
   cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors1.css
