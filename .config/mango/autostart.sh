@@ -1,13 +1,1 @@
-swww-daemon &
-
-brightnessctl s 15%
-
-copyq &
-hyprpm reload
-swaync &
-
-"$HOME/dotfiles/scripts/niri_monitors/placement.sh"
-
-"$HOME/dotfiles/scripts/colorschem/start_wall.sh"
-
-"$HOME/dotfiles/scripts/disable-wifi-power.sh"
+/nix/store/71yvf00ywxflbj7i28rpqim2n46ah4p0-home-manager-files/.config/mango/autostart.sh
