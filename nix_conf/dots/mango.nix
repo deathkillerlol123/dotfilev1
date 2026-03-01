@@ -202,7 +202,7 @@
  
  bind = NONE, F2, spawn_shell, ~/dotfiles/scripts/sys_sounds/volume_decrease.sh
  bind = NONE, F3, spawn_shell, ~/dotfiles/scripts/sys_sounds/volume_increase.sh
- bind = NONE, F4, spawn, pactl amixer set Master toggle
+ bind = NONE, F4, spawn_shell, ~/dotfiles/scripts/sys_sounds/volume_mute.sh
  bind = NONE, F5, spawn, playerctl previous
  bind = NONE, F6, spawn, playerctl next
  bind = NONE, F7, spawn, playerctl play-pause

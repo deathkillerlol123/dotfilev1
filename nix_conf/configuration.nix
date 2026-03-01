@@ -28,6 +28,7 @@
   services = {
     displayManager.sddm = {
      enable = true;
+ #    theme = "";
      wayland.enable = true;
     };
     xserver = {
@@ -47,6 +48,20 @@
     hostName = "nixbtw";
     networkmanager.enable = true;
   };
+
+  xdg.portal = {
+  	enable = true;
+	config = {
+		common = {
+		default = "*";
+		};
+	};
+	extraPortals = [
+		pkgs.xdg-desktop-portal-hyprland
+		pkgs.xdg-desktop-portal-gtk
+	];
+  };
+
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
