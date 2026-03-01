@@ -1,6 +1,6 @@
 @import "colors.css";
 
-@define-color background-color @color9;
+@define-color background-color @color8;
 * {
   font-family: "FiraCode Nerd Font";
   font-weight: bold;

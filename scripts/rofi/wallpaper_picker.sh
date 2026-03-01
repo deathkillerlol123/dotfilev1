@@ -6,7 +6,11 @@ WALLPAPER_DIR="$HOME/Pictures"
 
 FILE=$(ls "$WALLPAPER_DIR" | rofi -dmenu -p "Select Directory" -lines 10 -width 30)
 FILE="$WALLPAPER_DIR/$FILE"
-FILE="$(hellpaper $FILE)"
+
+cd ~/Desktop/
+FILE="$(./hellpaper $FILE)"
+
+cd ~/dotfiles/.config/waybar/
 
 if [ -n "$FILE" ]; then
   echo "$FILE" >"$LAST_WALL"

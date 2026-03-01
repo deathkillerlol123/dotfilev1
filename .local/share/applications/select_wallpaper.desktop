@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Choose Wallpaper
 Comment=Pick a wallpaper using a GUI
-Exec=/home/archboom/dotfiles/scripts/rofi/wallpaper_picker.sh
+Exec=/home/nixboom/dotfiles/scripts/rofi/wallpaper_picker.sh
 Icon=preferences-desktop-wallpaper
 Terminal=false
 Type=Application
