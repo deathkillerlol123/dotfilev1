@@ -20,8 +20,8 @@
  ;
  home.file."/.config/mango/config.conf".text = ''
 
- exec-once = bash ~/dotfiles/.config/mango/autostart.sh
- exec = bash ~/dotfiles/.config/mango/autostart.sh 
+ exec-once = bash ~/.config/mango/autostart.sh
+ exec = bash ~/.config/mango/autostart.sh 
  
  exec = bash nohup ./autostart.sh >/dev/null 2>&1 & disown; exit
  exec-once = bash nohup ./script.sh >/dev/null 2>&1 & disown; exit
@@ -194,7 +194,7 @@
  
  bind = Alt, P, togglefloating
  
- bind = Alt, C, spawn_shell, pidof waybar > /dev/null && killall waybar || waybar
+ bind = Alt, C, spawn_shell, ~/dotfiles/scripts/way.sh
  
  bind = NONE, Print, spawn_shell, grim -g "$(slurp)" - | swappy -f - &
  
