@@ -26,14 +26,20 @@
   };
 
   services = {
-    displayManager.sddm = {
-     enable = true;
- #    theme = "";
-     wayland.enable = true;
+    displayManager = {
+      sddm = {
+        enable = false;
+	wayland.enable = true;
+      };
+      gdm = {
+        enable = true;
+	wayland = true;
+      };
     };
     xserver = {
       enable = true;
       windowManager.qtile.enable = true;
+      displayManager.lightdm.enable = false;
     };
     pipewire = {
       enable = true;
@@ -97,6 +103,9 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
+    gdm
+
+
     mangohud
     protonup-qt
     lutris
