@@ -7,6 +7,7 @@
 	./dots/zellij.nix
 	./dots/neofetch.nix
 	./dots/nvim.nix
+	./dots/swaync.nix
 	./dots/hyprland.nix
 	./dots/mango.nix
   ];

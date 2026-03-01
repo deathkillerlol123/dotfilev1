@@ -11,110 +11,76 @@
       inputs.home-manager.nixosModules.default
     ];
 
-#  boot.loader.systemd-boot.enable = true;
-
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.grub.enable = true;
-  boot.loader.grub.devices = ["nodev"];
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
-
-  boot.kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
-
-  
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-   };
-
-  services.xserver = {
-    enable = true;
-    windowManager.qtile.enable = true;
-    desktopManager.gnome.enable = true;
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+      #systemd-boot.enable = true;
+      grub = {
+        enable = true;
+        devices = ["nodev"];
+	efiSupport = true;
+	useOSProber = true;
+      };
+    };
+    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
   };
 
-  services.flatpak.enable = true;
-  
-  networking.hostName = "nixbtw"; # Define your hostname.
+  services = {
+    displayManager.sddm = {
+     enable = true;
+     wayland.enable = true;
+    };
+    xserver = {
+      enable = true;
+      windowManager.qtile.enable = true;
+    };
+    pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
+    desktopManager.gnome.enable = true;
+    flatpak.enable = true;
+    libinput.enable = true;
+  };
 
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixbtw";
+    networkmanager.enable = true;
+  };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   time.timeZone = "Europe/London";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable the X11 windowing system.
-  #services.xserver.enable = true;
-  
-
-  
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-   };
-
-  services.libinput.enable = true;
-
   home-manager = {
-
   	extraSpecialArgs = {inherit inputs; };
 	users = {
 		"nixboom" = import ./home.nix;
 	};
   };
 
-  #Define a user account. Don't forget to set a password with ‘passwd’.
- users.users.nixboom = {
-   isNormalUser = true;
-   shell = pkgs.zsh;
-   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-   packages = with pkgs; [
-     tree
-   ];
- };
-
-  programs.zsh.enable = true;
-  programs.mangowc.enable = true;
-
+  users.users.nixboom = {
+    isNormalUser = true;
+    shell = pkgs.zsh;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      tree
+      ];
+  };
+  programs = {
+    zsh.enable = true;
+    mangowc.enable = true;
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      gamescopeSession.enable = true;
+      };
+  };
   nixpkgs.config = {
-  	allowUnfree = true;
+    allowUnfree = true;
   };
-  programs.steam = {
-  	enable = true;
-	remotePlay.openFirewall = true;
-	dedicatedServer.openFirewall = true;
-	
-	gamescopeSession.enable = true;
-
-  };
-  programs.gamemode.enable = true;
-
-  # List packages installed in system profile.
-  #You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     mangohud
     protonup-qt
@@ -174,8 +140,10 @@
     wdisplays
     whatsapp-electron
 
-    python315
+    discord-ptb
 
+
+    python315
 
     zed-editor
     stow
