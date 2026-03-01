@@ -22,7 +22,7 @@
 	useOSProber = true;
       };
     };
-    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
+    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
   };
 
   services = {
@@ -104,7 +104,7 @@
   };
   environment.systemPackages = with pkgs; [
     gdm
-
+    efibootmgr
 
     mangohud
     protonup-qt
@@ -130,7 +130,7 @@
     rofi
     firefox-devedition
 
-    warehouse
+    touchegg
 
     grim
     slurp
