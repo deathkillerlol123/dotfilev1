@@ -17,7 +17,7 @@ if [ -n "$FILE" ]; then
   cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors1.css
   cp ~/.cache/wal/colors.css ~/dotfiles/.config/mozilla/firefox/3rv9ix8a.dev-edition-default/chrome/colors1.css
   cp ~/.cache/wal/colors.css ~/dotfiles/.config/swaync/
-  cp colors1.css ~/dotfiles/.config/wlogout/colors1.css
+  cp ~/.cache/wal/colors.css ~/dotfiles/.config/wlogout/colors1.css
   cp ~/.cache/wal/colors-kitty.conf ~/dotfiles/.config/kitty/
 
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"

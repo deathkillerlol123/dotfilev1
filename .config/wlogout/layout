@@ -6,13 +6,13 @@
 }
 {
     "label" : "Windows10",
-    "action" : "kitty /home/archboom/dotfiles/scripts/Boot-Windows10.sh",
+    "action" : "kitty /home/nixboom/dotfiles/scripts/Boot-Windows10.sh",
     "text" : "Windows10",
     "keybind" : "w"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "shutdown now",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -23,10 +23,10 @@
     "keybind" : "e"
 }
 {
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
+    "label" : "reboot",
+    "action" : "reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
 }
 {
     "label" : "suspend",
