@@ -1,0 +1,19 @@
+{config,pkgs, ...}:
+
+{
+ home.file."/.config/nvim/lazyvim.json".text = ''
+ {
+   "extras": [
+     "lazyvim.plugins.extras.coding.yanky",
+     "lazyvim.plugins.extras.editor.dial",
+     "lazyvim.plugins.extras.util.dot",
+     "lazyvim.plugins.extras.util.mini-hipatterns"
+   ],
+   "install_version": 8,
+   "news": {
+     "NEWS.md": "11866"
+   },
+   "version": 8
+ }
+ '';
+}

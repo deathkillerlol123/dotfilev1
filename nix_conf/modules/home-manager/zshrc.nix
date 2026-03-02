@@ -11,9 +11,10 @@
  
  
  eval "$(starship init zsh)"
+ eval "$(zoxide init zsh)"
  
  alias ls='eza -a --tree -L 1'
- alias z='zellij -l welcome'
+ #alias z='zellij -l welcome'
  alias pyws="~/Documents/codes/venv/bin/python"
  #alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
  

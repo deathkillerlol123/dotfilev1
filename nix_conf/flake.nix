@@ -10,14 +10,12 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
-    let
-      system = "x86_64-linx";
-    in
     {
       nixosConfigurations.nixbtw = nixpkgs.lib.nixosSystem {
+      	  system = "x86_64-linux";
       	  specialArgs = {inherit inputs;};
       	  modules = [ 
-	    ./configuration.nix
+	    ./hosts/nixboom/configuration.nix
 	    inputs.home-manager.nixosModules.default
 	  ];  
       };

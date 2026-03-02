@@ -119,6 +119,10 @@
     swaynotificationcenter
     swaybg
     btop
+
+    zoxide
+    fzf
+
     cmatrix
     neofetch
     ranger
