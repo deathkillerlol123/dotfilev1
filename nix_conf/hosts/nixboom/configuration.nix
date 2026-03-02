@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
+      #inputs.home-manager.nixosModules.default
     ];
 
   boot = {
@@ -73,12 +73,12 @@
 
   time.timeZone = "Europe/London";
 
-  home-manager = {
-  	extraSpecialArgs = {inherit inputs; };
-	users = {
-		"nixboom" = import ./home.nix;
-	};
-  };
+  #home-manager = {
+  #	extraSpecialArgs = {inherit inputs; };
+  #		users = {
+  #		"nixboom" = import ./home.nix;
+  #	};
+  #};
 
   users.users.nixboom = {
     isNormalUser = true;
@@ -113,16 +113,19 @@
     #bottles
 
     wget
-    neovim
-    kitty
     borgbackup
     swaynotificationcenter
     swaybg
-    btop
 
     zoxide
     fzf
 
+    kitty
+    starship
+    zsh
+    bash
+    neovim
+    btop
     cmatrix
     neofetch
     ranger
@@ -131,10 +134,11 @@
     copyq
     ntfs3g
     bat
+    eza
+    git
     rofi
     firefox-devedition
 
-    touchegg
 
     grim
     slurp
@@ -149,36 +153,23 @@
     libdrm
     libxkbcommon
     pixman
-    
     meson
     gcc
-    
     ninja
     gnumake
     raylib
-
-
     libdisplay-info
     hwdata
     seatd
     pcre2
+    python315
 
-    eza
     wlr-randr
     wdisplays
     whatsapp-electron
-
     discord-ptb
-
-
-    python315
-
     zed-editor
     stow
-    starship
-    bash
-    zsh
-    git
     waybar
     swww
     pywal
