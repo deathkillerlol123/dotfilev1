@@ -107,6 +107,8 @@
     gdm
     efibootmgr
 
+    nix-search-cli
+
     mangohud
     protonup-qt
     lutris
