@@ -19,12 +19,8 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
-  home.packages = [ ];
-  home.file = { 
-#    ".config/neofetch" = {
-#      source = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles/.config/neofetch";
-#      };
-  };
+  home.packages = with pkgs; [ ];
+  home.file = {  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a

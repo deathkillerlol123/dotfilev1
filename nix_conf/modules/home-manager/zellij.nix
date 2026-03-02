@@ -2,6 +2,7 @@
 
 {
  home.file."/.config/zellij/config.kdl".text = ''
+ hello
  keybinds clear-defaults=true {
      locked {
          bind "Ctrl g" { SwitchToMode "normal"; }
