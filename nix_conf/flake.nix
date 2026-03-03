@@ -7,13 +7,9 @@
     	url = "github:nix-community/home-manager";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
-    dotfiles = {
-      url = "git+https://github.com/deathkillerlol123/dotfilev1.git";
-      flake = false;
-    };
   };
 
-  outputs = { self, nixpkgs, dotfiles, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
       	  nixbtw = nixpkgs.lib.nixosSystem {

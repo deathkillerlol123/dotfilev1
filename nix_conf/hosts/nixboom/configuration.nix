@@ -80,7 +80,17 @@
   };
 
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix = {
+    settings.experimental-features = ["nix-command" "flakes"];
+    optimise = {
+      automatic = true;
+      dates = ["20:00"];
+    };
+    gc = {
+      automatic = true;
+      options = "--delete-older-than-2d";
+    };
+  };
 
   time.timeZone = "Europe/London";
 

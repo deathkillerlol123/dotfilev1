@@ -114,6 +114,14 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles/.config/dunst";
       recursive = true;
     };
+    ".config/starship.toml" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles/.config/starship.toml";
+      recursive = true;
+    };
+    ".config/mozilla/firefox/3rv9ix8a.dev-edition-default/chrome/userChrome.css" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles/.config/mozilla/firefox/3rv9ix8a.dev-edition-default/chrome/userChrome.css";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = {

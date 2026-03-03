@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "dotfiles": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1772566895,
-        "narHash": "sha256-Pg9JUnwChK9SFE5B/ub/d3pPLnAqUozT9eNLcbMd9tc=",
-        "ref": "refs/heads/main",
-        "rev": "0d9e2e1b5b8f8703841cbf900af705319106473c",
-        "revCount": 36,
-        "type": "git",
-        "url": "https://github.com/deathkillerlol123/dotfilev1.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/deathkillerlol123/dotfilev1.git"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -88,7 +72,6 @@
     },
     "root": {
       "inputs": {
-        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "nixos-grub-themes": "nixos-grub-themes",
         "nixpkgs": "nixpkgs_2"
