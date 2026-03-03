@@ -11,6 +11,6 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
   /home/nixboom/Documents \
   /home/nixboom/Downloads \
   /home/nixboom/Pictures/Screenshots \
-  /home/nixboom/dotfiles \
+  /home/nixboom/dotfiles
 
 borg list /mnt/Backups/ArchB/BorgBackups2/

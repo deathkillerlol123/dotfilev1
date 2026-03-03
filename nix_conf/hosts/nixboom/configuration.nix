@@ -1,14 +1,9 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, inputs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
-      #inputs.home-manager.nixosModules.default
     ];
 
   boot = {
@@ -50,10 +45,24 @@
     flatpak.enable = true;
     libinput.enable = true;
   };
-
   networking = {
     hostName = "nixbtw";
     networkmanager.enable = true;
+  };
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+	  Experimental = true;
+	  FastConnectable = true;
+	};
+        Policy = {
+	  AutoEnable = true;
+	};
+      };
+    };
   };
 
   xdg.portal = {
@@ -74,13 +83,6 @@
 
   time.timeZone = "Europe/London";
 
-  #home-manager = {
-  #	extraSpecialArgs = {inherit inputs; };
-  #		users = {
-  #		"nixboom" = import ./home.nix;
-  #	};
-  #};
-
   users.users.nixboom = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -89,6 +91,12 @@
       tree
       ];
   };
+  security.sudo.extraRules = [{
+     users = ["nixboom"];
+     commands = [{ command = "ALL";
+       options = ["NOPASSWD"];
+       }];
+  }];
   programs = {
     zsh.enable = true;
     mangowc.enable = true;
@@ -108,6 +116,7 @@
     efibootmgr
 
     nix-search-cli
+    blueberry
 
     mangohud
     protonup-qt
