@@ -17,6 +17,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 export EDITOR=nvim
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && source /usr/share/bash-completion/bash_completion
 export PATH="$HOME/.cargo/bin:$PATH"

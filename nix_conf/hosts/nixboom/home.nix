@@ -1,17 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs,inputs, ... }:
 
 {
-  imports = [
-    ../../modules/home-manager/hyprland.nix
-    ../../modules/home-manager/mango.nix
-    ../../modules/home-manager/kitty.nix
-    ../../modules/home-manager/neofetch.nix
-    ../../modules/home-manager/nvim.nix
-    ../../modules/home-manager/swaync.nix
-    ../../modules/home-manager/zellij.nix
-    ../../modules/home-manager/zshrc.nix
-
-  ];
   home.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
 
@@ -20,7 +9,12 @@
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
   home.packages = with pkgs; [ ];
-  home.file = {  };
+  home.file = {
+    ".config/neofetch" = {
+      source = "${inputs.dotfiles}/.config/neofetch";
+      recursive = true;
+    };
+  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -41,5 +35,7 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

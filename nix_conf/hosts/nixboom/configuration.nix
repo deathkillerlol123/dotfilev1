@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   boot = {
@@ -82,6 +83,16 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   time.timeZone = "Europe/London";
+
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs ; };
+      users = {
+        "nixboom" = import ./home.nix;
+      };
+  };
 
   users.users.nixboom = {
     isNormalUser = true;
