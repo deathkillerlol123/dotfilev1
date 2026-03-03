@@ -15,7 +15,6 @@ if [ -n "$FILE" ]; then
 
   pkill -f rofi
   cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors1.css
-  cp ~/.cache/wal/colors.css ~/dotfiles/.config/mozilla/firefox/3rv9ix8a.dev-edition-default/chrome/colors1.css
   cp ~/.cache/wal/colors.css ~/dotfiles/.config/swaync/
   cp ~/.cache/wal/colors.css ~/dotfiles/.config/wlogout/colors1.css
   cp ~/.cache/wal/colors-kitty.conf ~/dotfiles/.config/kitty/
