@@ -118,6 +118,12 @@
        options = ["NOPASSWD"];
        }];
   }];
+  system = {
+    autoUpgrade = {
+      enable = true;
+      allowReboot = false;
+    };
+  };
   programs = {
     zsh.enable = true;
     mangowc.enable = true;
