@@ -3,11 +3,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1772566189,
-        "narHash": "sha256-rLYlOzPoTGylfk66H/LWsmFHh9byaTH2vA+b8++LGco=",
+        "lastModified": 1772566895,
+        "narHash": "sha256-Pg9JUnwChK9SFE5B/ub/d3pPLnAqUozT9eNLcbMd9tc=",
         "ref": "refs/heads/main",
-        "rev": "b53c1ee7dbab017388dcf1e9121d0c6c46acb032",
-        "revCount": 34,
+        "rev": "0d9e2e1b5b8f8703841cbf900af705319106473c",
+        "revCount": 36,
         "type": "git",
         "url": "https://github.com/deathkillerlol123/dotfilev1.git"
       },
