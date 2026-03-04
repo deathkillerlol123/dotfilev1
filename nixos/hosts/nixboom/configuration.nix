@@ -169,6 +169,9 @@
     zsh
     bash
     neovim
+    helix
+
+
     btop
     cmatrix
     neofetch
