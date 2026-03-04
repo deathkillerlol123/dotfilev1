@@ -112,12 +112,15 @@
       tree
       ];
   };
-  security.sudo.extraRules = [{
-     users = ["nixboom"];
-     commands = [{ command = "ALL";
-       options = ["NOPASSWD"];
-       }];
-  }];
+  security = {
+    sudo.extraRules = [{
+      users = ["nixboom"];
+      commands = [{ command = "ALL";
+        options = ["NOPASSWD"];
+	}];
+    }];
+    pam.services.swaylock = {};
+  };
   system = {
     autoUpgrade = {
       enable = true;
@@ -155,6 +158,7 @@
     borgbackup
     swaynotificationcenter
     swaybg
+    swaylock
     wlogout
 
     zoxide
