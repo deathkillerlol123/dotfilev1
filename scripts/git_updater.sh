@@ -2,7 +2,7 @@
 
 cd ~/dotfiles/
 
-sudo cp -r /etc/nixos/* ~/dotfiles/nix_conf/
+#sudo cp -r /etc/nixos/* ~/dotfiles/nix_conf/
 
 if [ ! -d ".git" ]; then
   git init
