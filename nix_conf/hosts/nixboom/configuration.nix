@@ -79,7 +79,6 @@
 	];
   };
 
-
   nix = {
     settings.experimental-features = ["nix-command" "flakes"];
     optimise = {
@@ -121,6 +120,7 @@
     }];
     pam.services.swaylock = {};
   };
+  documentation.enable = false;
   system = {
     autoUpgrade = {
       enable = true;
