@@ -215,7 +215,6 @@
     wdisplays
     whatsapp-electron
     discord-ptb
-    zed-editor
     stow
     waybar
     swww
