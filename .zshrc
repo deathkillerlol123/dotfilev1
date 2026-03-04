@@ -9,6 +9,8 @@ bindkey "^[[6~" down-line-or-history
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
+alias nrs='sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos'
+
 alias ls='eza -a --tree -L 1'
 #alias z='zellij -l welcome'
 alias pyws="~/Documents/codes/venv/bin/python"

@@ -87,7 +87,7 @@
     };
     gc = {
       automatic = true;
-      options = "--delete-older-than-2d";
+      options = "--delete-older-than-1d";
     };
   };
 
