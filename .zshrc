@@ -10,6 +10,7 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 alias nrs='sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos'
+alias gu='~/dotfiles/scripts/git_updater.sh'
 
 alias ls='eza -a --tree -L 1'
 #alias z='zellij -l welcome'
