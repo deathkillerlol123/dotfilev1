@@ -179,7 +179,10 @@
     ntfs3g
     bat
     eza
+
     git
+    gh
+
     rofi
     firefox-devedition
 

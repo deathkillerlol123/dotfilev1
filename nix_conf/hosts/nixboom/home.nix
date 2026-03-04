@@ -126,6 +126,10 @@ in
       source = "${dotfiles}/.config/mozilla/firefox/tb14nia8.dev-edition-default/chrome/userChrome.css";
       recursive = true;
     };
+    ".local/share/applications" = {
+      source = "${dotfiles}/.local/share/applications";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = {
