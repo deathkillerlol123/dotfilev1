@@ -13,7 +13,7 @@ alias nrs='sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos'
 alias gu='~/dotfiles/scripts/git_updater.sh'
 
 alias ls='eza -a --tree -L 1'
-#alias z='zellij -l welcome'
+alias zell='zellij -l welcome'
 alias pyws="~/Documents/codes/venv/bin/python"
 #alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
 

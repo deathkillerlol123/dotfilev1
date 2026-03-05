@@ -169,7 +169,7 @@
     zsh
     bash
     neovim
-    helix
+    zed-editor
 
 
     btop
