@@ -189,7 +189,6 @@
     rofi
     firefox-devedition
 
-
     grim
     slurp
     wl-clipboard
@@ -216,8 +215,10 @@
 
     wlr-randr
     wdisplays
+    
     whatsapp-electron
     discord-ptb
+
     stow
     waybar
     swww
