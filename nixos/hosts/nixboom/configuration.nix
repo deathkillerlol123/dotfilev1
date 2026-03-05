@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
@@ -26,16 +26,15 @@
     displayManager = {
       sddm = {
         enable = false;
-	wayland.enable = true;
+       	wayland.enable = true;
       };
       gdm = {
         enable = true;
-	wayland = true;
+        wayland = true;
       };
     };
     xserver = {
       enable = true;
-      windowManager.qtile.enable = true;
       displayManager.lightdm.enable = false;
     };
     pipewire = {
@@ -147,6 +146,8 @@
 
     nix-search-cli
     blueberry
+    
+    tokyonight-gtk-theme
 
     mangohud
     protonup-qt
@@ -215,7 +216,7 @@
 
     wlr-randr
     wdisplays
-    
+
     whatsapp-electron
     discord-ptb
 
@@ -277,4 +278,3 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-
