@@ -11,6 +11,8 @@ eval "$(zoxide init zsh)"
 
 alias nrs='sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos'
 alias gu='~/dotfiles/scripts/git_updater.sh'
+alias up='~/dotfiles/scripts/updatesys_Nixos.sh'
+
 
 alias ls='eza -a --tree -L 1'
 alias zell='zellij -l welcome'
@@ -20,6 +22,7 @@ alias pyws="~/Documents/codes/venv/bin/python"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/usr/bin/python3"
 
+ZED_ALLOW_ROOT=true
 
 #source /home/archboom/.config/broot/launcher/bash/br
 
