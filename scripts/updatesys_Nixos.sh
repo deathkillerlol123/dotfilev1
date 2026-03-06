@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos
+~/dotfiles/scripts/git_updater.sh
+
 sudo nix-collect-garbage -d
 home-manager expire-generations -d
 nix store gc
@@ -8,6 +11,4 @@ home-manager remove-generations old
 
 nh clean all
 
-sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos
-~/dotfiles/scripts/git_updater.sh
 

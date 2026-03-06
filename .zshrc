@@ -21,8 +21,3 @@ alias pyws="~/Documents/codes/venv/bin/python"
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/usr/bin/python3"
-
-ZED_ALLOW_ROOT=true
-
-#source /home/archboom/.config/broot/launcher/bash/br
-
