@@ -84,10 +84,6 @@
       automatic = true;
       dates = ["20:00"];
     };
-    gc = {
-      automatic = false;
-      options = "--delete-older-than-1d";
-    };
   };
 
   time.timeZone = "Europe/London";
