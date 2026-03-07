@@ -1,5 +1,4 @@
 {
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
@@ -13,13 +12,13 @@
     {
       nixosConfigurations = {
       	  nixbtw = nixpkgs.lib.nixosSystem {
-	    system = "x86_64-linux";
-	    specialArgs = {inherit inputs;};
-	    modules = [ 
-	      ./hosts/nixboom/configuration.nix
-	      inputs.home-manager.nixosModules.default
-	      ];  
-	    };
-	  };
-	};
+      	    system = "x86_64-linux";
+      	    specialArgs = {inherit inputs;};
+      	    modules = [ 
+      	      ./hosts/nixboom/configuration.nix
+      	      inputs.home-manager.nixosModules.default
+    	      ];  
+         };         
+   	  };
+   	};
 }

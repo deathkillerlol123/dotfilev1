@@ -1,4 +1,5 @@
 swww-daemon &
+eww daemon
 
 brightnessctl set 40%
 
