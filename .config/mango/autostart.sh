@@ -1,6 +1,6 @@
 swww-daemon &
 
-brightnessctl s 15%
+brightnessctl set 40%
 
 copyq &
 hyprpm reload
