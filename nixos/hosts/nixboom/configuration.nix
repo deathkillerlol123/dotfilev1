@@ -64,18 +64,13 @@
       };
     };
   };
-
   xdg.portal = {
   	enable = true;
-	config = {
-		common = {
-		default = "*";
-		};
-	};
-	extraPortals = [
-		pkgs.xdg-desktop-portal-hyprland
-		pkgs.xdg-desktop-portal-gtk
-	];
+   config = {
+     common = {
+     		default = "*";
+   		};
+  	};
   };
 
   nix = {
@@ -145,56 +140,62 @@
   environment.systemPackages = with pkgs; [
     gdm
     efibootmgr
-
-    nix-search-cli
-    blueberry
     
-    brightnessctl
+ 		xdg-desktop-portal-hyprland
+		xdg-desktop-portal-gtk
     mangohud
     protonup-qt
-    lutris
     heroic
-    #bottles
-
-    wget
+    nix-search-cli
+    brightnessctl    
+    blueberry
+    wlr-randr
     borgbackup
+    wdisplays   
+    git
+    gh
+
     swaynotificationcenter
     swaybg
     swaylock
     wlogout
-
-    zoxide
-    fzf
+    nautilus  
+    rofi
+    waybar
+    playerctl
+    alsa-utils
+    pavucontrol
+   
+    firefox-devedition
+    whatsapp-electron
+    discord-ptb
 
     kitty
     starship
     zsh
     bash
+    zoxide
     neovim
     zed-editor
-
-
-    btop
-    cmatrix
-    neofetch
-    ranger
     zellij
-    nautilus
     copyq
-    ntfs3g
-    bat
-    eza
-
-    git
-    gh
-
-    rofi
-    firefox-devedition
-
     grim
     slurp
     wl-clipboard
     swappy
+ 
+    bat
+    eza
+    btop
+    cmatrix
+    neofetch
+    ranger
+    stow
+    swww
+    pywal
+    kdePackages.gwenview  
+    ntfs3g
+
 
     mangowc
     glibc
@@ -215,24 +216,10 @@
     pcre2
     python315
 
-    wlr-randr
-    wdisplays
-
-    whatsapp-electron
-    discord-ptb
-
-    stow
-    waybar
-    swww
-    pywal
-    kdePackages.gwenview
-    playerctl
-    alsa-utils
-    pavucontrol
   ];
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
-	nerd-fonts.droid-sans-mono
+  	nerd-fonts.droid-sans-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -243,10 +230,7 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -259,23 +243,7 @@
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
 
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
   # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
-  # to actually do that.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
