@@ -2,11 +2,10 @@
 
 {
   imports =
-    [
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
-
+  [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
