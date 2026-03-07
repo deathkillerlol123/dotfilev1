@@ -14,14 +14,14 @@
       grub = {
         enable = true;
         devices = ["nodev"];
-	efiSupport = true;
-	useOSProber = true;
-	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.hyperfluent;
+       	efiSupport = true;
+       	useOSProber = true;
+       	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.hyperfluent;
       };
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
   };
-
+  
   services = {
     displayManager = {
       sddm = {
@@ -55,12 +55,12 @@
       powerOnBoot = true;
       settings = {
         General = {
-	  Experimental = true;
-	  FastConnectable = true;
-	};
+          Experimental = true;
+          FastConnectable = true;
+       	};
         Policy = {
-	  AutoEnable = true;
-	};
+       	  AutoEnable = true;
+       	};
       };
     };
   };
@@ -80,9 +80,7 @@
       dates = ["20:00"];
     };
   };
-
   time.timeZone = "Europe/London";
-
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -92,7 +90,6 @@
         "nixboom" = import ./home.nix;
       };
   };
-
   users.users.nixboom = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -106,17 +103,17 @@
       users = ["nixboom"];
       commands = [{ command = "ALL";
         options = ["NOPASSWD"];
-	}];
+      }];
     }];
     pam.services.swaylock = {};
   };
-  documentation.enable = false;
   system = {
     autoUpgrade = {
       enable = true;
       allowReboot = false;
     };
   };
+  documentation.enable = false;
   programs = {
     zsh.enable = true;
     mangowc.enable = true;
