@@ -77,6 +77,10 @@ in
       source = "${dotfiles}/.config/nvim";
       recursive = true;
     };
+    ".config/zed" = {
+      source = "${dotfiles}/.config/zed";
+      recursive = true;
+    };
     ".config/niri" = {
       source = "${dotfiles}/.config/niri";
       recursive = true;
