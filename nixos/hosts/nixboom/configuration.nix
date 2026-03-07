@@ -1,5 +1,4 @@
 { config, lib, pkgs, inputs, ... }:
-
 {
   imports = [
     ./hardware-configuration.nix
@@ -38,6 +37,13 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      alsa.enable = true;
+      wireplumber.enable = true;
+      extraConfig.pipewire-pulse."auto-switch" = {
+        "pulse.cmd" =[
+          { cmd = "load-module"; args = "module-switch-on-connect"; }
+        ];
+      };
     };
     desktopManager.gnome.enable = true;
     flatpak.enable = true;
@@ -91,7 +97,8 @@
        	  AutoEnable = true;
        	};
       };
-    };  };
+    };
+  };
   xdg.portal = {
    	enable = true;
     config = {
@@ -132,11 +139,12 @@
     
  		xdg-desktop-portal-hyprland
 		xdg-desktop-portal-gtk
+		xdg-desktop-portal-wlr
     mangohud
     protonup-qt
     heroic
     nix-search-cli
-    brightnessctl    
+    brightnessctl 
     blueberry
     wlr-randr
     borgbackup
@@ -156,6 +164,8 @@
     playerctl
     alsa-utils
     pavucontrol
+    pulseaudio
+    wireplumber
    
     firefox-devedition
     whatsapp-electron
