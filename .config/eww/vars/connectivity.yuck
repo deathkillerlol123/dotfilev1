@@ -1,0 +1,92 @@
+;; ethernet ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;; (defpoll interface
+;;          :interval "1m"
+;;          "~/.local/bin/get-network-interface.sh")
+
+(deflisten eth-status
+           :initial 1
+           "~/.local/bin/netctl.sh monitor status ethernet")
+
+
+;; wifi ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(deflisten wifi-status
+           :initial 0
+           "~/.local/bin/netctl.sh monitor status wifi")
+
+(deflisten wifi-connection
+           :initial ""
+           "~/.local/bin/netctl.sh monitor connection wifi")
+
+
+;; vpn ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(deflisten vpn-status
+           :initial 0
+           "~/.local/bin/vpnctl.sh monitor status")
+
+(deflisten vpn-region
+           :initial ""
+           "~/.local/bin/vpnctl.sh monitor region")
+
+
+;; bluetooth ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(defpoll bt-status
+         :initial "off"
+         :interval "2s"
+         "~/.local/bin/btctl.sh status")
+
+(defpoll bt-devices-connected
+         :initial ""
+         :interval "5s"
+         "~/.local/bin/btctl.sh get devices connected")
+
+;; (defpoll bt-devices-paired
+;;          :initial ""
+;;          :interval "5s"
+;;          "~/.local/bin/btctl.sh get devices paired")
+
+(defpoll bt-devices-paired-json
+         :initial ""
+         :interval "2s"
+         "~/.config/eww/scripts/get-bt-devices-list.sh")
+
+
+;; bluetooth devices ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(defpoll bt-headphones-blocked
+         :initial 1
+         :interval "5s"
+         "~/.local/bin/btctl.sh device blocked momentum-4")
+
+(defpoll bt-speakers-blocked
+         :initial 1
+         :interval "5s"
+         "~/.local/bin/btctl.sh device blocked google-home")
+
+
+;; battery devices ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(defpoll battery-devices-json
+         :initial "[]"
+         :interval "5s"
+         :run-while { bt-status > 0 }
+         "~/.config/eww/scripts/get-battery-devices-list.sh")
+
+;; DEPRECATED
+;; -----------------------
+;; (defpoll charge
+;;          :interval "10s"
+;;          :iniitial 50
+;;          "~/.local/bin/get-battery.sh percentage battery_ps_controller_battery_a0oabo51o62o65o1d")
+
+;; (defpoll present
+;;          :interval "10s"
+;;          :iniitial 50
+;;          "~/.local/bin/get-battery.sh present battery_ps_controller_battery_a0oabo51o62o65o1d")
+
+;; (defpoll state
+;;          :interval "10s"
+;;          :iniitial 50
+;;          "~/.local/bin/get-battery.sh state battery_ps_controller_battery_a0oabo51o62o65o1d")
+
+;; (defpoll warning-level
+;;          :interval "10s"
+;;          :iniitial 50
+;;          "~/.local/bin/get-battery.sh warning-level battery_ps_controller_battery_a0oabo51o62o65o1d")

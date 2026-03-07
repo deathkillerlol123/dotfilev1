@@ -121,6 +121,10 @@ in
       source = "${dotfiles}/.config/eww";
       recursive = true;
     };
+    ".config/quickshell" = {
+      source = "${dotfiles}/.config/quickshell";
+      recursive = true;
+    };  
     ".config/dunst" = {
       source = "${dotfiles}/.config/dunst";
       recursive = true;

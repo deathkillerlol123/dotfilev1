@@ -1,0 +1,193 @@
+* {
+    all: unset;
+}
+
+@import "themes/base16.scss";
+
+// global vars -----------------------------------------------------------------
+$text-font:
+    "Hack Nerd Font", "Source Han Sans JP", "Font Awesome 7 Free Solid",
+    "FontAwesome", "Roboto";
+$icon-font: "Font Awesome 7 Free Solid";
+
+$accent-color: $base0A;
+$accent-line-width: 2px;
+$indicator-line-width: 3px;
+
+$checkbox-width: 30px;
+$checkbox-gap: 3px;
+$checkbox-margin: 20pt;
+
+$transition-duration: 0.35s;
+
+// global styles ===============================================================
+.main-bar,
+.second-bar,
+.powermenu-panel {
+    background-color: rgba($base00, 0.2);
+}
+
+.icon,
+.workspaces button {
+    font: 12pt $icon-font;
+}
+
+.black {
+    color: $base00;
+}
+.gray {
+    color: $base04;
+}
+.white {
+    color: $base07;
+}
+.red,
+.state-urgent {
+    color: $base08;
+}
+.orange {
+    color: $base09;
+}
+.yellow,
+.state-warning {
+    color: $base0A;
+}
+.green,
+.state-good {
+    color: $base0B;
+}
+.cyan {
+    color: $base0C;
+}
+.blue {
+    color: $base0D;
+}
+.purple {
+    color: $base0E;
+}
+.special {
+    color: $base0F;
+}
+
+.shutdown {
+    color: $base08;
+}
+.reboot {
+    color: $base0A;
+}
+.suspend {
+    color: $base0D;
+}
+.lock-screen {
+    color: $base0C;
+}
+.log-out {
+    color: $base0B;
+}
+
+.shutdown,
+.reboot,
+.suspend,
+.lock-screen,
+.log-out {
+    font-size: 14pt;
+}
+
+// button ----------------------------------------------------------------------
+button.string {
+    font-family: $text-font;
+    font-size: 12pt;
+
+    padding: 7px 20px;
+    border-radius: 1.5rem;
+}
+
+button.fill {
+    color: $base02;
+    background-color: rgba($accent-color, 0.8);
+}
+
+button.outline {
+    color: $accent-color;
+    border: 2px solid rgba($accent-color, 0.8);
+}
+
+button:hover {
+    transition-duration: $transition-duration;
+}
+
+.x-button {
+    background-color: rgba($base03, 0.5);
+    border-radius: 1.5rem;
+}
+
+// checkbox --------------------------------------------------------------------
+checkbutton {
+    background-color: rgba($base04, 0.5);
+    border-radius: 1.5rem;
+    margin-left: $checkbox-margin;
+    transition-duration: $transition-duration;
+    check {
+        color: transparent;
+        background-color: rgba($base02, 0.8);
+        padding: 5px;
+        border-radius: 1.5rem;
+        margin: $checkbox-gap $checkbox-width $checkbox-gap $checkbox-gap;
+        transition-duration: $transition-duration;
+    }
+}
+
+checkbutton:indeterminate {
+    check {
+        margin: $checkbox-gap $checkbox-width/2 $checkbox-gap $checkbox-width/2;
+    }
+}
+
+checkbutton:checked {
+    background-color: rgba($accent-color, 0.8);
+    check {
+        background-color: shade($accent-color, 0.5);
+        margin: $checkbox-gap $checkbox-gap $checkbox-gap $checkbox-width;
+    }
+}
+
+// progress bar ----------------------------------------------------------------
+progressbar {
+    background-color: transparent;
+    transition-duration: 3s;
+
+    trough {
+        background-color: rgba($base03, 0.5);
+
+        progress {
+            background-color: rgba($base06, 0.8);
+        }
+    }
+
+    trough,
+    trough progress {
+        min-height: 1em;
+    }
+}
+
+// templates -------------------------------------------------------------------
+
+.config.heading {
+    font-family: $text-font;
+    font-size: 22pt;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba($base05, 0.5);
+}
+
+.entry.toggle {
+    font-family: $text-font;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($base03, 0.5);
+}
+
+// imports ---------------------------------------------------------------------
+@import "modules/_style.scss";
+@import "modules/templates/_style.scss";
+@import "panels/_style.scss";
+@import "panels/status-bars/_style.scss";

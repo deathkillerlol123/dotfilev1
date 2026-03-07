@@ -148,6 +148,8 @@
     wlr-randr
     borgbackup
     wdisplays   
+    quickshell
+    eww
     git
     gh
 

@@ -1,1 +1,63 @@
-(include "./music-widget/eww.yuck")
+;; variables
+;;------------------------------------------------------------------------------
+(include "vars/connectivity.yuck")
+(include "vars/images.yuck")
+(include "vars/keyboard.yuck")
+(include "vars/music.yuck")
+(include "vars/player.yuck")
+(include "vars/private.yuck")
+(include "vars/scripts.yuck")
+(include "vars/states.yuck")
+(include "vars/system.yuck")
+(include "vars/systray.yuck")
+(include "vars/theme.yuck")
+(include "vars/time.yuck")
+(include "vars/weather.yuck")
+(include "vars/wm.yuck")
+
+;; system
+(include "panels/confirmation-window.yuck")
+(include "panels/indicators.yuck")
+(include "panels/powermenu.yuck")
+(include "panels/which-key.yuck")
+
+;; panels: status bars
+;;------------------------------------------------------------------------------
+(include "panels/status-bars/primary.yuck")
+(include "panels/status-bars/secondary.yuck")
+(include "panels/status-bars/widgets.yuck")
+
+;; panels: config
+(include "panels/quick-settings.yuck")
+(include "panels/autostart.yuck")
+
+;; panels: dashboards
+(include "panels/monitor.yuck")
+
+;; panels: office
+(include "panels/calendar.yuck")
+
+;; panels: misc
+(include "panels/playground.yuck")
+
+;; modules
+;;------------------------------------------------------------------------------
+(include "modules/charge-levels.yuck")
+(include "modules/music-player.yuck")
+(include "modules/quick-toggles.yuck")
+(include "modules/system-graphs.yuck")
+(include "modules/updates-list.yuck")
+(include "modules/weather.yuck")
+
+;; module templates
+(include "modules/templates/circular-progress.yuck")
+(include "modules/templates/config-heading.yuck")
+(include "modules/templates/graphs.yuck")
+(include "modules/templates/icon.yuck")
+(include "modules/templates/quick-toggle-submenu.yuck")
+(include "modules/templates/quick-toggle.yuck")
+(include "modules/templates/slider.yuck")
+(include "modules/templates/x-button.yuck")
+
+;; modules
+(include "modules/disks/mod.yuck")

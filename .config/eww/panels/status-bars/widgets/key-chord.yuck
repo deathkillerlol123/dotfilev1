@@ -1,0 +1,12 @@
+(defwidget
+ bar-key-chord []
+ (revealer
+  :transition "slideleft"
+  :duration revealer-duration
+  :reveal { wm-key-chord != "" }
+  (box :orientation "h"
+       :space-evenly false
+
+       (bar-separator)
+       (label :class "widget key-chord"
+              :text wm-key-chord))))

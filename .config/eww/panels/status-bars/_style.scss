@@ -1,0 +1,186 @@
+.bar {
+    color: $base07;
+    font-family: $text-font;
+    font-size: 12pt;
+    text-shadow: 1 1 $base00;
+    .gravity.left {
+        padding-left: 7px;
+    }
+    .gravity.right {
+        padding-right: 7px;
+    }
+
+    .widget.colored {
+        box-shadow: inset 0 (-$accent-line-width) $base04;
+        padding: 0 7px;
+    }
+
+    // status widgets coloring
+    //----------------------------------------------------------------------------
+    .widget.colored.volume {
+        box-shadow: inset 0 (-$accent-line-width) $base08;
+    }
+    .widget.colored.cpu-thermal {
+        box-shadow: inset 0 (-$accent-line-width) $base09;
+    }
+    .widget.colored.cpu {
+        box-shadow: inset 0 (-$accent-line-width) $base0A;
+    }
+    .widget.colored.ram {
+        box-shadow: inset 0 (-$accent-line-width) $base0B;
+    }
+    .widget.colored.network {
+        box-shadow: inset 0 (-$accent-line-width) $base0C;
+    }
+    .widget.colored.updates {
+        box-shadow: inset 0 (-$accent-line-width) $base0D;
+    }
+    .widget.colored.battery {
+        box-shadow: inset 0 (-$accent-line-width) $base0E;
+    }
+
+    // widgets
+    //----------------------------------------------------------------------------
+    .widget.separator {
+        color: $base04;
+        text-shadow: none;
+        padding: 0 1px;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.workspaces {
+        .workspace {
+            font: 12pt $icon-font;
+            padding: 0 7px;
+        }
+
+        .workspace.empty {
+            color: $base07;
+            opacity: 0.4;
+        }
+        .workspace.occupied {
+            color: $base07;
+        }
+        .workspace.urgent {
+            color: $base08;
+        }
+
+        .workspace.monitor_0 {
+            background-color: $base03;
+            box-shadow: inset 0 (-$indicator-line-width) $base0E;
+        }
+
+        .workspace.monitor_1 {
+            background-color: $base03;
+            box-shadow: inset 0 ($indicator-line-width) $base04;
+        }
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.layout {
+        color: $base0C;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.title {
+        color: $base0A;
+        font-weight: bold;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.key-chord {
+        color: $base01;
+        background: $base0A;
+        font-weight: bold;
+        padding: 7px;
+        text-shadow: none;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.player {
+        color: $base06;
+
+        .player-name {
+            color: $base01;
+            background: $base0B;
+            padding: 7px;
+            font-weight: bold;
+            text-shadow: none;
+        }
+
+        .track-info {
+            .artist {
+                font-weight: bold;
+            }
+            .separator {
+                color: $base04;
+            }
+        }
+
+        .playback-info {
+            color: $base03;
+        }
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.audio-output {
+        color: $base01;
+        background: $base0B;
+        font-weight: bold;
+        padding: 7px;
+        text-shadow: none;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.updates {
+        .count,
+        .flags {
+            padding-left: 7px;
+        }
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.network {
+        .graph.net-down {
+            color: $base0D;
+        }
+
+        .graph.net-up {
+            color: $base0A;
+        }
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.uptime {
+        color: $base04;
+    }
+
+    //----------------------------------------------------------------------------
+    .widget.profile {
+        .face {
+            margin: 5px;
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 50%;
+            border: 2px solid $base04;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+.widget.security-indicators {
+    .indicator.dot {
+        margin-right: 5px;
+    }
+    .indicator.dot.screen {
+        color: $base09;
+    }
+    .indicator.dot.mic {
+        color: $base0B;
+    }
+    .indicator.dot.idle {
+        color: $base0E;
+    }
+}
