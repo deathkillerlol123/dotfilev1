@@ -1,9 +1,0 @@
-(defwidget x-button [?onclick]
-           (eventbox :class "x-button"
-                     :width 40
-                     :height 40
-                     :onclick onclick
-                     :cursor "pointer"
-
-                     (label :class "icon"
-                            :text "xmark")))

@@ -1,8 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports =
-  [
+  imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
   ];
@@ -20,7 +19,7 @@
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
   };
-  
+  time.timeZone = "Europe/London"; 
   services = {
     displayManager = {
       sddm = {
@@ -42,12 +41,43 @@
     };
     desktopManager.gnome.enable = true;
     flatpak.enable = true;
-    libinput.enable = true;
-  };
+    libinput.enable = true;  };
   networking = {
     hostName = "nixbtw";
-    networkmanager.enable = true;
-  };
+    networkmanager.enable = true;  };
+  system = {
+    autoUpgrade = {
+      enable = true;
+      allowReboot = false;
+    };  };
+  nix = {
+    settings.experimental-features = ["nix-command" "flakes"];
+    optimise = {
+      automatic = true;
+      dates = ["20:00"];
+    };  };
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs ; };
+      users = {
+        "nixboom" = import ./home.nix;
+      };  };
+  users.users.nixboom = {
+    isNormalUser = true;
+    shell = pkgs.zsh;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [  
+    ];  };  
+  security = {
+    sudo.extraRules = [{
+      users = ["nixboom"];
+      commands = [{ command = "ALL";
+        options = ["NOPASSWD"];
+      }];
+    }];
+    pam.services.swaylock = {};  };  
   hardware = {
     bluetooth = {
       enable = true;
@@ -61,57 +91,14 @@
        	  AutoEnable = true;
        	};
       };
-    };
-  };
+    };  };
   xdg.portal = {
-  	enable = true;
-   config = {
-     common = {
-     		default = "*";
-   		};
-  	};
-  };
-
-  nix = {
-    settings.experimental-features = ["nix-command" "flakes"];
-    optimise = {
-      automatic = true;
-      dates = ["20:00"];
-    };
-  };
-  time.timeZone = "Europe/London";
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs ; };
-      users = {
-        "nixboom" = import ./home.nix;
-      };
-  };
-  users.users.nixboom = {
-    isNormalUser = true;
-    shell = pkgs.zsh;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-      ];
-  };
-  security = {
-    sudo.extraRules = [{
-      users = ["nixboom"];
-      commands = [{ command = "ALL";
-        options = ["NOPASSWD"];
-      }];
-    }];
-    pam.services.swaylock = {};
-  };
-  system = {
-    autoUpgrade = {
-      enable = true;
-      allowReboot = false;
-    };
-  };
+   	enable = true;
+    config = {
+      common = {
+      		default = "*";
+    		};
+   	};  };
   documentation.enable = false;
   programs = {
     zsh.enable = true;
@@ -129,10 +116,16 @@
       clean.extraArgs = "--keep-since 1d --keep 2";
       flake = "/home/nixboom/dotfiles/nixos/";
       };
-  };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+      ];
+    };  };
   nixpkgs.config = {
-    allowUnfree = true;
-  };
+    allowUnfree = true;  };
+  fonts.packages = with pkgs; [
+  	nerd-fonts.fira-code
+  	nerd-fonts.droid-sans-mono  ];
   environment.systemPackages = with pkgs; [
     gdm
     efibootmgr
@@ -194,7 +187,6 @@
     kdePackages.gwenview  
     ntfs3g
 
-
     mangowc
     glibc
     wayland
@@ -213,11 +205,6 @@
     seatd
     pcre2
     python315
-
-  ];
-  fonts.packages = with pkgs; [
-  	nerd-fonts.fira-code
-  	nerd-fonts.droid-sans-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

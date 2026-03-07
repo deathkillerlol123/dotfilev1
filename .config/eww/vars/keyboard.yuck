@@ -1,4 +1,0 @@
-(defpoll kbd
-         :initial "us"
-         :interval "1s"
-         "~/.local/bin/get-lang.sh")

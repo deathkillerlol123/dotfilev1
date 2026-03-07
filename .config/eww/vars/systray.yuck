@@ -1,5 +1,0 @@
-(defpoll trayer-width
-         :initial "0"
-         :interval "2s"
-         :run-while true
-         "~/.local/bin/get-trayer-width.sh")
