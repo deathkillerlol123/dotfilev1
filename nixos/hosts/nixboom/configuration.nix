@@ -136,6 +136,7 @@
   environment.systemPackages = with pkgs; [
     gdm
     efibootmgr
+    os-prober
     
  		xdg-desktop-portal-hyprland
 		xdg-desktop-portal-gtk
@@ -146,6 +147,7 @@
     nix-search-cli
     brightnessctl 
     blueberry
+    cava
     wlr-randr
     borgbackup
     wdisplays   
