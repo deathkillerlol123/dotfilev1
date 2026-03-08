@@ -127,7 +127,8 @@
       enable = true;
       libraries = with pkgs; [
       ];
-    };  };
+    };
+  };
   nixpkgs.config = {
     allowUnfree = true;  };
   fonts.packages = with pkgs; [
@@ -145,9 +146,9 @@
     protonup-qt
     heroic
     nix-search-cli
-    brightnessctl 
+    brightnessctl
     blueberry
-    cava
+    cavasik
     wlr-randr
     borgbackup
     wdisplays   
