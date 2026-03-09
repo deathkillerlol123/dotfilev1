@@ -16,7 +16,7 @@
        	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
-    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
+    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet" "loglevel=3"];
   };
   services = {
     displayManager = {
@@ -242,9 +242,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -252,11 +249,11 @@
   # networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  # (/run/current-system/configuration.nix). This is useful in case you 
+  # not available with flakes
+  #system.copySystemConfiguration = true;
 
   # Most users should NEVER change this value after the initial install, for any reason,
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.11";
 
 }
