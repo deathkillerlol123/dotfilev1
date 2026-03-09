@@ -18,15 +18,16 @@
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
   };
-  time.timeZone = "Europe/London"; 
   services = {
     displayManager = {
       sddm = {
-        enable = false;
+        enable = true;
        	wayland.enable = true;
+        package = pkgs.kdePackages.sddm;
+        theme = "sddm-astronaut-theme";
       };
       gdm = {
-        enable = true;
+        enable = false;
         wayland = true;
       };
     };
@@ -48,6 +49,7 @@
     desktopManager.gnome.enable = true;
     flatpak.enable = true;
     libinput.enable = true;  };
+  time.timeZone = "Europe/London"; 
   networking = {
     hostName = "nixbtw";
     networkmanager.enable = true;  };
