@@ -117,34 +117,6 @@
 	"on-scroll-down": "shift_down"
 },
 
-"clock#2": {
-    "format": " {:%I:%M %p}", // AM PM format
-    //"format": "  {:%H:%M}",// 24H
-    "format-alt": "{:%A  |  %H:%M  |  %e %B}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-},
-
-"clock#3": {
-    "format": "{:%I:%M %p - %d/%b}",//for AM/PM
-    //"format": "{:%H:%M - %d/%b}",// 24H
-	"tooltip": false
-},
-
-"clock#4": {
-	"interval": 60,
-    "format": "{:%B | %a %d, %Y | %I:%M %p}",// AM PM format
-    //"format": "{:%B | %a %d, %Y | %H:%M}",// 24H
-	"format-alt": "{:%a %b %d, %G}",
-	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-},
-
-"clock#5": {
-    "format": "{:%A, %I:%M %P}",// AM PM format
-    //"format": "{:%a %d | %H:%M}",// 24H
-	"format-alt": "{:%A, %d %B, %Y (%R)}",
-	"tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-},
-
 "cpu": {
 	"format": "{usage}% 󰍛",
 	"interval": 1,
@@ -167,32 +139,6 @@
 	"tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
 },
 
-"hyprland/language": {
-	"format": "Lang: {}",
-	"format-en": "US",
-	"format-tr": "Korea",
-	"keyboard-name": "at-translated-set-2-keyboard",
-	"on-click": "hyprctl switchxkblayout $SET_KB next"
-},
-
-"hyprland/submap": {
-	"format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
-	"tooltip": false,
-},
-
-"hyprland/window": {
-	"format": "{}",
-	"max-length": 55,
-	"separate-outputs": true,
-	"offscreen-css": true,
-	"offscreen-css-text": "(inactive)",
-	"rewrite": {
-		"(.*) — Mozilla Firefox": " $1",
-		"(.*) - fish": "> [$1]",
-		"(.*) - zsh": "> [$1]",
-		"(.*) - $term": "> [$1]",
-	},
-},
 
 "idle_inhibitor": {
 	"tooltip": true,
@@ -203,19 +149,6 @@
 		"activated": "  ",
 		"deactivated": "  ",
 	}
-},
-
-"keyboard-state": {
-	//"numlock": true,
-	"capslock": true,
-	"format": {
-		"numlock": "N {icon}",
-		"capslock": "󰪛 {icon}",
-	},
-	"format-icons": {
-		"locked": "",
-		"unlocked": ""
-	},
 },
 
 "memory": {

@@ -25,7 +25,10 @@
       "transition-left-to-right": true,
     },
   "modules": [
-    "pulseaudio",
+    "temperature",     
+    "cpu",
+    "memory",
+    "disk",
   ]
 },
 "group/notifytray": {

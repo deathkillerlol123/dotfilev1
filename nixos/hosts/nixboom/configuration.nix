@@ -138,6 +138,7 @@
     gdm
     efibootmgr
     os-prober
+    lm_sensors
     
  		xdg-desktop-portal-hyprland
 		xdg-desktop-portal-gtk
