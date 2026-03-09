@@ -3,7 +3,6 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/nbfc.nix
   ];
   boot = {
     loader = {
