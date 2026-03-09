@@ -16,7 +16,7 @@
        	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
-    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet" "loglevel=0"];
+    kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
   };
   services = {
     displayManager = {
