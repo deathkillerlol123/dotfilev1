@@ -21,7 +21,7 @@
   services = {
     displayManager = {
       sddm = {
-        enable = true;
+        enable = false;
        	wayland.enable = true;
         package = pkgs.kdePackages.sddm;
         theme = "sddm-astronaut-theme";
@@ -29,6 +29,9 @@
       gdm = {
         enable = false;
         wayland = true;
+      };
+      ly = {
+        enable = true;
       };
     };
     xserver = {
@@ -140,6 +143,8 @@
   	nerd-fonts.droid-sans-mono  ];
   environment.systemPackages = with pkgs; [
     gdm
+    ly
+    
     efibootmgr
     os-prober
     lm_sensors
