@@ -26,8 +26,6 @@
     },
   "modules": [
     "pulseaudio",
-    "network",
-    "battery"
   ]
 },
 "group/notifytray": {

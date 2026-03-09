@@ -37,7 +37,7 @@ window {
     padding:                           0px;
     border:                            2px;
     border-radius:                     1%;
-    border-color:                      @color11;
+    border-color:                      @color9;
     background-color:                  @color0;
     spacing:                           0;
     children:                          [mainbox];
@@ -59,7 +59,7 @@ message {
 }
 
 message {
-    font:                              @color4;
+    font:                              @color9;
     color:                             @color0;
 }
 
@@ -69,13 +69,13 @@ inputbar {
     background-color:                  @color0;
     border:                            2px 2px 2px 2px;
    // border-radius:                   15px 15px 0px 0px;
-    border-color:                      @color11;
-    font:                              @color4;
+    border-color:                      @color9;
+    font:                              @color1;
 }
 
 entry,prompt,case-indicator {
     text-font:                         inherit;
-    text-color:                        @color4;
+    text-color:                        @color6;
 }
 
 prompt {
@@ -85,9 +85,9 @@ prompt {
 listview {
     padding:                           3px;
 //    border-radius:                   0px 0px 15px 15px;
-    border-color:                      @color11;
+    border-color:                      @color9;
     border:                            0px 2px 2px 2px;
-    background-color:                  @background;
+    background-color:                  @color0;
     dynamic:                           true;
     lines:                             4;
     columns:                           1;
@@ -99,7 +99,7 @@ element {
     border:                            2px;
     border-radius:                     0px;
     background-color:                  @element-bg;
-    color:                             @color4;
+    color:                             @color6;
     font:                              inherit;
 }
 
@@ -109,8 +109,8 @@ element-text {
 }
 
 element selected.normal {
-    background-color:                  @color4;
-    text-color: @color2;
+    background-color:                  @color1;
+    text-color: @color6;
 }
 
 element normal active {

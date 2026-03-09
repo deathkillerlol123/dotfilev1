@@ -10,14 +10,12 @@
   border-radius: 20px;
 }
 
-
-
 window#waybar,
 window#waybar.empty,
 window#waybar.empty #window {
   background-color: @background-color;
   border: 10px;
-}
+  }
 
 tooltip {
   color: @border;

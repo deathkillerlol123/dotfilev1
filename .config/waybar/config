@@ -34,8 +34,8 @@
 "group/down":{
     "orientation":"inherit",
     "modules":[
-      "custom/pipe",
-      "group/extra",
+      "pulseaudio",
+      "battery",
       "custom/pipe",
       "group/notifytray"
     ]
@@ -50,7 +50,6 @@
 "group/up":{
     "orientation": "inherit",
     "modules": [
-     "group/git_system",
       "clock",
     ]
   }
