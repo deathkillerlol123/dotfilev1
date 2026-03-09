@@ -14,12 +14,12 @@ if [ -n "$FILE" ]; then
   wal -i "$FILE" -n
 
   pkill -f rofi
-  cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors1.css
+  cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors.css
   cp ~/.cache/wal/colors.css ~/dotfiles/.config/swaync/
   cp ~/.cache/wal/colors-kitty.conf ~/dotfiles/.config/kitty/
   cp ~/.cache/wal/colors-zed.json ~/dotfiles/.config/zed/themes/pywal.json
 
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"
-  mv colors1.rasi ~/dotfiles/.config/rofi/colors1.rasi
+  mv colors.rasi ~/dotfiles/.config/rofi/colors.rasi
 
 fi

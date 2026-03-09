@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Usage: ./xres_to_rasi.sh input_file output_file
-INPUT="colors1.css"
-OUTPUT="colors1.rasi"
+INPUT="colors.css"
+OUTPUT="colors.rasi"
 
 if [[ -z "$INPUT" || -z "$OUTPUT" ]]; then
   echo "Usage: $0 input_file output_file"

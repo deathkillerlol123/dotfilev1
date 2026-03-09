@@ -28,7 +28,6 @@
     "temperature",     
     "cpu",
     "memory",
-    "disk",
   ]
 },
 "group/notifytray": {
