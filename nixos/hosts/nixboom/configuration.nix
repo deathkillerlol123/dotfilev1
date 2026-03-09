@@ -169,6 +169,7 @@
     wdisplays   
     quickshell
     eww
+    xev
     git
     gh
 
