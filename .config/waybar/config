@@ -43,6 +43,8 @@
     "orientation":"inherit",
     "modules": [
       "mpris",
+      "custom/pipe",     
+      "wlr/taskbar",   
     ]
   },
 
@@ -51,7 +53,7 @@
     "modules": [
       "clock",
       "group/extra",
-      "network#speed",
+      "power-profiles-daemon",
     ]
   }
 

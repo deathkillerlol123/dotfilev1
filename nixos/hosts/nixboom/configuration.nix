@@ -108,7 +108,9 @@
    	};  };
   documentation.enable = false;
   programs = {
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+    };
     mangowc.enable = true;
     gamemode.enable = true;
     steam = {
@@ -139,6 +141,9 @@
     efibootmgr
     os-prober
     lm_sensors
+    
+    curl 
+    wget
     
  		xdg-desktop-portal-hyprland
 		xdg-desktop-portal-gtk

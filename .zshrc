@@ -6,6 +6,7 @@ bindkey "^[[6~" down-line-or-history
 
 
 
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 

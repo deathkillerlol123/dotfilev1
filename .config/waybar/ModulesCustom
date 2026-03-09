@@ -2,7 +2,7 @@
 
 {
 "custom/pipe": {
-    "format": "| ",
+    "format": "|",
     "interval": 999999,
 },
 "custom/mpris": {
@@ -17,7 +17,7 @@
 },
 "custom/notification": {
   "tooltip": false,
-  "format": "<span size='16pt'>{0} {icon}</span>",
+  "format": " <span size='16pt'>{0} {icon}</span>",
   "format-icons": {
     "notification": "󱅫 ",
     "none": "󰂜 ",
