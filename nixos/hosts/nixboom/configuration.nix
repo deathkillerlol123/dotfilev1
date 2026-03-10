@@ -3,6 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+    ../../modules/environment
   ];
   boot = {
     loader = {
@@ -53,7 +54,6 @@
         ];
       };
     };
-    desktopManager.gnome.enable = true;
     flatpak.enable = true;
     libinput.enable = true;  };
   time.timeZone = "Europe/London"; 
