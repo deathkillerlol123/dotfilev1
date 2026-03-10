@@ -41,7 +41,7 @@ tooltip label {
 
 .modules-right,
 .modules-left {
-  border: 1px solid @texts;
+  border: 2px solid @texts;
 }
 /*-----modules indv----*/
 #taskbar button,

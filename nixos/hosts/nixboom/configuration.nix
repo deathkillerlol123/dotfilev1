@@ -1,10 +1,14 @@
 { config, lib, pkgs, inputs, ... }:
+
+let
+  mod=../../modules
+in
 {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/environment/gnome.nix
-    ../../modules/Login/login.nix
+    mod/environment/gnome.nix
+    mod/Login/login.nix
   ];
   boot = {
     loader = {
