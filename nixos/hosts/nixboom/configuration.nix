@@ -3,7 +3,8 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/environment
+    ../../modules/environment/gnome.nix
+    ../../modules/DMan/default.nix
   ];
   boot = {
     loader = {
@@ -21,24 +22,6 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
   services = {
-    displayManager = {
-      sddm = {
-        enable = false;
-       	wayland.enable = true;
-        package = pkgs.kdePackages.sddm;
-        theme = "sddm-astronaut-theme";
-      };
-      gdm = {
-        enable = false;
-        wayland = true;
-      };
-      ly = {
-        enable = true;
-        settings = {
-          clear_screen = true;
-        };
-      };
-    };
     xserver = {
       enable = true;
       displayManager.lightdm.enable = false;
