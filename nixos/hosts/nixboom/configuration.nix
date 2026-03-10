@@ -9,6 +9,7 @@ in
     inputs.home-manager.nixosModules.default
     "${mod}/environment/gnome/"
     "${mod}/login/login.nix"
+    "${mod}/common/"
   ];
   boot = {
     loader = {
@@ -132,91 +133,6 @@ in
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
   	nerd-fonts.droid-sans-mono  ];
-  environment.systemPackages = with pkgs; [
-    gdm
-    ly
-    efibootmgr
-    os-prober
-    lm_sensors
-    curl 
-    wget    
- 		xdg-desktop-portal-hyprland
-		xdg-desktop-portal-gtk
-		xdg-desktop-portal-wlr
-    mangohud
-    protonup-qt
-    heroic    
-    nix-search-cli
-    brightnessctl
-    blueberry
-    cavasik
-    wlr-randr
-    borgbackup
-    wdisplays   
-    quickshell
-    eww    
-    xev
-    git
-    gh
-    swaynotificationcenter
-    swaybg
-    swaylock
-    wlogout
-    nautilus  
-    rofi
-    waybar
-    playerctl
-    alsa-utils
-    pavucontrol
-    pulseaudio
-    wireplumber
-
-    firefox-devedition  
-    whatsapp-electron
-    discord-ptb
-    kitty
-    starship
-    zsh
-    bash
-    zoxide
-    neovim
-    zed-editor
-    zellij
-    copyq
-    grim
-    slurp
-    wl-clipboard
-    swappy 
-    bat
-    eza
-    btop
-    cmatrix
-    neofetch
-    ranger
-    swww
-    pywal
-    kdePackages.gwenview  
-    ntfs3g
-
-    mangowc
-    glibc
-    wayland
-    wayland-protocols
-    libinput
-    libdrm
-    libxkbcommon
-    pixman
-    meson
-    gcc
-    ninja
-    gnumake
-    raylib
-    libdisplay-info
-    hwdata
-    seatd
-    pcre2
-    python315
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
