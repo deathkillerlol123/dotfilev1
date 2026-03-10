@@ -1,14 +1,13 @@
+#!/usr/bin/env bash
 swww-daemon &
-eww daemon
-
-brightnessctl set 40%
+eww daemon &
 
 copyq &
-hyprpm reload
 swaync &
+
+brightnessctl set 10%
 
 "$HOME/dotfiles/scripts/niri_monitors/placement.sh"
 
 "$HOME/dotfiles/scripts/colorschem/start_wall.sh"
 
-"$HOME/dotfiles/scripts/disable-wifi-power.sh"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd ~/dotfiles/scripts/colorschem/
 value="$(cat last_wall.txt)"
