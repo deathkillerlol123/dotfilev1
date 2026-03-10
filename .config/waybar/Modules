@@ -1,5 +1,4 @@
 {
-
 "temperature": {
 	"interval": 10,
 	"tooltip": true,
