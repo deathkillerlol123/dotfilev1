@@ -161,6 +161,7 @@
     mangohud
     protonup-qt
     heroic
+    
     nix-search-cli
     brightnessctl
     blueberry
@@ -168,8 +169,10 @@
     wlr-randr
     borgbackup
     wdisplays   
+    
     quickshell
     eww
+    
     xev
     git
     gh
@@ -186,8 +189,8 @@
     pavucontrol
     pulseaudio
     wireplumber
-   
-    firefox-devedition
+
+    firefox-devedition  
     whatsapp-electron
     discord-ptb
 

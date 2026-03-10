@@ -43,7 +43,6 @@
     "orientation":"inherit",
     "modules": [
       "mpris",
-      "custom/pipe",     
       "wlr/taskbar",   
     ]
   },

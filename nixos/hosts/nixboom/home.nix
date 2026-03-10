@@ -133,12 +133,12 @@ in
       source = "${dotfiles}/.config/starship.toml";
       recursive = true;
     };
-    ".config/mozilla/firefox/tb14nia8.dev-edition-default/chrome/userChrome.css" = {
-      source = "${dotfiles}/.config/mozilla/firefox/tb14nia8.dev-edition-default/chrome/userChrome.css";
-      recursive = true;
-    };
     ".local/share/applications" = {
       source = "${dotfiles}/.local/share/applications";
+      recursive = true;
+    };
+    ".config/mozilla/firefox/ygg3oho0.dev-edition-default/chrome/userChrome.css" = {
+      source = "${dotfiles}/.config/firefox/ygg3oho0.dev-edition/chrome/userChrome.css";
       recursive = true;
     };
   };
