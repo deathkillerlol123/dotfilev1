@@ -7,7 +7,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    "${mod}/environment/gnome.nix"
+    "${mod}/environment/gnome/"
     "${mod}/Login/login.nix"
   ];
   boot = {
