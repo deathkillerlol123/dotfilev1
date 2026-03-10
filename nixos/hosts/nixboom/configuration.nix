@@ -8,7 +8,7 @@ in
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     "${mod}/environment/gnome/"
-    "${mod}/Login/login.nix"
+    "${mod}/login/login.nix"
   ];
   boot = {
     loader = {
