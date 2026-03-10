@@ -137,10 +137,6 @@ in
       source = "${dotfiles}/.local/share/applications";
       recursive = true;
     };
-    ".config/mozilla/firefox/ygg3oho0.dev-edition-default/chrome/userChrome.css" = {
-      source = "${dotfiles}/.config/firefox/ygg3oho0.dev-edition/chrome/userChrome.css";
-      recursive = true;
-    };
   };
 
 }
