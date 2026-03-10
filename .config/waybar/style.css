@@ -9,12 +9,13 @@
   min-height: 0;
   font-size: 15px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  border-radius: 20px;
+  border-radius: 2px;
+}
+#battery {
+    box-shadow: 0 1px 3px;    
 }
 
-window#waybar,
-window#waybar.empty,
-window#waybar.empty #window {
+window#waybar {
   background-color: @background-color;
   border: 10px;
   }
@@ -33,10 +34,6 @@ tooltip label {
 .modules-left {
   background-color: @background-color;
   color: @texts;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
 }
 
 .modules-right,
@@ -143,6 +140,9 @@ tooltip label {
   padding-bottom: 4px;
   padding-right: 6px;
   padding-left: 6px;
+  box-shadow: 0 1px 3px;
+  border-radius: 0px;
+  margin: 1px 2px;
 }
 /*-----Indicators----*/
 #custom-hypridle.notactive,

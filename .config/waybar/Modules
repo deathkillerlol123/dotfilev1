@@ -282,7 +282,7 @@
 
 "wlr/taskbar": {
 	"format": "{icon}",
-	"icon-size": 16,
+	"icon-size": 20,
 	"all-outputs": false,
 	"tooltip-format": "{title}",
 	"on-click": "activate",

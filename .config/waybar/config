@@ -7,7 +7,7 @@
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
   ],
-"layer": "bottom",
+"layer": "top",
 "output": ["eDP-1","HDMI-A-1"],
 "reload_style_on_change": true,
 "mode": "dock",
@@ -33,9 +33,9 @@
 "group/down":{
     "orientation":"inherit",
     "modules":[
+      "wlr/taskbar",       
       "pulseaudio",
       "battery",
-      "custom/pipe",
       "group/notifytray"
     ]
   },
@@ -43,7 +43,6 @@
     "orientation":"inherit",
     "modules": [
       "mpris",
-      "wlr/taskbar",   
     ]
   },
 
