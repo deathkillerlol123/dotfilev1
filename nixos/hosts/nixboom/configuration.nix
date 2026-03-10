@@ -131,21 +131,17 @@
   environment.systemPackages = with pkgs; [
     gdm
     ly
-    
     efibootmgr
     os-prober
     lm_sensors
-    
     curl 
-    wget
-    
+    wget    
  		xdg-desktop-portal-hyprland
 		xdg-desktop-portal-gtk
 		xdg-desktop-portal-wlr
     mangohud
     protonup-qt
-    heroic
-    
+    heroic    
     nix-search-cli
     brightnessctl
     blueberry
@@ -153,14 +149,11 @@
     wlr-randr
     borgbackup
     wdisplays   
-    
     quickshell
-    eww
-    
+    eww    
     xev
     git
     gh
-
     swaynotificationcenter
     swaybg
     swaylock
@@ -177,7 +170,6 @@
     firefox-devedition  
     whatsapp-electron
     discord-ptb
-
     kitty
     starship
     zsh
@@ -190,15 +182,13 @@
     grim
     slurp
     wl-clipboard
-    swappy
- 
+    swappy 
     bat
     eza
     btop
     cmatrix
     neofetch
     ranger
-    stow
     swww
     pywal
     kdePackages.gwenview  
