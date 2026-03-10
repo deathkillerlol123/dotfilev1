@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 let
-  mod=../../modules
+  mod=../../modules;
 in
 {
   imports = [
