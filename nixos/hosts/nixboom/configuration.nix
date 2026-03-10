@@ -4,7 +4,7 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     ../../modules/environment/gnome.nix
-    ../../modules/Login/main.nix
+    ../../modules/Login/login.nix
   ];
   boot = {
     loader = {
