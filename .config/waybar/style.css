@@ -1,8 +1,8 @@
 @import "colors.css";
 
-@define-color background-color @color2;
-@define-color border @color6;
-@define-color texts @color5;
+@define-color background-color @color1;
+@define-color border @color4;
+@define-color texts @color6;
 * {
   font-family: "FiraCode Nerd Font";
   font-weight: bold;
@@ -37,37 +37,11 @@ tooltip label {
 .modules-left {
   border: 1px solid @texts;
 }
-/*-----modules indv----*/
-#taskbar button,
-#workspaces button {
-  color: @texts;
-  box-shadow: none;
-  text-shadow: none;
-  padding: 0px;
-  border-radius: 0px;
-  padding-left: 1px;
-  padding-right: 1px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
-#taskbar button:hover,
-#workspaces button:hover {
-  color: @border;
-  border-radius: 0px;
-  padding-left: 2px;
-  padding-right: 2px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+#taskbar {
+    border: 1px solid @texts;
 }
 
-#taskbar button.active,
-#workspaces button.active {
-  color: @texts;
-  padding-left: 0px;
-  padding-right: 0px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
+/*-----modules indv----*/
 
 #workspaces button.urgent {
   color: @critical-red;
@@ -85,16 +59,15 @@ tooltip label {
 #clock,
 #cpu,
 #disk,
+#power-profiles-daemon,
 #idle_inhibitor,
 #keyboard-state,
 #memory,
 #mode,
 #mpris,
 #network,
-#power-profiles-daemon,
 #pulseaudio,
 #pulseaudio-slider,
-#taskbar,
 #temperature,
 #tray,
 #window,
@@ -185,7 +158,36 @@ tooltip label {
   min-height: 5px;
   border-radius: 5px;
 }
+#taskbar button,
+#workspaces button {
+  color: @texts;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 0px;
+  padding-left: 1px;
+  padding-right: 1px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+#taskbar button:hover,
+#workspaces button:hover {
+  color: @border;
+  border-radius: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
 
+#taskbar button.active,
+#workspaces button.active {
+  color: @texts;
+  padding-left: 0px;
+  padding-right: 0px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
   min-height: 10px;
