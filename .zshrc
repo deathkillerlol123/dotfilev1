@@ -4,8 +4,7 @@ bindkey "^[[F" end-of-line
 bindkey "^[[5~" up-line-or-history
 bindkey "^[[6~" down-line-or-history
 
-
-
+setopt NO_BEEP
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
