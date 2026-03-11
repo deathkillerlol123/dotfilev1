@@ -32,7 +32,6 @@
     nautilus  
     rofi
     waybar
-    ags
     
     playerctl
     alsa-utils
