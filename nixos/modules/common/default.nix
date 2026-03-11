@@ -32,6 +32,7 @@
     nautilus  
     rofi
     waybar
+    
     playerctl
     alsa-utils
     pavucontrol
@@ -77,12 +78,15 @@
     gcc
     ninja
     gnumake
+    rustc
+    cargo
     raylib
     libdisplay-info
     hwdata
     seatd
     pcre2
     python315
+    pipx
   ];
   
 }

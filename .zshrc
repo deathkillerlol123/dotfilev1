@@ -24,3 +24,7 @@ alias pyws="~/Documents/codes/venv/bin/python"
 
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$PATH:/usr/bin/python3"
+#export PATH="$HOME/.local/bin"
+
+# Created by `pipx` on 2026-03-11 14:52:41
+export PATH="$PATH:/home/nixboom/.local/bin"
