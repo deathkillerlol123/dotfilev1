@@ -127,6 +127,7 @@ in
       ];
     };
   };
+  console.font = "solar24x32a
   nixpkgs.config = {
     allowUnfree = true;  };
   fonts.packages = with pkgs; [
