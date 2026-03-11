@@ -154,5 +154,4 @@ in
 
   # Most users should NEVER change this value after the initial install, for any reason,
   system.stateVersion = "25.11";
-
 }
