@@ -11,9 +11,6 @@
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   border-radius: 7px;
 }
-#custom-notification {
-    box-shadow: 0 1px 3px;    
-}
 
 window#waybar {
   background-color: @background-color;
@@ -48,8 +45,8 @@ tooltip label {
   text-shadow: none;
   padding: 0px;
   border-radius: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 1px;
+  padding-right: 1px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -103,6 +100,7 @@ tooltip label {
 #window,
 #wireplumber,
 #workspaces,
+#custom-cava,
 #custom-backlight,
 #custom-browser,
 #custom-cava_mviz,
@@ -138,10 +136,15 @@ tooltip label {
 #custom-weather.sunnyDay {
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
   box-shadow: 0 1px 3px;
   border-radius: 7px;
+}
+#custom-cava {
+    margin-right: 1px;
+    margin-left: 1px;
+    padding-left: 0px;
 }
 /*-----Indicators----*/
 #custom-hypridle.notactive,

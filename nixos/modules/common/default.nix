@@ -16,7 +16,7 @@
     nix-search-cli
     brightnessctl
     blueberry
-    cavasik
+    cava
     wlr-randr
     borgbackup
     wdisplays   

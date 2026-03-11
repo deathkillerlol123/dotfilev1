@@ -6,13 +6,14 @@
   "$HOME/.config/waybar/Modules",
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/ModulesMango",
   ],
 "layer": "top",
 "output": ["eDP-1","HDMI-A-1"],
 "reload_style_on_change": true,
 "mode": "dock",
 "exclusive": true,
-"passthrough": false,
+"passthrough": true,
 "position": "bottom",
 "fixed-center": true,
 "ipc": true,
@@ -43,17 +44,17 @@
     "orientation":"inherit",
     "modules": [
       "mpris",
+      "clock",
     ]
   },
 
 "group/up":{
     "orientation": "inherit",
     "modules": [
-      "clock",
+      "power-profiles-daemon",    
+      "custom/cava",      
       "group/extra",
-      "power-profiles-daemon",
     ]
-  }
-
+    },
 
 }
