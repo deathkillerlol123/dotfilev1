@@ -25,11 +25,6 @@
           enable = false;
         };
       };
-      windowManager = {
-        openbox = {
-          enable = true;
-        };
-      };
     };
   };
 }
