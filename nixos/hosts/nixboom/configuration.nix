@@ -39,8 +39,12 @@ in
         ];
       };
     };
+    blueman = {
+      enable = true;
+    };
     flatpak.enable = true;
-    libinput.enable = true;  };
+    libinput.enable = true;
+  };
   time.timeZone = "Europe/London"; 
   networking = {
     hostName = "nixbtw";
