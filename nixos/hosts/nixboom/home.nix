@@ -102,7 +102,7 @@ in
       recursive = true;
     };
     ".config/kitty" = {
-      source = "${dotfiles}/.config/kitty";
+      source = ./apps/kitty;
       recursive = true;
     };
     ".config/hypr" = {
