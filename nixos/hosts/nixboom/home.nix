@@ -138,5 +138,11 @@ in
       recursive = true;
     };
   };
-
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.orchis-theme;
+      name = "Orchis-Grey-Dark";
+    };
+  };
 }
