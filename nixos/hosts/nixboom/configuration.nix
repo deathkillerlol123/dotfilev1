@@ -8,6 +8,7 @@ in
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
     "${mod}/environment/gnome/"
+    "${mod}/environment/openbox/"
     "${mod}/login/login.nix"
     "${mod}/common/"
   ];

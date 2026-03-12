@@ -3,9 +3,9 @@
     xserver ={ 
       windowManager = {
         openbox ={ 
-          enable = true
-        }
-      }
-    }
-  }
+          enable = true;
+        };
+      };
+    };
+  };
 }
