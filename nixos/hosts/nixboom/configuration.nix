@@ -27,10 +27,6 @@ in
     kernelPackages = pkgs.linuxPackages_latest;
   };
   services = {
-    xserver = {
-      enable = true;
-      displayManager.lightdm.enable = false;
-    };
     pipewire = {
       enable = true;
       pulse.enable = true;

@@ -18,5 +18,18 @@
         };
       };
     };
+    xserver = {
+      enable = true;
+      displayManager = {
+        lightdm = {
+          enable = false;
+        };
+      };
+      windowManager = {
+        openbox = {
+          enable = true;
+        };
+      };
+    };
   };
 }
