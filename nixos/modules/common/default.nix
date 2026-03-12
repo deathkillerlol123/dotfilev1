@@ -15,7 +15,6 @@
     heroic    
     nix-search-cli
     brightnessctl
-    blueberry
     cava
     wlr-randr
     borgbackup
