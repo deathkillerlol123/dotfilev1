@@ -11,7 +11,7 @@ in
     "${mod}/environment/openbox/"
     "${mod}/login/login.nix"
     "${mod}/common/"
-    "${mod}/sound/sound.nix"
+    "${mod}/sound/"
   ];
   boot = {
     loader = {
