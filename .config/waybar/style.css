@@ -1,6 +1,6 @@
 @import "colors.css";
 
-@define-color background-color @color1;
+@define-color background-color @color3;
 @define-color border @color4;
 @define-color texts @color6;
 * {

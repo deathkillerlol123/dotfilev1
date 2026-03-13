@@ -51,7 +51,7 @@
     "orientation": "inherit",
     "modules": [
        "group/mangoes",
-       "custom/cava",      
+ /*      "custom/cava",      */
        "group/extra",
     ]
     },
