@@ -138,6 +138,10 @@ in
       source = "${dotfiles}/.local/share/applications";
       recursive = true;
     };
+    ".config/mozilla/firefox/hcq4c6te.dev-edition-default/chrome/userChrome.css" = {
+      source = "${dotfiles}/.config/mozilla/userChrome.css";
+      recursive = true;
+    };
   };
   gtk = {
     enable = true;
