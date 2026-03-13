@@ -31,12 +31,6 @@
     nautilus  
     rofi
     waybar
-    
-    playerctl
-    alsa-utils
-    pavucontrol
-    pulseaudio
-    wireplumber
 
     qutebrowser
     firefox-devedition  

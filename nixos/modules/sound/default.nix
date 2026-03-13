@@ -21,6 +21,11 @@
     pavucontrol
     wiremix
     noisetorch
+    
+    playerctl
+    alsa-utils
+    pulseaudio
+    wireplumber
   ];
 
   security.wrappers.noisetorch = {
