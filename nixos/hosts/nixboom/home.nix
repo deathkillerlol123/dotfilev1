@@ -6,9 +6,6 @@ let
 
 in
 {
-  import = [
-    
-  ];
   home.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
   home.sessionVariables = {
