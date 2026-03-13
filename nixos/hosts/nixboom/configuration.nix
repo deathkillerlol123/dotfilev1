@@ -11,6 +11,7 @@ in
     "${mod}/environment/openbox/"
     "${mod}/login/login.nix"
     "${mod}/common/"
+    "${mod}/sound/sound.nix"
   ];
   boot = {
     loader = {
@@ -28,17 +29,6 @@ in
     kernelPackages = pkgs.linuxPackages_latest;
   };
   services = {
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-      alsa.enable = true;
-      wireplumber.enable = true;
-      extraConfig.pipewire-pulse."auto-switch" = {
-        "pulse.cmd" =[
-          { cmd = "load-module"; args = "module-switch-on-connect"; }
-        ];
-      };
-    };
     blueman = {
       enable = true;
     };
