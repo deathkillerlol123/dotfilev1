@@ -16,11 +16,6 @@ in
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
   
-  programs = {
-    firefox = {
-      enable = true;
-    };    
-  };    
   home.packages = with pkgs; [ ];
   home.file = {
     ".zshrc" = {
