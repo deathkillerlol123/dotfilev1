@@ -38,6 +38,7 @@
     pulseaudio
     wireplumber
 
+    qutebrowser
     firefox-devedition  
     whatsapp-electron
     discord-ptb
