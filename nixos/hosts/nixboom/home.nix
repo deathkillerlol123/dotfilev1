@@ -2,6 +2,7 @@
 
 let
   dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
+  firefox_user = "hcq4c6te.dev-edition-default"
 
 in
 {
@@ -138,7 +139,7 @@ in
       source = "${dotfiles}/.local/share/applications";
       recursive = true;
     };
-    ".config/mozilla/firefox/hcq4c6te.dev-edition-default/chrome/userChrome.css" = {
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
       recursive = true;
     };
