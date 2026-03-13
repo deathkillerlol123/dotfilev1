@@ -15,7 +15,6 @@
     heroic    
     nix-search-cli
     brightnessctl
-    cava
     wlr-randr
     borgbackup
     wdisplays   
