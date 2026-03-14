@@ -140,7 +140,7 @@ in
       recursive = true;
     };
     ".confi/qutebrowser" = {
-      source = "${dotfiles/.config/qutebrowser}";
+      source = "${dotfiles}/.config/qutebrowser}";
       recursive = true;
     };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
