@@ -33,6 +33,7 @@
     nautilus  
     rofi
     waybar
+    polybar
 
     qutebrowser
     firefox-devedition  
