@@ -139,6 +139,10 @@ in
       source = "${dotfiles}/.local/share/applications";
       recursive = true;
     };
+    ".confi/qutebrowser" = {
+      source = "${dotfiles/.config/qutebrowser}";
+      recursive = true;
+    };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
       recursive = true;

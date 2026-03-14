@@ -17,7 +17,7 @@ alias windows='~/dotfiles/scripts/Boot-Windows10.sh'
 alias total='gu && up'
 
 alias ls='eza -a --tree -L 1'
-alias zell='zellij -l welcome'
+alias zellij='zellij -l welcome'
 alias pyws="~/Documents/codes/venv/bin/python"
 #alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
 
