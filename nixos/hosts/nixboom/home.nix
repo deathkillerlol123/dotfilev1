@@ -139,7 +139,7 @@ in
       source = "${dotfiles}/.local/share/applications";
       recursive = true;
     };
-    ".confi/qutebrowser" = {
+    ".config/qutebrowser" = {
       source = "${dotfiles}/.config/qutebrowser}";
       recursive = true;
     };
