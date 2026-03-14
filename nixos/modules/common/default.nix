@@ -25,6 +25,7 @@
     git
     gh
     dysk
+    libnotify
     swaynotificationcenter
     swaybg
     swaylock
