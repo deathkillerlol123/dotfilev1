@@ -24,6 +24,7 @@
     xev
     git
     gh
+    dysk
     swaynotificationcenter
     swaybg
     swaylock
