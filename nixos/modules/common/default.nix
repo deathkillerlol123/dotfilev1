@@ -33,8 +33,7 @@
     nautilus  
     rofi
     waybar
-    polybar
-
+    ironbar
     qutebrowser
     firefox-devedition  
     whatsapp-electron
