@@ -20,7 +20,6 @@
     pamixer
     pavucontrol
     wiremix
-    noisetorch
     
     playerctl
     alsa-utils
