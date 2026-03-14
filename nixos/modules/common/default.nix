@@ -15,6 +15,7 @@
     heroic    
     nix-search-cli
     brightnessctl
+    mpv
     wlr-randr
     borgbackup
     wdisplays   
