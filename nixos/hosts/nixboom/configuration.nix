@@ -99,7 +99,7 @@ in
     zsh = {
       enable = true;
     };
-    niri.enable = true;
+    niri.enable = false;
     mangowc.enable = true;
     gamemode.enable = true;
     steam = {
