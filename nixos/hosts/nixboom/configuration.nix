@@ -11,6 +11,7 @@ in
     "${mod}/login/login.nix"
     "${mod}/common/"
     "${mod}/sound/"
+    ../../main.nix
   ];
   boot = {
     loader = {
