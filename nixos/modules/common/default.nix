@@ -29,6 +29,7 @@
     swaynotificationcenter
     swaybg
     swaylock
+    stasis
     wlogout
     nautilus  
     rofi
