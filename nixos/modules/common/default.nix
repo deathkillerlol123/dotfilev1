@@ -35,6 +35,8 @@
     waybar
     ironbar
     qutebrowser
+    
+    firefox
     firefox-devedition  
     whatsapp-electron
     discord-ptb
