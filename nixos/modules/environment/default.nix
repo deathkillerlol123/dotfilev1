@@ -10,6 +10,9 @@
         openbox ={ 
           enable = false;
         };
+        dwm = {
+          enable = true;
+        };
       };
     };
   };
