@@ -36,7 +36,8 @@
     ironbar
     qutebrowser
     
-    firefox
+    gnome-software
+    
     firefox-devedition  
     whatsapp-electron
     discord-ptb
