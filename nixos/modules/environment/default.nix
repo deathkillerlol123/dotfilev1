@@ -1,6 +1,7 @@
 {pkgs, ... }: {
   services = {
     desktopManager = {
+      cosmic.enable = false;
       plasma6.enable = true; #KDE plasma cannot be true with gnome
       gnome = {
         enable = false;
