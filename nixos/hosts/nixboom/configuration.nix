@@ -49,7 +49,8 @@ in
     optimise = {
       automatic = true;
       dates = ["20:00"];
-    };  };
+    };
+  };
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
