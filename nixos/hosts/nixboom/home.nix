@@ -14,7 +14,6 @@ in
   programs.home-manager.enable = true;
   # You should not change this value, even if you update Home Manager. If you do
   home.stateVersion = "25.11"; # Please read the comment before changing.
-  programs.nixvim.imports = [./nixvim.nix];
   home.packages = with pkgs; [ ];
   home.file = {
     ".zshrc" = {
