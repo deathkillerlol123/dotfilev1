@@ -33,6 +33,8 @@
     wlogout
     nautilus  
     rofi
+    
+    dmenu
     waybar
     ironbar
     qutebrowser
@@ -43,7 +45,6 @@
     starship
     zsh
     bash
-    
     fish
     
     zoxide
