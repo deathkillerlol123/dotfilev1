@@ -37,12 +37,14 @@ in
         "nixboom" = import ./home.nix;
       };
   };
-  users.users.nixboom = {
-    isNormalUser = true;
-    shell = pkgs.zsh;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [  
-    ];
+  users.users = {
+    nixboom = {
+      isNormalUser = true;
+      shell = pkgs.zsh;
+      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+      packages = with pkgs; [  
+      ];
+    };
   };  
   security = {
     sudo.extraRules = [{
