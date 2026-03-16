@@ -67,6 +67,9 @@ in
     zsh = {
       enable = true;
     };
+    fish = {
+      enable = true;
+    };
     gamemode.enable = true;
     steam = {
       enable = true;
