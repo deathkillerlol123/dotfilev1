@@ -40,7 +40,7 @@ in
   users.users = {
     nixboom = {
       isNormalUser = true;
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
       packages = with pkgs; [  
       ];
@@ -65,7 +65,7 @@ in
   };
   programs = {
     zsh = {
-      enable = true;
+      enable = false;
     };
     fish = {
       enable = true;
