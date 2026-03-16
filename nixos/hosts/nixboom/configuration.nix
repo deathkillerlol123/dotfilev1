@@ -57,7 +57,6 @@ in
       		default = "*";
     		};
    	};  };
-  documentation.enable = false;
   programs = {
     zsh = {
       enable = true;

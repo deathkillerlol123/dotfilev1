@@ -1,5 +1,6 @@
 {config, lib, pkgs, inputs, ...}:
 {
+  documentation.enable = false;
   services = {
     blueman = {
       enable = true;
