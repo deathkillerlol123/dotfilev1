@@ -9,7 +9,7 @@ in
     inputs.home-manager.nixosModules.default
     ../../main.nix    
     "${mod}/environment/"
-    "${mod}/login/login.nix"
+    "${mod}/login/"
     "${mod}/common/"
     "${mod}/sound/"
   ];
