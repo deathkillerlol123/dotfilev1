@@ -1,6 +1,0 @@
-abbr -a nrs 'sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos'
-abbr -a gu '~/dotfiles/scripts/git_updater.sh'
-abbr -a windows '~/dotfiles/scripts/Boot-Windows10.sh'
-abbr -a total '~/dotfiles/scripts/git_updater.sh && ~/dotfiles/scripts/updatesys_Nixos.sh'
-abbr -a ls 'eza -a --tree -L 1'
-abbr -a zellij 'zellij -l welcome'
