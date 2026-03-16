@@ -18,6 +18,15 @@
         };
       };
     };
+    greetd = {
+      enable = false;
+      settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+          user = "greeter";    
+        };
+      };
+    };
     xserver = {
       enable = true;
       displayManager = {
