@@ -1,18 +1,13 @@
 {pkgs, ... }: {
   services = {
     desktopManager = {
-      plasma6.enable = true;
       gnome = {
         enable = true;
       };
     };
     xserver ={
      desktopManager = {
-       xfce = {
-         enable = false;
-         noDesktop = true;
-         enableXfwm = true;
-       };
+       budgie.enable = true;
      };
      windowManager = {
        openbox ={ 
