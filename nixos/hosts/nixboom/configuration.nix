@@ -1,17 +1,18 @@
 { config, lib, pkgs, inputs, ... }:
 
 let
-  mod=../../modules;
+  parent = "../..";
+  mod= $parent + /modules;
 in
 {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+    ../../main.nix    
     "${mod}/environment/"
     "${mod}/login/login.nix"
     "${mod}/common/"
     "${mod}/sound/"
-    ../../main.nix
   ];
   boot = {
     loader = {
