@@ -18,7 +18,6 @@ alias total='gu && up'
 
 alias ls='eza -a --tree -L 1'
 alias zellij='zellij -l welcome'
-alias pyws="~/Documents/codes/venv/bin/python"
 #alias archspin='~/3d-ascii-viewer/3d-ascii-viewer ~/arch-logo.obj'
 
 export PATH="$HOME/.npm-global/bin:$PATH"
