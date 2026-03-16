@@ -43,6 +43,9 @@
     starship
     zsh
     bash
+    
+    fish
+    
     zoxide
     neovim
     zed-editor
