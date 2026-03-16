@@ -52,7 +52,8 @@
     "modules": [
        "group/mangoes",
  /*      "custom/cava",      */
-       "group/extra",
+    "cpu",
+    "memory",
     ]
     },
 

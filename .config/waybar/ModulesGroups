@@ -25,7 +25,6 @@
       "transition-left-to-right": true,
     },
   "modules": [
-    "temperature",     
     "cpu",
     "memory",
   ]
