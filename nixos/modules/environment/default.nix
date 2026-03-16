@@ -16,4 +16,8 @@
       };
     };
   };
+  programs = {
+    niri.enable = false;
+    mangowc.enable = true;  
+  };
 }
