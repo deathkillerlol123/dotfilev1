@@ -5,15 +5,23 @@
         enable = true;
       };
     };
-    xserver ={ 
-      windowManager = {
-        openbox ={ 
-          enable = false;
-        };
-        dwm = {
-          enable = false;
-        };
-      };
+    xserver ={
+     desktopManager = {
+       xterm.enable = true;
+       xfce = {
+         enable = true;
+         noDesktop = true;
+         enableXfwm = true;
+       };
+     };
+     windowManager = {
+       openbox ={ 
+         enable = false;
+       };
+       dwm = {
+         enable = false;
+       };
+     };
     };
   };
   programs = {
