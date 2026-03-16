@@ -11,6 +11,12 @@
         enable = false;
         wayland = true;
       };
+      lemurs = {
+        enable = false;
+        settings = {
+          do_log = true;
+        };
+      };
       ly = {
         enable = true;
         settings = {
