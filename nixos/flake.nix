@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+    nixvim.url = "github:nix-community/nixvim";
     #nix-software-center.url = "github:snowfallorg/nix-software-center";
     home-manager = {
     	url = "github:nix-community/home-manager";
