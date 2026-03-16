@@ -2,7 +2,7 @@
   services = {
     desktopManager = {
       gnome = {
-        enable = true;
+        enable = false;
       };
     };
     xserver ={
