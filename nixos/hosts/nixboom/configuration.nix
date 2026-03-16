@@ -35,13 +35,15 @@ in
     extraSpecialArgs = { inherit inputs ; };
       users = {
         "nixboom" = import ./home.nix;
-      };  };
+      };
+  };
   users.users.nixboom = {
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [  
-    ];  };  
+    ];
+  };  
   security = {
     sudo.extraRules = [{
       users = ["nixboom"];
@@ -49,14 +51,16 @@ in
         options = ["NOPASSWD"];
       }];
     }];
-    pam.services.swaylock = {};  };  
+    pam.services.swaylock = {}; 
+  };  
   xdg.portal = {
    	enable = true;
     config = {
       common = {
       		default = "*";
     		};
-   	};  };
+   	};  
+  };
   programs = {
     zsh = {
       enable = true;
