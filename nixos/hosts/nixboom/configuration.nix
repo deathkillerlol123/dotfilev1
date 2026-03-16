@@ -89,6 +89,9 @@ in
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
   	nerd-fonts.droid-sans-mono  ];
+  environment.systemPackages = with pkgs; [
+    #inputs.nix-software-center.packages.${system}.nix-software-center    
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
