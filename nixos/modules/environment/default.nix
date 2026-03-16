@@ -1,7 +1,7 @@
 {pkgs, ... }: {
   services = {
     desktopManager = {
-      #plasma6.enable = true; #KDE plasma cannot be true with gnome
+      plasma6.enable = true; #KDE plasma cannot be true with gnome
       gnome = {
         enable = false;
       };
