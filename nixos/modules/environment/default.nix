@@ -20,7 +20,7 @@
     niri.enable = false;
     mangowc.enable = true;
     hyprland = {
-      enable = true;
+      enable = false; #takes too long
       withUWSM = false;
       xwayland.enable = false;
     };
