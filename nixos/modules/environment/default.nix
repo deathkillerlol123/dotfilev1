@@ -11,7 +11,7 @@
           enable = false;
         };
         dwm = {
-          enable = true;
+          enable = false;
         };
       };
     };
