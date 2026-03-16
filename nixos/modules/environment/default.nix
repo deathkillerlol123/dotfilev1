@@ -18,6 +18,11 @@
   };
   programs = {
     niri.enable = false;
-    mangowc.enable = true;  
+    mangowc.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland.enable = false;
+    };
   };
 }
