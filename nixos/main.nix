@@ -24,6 +24,9 @@
       dates = ["20:00"];
     };
   };
+  nixpkgs.config = {
+    allowUnfree = true;
+  };  
   hardware = {
     bluetooth = {
       enable = true;
