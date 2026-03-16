@@ -1,8 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 let
-  parent = "../..";
-  mod= "${parent}" + "/modules";
+  mod=../../modules;
 in
 {
   imports = [
