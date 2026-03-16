@@ -1,13 +1,14 @@
 {pkgs, ... }: {
   services = {
     desktopManager = {
+      #plasma6.enable = true; #KDE plasma cannot be true with gnome
       gnome = {
         enable = false;
       };
     };
     xserver ={
      desktopManager = {
-       budgie.enable = true;
+       budgie.enable = true; #cannot be true with gnome
      };
      windowManager = {
        openbox ={ 
