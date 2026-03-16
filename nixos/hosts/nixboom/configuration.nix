@@ -11,7 +11,7 @@ in
     "${mod}/login/login.nix"
     "${mod}/common/"
     "${mod}/sound/"
- #   ../../main.nix
+    ../../main.nix
   ];
   boot = {
     loader = {
@@ -27,29 +27,6 @@ in
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
     kernelPackages = pkgs.linuxPackages_latest;
-  };
-  services = {
-    blueman = {
-      enable = true;
-    };
-    flatpak.enable = true;
-    libinput.enable = true;
-  };
-  time.timeZone = "Europe/London"; 
-  networking = {
-    hostName = "nixbtw";
-    networkmanager.enable = true;  };
-  system = {
-    autoUpgrade = {
-      enable = true;
-      allowReboot = false;
-    };  };
-  nix = {
-    settings.experimental-features = ["nix-command" "flakes"];
-    optimise = {
-      automatic = true;
-      dates = ["20:00"];
-    };
   };
   home-manager = {
     useUserPackages = true;
