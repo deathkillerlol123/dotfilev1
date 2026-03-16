@@ -23,6 +23,10 @@ in
       source = "${dotfiles}/.zshrc";
       recursive = true;
     };
+    ".config/fish" = {
+      source = "${dotfiles}/.config/fish";
+      recursive = true;
+    };    
     ".config/zellij" = {
       source = "${dotfiles}/.config/zellij";
       recursive = true;
