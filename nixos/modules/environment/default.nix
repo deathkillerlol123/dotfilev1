@@ -1,15 +1,15 @@
 {pkgs, ... }: {
   services = {
     desktopManager = {
+      plasma6.enable = true;
       gnome = {
         enable = true;
       };
     };
     xserver ={
      desktopManager = {
-       xterm.enable = true;
        xfce = {
-         enable = true;
+         enable = false;
          noDesktop = true;
          enableXfwm = true;
        };
