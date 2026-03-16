@@ -2,7 +2,7 @@
 
 let
   parent = "../..";
-  mod= ${parent} + /modules;
+  mod= "${parent}" + "/modules";
 in
 {
   imports = [
