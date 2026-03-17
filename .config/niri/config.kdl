@@ -24,20 +24,11 @@ input{
     }
 }
 output "eDP-1"{
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
     mode "1920x1080@60.00"
     scale 1.5
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
     position x=1920 y=0
     focus-at-startup   
-}
-output "DP-1"{
-    mode "1920x1080@60.00"
-    scale 1
-    transform "normal"
-    position x=1920 y=1080
-    focus-at-startup
 }
 output "HDMI-A-1"{
     mode "1920x1080@60.00"
@@ -145,9 +136,9 @@ binds{
     Alt+F                                          { fullscreen-window; }
 //F_keys
     F1                                             { spawn-sh "~/dotfiles/.config/waybar/random_wallpaper.sh";}
-    F2                                             { spawn-sh "~/dotfiles/scripts/volume_decrease.sh";}
-    F3                                             { spawn-sh "~/dotfiles/scripts/volume_increase.sh";}
-    F4                                             { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle";}
+    F2                                             { spawn-sh "~/dotfiles/scripts/sys_sounds/volume_decrease.sh";}
+    F3                                             { spawn-sh "~/dotfiles/scripts/sys_sounds/volume_increase.sh";}
+    F4                                             { spawn-sh "~/dotfiles/scripts/sys_sounds/volume_mute.sh";}
     F5                                             { spawn-sh "playerctl previous";}
     F6                                             { spawn-sh "playerctl next";}
     F7                                             { spawn-sh "playerctl play-pause";}
@@ -163,14 +154,14 @@ binds{
     Alt+Shift+s                                    { move-column-to-workspace-down; }
     Alt+Shift+w                                    { move-column-to-workspace-up; }
 //monitor_stuff
-    Alt+Ctrl+J                                     { focus-monitor-left;}
-    Alt+Ctrl+L                                     { focus-monitor-right; }
+    Alt+Shift+J                                     { focus-monitor-left;}
+    Alt+Shift+L                                     { focus-monitor-right; }
 
-    Alt+Shift+J                                    { move-column-to-monitor-left;}
-    Alt+Shift+L                                    { move-column-to-monitor-right;}
+    Alt+Ctrl+J                                    { move-column-to-monitor-left;}
+    Alt+Ctrl+L                                    { move-column-to-monitor-right;}
 
-    Alt+Shift+I                                    { move-workspace-up; }
-    Alt+Shift+K                                    { move-workspace-down; }
+    Alt+Shift+up                                    { move-workspace-up; }
+    Alt+Shift+down                                   { move-workspace-down; }
 //workspaces
     Alt+1                                          { focus-workspace 1; }
     Alt+2                                          { focus-workspace 2; }
@@ -181,15 +172,15 @@ binds{
     Alt+7                                          { focus-workspace 7; }
     Alt+8                                          { focus-workspace 8; }
     Alt+9                                          { focus-workspace 9; }
-    Alt+Ctrl+1                                     { move-column-to-workspace 1; }
-    Alt+Ctrl+2                                     { move-column-to-workspace 2; }
-    Alt+Ctrl+3                                     { move-column-to-workspace 3; }
-    Alt+Ctrl+4                                     { move-column-to-workspace 4; }
-    Alt+Ctrl+5                                     { move-column-to-workspace 5; }
-    Alt+Ctrl+6                                     { move-column-to-workspace 6; }
-    Alt+Ctrl+7                                     { move-column-to-workspace 7; }
-    Alt+Ctrl+8                                     { move-column-to-workspace 8; }
-    Alt+Ctrl+9                                     { move-column-to-workspace 9; }
+    Alt+Shift+1                                     { move-column-to-workspace 1; }
+    Alt+Shift+2                                     { move-column-to-workspace 2; }
+    Alt+Shift+3                                     { move-column-to-workspace 3; }
+    Alt+shift+4                                     { move-column-to-workspace 4; }
+    Alt+shift+5                                     { move-column-to-workspace 5; }
+    Alt+shift+6                                     { move-column-to-workspace 6; }
+    Alt+Shift+7                                     { move-column-to-workspace 7; }
+    Alt+Shift+8                                     { move-column-to-workspace 8; }
+    Alt+Shift+9                                     { move-column-to-workspace 9; }
 //final
     Alt+F3                                         { power-off-monitors; }
     Alt+F4                                         { spawn-sh "swaylock & playerctl pause";}
