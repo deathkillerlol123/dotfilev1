@@ -2,17 +2,7 @@
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 
-spawn-sh-at-startup "swww-daemon &"
-
-spawn-sh-at-startup "~/dotfiles/scripts/colorschem/start_wall.sh"
-spawn-sh-at-startup "~/dotfiles/scripts/disable-wifi-power.sh"
-spawn-sh-at-startup "~/dotfiles/scripts/niri_monitors/placement.sh"
-
-spawn-at-startup "wayscriber --daemon &"
-spawn-sh-at-startup "copyq &"
-spawn-sh-at-startup "hyprpm reload"
-spawn-sh-at-startup "dunst &"
-
+spawn-sh-at-startup "~/dotfiles/scripts/autostart/autostart.sh"
 spawn-sh-at-startup "~/dotfiles/scripts/sys_sounds/sound_mon.sh"
 // https://yalter.github.io/niri/Configuration:-Introduction
 input{
