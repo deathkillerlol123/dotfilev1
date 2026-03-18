@@ -37,6 +37,7 @@
     dmenu
     waybar
     ironbar
+    
     qutebrowser
     firefox-devedition  
     whatsapp-electron
