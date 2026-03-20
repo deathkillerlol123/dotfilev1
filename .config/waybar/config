@@ -9,7 +9,7 @@
   "$HOME/.config/waybar/ModulesMango",
   ],
 "layer": "top",
-"output": ["eDP-1","HDMI-A-1"],
+"output": ["eDP-1","DP-1"],
 "reload_style_on_change": true,
 "mode": "dock",
 "exclusive": true,
