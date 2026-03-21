@@ -13,6 +13,8 @@
     mangohud
     protonup-qt
     heroic    
+    gamescope
+    gamemode    
     nix-search-cli
     brightnessctl
     mpv
