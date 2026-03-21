@@ -64,11 +64,11 @@ in
         "org.freedesktop.portal.OpenURI" = ["kde"];
       };
    	};  
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-termfilechooser
-      pkgs.kdePackages.xdg-desktop-portal-kde
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-termfilechooser
+      kdePackages.xdg-desktop-portal-kde
     ];
   };
   programs = {
