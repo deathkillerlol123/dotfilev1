@@ -12,7 +12,7 @@
 		xdg-desktop-portal-wlr
     mangohud
     protonup-qt
-    bottles
+    #bottles
     heroic    
     gamescope
     gamemode
