@@ -101,7 +101,6 @@ in
   	nerd-fonts.droid-sans-mono  ];
   environment.systemPackages = with pkgs; [
     #inputs.nix-software-center.packages.${system}.nix-software-center    
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.rocket-league
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
