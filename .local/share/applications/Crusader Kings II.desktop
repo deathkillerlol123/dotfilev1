@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=War Thunder
+Name=Crusader Kings II
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/236390
-Icon=steam_icon_236390
+Exec=steam steam://rungameid/203770
+Icon=steam_icon_203770
 Terminal=false
 Type=Application
 Categories=Game;
