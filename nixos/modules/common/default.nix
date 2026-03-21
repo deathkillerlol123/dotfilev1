@@ -13,7 +13,8 @@
     mangohud
     protonup-qt
     heroic
-    bottles
+    #bottles
+    lutris
     gamescope
     gamemode
     
