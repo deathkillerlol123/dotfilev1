@@ -58,10 +58,16 @@ in
   xdg.portal = {
    	enable = true;
     config = {
-      common = {
-      		default = "*";
-    		};
+      kde.default = ["kde" "gtk" "gnome"];
+      kde."org.freedesktop.portal.FileChooser" = ["kde"];
+      kde."org.freedesktop.portal.OpenURI" = ["kde"];
    	};  
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-termfilechooser
+      pkgs.kdePackages.xdg-desktop-portal-kde
+    ];
   };
   programs = {
     zsh = {
