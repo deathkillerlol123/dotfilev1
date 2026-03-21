@@ -77,8 +77,10 @@ in
       enable = true;
     };
     gamemode.enable = true;
-    gamescope.enable = true;
-    gamescope.capSysNice = true;
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
