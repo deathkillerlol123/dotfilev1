@@ -30,8 +30,6 @@
   hardware = {
     opengl = {
       enable = true;
-      driSupport = true;
-      driSupport32bit = true;
     };
     bluetooth = {
       enable = true;

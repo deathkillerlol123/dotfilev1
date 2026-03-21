@@ -12,9 +12,12 @@
 		xdg-desktop-portal-wlr
     mangohud
     protonup-qt
+    bottles
     heroic    
     gamescope
-    gamemode    
+    gamemode
+    #teamspeak6-client
+    
     nix-search-cli
     brightnessctl
     mpv
