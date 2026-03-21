@@ -86,7 +86,7 @@ in
     nh = {
       enable = true;
       clean.enable = true;
-      clean.extraArgs = "--keep-since 3d --keep 2";
+      clean.extraArgs = "--keep 3";
       flake = "/home/nixboom/dotfiles/nixos/";
       };
     nix-ld = {
