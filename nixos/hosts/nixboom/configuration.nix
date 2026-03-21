@@ -58,9 +58,11 @@ in
   xdg.portal = {
    	enable = true;
     config = {
-      kde.default = ["kde" "gtk" "gnome"];
-      kde."org.freedesktop.portal.FileChooser" = ["kde"];
-      kde."org.freedesktop.portal.OpenURI" = ["kde"];
+      kde = {
+        default = ["kde" "gtk" "gnome"];
+        "org.freedesktop.portal.FileChooser" = ["kde"];
+        "org.freedesktop.portal.OpenURI" = ["kde"];
+      };
    	};  
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
