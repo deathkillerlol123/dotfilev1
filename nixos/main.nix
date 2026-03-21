@@ -28,9 +28,6 @@
     allowUnfree = true;
   };  
   hardware = {
-    opengl = {
-      enable = true;
-    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
