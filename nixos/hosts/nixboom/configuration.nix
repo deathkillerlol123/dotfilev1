@@ -60,14 +60,12 @@ in
     config = {
       kde = {
         default = ["kde" "gtk" "gnome"];
-        "org.freedesktop.portal.FileChooser" = ["kde"];
         "org.freedesktop.portal.OpenURI" = ["kde"];
       };
    	};  
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
-      xdg-desktop-portal-termfilechooser
       kdePackages.xdg-desktop-portal-kde
     ];
   };
