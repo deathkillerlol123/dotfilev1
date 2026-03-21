@@ -10,4 +10,4 @@ home-manager remove-generations old
 
 nh clean all
 
-
+rm -rf ~/.cache/*
