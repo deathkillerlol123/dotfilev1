@@ -13,7 +13,6 @@
     mangohud
     protonup-qt
     heroic    
-    lutris
     gamescope
     gamemode
     
