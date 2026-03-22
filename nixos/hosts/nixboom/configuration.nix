@@ -104,6 +104,7 @@ in
   	nerd-fonts.droid-sans-mono  ];
   environment.systemPackages = with pkgs; [
     #inputs.nix-software-center.packages.${system}.nix-software-center    
+    inputs.matugen.packages.${system}.default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
