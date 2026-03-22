@@ -66,6 +66,7 @@
     eza
     btop
     cmatrix
+    clock-rs
     neofetch
     ranger
     swww
