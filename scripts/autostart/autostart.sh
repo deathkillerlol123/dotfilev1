@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 swww-daemon &
-eww daemon &
 
 copyq &
 swaync &
