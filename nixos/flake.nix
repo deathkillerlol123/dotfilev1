@@ -4,7 +4,7 @@
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     home-manager = {
     	url = "github:nix-community/home-manager";
-     inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
