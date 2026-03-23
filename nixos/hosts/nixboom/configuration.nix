@@ -18,12 +18,15 @@ in
       efi.canTouchEfiVariables = true;
       #systemd-boot.enable = true;
       grub = {
-        enable = true;
+        enable = false;
         devices = ["nodev"];
        	efiSupport = true;
        	useOSProber = true;
        	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
+      limine = {
+        enable = true;
+      }
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
     kernelPackages = pkgs.linuxPackages_latest;
