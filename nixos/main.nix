@@ -11,7 +11,7 @@
   time.timeZone = "Europe/London"; 
   networking = {
     hostName = "nixbtw";
-    networkmanager.enable = false;  };
+    networkmanager.enable = true;  };
   system = {
     autoUpgrade = {
       enable = true;
