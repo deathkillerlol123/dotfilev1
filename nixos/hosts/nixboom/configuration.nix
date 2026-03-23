@@ -26,6 +26,7 @@ in
       };
       limine = {
         enable = true;
+        style.wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
         extraEntries = ''
           /Windows
             protocol: efi
