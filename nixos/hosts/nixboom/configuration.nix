@@ -26,6 +26,9 @@ in
       };
       limine = {
         enable = true;
+        extraConfig = ''
+          remember_last_entry: yes
+          '';
       };
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
