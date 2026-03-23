@@ -7,6 +7,7 @@ home-manager expire-generations -d
 nix store gc
 sudo nix store optimise
 
+
 nh clean all
 
 rm -rf ~/.cache/*
