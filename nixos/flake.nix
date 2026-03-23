@@ -21,7 +21,7 @@
       	    modules = [ 
       	      ./hosts/nixboom/configuration.nix
       	      inputs.home-manager.nixosModules.default
-              grub2-themes.nixosModules.default
+              inputs.grub2-themes.nixosModules.default
     	      ];  
          };         
    	  };
