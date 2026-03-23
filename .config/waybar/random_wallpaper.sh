@@ -10,7 +10,7 @@ echo "$FILE"
 if [ -n "$FILE" ]; then
   echo "$FILE" >"$LAST_WALL"
 
-  swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7
+  swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7 &
   wal -i "$FILE" -n
 
   pkill -f rofi
