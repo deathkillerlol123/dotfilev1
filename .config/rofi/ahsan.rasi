@@ -19,6 +19,10 @@
     font:                              "FiraCode Nerd Bold 12";
     padding:                            0px;
     margin:                             0px;
+    
+    background:                         @color2;
+    border:                             @color4;
+    texts:                              @color5;
 }
 
 configuration {
@@ -37,8 +41,8 @@ window {
     padding:                           0px;
     border:                            2px;
     border-radius:                     1%;
-    border-color:                      @color9;
-    background-color:                  @color0;
+    border-color:                      @border;
+    background-color:                  @background;
     spacing:                           0;
     children:                          [mainbox];
     orientation:                       horizontal;
@@ -51,11 +55,11 @@ mainbox {
 }
 
 message {
-    border-color:                      @color4;
+    border-color:                      @border;
 //  border:                            0px 2px 2px 2px;
 //  border-radius:                     10px;
     padding:                           5;
-    background-color:                  #ccb0c4de;
+    background-color:                  @background;
 }
 
 message {
@@ -69,13 +73,13 @@ inputbar {
     background-color:                  @color0;
     border:                            2px 2px 2px 2px;
    // border-radius:                   15px 15px 0px 0px;
-    border-color:                      @color9;
+    border-color:                      @border;
     font:                              @color1;
 }
 
 entry,prompt,case-indicator {
     text-font:                         inherit;
-    text-color:                        @color6;
+    text-color:                        @texts;
 }
 
 prompt {
@@ -85,7 +89,7 @@ prompt {
 listview {
     padding:                           3px;
 //    border-radius:                   0px 0px 15px 15px;
-    border-color:                      @color9;
+    border-color:                      @border;
     border:                            0px 2px 2px 2px;
     background-color:                  @color0;
     dynamic:                           true;
@@ -96,8 +100,8 @@ listview {
 element {
     padding:                           3px;
     vertical-align:                    0.5;
-    border:                            2px;
-    border-radius:                     0px;
+    border:                            1px;
+    border-radius:                     1px;
     background-color:                  @element-bg;
     color:                             @color6;
     font:                              inherit;
@@ -105,12 +109,12 @@ element {
 
 element-text {
     background-color:                  inherit;
-    text-color:                        inherit;
+    text-color:                        @texts;
 }
 
 element selected.normal {
-    background-color:                  @color1;
-    text-color: @color6;
+    background-color:                  @color3;
+    text-color: @texts;
 }
 
 element normal active {
@@ -169,7 +173,7 @@ button {
     border:                            2px 0px 2px 2px;
     border-radius:                     4px 0px 0px 4px;
     background-color:                  @color0;
-    border-color:                      @foreground;
+    border-color:                      @border;
     color:                             @foreground;
     horizontal-align:                  0.5;
 }
@@ -178,13 +182,13 @@ button selected normal {
     color:                             @color0;
     border:                            2px 0px 2px 2px;
     background-color:                  @color0;
-    border-color:                      @foreground;
+    border-color:                      @border;
 }
 
 error-message {
     expand:                            true;
     background-color:                  @red-alt;
-    border-color:                      @color0;
+    border-color:                      @border;
     border:                            2px;
     padding:                           1em;
 }
