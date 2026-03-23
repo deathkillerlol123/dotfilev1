@@ -22,12 +22,7 @@ in
         devices = ["nodev"];
        	efiSupport = true;
        	useOSProber = true;
-       	#theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
-      };
-      grub2-theme = {
-        enable = true;
-        theme = "vimix";
-        footer = true;
+       	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];

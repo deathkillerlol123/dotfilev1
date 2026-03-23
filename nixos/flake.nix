@@ -2,9 +2,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
-    grub2-themes = {
-      url = "github:vinceliuice/grub2-themes";
-    };
     #matugen.url = "github:/InioX/Matugen";
     home-manager = {
     	url = "github:nix-community/home-manager";
@@ -21,7 +18,6 @@
       	    modules = [ 
       	      ./hosts/nixboom/configuration.nix
       	      inputs.home-manager.nixosModules.default
-              inputs.grub2-themes.nixosModules.default
     	      ];  
          };         
    	  };
