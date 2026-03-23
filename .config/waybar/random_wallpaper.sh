@@ -25,4 +25,8 @@ if [ -n "$FILE" ]; then
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
 
+  cd ~/dotfiles/nixos/themes/limine_wallpaper/
+  rm -rf *
+  cp "$FILE" "$HOME/dotfiles/nixos/themes/limine_wallpaper/"
+
 fi
