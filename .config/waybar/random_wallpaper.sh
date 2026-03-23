@@ -2,6 +2,9 @@
 
 cd ~/dotfiles/.config/waybar/
 
+COLORS="$HOME/.cache/wal"
+OUPUT="$HOME/dotfiles/.config"
+
 LAST_WALL="$HOME/dotfiles/scripts/colorschem/last_wall.txt"
 
 # Pick wallpaper
@@ -12,14 +15,14 @@ if [ -n "$FILE" ]; then
 
   swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7 &
   wal -i "$FILE" -n
-
   pkill -f rofi
-  cp ~/.cache/wal/colors-waybar.css ~/dotfiles/.config/waybar/colors.css
-  cp ~/.cache/wal/colors.css ~/dotfiles/.config/swaync/
-  cp ~/.cache/wal/colors-kitty.conf ~/dotfiles/.config/kitty/
-  cp ~/.cache/wal/colors-zed.json ~/dotfiles/.config/zed/themes/pywal.json
+
+  cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
+  cp "${COLORS}/colors.css" "${OUPUT}/swaync/"
+  cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
+  cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
 
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"
-  mv colors.rasi ~/dotfiles/.config/rofi/colors.rasi
+  mv colors.rasi "${OUPUT}/rofi/colors.rasi"
 
 fi
