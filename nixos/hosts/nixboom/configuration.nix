@@ -106,7 +106,8 @@ in
   };
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
-  	nerd-fonts.droid-sans-mono  ];
+  	nerd-fonts.droid-sans-mono
+  ];
   environment.systemPackages = with pkgs; [
     #inputs.nix-software-center.packages.${system}.nix-software-center    
     #inputs.matugen.packages.${system}.default
