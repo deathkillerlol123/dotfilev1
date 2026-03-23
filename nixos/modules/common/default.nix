@@ -1,6 +1,5 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    limine
     gdm
     ly
     efibootmgr

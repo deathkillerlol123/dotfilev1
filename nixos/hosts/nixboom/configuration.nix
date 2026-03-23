@@ -27,7 +27,7 @@ in
       limine = {
         enable = true;
         extraEntries = ''
-          Windows
+          /Windows
             protocol: efi
             path: uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi
         '';
