@@ -148,6 +148,10 @@ in
       source = "${dotfiles}/.config/ironbar";
       recursive = true;
     };
+    ".config/matugen" = {
+      source = "${dotfiles}/.config/matugen";
+      recursive = true;
+    };    
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
       recursive = true;
