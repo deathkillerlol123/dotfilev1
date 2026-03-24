@@ -168,8 +168,8 @@ in
       name = "Orchis-Grey-Dark";
     };
     cursorTheme = {
+      enable = true;
       size = 16;
-      asd
       name = "LyraB Cursors";
     };
   };
