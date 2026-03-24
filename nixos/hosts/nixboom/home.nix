@@ -169,6 +169,7 @@ in
     };
     cursorTheme = {
       size = 16;
+      asd
       name = "LyraB Cursors";
     };
   };
