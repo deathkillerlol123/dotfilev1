@@ -167,5 +167,9 @@ in
       package = pkgs.orchis-theme;
       name = "Orchis-Grey-Dark";
     };
+    cursorTheme = {
+      size = 16;
+      name = "Adwaita";
+    };
   };
 }

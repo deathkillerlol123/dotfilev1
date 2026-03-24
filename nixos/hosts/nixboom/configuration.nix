@@ -86,6 +86,8 @@ in
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
       kdePackages.xdg-desktop-portal-kde
+      
+      xdg-desktop-portal-wlr
     ];
   };
   programs = {
