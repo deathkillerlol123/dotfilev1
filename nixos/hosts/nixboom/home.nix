@@ -168,7 +168,7 @@ in
       name = "Orchis-Grey-Dark";
     };
     cursorTheme = {
-      size = 16;
+      size = 30;
       name = "Adwaita";
     };
   };
