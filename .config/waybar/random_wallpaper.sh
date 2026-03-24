@@ -15,15 +15,15 @@ if [ -n "$FILE" ]; then
 
   swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7 &
   wal -i "$FILE" -n
-  pkill -f rofi
 
   cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
-  cp "${COLORS}/colors.css" "${OUPUT}/swaync/"
+ # cp "${COLORS}/colors.css" "${OUPUT}/swaync/"
  # cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
   cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
 
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
+  pkill -f rofi
 
   cd ~/dotfiles/nixos/themes/limine_wallpaper/
   rm -rf *

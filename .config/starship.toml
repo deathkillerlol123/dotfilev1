@@ -2,9 +2,12 @@
 #[╭─user───❯](bold blue) $username
 #[┣─system─❯](bold yellow) $hostname
 #[┣─project❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-#[╰─cmd────❯](bold green) 
+#[╰─cmd────❯](bold green) $shell
 #"""
 #format = '$all'
+format = """
+❯
+"""
 
 right_format = """
 """
@@ -19,14 +22,14 @@ format = '[$localipv4](bold red) '
 style_user = "green bold"
 style_root = "red bold"
 format = "[$user]($style) "
-disabled = true
-show_always = false
+disabled = false
+show_always = true
 
 [hostname]
 ssh_only = false
 format = '[$hostname](bold red) '
 trim_at = "."
-disabled = true
+disabled = false
 
 [git_branch]
 disabled = false
@@ -38,7 +41,7 @@ disabled = true
 disabled = true
 
 [shell]
-disabled = true
+disabled = false
 
 [rust]
 disabled = true
