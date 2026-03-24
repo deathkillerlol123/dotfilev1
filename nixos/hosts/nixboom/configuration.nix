@@ -123,7 +123,6 @@ in
   	nerd-fonts.droid-sans-mono
   ];
   environment.systemPackages = with pkgs; [
-    inputs.wezterm.packages.${system}.default;
     #inputs.nix-software-center.packages.${system}.nix-software-center    
     #inputs.matugen.packages.${system}.default
   ];
