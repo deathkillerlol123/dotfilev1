@@ -3,6 +3,12 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+wezterm.on('window-focus-changed', function(window, pane)
+  local has_selection = window:get_selection_text_for_pane(pane) ~= ""
+  if has_selection then
+    window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+  end
+end)
 
 
 
