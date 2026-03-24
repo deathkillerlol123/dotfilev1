@@ -26,7 +26,7 @@ in
       };
       limine = {
         enable = true;
-        maxGenerations = 5;
+        maxGenerations = 3;
         style = {
           wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
           wallpaperStyle = "centered";
