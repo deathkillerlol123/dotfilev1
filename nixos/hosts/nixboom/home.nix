@@ -21,7 +21,7 @@ in
       recursive = true;
     };
     ".wezterm.lua" = {
-      source = "${dotfiles}/.westerm.lua";
+      source = "${dotfiles}/.wezterm.lua";
       recursive = true;
     };    
     ".config/fish" = {
