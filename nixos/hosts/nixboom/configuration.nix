@@ -28,6 +28,10 @@ in
         enable = true;
         style = {
           wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
+          wallpaperStyle = "centered";
+          interface = {
+            helpHidden = false;
+          };
         };
         extraEntries = ''
           /Windows
