@@ -75,6 +75,7 @@
     pywal
     kdePackages.gwenview  
     
+    xcursor-pro
     ntfs3g
     
     mangowc
