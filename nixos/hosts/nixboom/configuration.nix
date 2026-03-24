@@ -95,6 +95,9 @@ in
     fish = {
       enable = true;
     };
+    wezterm = {
+      enable = true;
+    };
     gamemode.enable = true;
     gamescope = {
       enable = true;
