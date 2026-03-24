@@ -1,7 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+    wezterm.url = "github:wezterm/wezterm?dir=nix";
+    #nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     #matugen.url = "github:/InioX/Matugen";
     home-manager = {
     	url = "github:nix-community/home-manager";
