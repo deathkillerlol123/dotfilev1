@@ -49,6 +49,7 @@
     discord-ptb
     kitty
     
+    wezterm
     starship
     zsh
     bash
