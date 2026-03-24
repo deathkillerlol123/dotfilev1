@@ -167,5 +167,10 @@ in
       package = pkgs.orchis-theme;
       name = "Orchis-Grey-Dark";
     };
+    cursorTheme = {
+      package = pkgs.lyra-cursors;
+      name = "LyraR Cursors";
+      size = 16;
+    }
   };
 }
