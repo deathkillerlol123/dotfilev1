@@ -20,6 +20,10 @@ in
       source = "${dotfiles}/.zshrc";
       recursive = true;
     };
+    ".wezterm.lua" = {
+      source = "${dotfiles}/.westerm.lua";
+      recursive = true;
+    };    
     ".config/fish" = {
       source = "${dotfiles}/.config/fish";
       recursive = true;
