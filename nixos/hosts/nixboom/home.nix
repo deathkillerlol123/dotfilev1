@@ -171,6 +171,6 @@ in
       package = pkgs.lyra-cursors;
       name = "LyraR Cursors";
       size = 16;
-    }
+    };
   };
 }
