@@ -168,7 +168,6 @@ in
       name = "Orchis-Grey-Dark";
     };
     cursorTheme = {
-      enable = true;
       size = 16;
       name = "LyraB Cursors";
     };
