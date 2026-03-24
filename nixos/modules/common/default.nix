@@ -74,6 +74,8 @@
     swww
     pywal
     kdePackages.gwenview  
+    lyra-cursors
+    
     ntfs3g
     
     mangowc
