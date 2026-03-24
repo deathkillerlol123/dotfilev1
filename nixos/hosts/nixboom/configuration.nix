@@ -95,6 +95,10 @@ in
     fish = {
       enable = true;
     };
+    wezterm = {
+      enable = true;
+      package = inputs.wezterm.packages.${pkgs.system}.default;
+    };
     gamemode.enable = true;
     gamescope = {
       enable = true;
