@@ -168,8 +168,8 @@ in
       name = "Orchis-Grey-Dark";
     };
     cursorTheme = {
-      size = 30;
-      name = "Adwaita";
+      size = 16;
+      name = "LyraB Cursors";
     };
   };
 }
