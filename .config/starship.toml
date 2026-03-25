@@ -4,9 +4,11 @@
 #[┣─project❯](bold red) $directory$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
 #[╰─cmd────❯](bold green) $shell
 #"""
-#format = '$all'
+#format = '$al
+
+	
 format = """
-❯
+$git_branch❯
 """
 
 right_format = """

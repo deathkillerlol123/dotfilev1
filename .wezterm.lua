@@ -38,5 +38,9 @@ config.colors = {
   cursor_bg = "#7aa2f7",
   cursor_border = "#7aa2f7",
 }
+
+warn_about_missing_glyphs=false
+
+
 -- Finally, return the configuration to wezterm:
 return config
