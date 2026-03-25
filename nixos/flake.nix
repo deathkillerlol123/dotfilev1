@@ -2,8 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:danth/stylix";
     };
     #nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     #matugen.url = "github:/InioX/Matugen";
@@ -13,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
       	  nixbtw = nixpkgs.lib.nixosSystem {
@@ -22,7 +21,7 @@
       	    modules = [ 
       	      ./hosts/nixboom/configuration.nix
       	      inputs.home-manager.nixosModules.default
-              stylix.nixosModules.stylix
+              inputs.stylix.nixosModules.stylix
     	      ];  
          };         
    	  };

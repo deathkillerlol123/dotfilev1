@@ -47,9 +47,6 @@ in
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
     kernelPackages = pkgs.linuxPackages_latest;
   };
-  {
-    stylix.enable = true;
-  };
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
