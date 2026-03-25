@@ -16,8 +16,8 @@ config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'NeverPrompt'
 
 
-config.enable_tab_bar = false
---config.hide_tab_bar_if_only_one_tab = false
+config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.show_close_tab_button_in_tabs = false
 
