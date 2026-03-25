@@ -31,7 +31,7 @@ config.window_padding = {
 
 
 config.color_scheme = 'Tokyo Night Storm'
-config.font = wezterm.font('FiraCode Nerd Font Mono')
+config.font = wezterm.font('FiraCode Nerd Font')
 config.font_size = 13
 config.adjust_window_size_when_changing_font_size = false
 
@@ -40,7 +40,8 @@ config.colors = {
   cursor_border = "#7aa2f7",
 }
 
-warn_about_missing_glyphs=false
+warn_about_missing_glyphs = false
 
 -- Finally, return the configuration to wezterm:
 return config
+
