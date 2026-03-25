@@ -43,7 +43,7 @@
       "transition-left-to-right": true,
     },
   "modules": [
-    "custom/notification",
+    "custom/notification",  
     "tray",
   ]
 },

@@ -14,7 +14,7 @@
 "mode": "bar",
 "exclusive": true,
 "passthrough": true,
-"position": "right",
+"position": "bottom",
 "fixed-center": true,
 "ipc": true,
 "margin": 0,
@@ -36,9 +36,7 @@
     "modules":[
       "pulseaudio",
       "battery",
-      "custom/notification",
-      "tray",
-      
+      "group/notifytray"
     ]
   },
 "group/middle":{
