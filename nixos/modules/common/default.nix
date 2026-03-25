@@ -57,6 +57,9 @@
     
     zoxide
     neovim
+    
+    emacs
+    
     zed-editor
     zellij
     copyq
