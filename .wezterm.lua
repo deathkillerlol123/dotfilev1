@@ -11,7 +11,6 @@ wezterm.on('window-focus-changed', function(window, pane)
 end)
 
 
-
 config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'NeverPrompt'
 

@@ -255,12 +255,7 @@ plugins {
     }
     plugin-manager location="zellij:plugin-manager"
     session-manager location="zellij:session-manager"
-    status-bar location="zellij:status-bar"
     strider location="zellij:strider"
-    tab-bar location="zellij:tab-bar"
-    welcome-screen location="zellij:session-manager" {
-        welcome_screen true
-    }
 }
 
 // eg. "file:/path/to/my-plugin.wasm"
@@ -296,9 +291,9 @@ copy_on_select true
 attach_to_session true
 auto_layout true
 session_serialization true
-serialize_pane_viewport true
+serialize_pane_viewport false
 scrollback_lines_to_serialize 10000
-styled_underlines true
+styled_underlines false
 serialization_interval 10
 disable_session_metadata false
 support_kitty_keyboard_protocol true
