@@ -272,7 +272,7 @@ theme "tokyo-night-storm"
 default_mode "normal"
 default_shell "fish"
  
-default_layout "default"
+default_layout "disable-status-bar"
  
 // layout_dir "/tmp"
 // default_cwd "/tmp"
