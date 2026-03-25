@@ -91,6 +91,7 @@ in
     ];
   };
   programs = {
+    stylix.enable = true;
     zsh = {
       enable = false;
     };
