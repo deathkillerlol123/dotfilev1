@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 
+
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
@@ -40,7 +41,6 @@ config.colors = {
 }
 
 warn_about_missing_glyphs=false
-
 
 -- Finally, return the configuration to wezterm:
 return config
