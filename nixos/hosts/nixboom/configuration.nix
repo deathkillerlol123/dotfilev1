@@ -120,6 +120,9 @@ in
       ];
     };
   };
+  {
+    stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm-yaml"
+  };
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
   	nerd-fonts.droid-sans-mono
