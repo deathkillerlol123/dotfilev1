@@ -57,8 +57,8 @@
     
     zoxide
     neovim
-    
     emacs
+    yazi
     
     zed-editor
     zellij
