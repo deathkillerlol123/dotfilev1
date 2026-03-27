@@ -6,9 +6,9 @@ let
 
 in
 {
-  imports = [
-   ./home_files/firefox.nix
-  ];
+#  imports = [
+#   ./home_files/firefox.nix
+#  ];
   home.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
   home.sessionVariables = {
