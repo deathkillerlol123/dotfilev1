@@ -45,7 +45,7 @@
     
 #    qutebrowser
     firefox-devedition
-    firefox
+
     
     whatsapp-electron
     discord-ptb

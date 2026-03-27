@@ -15,6 +15,7 @@ in
   # You should not change this value, even if you update Home Manager. If you do
   home.stateVersion = "25.11"; # Please read the comment before changing.
   home.packages = with pkgs; [ ];
+  
   home.file = {
     ".zshrc" = {
       source = "${dotfiles}/.zshrc";
@@ -154,10 +155,6 @@ in
     };
     ".config/matugen" = {
       source = "${dotfiles}/.config/matugen";
-      recursive = true;
-    };
-    ".emacs.d" = {
-      source = "${dotfiles}/emacs";
       recursive = true;
     };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
