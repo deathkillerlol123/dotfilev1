@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # Set DP (left) and HDMI (right) without setting primary
 
