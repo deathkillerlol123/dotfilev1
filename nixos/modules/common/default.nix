@@ -10,6 +10,9 @@
     heroic
     gamescope
     gamemode
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
     
     brightnessctl
     wlr-randr
