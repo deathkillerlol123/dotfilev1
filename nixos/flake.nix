@@ -4,6 +4,10 @@
     stylix = {
       url = "github:danth/stylix";
     };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
     #matugen.url = "github:/InioX/Matugen";
     home-manager = {
