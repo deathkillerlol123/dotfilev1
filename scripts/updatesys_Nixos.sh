@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env fish
 
 sudo nixos-rebuild switch --upgrade --flake ~/dotfiles/nixos
 ~/dotfiles/scripts/git_updater.sh
