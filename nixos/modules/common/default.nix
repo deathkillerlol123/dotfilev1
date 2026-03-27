@@ -43,8 +43,10 @@
     waybar
     ironbar
     
-    qutebrowser
-    firefox-devedition  
+#    qutebrowser
+    firefox-devedition
+    firefox
+    
     whatsapp-electron
     discord-ptb
     kitty
