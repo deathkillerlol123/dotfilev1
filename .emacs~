@@ -1,10 +1,9 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-(require 'tree-sitter)
-(require 'tree-sitter-langs)
 
 
+(add-to-list 'load-path "/home/nixboom/dotfiles/")
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
 (setq vc-follow-symlinks t)
@@ -29,5 +28,5 @@
  )
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
-(global-tree-sitter-mode)
-(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+(global-font-lock-mode 1)
+
