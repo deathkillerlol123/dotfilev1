@@ -8,6 +8,6 @@ nix store gc
 sudo nix store optimise
 
 
-nh clean all
+nh clean all --keep 3
 
 rm -rf ~/.cache/*
