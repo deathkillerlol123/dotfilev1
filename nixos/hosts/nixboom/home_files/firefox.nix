@@ -12,5 +12,8 @@ in
 {
   programs.firefox = {
     enable = true;
+    extensions = [
+      inputs.firefox-addons.packages."x86_64".block-origin
+    ];
   };
 }
