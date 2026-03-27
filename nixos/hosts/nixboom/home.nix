@@ -157,6 +157,9 @@ in
       source = "${dotfiles}/.config/matugen";
       recursive = true;
     };
+    ".emacs" = {
+        source = "${dotfiles}/.emacs";
+    };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
       recursive = true;
