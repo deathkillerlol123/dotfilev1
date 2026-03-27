@@ -30,7 +30,7 @@ in
         maxGenerations = 3;
         style = {
           wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
-          wallpaperStyle = "centered";
+          wallpaperStyle = "stretched";
           interface = {
             helpHidden = false;
           };
