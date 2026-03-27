@@ -13,6 +13,7 @@ in
     "${mod}/common/"
     "${mod}/sound/"
   ];
+  services.fwupd.enable = false;  
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
