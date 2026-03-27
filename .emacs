@@ -13,3 +13,4 @@
  )
 
 (add-hook 'after-init-hook 'global-company-mode)
+(global-display-line-numbers-mode)
