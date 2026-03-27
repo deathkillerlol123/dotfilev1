@@ -157,7 +157,7 @@ in
       recursive = true;
     };
     ".emacs.d" = {
-      source = "${dotfiles}/.emacs.d";
+      source = "${dotfiles}/emacs";
       recursive = true;
     };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
