@@ -7,10 +7,11 @@
 
 (custom-set-variables
  '(custom-enabled-themes '(modus-vivendi-tinted))
- '(package-selected-packages '(company multiple-cursors)))
+ '(package-selected-packages '(company multiple-cursors tree-inspector)))
 (custom-set-faces
 
  )
-
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
+(global-font-lock-mode 1)
+
