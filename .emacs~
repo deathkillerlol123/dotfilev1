@@ -1,9 +1,12 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(require 'tree-sitter)
+(require 'tree-sitter-langs)
 
+(require 'evil)
+(evil-mode 1)
 
-(add-to-list 'load-path "/home/nixboom/dotfiles/")
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
 (setq vc-follow-symlinks t)
@@ -17,7 +20,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(package-selected-packages
-   '(company eglot-inactive-regions flycheck lsp-latex lsp-mode
+   '(company eglot-inactive-regions evil flycheck lsp-latex lsp-mode
 	     lsp-python-ms lsp-ui multiple-cursors tree-inspector
 	     tree-sitter tree-sitter-indent tree-sitter-langs)))
 (custom-set-faces
@@ -28,5 +31,5 @@
  )
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
-(global-font-lock-mode 1)
-
+(global-tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
