@@ -9,8 +9,8 @@
   "$HOME/.config/waybar/ModulesMango",
   ],
 "layer": "top",
-"output": ["eDP-1","DP-1"],
 "reload_style_on_change": true,
+"output": ["eDP-1","DP-2"],
 "exclusive": true,
 "passthrough": true,
 "position": "bottom",
@@ -57,6 +57,5 @@
     "memory",
     "pulseaudio",
     ]
-    },
-
+  },
 }
