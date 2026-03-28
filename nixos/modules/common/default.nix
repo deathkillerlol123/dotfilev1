@@ -14,6 +14,8 @@
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
 
+    uxplay
+
     brightnessctl
     wlr-randr
     borgbackup

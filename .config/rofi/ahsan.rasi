@@ -20,8 +20,8 @@
     padding:                            0px;
     margin:                             0px;
     
-    background:                         @color2;
-    border:                             @color4;
+    background:                         @color0;
+    border:                             @color2;
     texts:                              @color5;
 }
 
