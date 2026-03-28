@@ -11,8 +11,6 @@
     gamescope
     gamemode
 
-    xdg-desktop-portal-gnome
-
     uxplay
 
     brightnessctl
