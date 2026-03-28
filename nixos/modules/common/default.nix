@@ -33,6 +33,7 @@
     wlogout
     nautilus  
     rofi
+    waybar
     
 
     firefox-devedition

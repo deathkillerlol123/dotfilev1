@@ -93,7 +93,6 @@ in
     ];
   };
   programs = {
-    waybar.enable = true;
     zsh = {
       enable = false;
     };
