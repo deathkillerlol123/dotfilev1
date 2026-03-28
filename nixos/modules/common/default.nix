@@ -11,8 +11,6 @@
     gamescope
     gamemode
 
-    uxplay
-
     brightnessctl
     wlr-randr
     borgbackup
