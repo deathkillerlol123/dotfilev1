@@ -13,7 +13,6 @@
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
-    miraclecast
 
     brightnessctl
     wlr-randr
