@@ -48,6 +48,23 @@ in
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
     kernelPackages = pkgs.linuxPackages_latest;
   };
+  environment.systempackages = with pkgs; [
+    gnome-network-displays
+  ];z
+  xdg.portal.enable = true;
+  xdg.portal.xdgOpenUsePortal = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gnome
+    pkgs.xdg-desktop-portal-wlr
+  ];
+  networking.firewall = {
+    trustedInterfaces = ["p2p-wl+"];
+    allowedtcpports = [7236 7259];
+    allowedudpports = [7236 5353];
+  };
+
+
+
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
