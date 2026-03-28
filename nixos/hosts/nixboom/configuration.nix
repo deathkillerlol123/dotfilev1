@@ -85,6 +85,7 @@ in
       };
    	};  
     extraPortals = with pkgs; [
+      xdg-desktop-portals
       xdg-desktop-portal-gtk
       kdePackages.xdg-desktop-portal-kde
       xdg-desktop-portal-wlr
