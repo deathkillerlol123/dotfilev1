@@ -11,7 +11,6 @@
 "layer": "top",
 "output": ["eDP-1","DP-1"],
 "reload_style_on_change": true,
-"mode": "bar",
 "exclusive": true,
 "passthrough": true,
 "position": "bottom",

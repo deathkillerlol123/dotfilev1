@@ -33,8 +33,8 @@
     wlogout
     nautilus  
     rofi
-    waybar
     
+
     firefox-devedition
     whatsapp-electron
     discord-ptb
