@@ -50,7 +50,7 @@ in
   };
   environment.systempackages = with pkgs; [
     gnome-network-displays
-  ];z
+  ];
   xdg.portal.enable = true;
   xdg.portal.xdgOpenUsePortal = true;
   xdg.portal.extraPortals = [
