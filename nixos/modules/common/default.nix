@@ -63,6 +63,7 @@
     clock-rs
     neofetch
     swww
+    fd
     pywal
     kdePackages.gwenview  
     ntfs3g
