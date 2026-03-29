@@ -263,7 +263,7 @@
 "tray": {
 	"icon-size": 15,
 	"spacing": 1,
-  "expand": false,
+  "expand": true,
   "show-passive-items": false
 },
 
