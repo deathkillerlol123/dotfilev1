@@ -34,7 +34,6 @@
     xdg-desktop-portal-wlr
 
     firefox-devedition
-    firefox
     whatsapp-electron
     discord-ptb
     kitty
