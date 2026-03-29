@@ -7,6 +7,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+    inputs.nixvim.nixosModules.nixvim
     ../../main.nix    
     "${mod}/environment/"
     "${mod}/login/"
