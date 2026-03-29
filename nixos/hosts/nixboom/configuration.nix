@@ -86,6 +86,7 @@ in
    };
   };
   programs = {
+    nixvim.enable=true;
     zsh = {
       enable = false;
     };
