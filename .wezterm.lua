@@ -22,6 +22,7 @@ config.use_fancy_tab_bar = false
 config.show_close_tab_button_in_tabs = false
 
 
+config.enable_scroll_bar = false
 config.window_padding = {
   left = 0,
   right = 0,

@@ -50,6 +50,7 @@
     
     zed-editor
     zellij
+    viu
     copyq
     grim
     slurp
