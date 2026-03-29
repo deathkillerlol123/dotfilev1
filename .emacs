@@ -4,6 +4,11 @@
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
 
+(require 'multiple-cursors)
+(global-set-key
+ (kbd "C-.")
+ 'mc/mark-next-like-this)
+
 
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
