@@ -4,9 +4,6 @@
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
 
-(require 'evil)
-(evil-mode 1)
-(setq evil-auto-indent t)
 
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
@@ -22,9 +19,10 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(company eglot-inactive-regions evil flycheck lsp-latex lsp-mode
-	     lsp-python-ms lsp-ui multiple-cursors tree-inspector
-	     tree-sitter tree-sitter-indent tree-sitter-langs)))
+   '(company eglot-inactive-regions flycheck lsp-latex
+	     lsp-mode lsp-python-ms lsp-ui multiple-cursors
+	     tree-inspector tree-sitter tree-sitter-indent
+	     tree-sitter-langs)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
