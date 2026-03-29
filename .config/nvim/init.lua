@@ -9,8 +9,8 @@ require("luasnip.loaders.from_lua").lazy_load("snippets")
 --require("lsp")
 
 --vim.cmd.colorscheme("catpuccin-mocha")
-vim.cmd.colorscheme("onedark")
---vim.cmd.colorscheme("cyberdream")
+--vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("cyberdream")
 
 vim.wo.number = true          -- absolute line numbers
 vim.wo.relativenumber = false -- disable relative numbers
