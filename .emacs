@@ -35,3 +35,4 @@
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+(put 'downcase-region 'disabled nil)

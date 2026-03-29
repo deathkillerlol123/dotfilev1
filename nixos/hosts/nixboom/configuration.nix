@@ -76,18 +76,18 @@ in
     }];
     pam.services.swaylock = {}; 
   };  
-  XDG.PORTAL = {
-   	ENABLE = TRUE;
-    CONFIG = {
-      KDE = {
-        DEFAULT = ["KDE" "GTK" "GNOME"];
-        "ORG.FREEDESKTOP.PORTAL.OPENURI" = ["KDE"];
+  xdg.portal = {
+   	enable = true;
+    config = {
+      kde = {
+        default = ["kde" "gtk" "gnome"];
+        "org.freedesktop.portal.openuri" = ["kde"];
       };
    	};  
-    EXTRAPORTALS = WITH PKGS; [
-      XDG-DESKTOP-PORTAL-GTK
-      KDEPACKAGES.XDG-DESKTOP-PORTAL-KDE
-      XDG-DESKTOP-PORTAL-WLR
+    extraportals = with pkgs; [
+      xdg-desktop-portal-gtk
+      kdepackages.xdg-desktop-portal-kde
+      xdg-desktop-portal-wlr
     ];
   };
   programs = {
