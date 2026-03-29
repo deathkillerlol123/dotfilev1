@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AdVenture Capitalist
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/346900
+Icon=steam_icon_346900
+Terminal=false
+Type=Application
+Categories=Game;

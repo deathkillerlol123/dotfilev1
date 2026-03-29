@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Rocket! Demo
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/2539630
+Icon=steam_icon_2539630
+Terminal=false
+Type=Application
+Categories=Game;
