@@ -44,7 +44,6 @@
     fish
     
     zoxide
-    neovim
     emacs
     yazi
     
