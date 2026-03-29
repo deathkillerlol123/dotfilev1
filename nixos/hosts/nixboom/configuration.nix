@@ -83,11 +83,7 @@ in
         default = ["kde" "gtk" "gnome"];
         "org.freedesktop.portal.openuri" = ["kde"];
       };
-   	};  
-    extraportals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
+   };
   };
   programs = {
     zsh = {

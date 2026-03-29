@@ -29,9 +29,7 @@
     nautilus  
     rofi
     waybar
-
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-wlr
+    
 
     firefox-devedition
     whatsapp-electron
