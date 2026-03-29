@@ -35,7 +35,6 @@
 
     firefox-devedition
     whatsapp-electron
-    ferdium
     discord-ptb
     kitty
     
