@@ -1,5 +1,4 @@
-alias nrs='sudo nixos-rebuild switch --flake ~/dotfiles/nixos'
-alias gu='~/dotfiles/scripts/git_updater.sh'
+alias nrs='~/dotfiles/scripts/git_updater.sh && sudo nixos-rebuild switch --flake ~/dotfiles/nixos'
 alias up='~/dotfiles/scripts/updatesys_Nixos.sh'
 alias windows='~/dotfiles/scripts/Boot-Windows10.sh'
 alias total='gu && up'
