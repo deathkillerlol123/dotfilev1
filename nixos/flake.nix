@@ -12,8 +12,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
-    #matugen.url = "github:/InioX/Matugen";
     home-manager = {
     	url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,9 +28,8 @@
       	      ./hosts/nixboom/configuration.nix
       	      inputs.home-manager.nixosModules.default
               inputs.stylix.nixosModules.stylix
-	      inputs.nixvim.nixosModules.nixvim
     	      ];
 	  };         
     };
-   };
+  };
 }
