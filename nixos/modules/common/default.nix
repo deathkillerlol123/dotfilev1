@@ -38,8 +38,8 @@
 
     firefox-devedition
     whatsapp-electron
-    discord-ptb
-    betterdiscordctl
+    discord
+
     kitty
     
     wezterm
