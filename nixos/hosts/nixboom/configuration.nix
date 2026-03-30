@@ -60,6 +60,7 @@ in
   };
   main-user.enable = true;
   main-user.userName = "triangle";
+  users.users."triangle".extraGroups = ["wheel "gamemode"];
   users.users = {
     nixboom = {
       isNormalUser = true;
