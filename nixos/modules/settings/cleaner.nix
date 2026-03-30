@@ -6,6 +6,7 @@
       flake-location = lib.mkOption {
         default = "/tmp";
       };
+    };
   };
   config = lib.mkIf config.cleaner.enable {
     programs = {
