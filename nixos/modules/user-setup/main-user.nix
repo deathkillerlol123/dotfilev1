@@ -11,8 +11,11 @@
       };
       cleaner = {
         generations = lib.mkOption {
-	default = "3";
+	  default = "3";
       	};
+	flake_location = lib.mkOption {
+	  default = "/tmp";
+	};
       };
     };
   };
@@ -21,9 +24,6 @@
       isNormalUser = true;
       shell = pkgs.${config.main-user.shell};
     };
-    programs = {
-      ${config.main-user.shell}.enable = true;
-    };
     security = {
       sudo.extraRules = [{
         users = [config.main-user.userName];
@@ -31,6 +31,9 @@
           options = ["NOPASSWD"];
         }];
       }];
-    };   
+    };
+    programs = {
+      ${config.main-user.shell}.enable = true;
+    };    
  };
 }
