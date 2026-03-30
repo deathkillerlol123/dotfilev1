@@ -66,7 +66,7 @@ in
     userName = username;
     shell = "fish";
   };
-  cleaner.flake-locations = flake_pos;
+  cleaner.flake-location = flake_pos;
 
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   fonts.packages = with pkgs; [
