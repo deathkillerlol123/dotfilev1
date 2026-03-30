@@ -2,6 +2,7 @@
 let
   mod=../../modules;
   username="nixboom";
+  flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
   imports = [
@@ -70,7 +71,7 @@ in
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep 3";
-      flake = "/home/nixboom/dotfiles/nixos/";
+      flake = flake_pos;
       };
     nix-ld = {
       enable = true;
