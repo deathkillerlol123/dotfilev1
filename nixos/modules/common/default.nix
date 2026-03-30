@@ -22,12 +22,20 @@
     gh
     dysk
     libnotify
+
     swaynotificationcenter
     swaybg
     swaylock
     wlogout
     nautilus  
     rofi
+
+    fuzzel
+    raffi
+    pwmenu
+    iwmenu
+    bzmenu
+    
     waybar
 
     xdg-desktop-portal-gtk
