@@ -64,10 +64,6 @@ in
     enable = true;
     userName = username;
     shell = "fish";
-    cleaner = {
-      flake_location = flake_pos;
-      generations = "3";
-    };
   };
   programss = {
     nh = {
