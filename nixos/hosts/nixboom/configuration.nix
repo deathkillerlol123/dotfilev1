@@ -13,6 +13,7 @@ in
     "${mod}/common/"
     "${mod}/sound/"
     "${mod}/flatpak/"
+    "${mod}/gaming/"
   ];
   services.fwupd.enable = false;  
   boot = {
@@ -88,23 +89,9 @@ in
    };
   };
   programs = {
-    zsh = {
-      enable = false;
-    };
     fish = {
       enable = true;
     };
-    gamemode.enable = true;
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-    };
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      gamescopeSession.enable = true;
-      };
     nh = {
       enable = true;
       clean.enable = true;
