@@ -42,7 +42,5 @@ config.colors = {
 }
 
 warn_about_missing_glyphs = false
-
--- Finally, return the configuration to wezterm:
 return config
 
