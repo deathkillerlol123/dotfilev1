@@ -66,9 +66,6 @@ in
   };
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   programs = {
-    fish = {
-      enable = true;
-    };
     nh = {
       enable = true;
       clean.enable = true;
