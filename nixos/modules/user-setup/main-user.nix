@@ -11,4 +11,5 @@
   users.users.${config.main-user.userName} = {
     isNormalUser = true;
     shell = pkgs.fish;
+  };
 }
