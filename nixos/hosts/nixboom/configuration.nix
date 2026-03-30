@@ -65,16 +65,8 @@ in
     userName = username;
     shell = "fish";
   };
-  programs = {
-    nh = {
-      enable = true;
-      clean.enable = true;
-      flake = flake_pos;
-    };
-    nix-ld = {
-      enable = true;
-    };
-  };
+  cleaner.flake-locations = flake_pos;
+
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
