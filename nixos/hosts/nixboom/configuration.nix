@@ -58,6 +58,8 @@ in
         "nixboom" = import ./home.nix;
       };
   };
+  main-user.enable = true;
+  main-user.userName = "triangle";
   users.users = {
     nixboom = {
       isNormalUser = true;
