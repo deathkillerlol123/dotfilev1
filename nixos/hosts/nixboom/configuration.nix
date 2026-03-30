@@ -3,7 +3,7 @@ let
   mod=../../modules;
   username="nixboom";
   flake_pos="/home/nixboom/dotfiles/nixos/";
-  generations="3"
+  generations="3";
 in
 {
   imports = [
