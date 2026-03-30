@@ -40,7 +40,6 @@
     whatsapp-electron
     discord
     kitty
-    sakura
 #    wezterm
     starship
     bash
