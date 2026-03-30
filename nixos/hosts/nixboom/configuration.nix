@@ -62,15 +62,7 @@ in
   main-user.enable = true;
   main-user.userName = username;
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
-  security = {
-    sudo.extraRules = [{
-      users = [username];
-      commands = [{ command = "ALL";
-        options = ["NOPASSWD"];
-      }];
-    }];
-    pam.services.swaylock = {}; 
-  };  
+
   programs = {
     fish = {
       enable = true;

@@ -14,5 +14,12 @@
       isNormalUser = true;
       shell = pkgs.fish;
     };
-  };
+    security = {
+      sudo.extraRules = [{
+        users = [config.main-user.userName];
+        commands = [{ command = "ALL";
+          options = ["NOPASSWD"];
+        }];
+      }];
+    };
 }
