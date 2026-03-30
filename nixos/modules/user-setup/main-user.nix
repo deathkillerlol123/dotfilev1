@@ -7,7 +7,7 @@
         default = "mainuser";
       };
       shell = lib.mkOption {
-        default = bash;
+        default = "bash";
       };
     };
   };
