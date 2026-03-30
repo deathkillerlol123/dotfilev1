@@ -9,6 +9,9 @@
       shell = lib.mkOption {
         default = "bash";
       };
+      cleaner = {
+        generations = lib.mkOption {default=3};
+      };
     };
   };
   config = lib.mkIf config.main-user.enable {
@@ -16,7 +19,9 @@
       isNormalUser = true;
       shell = pkgs.${config.main-user.shell};
     };
-    programs.${config.main-user.shell}.enable = true;    
+    programs = {
+      ${config.main-user.shell}.enable = true;
+    };
     security = {
       sudo.extraRules = [{
         users = [config.main-user.userName];
@@ -24,7 +29,6 @@
           options = ["NOPASSWD"];
         }];
       }];
-    };
-    
+    };   
  };
 }
