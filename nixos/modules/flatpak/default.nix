@@ -2,7 +2,7 @@
 let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
-    "org.onlyoffice.desktopeditors"
+
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
