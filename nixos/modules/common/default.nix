@@ -30,8 +30,7 @@
     nautilus  
     rofi
     bzmenu
-    bemenu
-
+    bemoji
     waybar
 
     xdg-desktop-portal-gtk
