@@ -9,9 +9,6 @@
       shell = lib.mkOption {
         default = "bash";
       };
-      flake = lib.mkOption {
-       default = "/tmp";
-      };
     };
   };
   config = lib.mkIf config.main-user.enable {
