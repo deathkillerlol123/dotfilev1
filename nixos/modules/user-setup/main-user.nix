@@ -34,6 +34,15 @@
     };
     programs = {
       ${config.main-user.shell}.enable = true;
+      nh = {
+        enable = true;
+        clean.enable = true;
+        clean.extraArgs = "--keep ${config.main-user.cleaner.generations}";
+        flake = config.main-user.cleaner.flake_location;
+      };
+      nix-ld = {
+        enable = true;
+      };      
     };    
  };
 }

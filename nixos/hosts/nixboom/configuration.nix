@@ -64,31 +64,18 @@ in
     enable = true;
     userName = username;
     shell = "fish";
-  };
-  users.users.${username}.extraGroups = ["wheel" "gamemode"];
-  programs = {
-    nh = {
-      enable = true;
-      clean.enable = true;
-      clean.extraArgs = "--keep 3";
-      flake = flake_pos;
-      };
-    nix-ld = {
-      enable = true;
-      libraries = with pkgs; [
-      ];
+    cleaner = {
+      flake_location = flake_pos;
+      generations = "3";
     };
   };
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm-yaml";
   };
   fonts.packages = with pkgs; [
   	nerd-fonts.fira-code
   	nerd-fonts.droid-sans-mono
-  ];
-  environment.systemPackages = with pkgs; [
-    #inputs.nix-software-center.packages.${system}.nix-software-center    
-    #inputs.matugen.packages.${system}.default
   ];
   # Most users should NEVER change this value after the initial install, for any reason,
   system.stateVersion = "25.11";
