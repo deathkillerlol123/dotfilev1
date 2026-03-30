@@ -62,7 +62,7 @@ in
   main-user = {
     enable = true;
     userName = username;
-    .shell = "fish";
+    shell = "fish";
   };
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   programs = {
