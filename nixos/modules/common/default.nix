@@ -39,6 +39,7 @@
     firefox-devedition
     whatsapp-electron
     discord-ptb
+    betterdiscordctl
     kitty
     
     wezterm
