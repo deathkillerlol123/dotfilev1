@@ -9,14 +9,6 @@
       shell = lib.mkOption {
         default = "bash";
       };
-      cleaner = {
-        generations = lib.mkOption {
-	  default = "3";
-      	};
-	flake_location = lib.mkOption {
-	  default = "/tmp";
-	};
-      };
     };
   };
   config = lib.mkIf config.main-user.enable {
@@ -34,15 +26,6 @@
     };
     programs = {
       ${config.main-user.shell}.enable = true;
-      nh = {
-        enable = true;
-        clean.enable = true;
-        clean.extraArgs = "--keep ${config.main-user.cleaner.generations}";
-        flake = config.main-user.cleaner.flake_location;
-      };
-      nix-ld = {
-        enable = true;
-      };      
     };    
  };
 }

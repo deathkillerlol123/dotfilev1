@@ -69,6 +69,17 @@ in
       generations = "3";
     };
   };
+  programss = {
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep 3";
+      flake = flake_pos;
+    };
+    nix-ld = {
+      enable = true;
+    };
+  };
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm-yaml";
