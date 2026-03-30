@@ -59,8 +59,11 @@ in
         ${username} = import ./home.nix;
       };
   };
-  main-user.enable = true;
-  main-user.userName = username;
+  main-user = {
+    enable = true;
+    userName = username;
+    .shell = "fish";
+  };
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   programs = {
     fish = {
@@ -89,22 +92,6 @@ in
     #inputs.nix-software-center.packages.${system}.nix-software-center    
     #inputs.matugen.packages.${system}.default
   ];
-
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case yo 
-  # not available with flakes
-  #system.copySystemConfiguration = true;
-
   # Most users should NEVER change this value after the initial install, for any reason,
   system.stateVersion = "25.11";
 }
