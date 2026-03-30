@@ -4,7 +4,7 @@
     efibootmgr
     os-prober
     curl 
-    wget    
+
     mangohud
     protonup-qt
     heroic
