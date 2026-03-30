@@ -3,7 +3,6 @@ let
   mod=../../modules;
   username="nixboom";
   flake_pos="/home/nixboom/dotfiles/nixos/";
-  generations="3";
 in
 {
   imports = [
@@ -34,7 +33,7 @@ in
       };
       limine = {
         enable = true;
-        maxGenerations = generations;
+        maxGenerations = 3;
         style = {
           wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
         };
