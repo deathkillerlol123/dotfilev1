@@ -56,7 +56,7 @@ in
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs ; };
       users = {
-        userName = import ./home.nix;
+        username = import ./home.nix;
       };
   };
   main-user.enable = true;
