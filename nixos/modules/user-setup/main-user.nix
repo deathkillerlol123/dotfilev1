@@ -1,7 +1,7 @@
 {lib,config,pkgs,...}:
 {
   options  = {
-    main-user.enable = lib.mkOption "enable user module";
+    main-user.enable = lib.mkEnableOption "enable user module";
     main-user.userName = lib.mkOption {
       default = "mainuser";
       description = ''
