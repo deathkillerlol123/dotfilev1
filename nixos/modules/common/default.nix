@@ -29,10 +29,9 @@
     wlogout
     nautilus  
     rofi
-
-    fuzzel
     bzmenu
-    
+    dmenu
+
     waybar
 
     xdg-desktop-portal-gtk
