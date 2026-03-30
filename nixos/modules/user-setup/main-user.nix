@@ -9,6 +9,7 @@
       shell = libmkOption {
         default = bash;
       };
+    };
   };
   config = lib.mkIf config.main-user.enable {
     users.users.${config.main-user.userName} = {
