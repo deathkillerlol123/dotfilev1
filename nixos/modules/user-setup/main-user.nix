@@ -12,6 +12,7 @@
       cleaner = {
         generations = lib.mkOption {
 	default = "3";
+      	};
       };
     };
   };
