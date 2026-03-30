@@ -1,6 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 let
   mod=../../modules;
+  username="nixboom";
 in
 {
   imports = [
@@ -59,8 +60,8 @@ in
       };
   };
   main-user.enable = true;
-  main-user.userName = "nixboom";
-  users.users."nixboom".extraGroups = ["wheel" "gamemode"];
+  main-user.userName = ${username};
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];
   security = {
     sudo.extraRules = [{
       users = ["nixboom"];
