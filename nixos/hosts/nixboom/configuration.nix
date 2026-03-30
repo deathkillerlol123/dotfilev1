@@ -60,8 +60,7 @@ in
   };
   main-user.enable = true;
   main-user.userName = "nixboom";
-  users.users."nixboom".extraGroups = ["wheel "gamemode"];
-
+  users.users."nixboom".extraGroups = ["wheel" "gamemode"];
   security = {
     sudo.extraRules = [{
       users = ["nixboom"];
@@ -78,7 +77,7 @@ in
     nh = {
       enable = true;
       clean.enable = true;
-      clean.extraArgs = "keep 3";
+      clean.extraArgs = "--keep 3";
       flake = "/home/nixboom/dotfiles/nixos/";
       };
     nix-ld = {
