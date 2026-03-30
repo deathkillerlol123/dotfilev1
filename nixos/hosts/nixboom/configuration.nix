@@ -64,7 +64,7 @@ in
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   security = {
     sudo.extraRules = [{
-      users = [${username}];
+      users = [username];
       commands = [{ command = "ALL";
         options = ["NOPASSWD"];
       }];
