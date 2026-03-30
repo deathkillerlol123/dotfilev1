@@ -17,6 +17,7 @@ in
     "${mod}/flatpak/"
     "${mod}/gaming/"
     "${mod}/settings/"
+    "${mod}/fonts/"
   ];
   services.fwupd.enable = false;  
   boot = {
@@ -65,13 +66,9 @@ in
     userName = username;
     shell = "fish";
   };
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];  
   cleaner.flake-location = flake_pos;
 
-  users.users.${username}.extraGroups = ["wheel" "gamemode"];
-  fonts.packages = with pkgs; [
-  	nerd-fonts.fira-code
-  	nerd-fonts.droid-sans-mono
-  ];
   # Most users should NEVER change this value after the initial install, for any reason,
   system.stateVersion = "25.11";
 }
