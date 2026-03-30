@@ -59,16 +59,8 @@ in
       };
   };
   main-user.enable = true;
-  main-user.userName = "triangle";
-  users.users."triangle".extraGroups = ["wheel "gamemode"];
-  users.users = {
-    nixboom = {
-      isNormalUser = true;
-      shell = pkgs.fish;
-      extraGroups = [ "wheel" "gamemode" ]; # Enable ‘sudo’ for the user.
-      packages = with pkgs; [  
-      ];
-    };
+  main-user.userName = "nixboom";
+  users.users."nixboom".extraGroups = ["wheel "gamemode"];
   };  
   security = {
     sudo.extraRules = [{
