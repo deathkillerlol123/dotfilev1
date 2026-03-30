@@ -10,7 +10,8 @@
         default = "bash";
       };
       cleaner = {
-        generations = lib.mkOption {default=3};
+        generations = lib.mkOption {
+	default=3
       };
     };
   };
