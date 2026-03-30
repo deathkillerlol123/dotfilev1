@@ -56,13 +56,12 @@ in
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs ; };
       users = {
-        "nixboom" = import ./home.nix;
+        userName = import ./home.nix;
       };
   };
   main-user.enable = true;
   main-user.userName = username;
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
-
   programs = {
     fish = {
       enable = true;
