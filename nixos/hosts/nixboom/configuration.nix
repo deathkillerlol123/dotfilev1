@@ -60,7 +60,7 @@ in
       };
   };
   main-user.enable = true;
-  main-user.userName = ${username};
+  main-user.userName = username;
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
   security = {
     sudo.extraRules = [{
