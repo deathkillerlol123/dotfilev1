@@ -54,8 +54,10 @@ in
     shell = "fish";
   };
   users.users.${username}.extraGroups = ["wheel" "gamemode"];
-  cleaner.enable = true;
-  cleaner.flake-location = flake_pos;
+  cleaner = {
+    enable = true;
+    flake-location = flake_pos;
+  };
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
