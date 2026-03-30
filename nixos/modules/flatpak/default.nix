@@ -3,7 +3,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
-    "eu.nokun.MirrorHall"
+
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
