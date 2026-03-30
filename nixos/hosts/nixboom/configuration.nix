@@ -61,7 +61,7 @@ in
   main-user.enable = true;
   main-user.userName = "nixboom";
   users.users."nixboom".extraGroups = ["wheel "gamemode"];
-  };  
+
   security = {
     sudo.extraRules = [{
       users = ["nixboom"];
