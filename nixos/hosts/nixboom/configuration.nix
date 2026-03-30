@@ -65,7 +65,7 @@ in
     userName = username;
     shell = "fish";
   };
-  programss = {
+  programs = {
     nh = {
       enable = true;
       clean.enable = true;
