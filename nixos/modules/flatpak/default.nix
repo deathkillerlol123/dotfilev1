@@ -3,7 +3,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
-    "com.discordapp.Discord"
+
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
