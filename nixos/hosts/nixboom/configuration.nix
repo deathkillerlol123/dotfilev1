@@ -69,7 +69,6 @@ in
     nh = {
       enable = true;
       clean.enable = true;
-      clean.extraArgs = "--keep 3";
       flake = flake_pos;
     };
     nix-ld = {
