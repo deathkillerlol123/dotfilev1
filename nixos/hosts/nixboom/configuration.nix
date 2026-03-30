@@ -12,6 +12,7 @@ in
     "${mod}/login/"
     "${mod}/common/"
     "${mod}/sound/"
+    "${mod}/flatpak/"
   ];
   services.fwupd.enable = false;  
   boot = {
