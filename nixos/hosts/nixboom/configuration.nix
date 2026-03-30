@@ -48,6 +48,13 @@ in
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
     kernelPackages = pkgs.linuxPackages_latest;
   };
+  main-user = {
+    enable = true;
+    userName = username;
+    shell = "fish";
+  };
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];  
+  cleaner.flake-location = flake_pos;
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -57,14 +64,5 @@ in
         ${username} = import ./home.nix;
       };
   };
-  main-user = {
-    enable = true;
-    userName = username;
-    shell = "fish";
-  };
-  users.users.${username}.extraGroups = ["wheel" "gamemode"];  
-  cleaner.flake-location = flake_pos;
-
-  # Most users should NEVER change this value after the initial install, for any reason,
   system.stateVersion = "25.11";
 }
