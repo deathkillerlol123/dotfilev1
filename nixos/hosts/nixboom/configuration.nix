@@ -78,7 +78,7 @@ in
     pam.services.swaylock = {}; 
   };  
   xdg.portal = {
-   	enable = true;
+   enable = true;
     config = {
       kde = {
         default = ["kde" "gtk" "gnome"];
