@@ -53,7 +53,8 @@ in
     userName = username;
     shell = "fish";
   };
-  users.users.${username}.extraGroups = ["wheel" "gamemode"];  
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];
+  cleaner.enable = true;
   cleaner.flake-location = flake_pos;
   home-manager = {
     useUserPackages = true;
