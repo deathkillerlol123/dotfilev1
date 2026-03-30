@@ -1,6 +1,13 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(setq backup-directory-alist '(("." . "~/dotfiles/emacs_backups"))
+      backup-by-copying      t  
+      version-control        t  
+      delete-old-versions    t  
+      kept-old-versions      1) 
+
+
 (require 'tree-sitter)
 (require 'tree-sitter-langs)
 

@@ -3,7 +3,6 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
-    "im.riot.Riot"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
