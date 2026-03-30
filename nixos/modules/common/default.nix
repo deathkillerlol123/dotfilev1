@@ -39,8 +39,8 @@
     firefox-devedition
     whatsapp-electron
     discord
-    kitty
-#    wezterm
+#    kitty
+    wezterm
     starship
     bash
     fish
