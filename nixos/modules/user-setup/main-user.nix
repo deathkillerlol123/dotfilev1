@@ -9,7 +9,9 @@
       shell = lib.mkOption {
         default = "bash";
       };
-      flake = lib.mkOption
+      flake = lib.mkOption {
+       null
+      };
     };
   };
   config = lib.mkIf config.main-user.enable {
