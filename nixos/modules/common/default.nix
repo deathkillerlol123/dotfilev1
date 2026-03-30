@@ -31,9 +31,6 @@
     rofi
 
     fuzzel
-    raffi
-    pwmenu
-    iwmenu
     bzmenu
     
     waybar
