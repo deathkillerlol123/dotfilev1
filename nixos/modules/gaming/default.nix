@@ -13,4 +13,4 @@
       gamescopeSession.enable = true;
     };  
   };
-};
+}
