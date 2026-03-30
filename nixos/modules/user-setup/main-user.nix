@@ -16,6 +16,7 @@
       isNormalUser = true;
       shell = pkgs.${config.main-user.shell};
     };
+    programs.${config.main-user.shell}.enable = true;    
     security = {
       sudo.extraRules = [{
         users = [config.main-user.userName];
