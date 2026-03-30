@@ -39,7 +39,8 @@
     firefox-devedition
     whatsapp-electron
     discord
-    kitty  
+    kitty
+    sakura
 #    wezterm
     starship
     bash
