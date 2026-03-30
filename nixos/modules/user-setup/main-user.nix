@@ -9,7 +9,7 @@
       '';
     };
   };
-  config = lib.mkIF config.main-user.enable {
+  config = lib.mkIf config.main-user.enable {
     users.users.${config.main-user.userName} = {
       isNormalUser = true;
       shell = pkgs.fish;
