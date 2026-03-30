@@ -10,7 +10,7 @@
         default = "bash";
       };
       flake = lib.mkOption {
-       default = "/tmp"
+       default = "/tmp";
       };
     };
   };
