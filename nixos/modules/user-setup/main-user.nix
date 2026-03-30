@@ -4,9 +4,6 @@
     main-user.enable = lib.mkEnableOption "enable user module";
     main-user.userName = lib.mkOption {
       default = "mainuser";
-      description = ''
-        username
-      '';
     };
   };
   config = lib.mkIf config.main-user.enable {
