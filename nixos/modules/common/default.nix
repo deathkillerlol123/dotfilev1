@@ -39,7 +39,7 @@
     firefox-devedition
     whatsapp-electron
     discord
-
+    discordo
     kitty
     
     wezterm
