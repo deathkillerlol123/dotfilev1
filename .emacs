@@ -31,8 +31,8 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(company eglot-inactive-regions flycheck lsp-latex
-	     lsp-mode lsp-python-ms lsp-ui multiple-cursors
+   '(company eglot-inactive-regions flycheck lsp-latex lsp-mode
+	     lsp-python-ms lsp-ui multiple-cursors qml-mode
 	     tree-inspector tree-sitter tree-sitter-indent
 	     tree-sitter-langs)))
 (custom-set-faces
