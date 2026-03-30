@@ -45,6 +45,7 @@
     starship
     bash
     fish
+    nushell
 
     neovim
     zoxide
