@@ -16,8 +16,7 @@ in
     "${mod}/sound/"
     "${mod}/flatpak/"
     "${mod}/gaming/"
-    "${mod}/settings/main-user.nix"
-    "${mod}/settings/cleaner.nix"
+    "${mod}/settings/"
   ];
   services.fwupd.enable = false;  
   boot = {
