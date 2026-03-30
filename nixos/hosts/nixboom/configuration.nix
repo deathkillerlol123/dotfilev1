@@ -17,6 +17,7 @@ in
     "${mod}/flatpak/"
     "${mod}/gaming/"
     "${mod}/settings/main-user.nix"
+    "${mod}/settings/cleaner.nix"
   ];
   services.fwupd.enable = false;  
   boot = {
