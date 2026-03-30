@@ -30,7 +30,7 @@
     nautilus  
     rofi
     bzmenu
-    dmenu
+    bemenu
 
     waybar
 
