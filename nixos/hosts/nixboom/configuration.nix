@@ -9,6 +9,7 @@ in
     inputs.home-manager.nixosModules.default
     ../../main.nix    
     "${mod}/environment/"
+    "${mod}/portals"
     "${mod}/login/"
     "${mod}/common/"
     "${mod}/sound/"
@@ -78,16 +79,6 @@ in
     }];
     pam.services.swaylock = {}; 
   };  
-  xdg.portal = {
-   enable = true;
-   wlr.enable = true;
-    config = {
-      kde = {
-        default = ["kde" "gtk" "gnome"];
-        "org.freedesktop.portal.openuri" = ["kde"];
-      };
-   };
-  };
   programs = {
     fish = {
       enable = true;
