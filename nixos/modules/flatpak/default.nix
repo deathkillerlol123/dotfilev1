@@ -2,7 +2,7 @@
 let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
-
+    "ch.openboard.OpenBoard"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
