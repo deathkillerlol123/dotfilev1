@@ -39,7 +39,6 @@
     firefox-devedition
     whatsapp-electron
     discord-ptb
-    legcord
     kitty
     
     wezterm
