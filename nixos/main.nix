@@ -2,9 +2,7 @@
 {
   documentation.enable = false;
   services = {
-    blueman = {
-      enable = true;
-    };
+    blueman.enable = true;
     flatpak.enable = true;
     libinput.enable = true;
   };
