@@ -11,7 +11,7 @@
       };
       cleaner = {
         generations = lib.mkOption {
-	default=3
+	default = "3";
       };
     };
   };
