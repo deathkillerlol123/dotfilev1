@@ -31,7 +31,7 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(company eglot-inactive-regions flycheck lsp-latex lsp-mode
+   '(company corfu eglot-inactive-regions flycheck lsp-latex lsp-mode
 	     lsp-python-ms lsp-ui multiple-cursors qml-mode
 	     tree-inspector tree-sitter tree-sitter-indent
 	     tree-sitter-langs)))
@@ -44,5 +44,6 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
+(global-corfu-mode)
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 (put 'downcase-region 'disabled nil)
