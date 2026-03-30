@@ -61,10 +61,10 @@ in
   };
   main-user.enable = true;
   main-user.userName = username;
-  users.users.${username}.extraGroups = ["wheel"];
+  users.users.${username}.extraGroups = ["wheel" "gamemode"];
   security = {
     sudo.extraRules = [{
-      users = ["nixboom"];
+      users = [${username}];
       commands = [{ command = "ALL";
         options = ["NOPASSWD"];
       }];
