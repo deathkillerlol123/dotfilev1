@@ -17,7 +17,7 @@
  'mc/mark-next-like-this)
 
 (global-set-key
- (kbd "C-l")
+ (kbd "C-q")
  'ace-swap-window)
 
 (defun volatile-kill-buffer()
@@ -43,10 +43,10 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-window company corfu eglot-inactive-regions flycheck lsp-latex
-		lsp-mode lsp-python-ms lsp-ui multiple-cursors
-		qml-mode tree-inspector tree-sitter tree-sitter-indent
-		tree-sitter-langs)))
+   '(ace-window aggressive-indent company corfu eglot-inactive-regions
+		flycheck lsp-latex lsp-mode lsp-python-ms lsp-ui
+		multiple-cursors qml-mode tree-inspector tree-sitter
+		tree-sitter-indent tree-sitter-langs)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -57,5 +57,9 @@
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
 (global-corfu-mode)
+
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+(add-hook 'css-mode-hook #'aggressive-indent-mode)
+
 (put 'downcase-region 'disabled nil)
