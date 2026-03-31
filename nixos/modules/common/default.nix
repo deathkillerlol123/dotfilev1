@@ -40,7 +40,6 @@
     firefox-devedition
     whatsapp-electron
     discord
-#    kitty
     wezterm
     starship
     bash
@@ -51,7 +50,6 @@
     emacs
     yazi
     
-    zed-editor
     zellij
     viu
     copyq
