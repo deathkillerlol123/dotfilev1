@@ -1,40 +1,51 @@
 import Quickshell
-import Quickshell.Wayland
+import Quickshell.Io // for Process
 import QtQuick
+import QtQuick.Layouts
+import Quickshell.Wayland
+
 
 PanelWindow {
-    anchors.top: false
-    anchors.bottom: true
-    anchors.left: true
-    anchors.right: true
-    implicitHeight: 30
-    color: "#1a1b26"
+  anchors {
+      top: false
+      bottom: true
+      left: true
+      right: true
+  }
+  implicitHeight: 30
+  color: "#888FFF"    
 
-    Text {
-        anchors.centerIn: parent
-        text: "My First Bar"
-        color: "#a9b1d6"
-        font.pixelSize: 14
-    }
-    Item {
-	property real margin: 5
-	implicitWidth: child.implicitWidth + margin * 10
-	implicitHeight: child.implicitHeight + margin *10
+  Text {
+    id: clock
 
-	Rectangle {
-	    id: child
+    anchors.centerIn: parent
 
-	    x: parent.margin
-	    y: parent.margin
-	    width: parent.width - parent.margin * 10
-	    height: parent.height - parent.margin * 10
-
-	    anchors.fill: parent
-	    anchors.margins: parent.margin
-
-	    implicitWidth: 50
-	    implicitHeight: 50
-
+    Process {
+	id: dateProc
+	command: ["date","+%m-%d %H:%M:%S"]
+	running: true
+	stdout: StdioCollector {
+            onStreamFinished: clock.text = this.text
 	}
     }
+      Timer {
+	  interval: 1000
+  	  running: true
+	  repeat: true
+	  onTriggered: dateProc.running = true
+      }
+  }
+    RowLayout {
+	anchors.fill: parent
+	anchors.margins: 8
+	spacing: 1
+	Repeater {
+	    model:3
+	    Rectangle {
+		width:5
+		height: 16
+	    }
+	}
+    }
+    
 }
