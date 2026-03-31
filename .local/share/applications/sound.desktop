@@ -3,6 +3,6 @@ Name=Sound
 Exec=pwmenu -l rofi
 Terminal=false
 Type=Application
-Icon=blueman
+Icon=org.pulseaudio.pavucontrol
 Categories=Utility;
 
