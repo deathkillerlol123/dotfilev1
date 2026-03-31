@@ -47,7 +47,11 @@
 
     neovim
     zoxide
+
     emacs
+    nixd
+    nil
+
     yazi
     
     zellij
