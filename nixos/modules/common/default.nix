@@ -29,6 +29,7 @@
     wlogout
     nautilus  
     rofi
+    bzmenu
     bemoji
     waybar
 
