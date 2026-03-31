@@ -18,7 +18,6 @@ in
     "${mod}/gaming/"
     "${mod}/settings/"
     "${mod}/fonts/"
-
   ];
   services.fwupd.enable = false;  
   boot = {
@@ -32,7 +31,7 @@ in
        	useOSProber = true;
        	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
-      limine = {
+      limzine = {
         enable = true;
         maxGenerations = 3;
         style = {
