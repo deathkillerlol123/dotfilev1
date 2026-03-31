@@ -31,7 +31,7 @@ in
        	useOSProber = true;
        	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
-      limzine = {
+      limine = {
         enable = true;
         maxGenerations = 3;
         style = {
