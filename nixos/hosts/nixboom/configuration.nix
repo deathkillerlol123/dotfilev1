@@ -14,10 +14,8 @@ in
     "${mod}/login/"
     "${mod}/common/"
     "${mod}/sound/"
-    "${mod}/flatpak/"
     "${mod}/gaming/"
     "${mod}/settings/"
-    "${mod}/fonts/"
   ];
   services.fwupd.enable = false;  
   boot = {
