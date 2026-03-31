@@ -30,6 +30,7 @@
     nautilus  
     rofi
     bzmenu
+    pwmenu
     bemoji
     waybar
 

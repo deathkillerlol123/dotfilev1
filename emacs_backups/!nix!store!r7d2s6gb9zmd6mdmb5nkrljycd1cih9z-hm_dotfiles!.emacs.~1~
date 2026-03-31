@@ -16,10 +16,6 @@
  (kbd "C-.")
  'mc/mark-next-like-this)
 
-(global-set-key
- (kbd "C-l")
- 'ace-swap-window)
-
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
   (interactive)
@@ -43,10 +39,10 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-window company corfu eglot-inactive-regions flycheck lsp-latex
-		lsp-mode lsp-python-ms lsp-ui multiple-cursors
-		qml-mode tree-inspector tree-sitter tree-sitter-indent
-		tree-sitter-langs)))
+   '(company corfu eglot-inactive-regions flycheck lsp-latex lsp-mode
+	     lsp-python-ms lsp-ui multiple-cursors qml-mode
+	     tree-inspector tree-sitter tree-sitter-indent
+	     tree-sitter-langs)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
