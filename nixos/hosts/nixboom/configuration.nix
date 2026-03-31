@@ -18,6 +18,7 @@ in
     "${mod}/gaming/"
     "${mod}/settings/"
     "${mod}/fonts/"
+    "${mod/settings/limine.nix"
   ];
   services.fwupd.enable = false;  
   boot = {
