@@ -4,7 +4,7 @@
     efibootmgr
     os-prober
     curl 
-    wget    
+
     mangohud
     protonup-qt
     heroic
@@ -22,12 +22,16 @@
     gh
     dysk
     libnotify
+
     swaynotificationcenter
     swaybg
     swaylock
     wlogout
     nautilus  
     rofi
+    bzmenu
+    pwmenu
+    bemoji
     waybar
 
     xdg-desktop-portal-gtk
@@ -35,21 +39,23 @@
 
     firefox-devedition
     whatsapp-electron
-    discord-ptb
-    kitty
-    
+    discord
     wezterm
     starship
     bash
     fish
-    
-    zoxide
+
     neovim
+    zoxide
+
     emacs
+    nixd
+    nil
+
     yazi
     
-    zed-editor
     zellij
+    viu
     copyq
     grim
     slurp
@@ -62,6 +68,7 @@
     clock-rs
     neofetch
     swww
+    fd
     pywal
     kdePackages.gwenview  
     ntfs3g
