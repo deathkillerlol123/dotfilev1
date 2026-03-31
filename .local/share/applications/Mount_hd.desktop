@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Mount HD
-Exec=/home/archboom/scripts/mounting_hd.sh
-Type=Application
-Terminal=true
