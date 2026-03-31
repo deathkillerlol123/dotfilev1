@@ -22,13 +22,6 @@ in
     loader = {
       efi.canTouchEfiVariables = true;
       #systemd-boot.enable = true;
-      grub = {
-        enable = false;
-        devices = ["nodev"];
-       	efiSupport = true;
-       	useOSProber = true;
-       	theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
-      };
       limine = {
         enable = true;
         maxGenerations = 3;
