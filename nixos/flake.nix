@@ -9,13 +9,15 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; }
-    {
-      imports = [
-        ./nixos.nix
+    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config,moduleWithSystem, ... }: {
+      {
+        imports = [
+          ./nixos.nix
+        ];
+      };
+      systems = [
+        "x86_64-linux"
       ];
     };
-    systems = [
-      "x86_64-linux"
-    ];
+   );
 }
