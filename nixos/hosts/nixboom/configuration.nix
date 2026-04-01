@@ -58,5 +58,6 @@ in
         ${username} = import ./home.nix;
       };
   };
+  programs.dconf.enable = true;
   system.stateVersion = "25.11";
 }
