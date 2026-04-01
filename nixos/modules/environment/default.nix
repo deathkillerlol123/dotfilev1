@@ -10,6 +10,7 @@
     xserver ={
      desktopManager = {
      #  budgie.enable = true; #cannot be true with gnome
+       xfce.enable = true;
      };
      windowManager = {
        openbox ={ 
