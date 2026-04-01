@@ -19,7 +19,7 @@
          enable = true;
        };
        fluxbox = {
-         enable = true;
+         enable = false;
        };
      };
     };
