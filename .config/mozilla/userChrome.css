@@ -42,7 +42,7 @@
   }
   
   #navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {  
-	transform: rotateX(0);
+      transform: rotateX(0);
   }
 
   #navigator-toolbox{

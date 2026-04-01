@@ -18,6 +18,9 @@
        dwm = {
          enable = true;
        };
+       fluxbox = {
+         enable = true;
+       };
      };
     };
   };
