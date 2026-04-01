@@ -8,7 +8,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; }
     {
       nixosConfigurations = {
       	  nixbtw = nixpkgs.lib.nixosSystem {
