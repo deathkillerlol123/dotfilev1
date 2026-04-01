@@ -13,15 +13,10 @@
        xfce.enable = true;
      };
      windowManager = {
-       openbox ={ 
-         enable = false;
-       };
-       dwm = {
-         enable = true;
-       };
-       fluxbox = {
-         enable = false;
-       };
+       openbox.enable = false;
+       dwm.enable = true;
+       fluxbox.enable = false;
+       nimdow.enable = true;
      };
     };
   };
