@@ -9,12 +9,16 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-  flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
-    imports = [
-      ./nixos.nix
-    ];
-    systems = [
-      "x86_64-linux"
-    ];
-  });
+    {
+      nixosConfigurations = {
+      	  nixbtw = nixpkgs.lib.nixosSystem {
+      	    system = "x86_64-linux";
+      	    specialArgs = {inherit inputs;};
+      	    modules = [ 
+      	      ./hosts/nixboom/configuration.nix
+      	      inputs.home-manager.nixosModules.default
+    	      ];
+	  };         
+    };
+  };
 }
