@@ -60,5 +60,6 @@ in
   };
   programs.dconf.enable = true;
   services.suricata.settings.logging.outputs.syslog.enable = true;
+  services.syslog-ng.enable = true;
   system.stateVersion = "25.11";
 }
