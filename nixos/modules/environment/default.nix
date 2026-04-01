@@ -16,7 +16,7 @@
        openbox.enable = false;
        dwm.enable = true;
        fluxbox.enable = false;
-       nimdow.enable = true;
+       nimdow.enable = false;
      };
     };
   };
