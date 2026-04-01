@@ -10,11 +10,9 @@
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (top@{ config,moduleWithSystem, ... }: {
-      {
-        imports = [
-          ./nixos.nix
-        ];
-      };
+      imports = [
+        ./nixos.nix
+      ];
       systems = [
         "x86_64-linux"
       ];
