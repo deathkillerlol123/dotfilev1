@@ -14,7 +14,7 @@
      };
      windowManager = {
        openbox.enable = false;
-       dwm.enable = true;
+       dwm.enable = false;
        fluxbox.enable = false;
        nimdow.enable = false;
      };
