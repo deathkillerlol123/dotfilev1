@@ -3,7 +3,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
-    "sh.ppy.osu"
+#    "sh.ppy.osu"
   ];
 in {
   system.userActivationScripts.flatpakManagement = {
