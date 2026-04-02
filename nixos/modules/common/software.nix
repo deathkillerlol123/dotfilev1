@@ -17,7 +17,8 @@
     borgbackup
     wdisplays   
     quickshell
-    eww    
+    eww
+    ags
     xev
     git
     gh
