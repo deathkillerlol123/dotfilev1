@@ -18,7 +18,7 @@
     wdisplays   
     quickshell
     eww
-    ags
+
     xev
     git
     gh
