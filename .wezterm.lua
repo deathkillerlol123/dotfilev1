@@ -32,7 +32,8 @@ config.window_padding = {
 
 
 config.color_scheme = 'Tokyo Night Storm'
-config.font = wezterm.font('FiraCode Nerd Font')
+
+
 config.font_size = 13
 config.adjust_window_size_when_changing_font_size = false
 

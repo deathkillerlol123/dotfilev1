@@ -33,6 +33,10 @@
 (setq-default case-fold-search nil)
 (setq vc-follow-symlinks t)
 
+(setq indent-tabs-mode t
+      tab-width 4)
+
+
 (line-number-mode 1)
 
 (custom-set-variables
@@ -43,8 +47,8 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-windowt company corfu eglot-inactive-regions
-		 flycheck lsp-latex lsp-mode lsp-python-ms lsp-ui
+   '(ace-windowt company corfu eglot-inactive-regions flycheck lsp-latex
+		 lsp-mode lsp-python-ms lsp-ui lua-mode
 		 multiple-cursors qml-mode tree-inspector tree-sitter
 		 tree-sitter-indent tree-sitter-langs)))
 (custom-set-faces
