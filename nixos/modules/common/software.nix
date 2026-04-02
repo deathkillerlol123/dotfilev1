@@ -73,7 +73,8 @@
     pywal
     kdePackages.gwenview  
     ntfs3g
-    
+
+    mangowc
     glibc
     wayland
     wayland-protocols
