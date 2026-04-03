@@ -1,0 +1,62 @@
+*********************** Log Started 2026-04-03T20:13:57Z ***********************
+************************** Gromacs Folding@home Core ***************************
+       Core: Gromacs
+       Type: 0xa8
+    Version: 0.0.12
+     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+  Copyright: 2020 foldingathome.org
+   Homepage: https://foldingathome.org/
+       Date: Jan 16 2021
+       Time: 19:24:44
+   Compiler: GNU 8.3.0
+    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+             -fdata-sections -O3 -funroll-loops -fno-pie
+   Platform: linux2 4.15.0-128-generic
+       Bits: 64
+       Mode: Release
+       SIMD: avx2_256
+     OpenMP: ON
+       CUDA: OFF
+       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+             -version 8.5.3 -lifeline 42303 -np 1
+************************************ libFAH ************************************
+       Date: Jan 16 2021
+       Time: 19:21:38
+   Compiler: GNU 8.3.0
+    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+             -fdata-sections -O3 -funroll-loops -fno-pie
+   Platform: linux2 4.15.0-128-generic
+       Bits: 64
+       Mode: Release
+************************************ CBang *************************************
+       Date: Jan 16 2021
+       Time: 19:21:24
+   Compiler: GNU 8.3.0
+    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+   Platform: linux2 4.15.0-128-generic
+       Bits: 64
+       Mode: Release
+************************************ System ************************************
+        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+       CPUs: 8
+     Memory: 15.31GiB
+Free Memory: 2.96GiB
+    Threads: POSIX_THREADS
+ OS Version: 6.19
+Has Battery: true
+ On Battery: false
+ UTC Offset: 1
+        PID: 58528
+        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+********************************************************************************
+Project: 16969 (Run 4, Clone 713, Gen 314)
+Unit: 0x00000000000000000000000000000000
+Digital signatures verified
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 1 -ntmpi 1
+Steps: first=785000000 total=787500000
+Completed 271502 out of 2500000 steps (10%)
+Caught signal SIGINT(2) on PID 58528
+Exiting, please wait. . .
+Folding@home Core Shutdown: INTERRUPTED

@@ -1,0 +1,315 @@
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpt 5 -nt 7 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 1 out of 2500000 steps (0%)
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 7 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785000000, 1570000.0 ps).
+Completed 25000 out of 2500000 steps (1%)
+Caught signal SIGINT(2) on PID 43788
+Exiting, please wait. . .
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     4588.611      655.516      700.0
+                 (ns/day)    (hour/ns)
+Performance:        7.408        3.240
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 28102 out of 2500000 steps (1%)
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 7 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785028101, 1570056.2 ps).
+Caught signal SIGINT(2) on PID 44377
+Exiting, please wait. . .
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     3492.825      498.975      700.0
+                 (ns/day)    (hour/ns)
+Performance:        7.411        3.238
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 49502 out of 2500000 steps (1%)
+Caught signal SIGINT(2) on PID 48142
+Exiting, please wait. . .
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 7 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785049501, 1570099.0 ps).
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:       46.521        6.646      700.0
+                 (ns/day)    (hour/ns)
+Performance:        6.526        3.678
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 49752 out of 2500000 steps (1%)
+Completed 50000 out of 2500000 steps (2%)
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 7 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785049751, 1570099.5 ps).
+Completed 75000 out of 2500000 steps (3%)
+Completed 100000 out of 2500000 steps (4%)
+Completed 125000 out of 2500000 steps (5%)
+Completed 150000 out of 2500000 steps (6%)
+Caught signal SIGINT(2) on PID 48248
+Exiting, please wait. . .
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    22313.954     3187.708      700.0
+                         53:07
+                 (ns/day)    (hour/ns)
+Performance:        6.001        3.999
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 8 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 160452 out of 2500000 steps (6%)
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 8 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785160451, 1570320.9 ps).
+Completed 175000 out of 2500000 steps (7%)
+Completed 200000 out of 2500000 steps (8%)
+Completed 225000 out of 2500000 steps (9%)
+Completed 250000 out of 2500000 steps (10%)
+Caught signal SIGINT(2) on PID 50931
+Exiting, please wait. . .
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    25475.131     3184.392      800.0
+                         53:04
+                 (ns/day)    (hour/ns)
+Performance:        6.026        3.983
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 1 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 271502 out of 2500000 steps (10%)
+Caught signal SIGINT(2) on PID 58528
+Exiting, please wait. . .
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 1 OpenMP thread 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785271501, 1570543.0 ps).
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:       23.939       23.939      100.0
+                 (ns/day)    (hour/ns)
+Performance:        3.977        6.034
+Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 8 -ntmpi 1
+Steps: first=785000000 total=787500000
+The current CPU can measure timings more accurately than the code in
+GROMACS was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding GROMACS with the GMX_USE_RDTSCP=ON CMake option.
+Reading file frame314.tpr, VERSION 2020 (single precision)
+
+This run will default to '-update gpu' as requested by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable. GPU update with domain decomposition lacks substantial testing and should be used with caution.
+Changing nstlist from 10 to 50, rlist from 1 to 1.111
+
+Update task on the GPU was required, by the GMX_FORCE_UPDATE_DEFAULT_GPU environment variable, but the following condition(s) were not satisfied:
+
+Either PME or short-ranged non-bonded interaction tasks must run on the GPU.
+Compatible GPUs must have been found.
+Only a CUDA build is supported.
+Only the md integrator is supported.
+The number of coupled constraints is higher than supported in the CUDA LINCS code.
+
+Will use CPU version of update.
+
+Using 1 MPI thread
+Completed 272052 out of 2500000 steps (10%)
+Completed 275000 out of 2500000 steps (11%)
+Caught signal SIGINT(2) on PID 58544
+Exiting, please wait. . .
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 8 OpenMP threads 
+
+Setting the maximum number of constraint warnings to 2147483647
+starting mdrun 'Protein in water'
+787500000 steps, 1575000.0 ps (continuing from step 785272051, 1570544.1 ps).
+
+
+Received the remote second INT/TERM signal, stopping within 51 steps
+
+Folding@home Core Shutdown: INTERRUPTED
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     1816.280      227.035      800.0
+                 (ns/day)    (hour/ns)
+Performance:        5.176        4.636

@@ -1,0 +1,585 @@
+*********************** Log Started 2026-04-03T18:02:43Z ***********************
+18:02:43:I1:*********************** Folding@home Client ***********************
+18:02:43:I1:    Version: 8.5.3
+18:02:43:I1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:02:43:I1:        Org: foldingathome.org
+18:02:43:I1:  Copyright: 2023-2025, foldingathome.org
+18:02:43:I1:   Homepage: https://foldingathome.org/
+18:02:43:I1:    License: GPL-3.0-or-later
+18:02:43:I1:        URL: https://v8-5.foldingathome.org/
+18:02:43:I1:       Date: Jan 1 1980
+18:02:43:I1:       Time: 00:00:00
+18:02:43:I1:   Compiler: GNU 15.2.0
+18:02:43:I1:    Options: -Wsuggest-override -faligned-new -std=c++14 -fsigned-char -O3 -fPIC
+18:02:43:I1:   Platform: linux 6.12.68
+18:02:43:I1:       Bits: 64
+18:02:43:I1:       Mode: Release
+18:02:43:I1:****************************** CBang ******************************
+18:02:43:I1:    Version: 1.7.2
+18:02:43:I1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:02:43:I1:        Org: Cauldron Development
+18:02:43:I1:  Copyright: Cauldron Development, 2003-2025
+18:02:43:I1:   Homepage: https://cauldrondevelopment.com/
+18:02:43:I1:    License: LGPL-2.1-or-later
+18:02:43:I1:       Date: Jan 1 1980
+18:02:43:I1:       Time: 00:00:00
+18:02:43:I1:   Compiler: GNU 15.2.0
+18:02:43:I1:    Options: -Wsuggest-override -faligned-new -std=c++14 -fsigned-char -O3 -fPIC
+18:02:43:I1:   Platform: linux 6.12.68
+18:02:43:I1:       Bits: 64
+18:02:43:I1:       Mode: Release
+18:02:43:I1:***************************** System ******************************
+18:02:43:I1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+18:02:43:I1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+18:02:43:I1:       CPUs: 8
+18:02:43:I1:     Memory: 15.31GiB
+18:02:43:I1:Free Memory: 9.05GiB
+18:02:43:I1: OS Version: 6.19
+18:02:43:I1:Has Battery: true
+18:02:43:I1: On Battery: false
+18:02:43:I1:   Hostname: nixbtw
+18:02:43:I1: UTC Offset: 1
+18:02:43:I1:        PID: 42303
+18:02:43:I1:        CWD: /home/nixboom/dotfiles/nixos/modules/common
+18:02:43:I1:       Exec: /nix/store/dwq6ly0yy005lbl6ndz1i1g8lwbzlvxp-fah-client-8.5.3/bin/fah-client
+18:02:43:I1:*******************************************************************
+18:02:43:I2:<config/>
+18:02:43:I1:Opening Database
+18:02:43:I1:Generating RSA key...+.+.........+...........+............+.+..............+.+.....+.+......+..+.+..+..........+.........+.....+...+...+...+......+..........+......+.....+.........+......+.......+......+..+.......+.....+.+..+...+....+.................+++++++++++++++++++++++++++++++++++++++++++++*..+................+...+...+...+.....+......+.+..+.......+++++++++++++++++++++++++++++++++++++++++++++*....+...+....+...........+.+.....+.+...+.....+.+.....+.+.....+.........+.+....................+.........+.....................+....+...+....................+.......+...........+...+....+......+.....+....+...+..+.+...........+.............+........+.........+.+...............+..+......+......+...+..........+........+...+.........+......................+......+.........+.........+.....+.+......+........+......+..........+.....+.............+..+....+.........+.....+...+.............+......+.....+...+......+...............+.+...+........+.........+.+...............+..+...+...............+...+............+...+......+....+...........+...+.............+.........+.....+......+.........+...+.+..............+...............+.......+.....+.........+..........+..+....+.....+...............+.+..............+......+.......+..+...+.......+...+...+...+...........+...............+++++-.........+.........+.+...........+...+......+....+.........+..+.+............+++++++++++++++++++++++++++++++++++++++++++++*.......+++++++++++++++++++++++++++++++++++++++++++++*........+...+......+...............+.+..+.+..+...+...............+....+..................+++++-
+18:02:43:I1:F@H ID = -TZslMw0n_xcwVPNgDOysAYl5XqH5qwZ6SHqzdP256s
+18:02:43:I3:Loading default resource group
+18:02:43:I2:Listening for HTTP on 127.0.0.1:7396
+18:02:43:I3:Loaded 0 wus.
+18:02:44:I2:OUT1:> GET /gpus HTTP/1.1
+18:02:48:I2:OUT1:< HTTP/1.1 200 HTTP_OK
+18:03:31:I2:REQ2:< GET / HTTP/1.1
+18:03:31:I1:REQ2:> HTTP/1.1 307 HTTP_TEMPORARY_REDIRECT
+18:03:33:I2:REQ3:< GET /api/websocket HTTP/1.1
+18:06:11:I2:REQ4:< GET /api/websocket HTTP/1.1
+18:06:15:I2:REQ5:< GET /api/websocket HTTP/1.1
+18:06:26:I2:OUT6:> PUT /machine/-TZslMw0n_xcwVPNgDOysAYl5XqH5qwZ6SHqzdP256s HTTP/1.1
+18:06:27:I2:OUT6:< HTTP/1.1 200 HTTP_OK
+18:06:27:I1:Account linked
+18:06:28:I2:OUT7:> GET /machine/-TZslMw0n_xcwVPNgDOysAYl5XqH5qwZ6SHqzdP256s HTTP/1.1
+18:06:29:I2:OUT7:< HTTP/1.1 200 HTTP_OK
+18:06:29:I2:OUT8:> GET /ws/client HTTP/1.1
+18:06:30:I2:OUT8:< HTTP/1.1 101 HTTP_SWITCHING_PROTOCOLS
+18:06:30:I1:Logging into node account
+18:06:46:I1:Machine state fold
+18:06:46:I1:Default:Added new work unit: cpus:7 gpus:
+18:06:46:I1:WU1:Requesting WU assignment for user Work team 1066966
+18:06:46:I2:OUT9:> POST /api/assign HTTP/1.1
+18:06:47:I2:OUT9:< HTTP/1.1 200 HTTP_OK
+18:06:47:I1:WU1:Received WU assignment B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s
+18:06:47:I1:WU1:Downloading WU
+18:06:47:I2:OUT10:> POST /api/assign HTTP/1.1
+18:06:48:I1:WU1:DOWNLOAD 100% 219B of 219B
+18:06:49:I2:OUT10:< HTTP/1.1 200 HTTP_OK
+18:06:49:I1:WU1:Received WU P16969 R4 C713 G314
+18:06:49:I1:Downloading https://cores2.foldingathome.org/fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2.crt
+18:06:49:I2:OUT11:> GET /fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2.crt HTTP/1.1
+18:06:49:I1:WU1:CORE 100% 976B of 976B
+18:06:49:I2:OUT11:< HTTP/1.1 200 OK
+18:06:49:I1:Downloading https://cores2.foldingathome.org/fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2.sig
+18:06:50:I2:OUT12:> GET /fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2.sig HTTP/1.1
+18:06:50:I1:WU1:CORE 100% 976B of 976B
+18:06:50:I2:OUT12:< HTTP/1.1 200 OK
+18:06:50:I1:Downloading https://cores2.foldingathome.org/fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2
+18:06:50:I2:OUT13:> GET /fahcore-a8-lin-64bit-avx2_256-0.0.12.tar.bz2 HTTP/1.1
+18:06:50:I1:WU1:CORE 100% 413B of 413B
+18:06:52:I1:WU1:CORE 100% 7.23MiB of 7.23MiB
+18:06:52:I2:OUT13:< HTTP/1.1 200 OK
+18:06:52:I1:Core signature valid
+18:06:52:I1:Extracting cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8
+18:06:52:I1:Testing core
+18:06:52:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 --info
+18:06:53:I1:Core test passed
+18:06:53:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 7
+18:06:53:I3:WU1:Started FahCore on PID 43788
+18:06:53:I1:WU1:*********************** Log Started 2026-04-03T18:06:53Z ***********************
+18:06:53:I1:WU1:************************** Gromacs Folding@home Core ***************************
+18:06:53:I1:WU1:       Core: Gromacs
+18:06:53:I1:WU1:       Type: 0xa8
+18:06:53:I1:WU1:    Version: 0.0.12
+18:06:53:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:06:53:I1:WU1:  Copyright: 2020 foldingathome.org
+18:06:53:I1:WU1:   Homepage: https://foldingathome.org/
+18:06:53:I1:WU1:       Date: Jan 16 2021
+18:06:53:I1:WU1:       Time: 19:24:44
+18:06:53:I1:WU1:   Compiler: GNU 8.3.0
+18:06:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:06:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:06:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:06:53:I1:WU1:       Bits: 64
+18:06:53:I1:WU1:       Mode: Release
+18:06:53:I1:WU1:       SIMD: avx2_256
+18:06:53:I1:WU1:     OpenMP: ON
+18:06:53:I1:WU1:       CUDA: OFF
+18:06:53:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+18:06:53:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 7
+18:06:53:I1:WU1:************************************ libFAH ************************************
+18:06:53:I1:WU1:       Date: Jan 16 2021
+18:06:53:I1:WU1:       Time: 19:21:38
+18:06:53:I1:WU1:   Compiler: GNU 8.3.0
+18:06:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:06:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:06:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:06:53:I1:WU1:       Bits: 64
+18:06:53:I1:WU1:       Mode: Release
+18:06:53:I1:WU1:************************************ CBang *************************************
+18:06:53:I1:WU1:       Date: Jan 16 2021
+18:06:53:I1:WU1:       Time: 19:21:24
+18:06:53:I1:WU1:   Compiler: GNU 8.3.0
+18:06:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:06:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+18:06:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:06:53:I1:WU1:       Bits: 64
+18:06:53:I1:WU1:       Mode: Release
+18:06:53:I1:WU1:************************************ System ************************************
+18:06:53:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+18:06:53:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+18:06:53:I1:WU1:       CPUs: 8
+18:06:53:I1:WU1:     Memory: 15.31GiB
+18:06:53:I1:WU1:Free Memory: 8.27GiB
+18:06:53:I1:WU1:    Threads: POSIX_THREADS
+18:06:53:I1:WU1: OS Version: 6.19
+18:06:53:I1:WU1:Has Battery: true
+18:06:53:I1:WU1: On Battery: false
+18:06:53:I1:WU1: UTC Offset: 1
+18:06:53:I1:WU1:        PID: 43788
+18:06:53:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+18:06:53:I1:WU1:********************************************************************************
+18:06:53:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+18:06:53:I1:WU1:Unit: 0x00000000000000000000000000000000
+18:06:53:I1:WU1:Reading tar file core.xml
+18:06:53:I1:WU1:Reading tar file frame314.tpr
+18:06:53:I1:WU1:Digital signatures verified
+18:06:53:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpt 5 -nt 7 -ntmpi 1
+18:06:53:I1:WU1:Steps: first=785000000 total=787500000
+18:06:54:I1:WU1:Completed 1 out of 2500000 steps (0%)
+18:08:07:I2:REQ14:< GET / HTTP/1.1
+18:08:07:I1:REQ14:> HTTP/1.1 307 HTTP_TEMPORARY_REDIRECT
+18:08:08:I2:REQ15:< GET /api/websocket HTTP/1.1
+18:10:34:I2:REQ16:< GET /api/websocket HTTP/1.1
+18:13:59:I2:REQ17:< GET /api/websocket HTTP/1.1
+18:16:29:I1:WU1:Completed 25000 out of 2500000 steps (1%)
+18:16:46:I2:REQ18:< GET /api/websocket HTTP/1.1
+18:17:05:I2:REQ19:< GET /api/websocket HTTP/1.1
+18:17:48:I1:Machine state pause
+18:17:48:I1:WU1:Caught signal SIGINT(2) on PID 43788
+18:17:48:I1:WU1:Exiting, please wait. . .
+18:17:49:I1:WU1:Folding@home Core Shutdown: INTERRUPTED
+18:17:49:I1:WU1:Core returned INTERRUPTED (102)
+18:18:19:I1:Machine state pause
+18:18:24:I1:Machine state fold
+18:18:24:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 7
+18:18:24:I3:WU1:Started FahCore on PID 44377
+18:18:24:I1:WU1:*********************** Log Started 2026-04-03T18:18:24Z ***********************
+18:18:24:I1:WU1:************************** Gromacs Folding@home Core ***************************
+18:18:24:I1:WU1:       Core: Gromacs
+18:18:24:I1:WU1:       Type: 0xa8
+18:18:24:I1:WU1:    Version: 0.0.12
+18:18:24:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:18:24:I1:WU1:  Copyright: 2020 foldingathome.org
+18:18:24:I1:WU1:   Homepage: https://foldingathome.org/
+18:18:24:I1:WU1:       Date: Jan 16 2021
+18:18:24:I1:WU1:       Time: 19:24:44
+18:18:24:I1:WU1:   Compiler: GNU 8.3.0
+18:18:24:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:18:24:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:18:24:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:18:24:I1:WU1:       Bits: 64
+18:18:24:I1:WU1:       Mode: Release
+18:18:24:I1:WU1:       SIMD: avx2_256
+18:18:24:I1:WU1:     OpenMP: ON
+18:18:24:I1:WU1:       CUDA: OFF
+18:18:24:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+18:18:24:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 7
+18:18:24:I1:WU1:************************************ libFAH ************************************
+18:18:24:I1:WU1:       Date: Jan 16 2021
+18:18:24:I1:WU1:       Time: 19:21:38
+18:18:24:I1:WU1:   Compiler: GNU 8.3.0
+18:18:24:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:18:24:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:18:24:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:18:24:I1:WU1:       Bits: 64
+18:18:24:I1:WU1:       Mode: Release
+18:18:24:I1:WU1:************************************ CBang *************************************
+18:18:24:I1:WU1:       Date: Jan 16 2021
+18:18:24:I1:WU1:       Time: 19:21:24
+18:18:24:I1:WU1:   Compiler: GNU 8.3.0
+18:18:24:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:18:24:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+18:18:24:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:18:24:I1:WU1:       Bits: 64
+18:18:24:I1:WU1:       Mode: Release
+18:18:24:I1:WU1:************************************ System ************************************
+18:18:24:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+18:18:24:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+18:18:24:I1:WU1:       CPUs: 8
+18:18:24:I1:WU1:     Memory: 15.31GiB
+18:18:24:I1:WU1:Free Memory: 9.19GiB
+18:18:24:I1:WU1:    Threads: POSIX_THREADS
+18:18:24:I1:WU1: OS Version: 6.19
+18:18:24:I1:WU1:Has Battery: true
+18:18:24:I1:WU1: On Battery: false
+18:18:24:I1:WU1: UTC Offset: 1
+18:18:24:I1:WU1:        PID: 44377
+18:18:24:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+18:18:24:I1:WU1:********************************************************************************
+18:18:24:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+18:18:24:I1:WU1:Unit: 0x00000000000000000000000000000000
+18:18:24:I1:WU1:Digital signatures verified
+18:18:24:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+18:18:24:I1:WU1:Steps: first=785000000 total=787500000
+18:18:25:I1:WU1:Completed 28102 out of 2500000 steps (1%)
+18:26:42:I1:Machine state pause
+18:26:42:I1:WU1:Caught signal SIGINT(2) on PID 44377
+18:26:42:I1:WU1:Exiting, please wait. . .
+18:26:43:I1:WU1:Folding@home Core Shutdown: INTERRUPTED
+18:26:44:I1:WU1:Core returned INTERRUPTED (102)
+18:27:20:I1:Machine state fold
+18:27:20:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 7
+18:27:20:I3:WU1:Started FahCore on PID 48142
+18:27:20:I1:WU1:*********************** Log Started 2026-04-03T18:27:20Z ***********************
+18:27:20:I1:WU1:************************** Gromacs Folding@home Core ***************************
+18:27:20:I1:WU1:       Core: Gromacs
+18:27:20:I1:WU1:       Type: 0xa8
+18:27:20:I1:WU1:    Version: 0.0.12
+18:27:20:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:27:20:I1:WU1:  Copyright: 2020 foldingathome.org
+18:27:20:I1:WU1:   Homepage: https://foldingathome.org/
+18:27:20:I1:WU1:       Date: Jan 16 2021
+18:27:20:I1:WU1:       Time: 19:24:44
+18:27:20:I1:WU1:   Compiler: GNU 8.3.0
+18:27:20:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:20:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:27:20:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:20:I1:WU1:       Bits: 64
+18:27:20:I1:WU1:       Mode: Release
+18:27:20:I1:WU1:       SIMD: avx2_256
+18:27:20:I1:WU1:     OpenMP: ON
+18:27:20:I1:WU1:       CUDA: OFF
+18:27:20:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+18:27:20:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 7
+18:27:20:I1:WU1:************************************ libFAH ************************************
+18:27:20:I1:WU1:       Date: Jan 16 2021
+18:27:20:I1:WU1:       Time: 19:21:38
+18:27:20:I1:WU1:   Compiler: GNU 8.3.0
+18:27:20:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:20:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:27:20:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:20:I1:WU1:       Bits: 64
+18:27:20:I1:WU1:       Mode: Release
+18:27:20:I1:WU1:************************************ CBang *************************************
+18:27:20:I1:WU1:       Date: Jan 16 2021
+18:27:20:I1:WU1:       Time: 19:21:24
+18:27:20:I1:WU1:   Compiler: GNU 8.3.0
+18:27:20:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:20:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+18:27:20:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:20:I1:WU1:       Bits: 64
+18:27:20:I1:WU1:       Mode: Release
+18:27:20:I1:WU1:************************************ System ************************************
+18:27:20:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+18:27:20:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+18:27:20:I1:WU1:       CPUs: 8
+18:27:20:I1:WU1:     Memory: 15.31GiB
+18:27:20:I1:WU1:Free Memory: 4.77GiB
+18:27:20:I1:WU1:    Threads: POSIX_THREADS
+18:27:20:I1:WU1: OS Version: 6.19
+18:27:20:I1:WU1:Has Battery: true
+18:27:20:I1:WU1: On Battery: false
+18:27:20:I1:WU1: UTC Offset: 1
+18:27:20:I1:WU1:        PID: 48142
+18:27:20:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+18:27:20:I1:WU1:********************************************************************************
+18:27:20:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+18:27:20:I1:WU1:Unit: 0x00000000000000000000000000000000
+18:27:20:I1:WU1:Digital signatures verified
+18:27:20:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+18:27:20:I1:WU1:Steps: first=785000000 total=787500000
+18:27:21:I1:WU1:Completed 49502 out of 2500000 steps (1%)
+18:27:26:I1:Machine state pause
+18:27:26:I1:WU1:Caught signal SIGINT(2) on PID 48142
+18:27:26:I1:WU1:Exiting, please wait. . .
+18:27:27:I1:WU1:Core returned INTERRUPTED (102)
+18:27:44:I1:Machine state fold
+18:27:44:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 7
+18:27:44:I3:WU1:Started FahCore on PID 48248
+18:27:44:I1:WU1:*********************** Log Started 2026-04-03T18:27:44Z ***********************
+18:27:44:I1:WU1:************************** Gromacs Folding@home Core ***************************
+18:27:44:I1:WU1:       Core: Gromacs
+18:27:44:I1:WU1:       Type: 0xa8
+18:27:44:I1:WU1:    Version: 0.0.12
+18:27:44:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+18:27:44:I1:WU1:  Copyright: 2020 foldingathome.org
+18:27:44:I1:WU1:   Homepage: https://foldingathome.org/
+18:27:44:I1:WU1:       Date: Jan 16 2021
+18:27:44:I1:WU1:       Time: 19:24:44
+18:27:44:I1:WU1:   Compiler: GNU 8.3.0
+18:27:44:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:44:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:27:44:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:44:I1:WU1:       Bits: 64
+18:27:44:I1:WU1:       Mode: Release
+18:27:44:I1:WU1:       SIMD: avx2_256
+18:27:44:I1:WU1:     OpenMP: ON
+18:27:44:I1:WU1:       CUDA: OFF
+18:27:44:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+18:27:44:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 7
+18:27:44:I1:WU1:************************************ libFAH ************************************
+18:27:44:I1:WU1:       Date: Jan 16 2021
+18:27:44:I1:WU1:       Time: 19:21:38
+18:27:44:I1:WU1:   Compiler: GNU 8.3.0
+18:27:44:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:44:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+18:27:44:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:44:I1:WU1:       Bits: 64
+18:27:44:I1:WU1:       Mode: Release
+18:27:44:I1:WU1:************************************ CBang *************************************
+18:27:44:I1:WU1:       Date: Jan 16 2021
+18:27:44:I1:WU1:       Time: 19:21:24
+18:27:44:I1:WU1:   Compiler: GNU 8.3.0
+18:27:44:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+18:27:44:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+18:27:44:I1:WU1:   Platform: linux2 4.15.0-128-generic
+18:27:44:I1:WU1:       Bits: 64
+18:27:44:I1:WU1:       Mode: Release
+18:27:44:I1:WU1:************************************ System ************************************
+18:27:44:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+18:27:44:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+18:27:44:I1:WU1:       CPUs: 8
+18:27:44:I1:WU1:     Memory: 15.31GiB
+18:27:44:I1:WU1:Free Memory: 4.65GiB
+18:27:44:I1:WU1:    Threads: POSIX_THREADS
+18:27:44:I1:WU1: OS Version: 6.19
+18:27:44:I1:WU1:Has Battery: true
+18:27:44:I1:WU1: On Battery: false
+18:27:44:I1:WU1: UTC Offset: 1
+18:27:44:I1:WU1:        PID: 48248
+18:27:44:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+18:27:44:I1:WU1:********************************************************************************
+18:27:44:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+18:27:44:I1:WU1:Unit: 0x00000000000000000000000000000000
+18:27:44:I1:WU1:Digital signatures verified
+18:27:44:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 7 -ntmpi 1
+18:27:44:I1:WU1:Steps: first=785000000 total=787500000
+18:27:45:I1:WU1:Completed 49752 out of 2500000 steps (1%)
+18:27:51:I1:WU1:Completed 50000 out of 2500000 steps (2%)
+18:40:03:I1:WU1:Completed 75000 out of 2500000 steps (3%)
+18:51:37:I1:WU1:Completed 100000 out of 2500000 steps (4%)
+19:03:05:I1:WU1:Completed 125000 out of 2500000 steps (5%)
+19:16:02:I1:WU1:Completed 150000 out of 2500000 steps (6%)
+19:19:33:I2:REQ20:< GET /api/websocket HTTP/1.1
+19:19:56:I2:REQ21:< GET /api/websocket HTTP/1.1
+19:20:52:I1:WU1:Caught signal SIGINT(2) on PID 48248
+19:20:52:I1:WU1:Exiting, please wait. . .
+19:20:52:I1:WU1:Folding@home Core Shutdown: INTERRUPTED
+19:20:52:I1:WU1:Core returned INTERRUPTED (102)
+19:20:52:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 8
+19:20:52:I3:WU1:Started FahCore on PID 50931
+19:20:53:I1:WU1:*********************** Log Started 2026-04-03T19:20:52Z ***********************
+19:20:53:I1:WU1:************************** Gromacs Folding@home Core ***************************
+19:20:53:I1:WU1:       Core: Gromacs
+19:20:53:I1:WU1:       Type: 0xa8
+19:20:53:I1:WU1:    Version: 0.0.12
+19:20:53:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+19:20:53:I1:WU1:  Copyright: 2020 foldingathome.org
+19:20:53:I1:WU1:   Homepage: https://foldingathome.org/
+19:20:53:I1:WU1:       Date: Jan 16 2021
+19:20:53:I1:WU1:       Time: 19:24:44
+19:20:53:I1:WU1:   Compiler: GNU 8.3.0
+19:20:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+19:20:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+19:20:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+19:20:53:I1:WU1:       Bits: 64
+19:20:53:I1:WU1:       Mode: Release
+19:20:53:I1:WU1:       SIMD: avx2_256
+19:20:53:I1:WU1:     OpenMP: ON
+19:20:53:I1:WU1:       CUDA: OFF
+19:20:53:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+19:20:53:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 8
+19:20:53:I1:WU1:************************************ libFAH ************************************
+19:20:53:I1:WU1:       Date: Jan 16 2021
+19:20:53:I1:WU1:       Time: 19:21:38
+19:20:53:I1:WU1:   Compiler: GNU 8.3.0
+19:20:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+19:20:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+19:20:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+19:20:53:I1:WU1:       Bits: 64
+19:20:53:I1:WU1:       Mode: Release
+19:20:53:I1:WU1:************************************ CBang *************************************
+19:20:53:I1:WU1:       Date: Jan 16 2021
+19:20:53:I1:WU1:       Time: 19:21:24
+19:20:53:I1:WU1:   Compiler: GNU 8.3.0
+19:20:53:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+19:20:53:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+19:20:53:I1:WU1:   Platform: linux2 4.15.0-128-generic
+19:20:53:I1:WU1:       Bits: 64
+19:20:53:I1:WU1:       Mode: Release
+19:20:53:I1:WU1:************************************ System ************************************
+19:20:53:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+19:20:53:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+19:20:53:I1:WU1:       CPUs: 8
+19:20:53:I1:WU1:     Memory: 15.31GiB
+19:20:53:I1:WU1:Free Memory: 4.90GiB
+19:20:53:I1:WU1:    Threads: POSIX_THREADS
+19:20:53:I1:WU1: OS Version: 6.19
+19:20:53:I1:WU1:Has Battery: true
+19:20:53:I1:WU1: On Battery: false
+19:20:53:I1:WU1: UTC Offset: 1
+19:20:53:I1:WU1:        PID: 50931
+19:20:53:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+19:20:53:I1:WU1:********************************************************************************
+19:20:53:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+19:20:53:I1:WU1:Unit: 0x00000000000000000000000000000000
+19:20:53:I1:WU1:Digital signatures verified
+19:20:53:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 8 -ntmpi 1
+19:20:53:I1:WU1:Steps: first=785000000 total=787500000
+19:20:53:I1:WU1:Completed 160452 out of 2500000 steps (6%)
+19:22:13:I2:REQ22:< GET /api/websocket HTTP/1.1
+19:25:49:I2:REQ23:< GET /api/websocket HTTP/1.1
+19:26:03:I2:REQ24:< GET /api/websocket HTTP/1.1
+19:26:50:I2:REQ25:< GET /api/websocket HTTP/1.1
+19:27:40:I1:WU1:Completed 175000 out of 2500000 steps (7%)
+19:36:57:I1:WU1:Completed 200000 out of 2500000 steps (8%)
+19:43:35:I2:REQ26:< GET /api/websocket HTTP/1.1
+19:47:24:I1:WU1:Completed 225000 out of 2500000 steps (9%)
+19:58:47:I1:WU1:Completed 250000 out of 2500000 steps (10%)
+20:13:56:I1:WU1:Caught signal SIGINT(2) on PID 50931
+20:13:56:I1:WU1:Exiting, please wait. . .
+20:13:57:I1:WU1:Core returned INTERRUPTED (102)
+20:13:57:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 1
+20:13:57:I3:WU1:Started FahCore on PID 58528
+20:13:58:I1:WU1:*********************** Log Started 2026-04-03T20:13:57Z ***********************
+20:13:58:I1:WU1:************************** Gromacs Folding@home Core ***************************
+20:13:58:I1:WU1:       Core: Gromacs
+20:13:58:I1:WU1:       Type: 0xa8
+20:13:58:I1:WU1:    Version: 0.0.12
+20:13:58:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+20:13:58:I1:WU1:  Copyright: 2020 foldingathome.org
+20:13:58:I1:WU1:   Homepage: https://foldingathome.org/
+20:13:58:I1:WU1:       Date: Jan 16 2021
+20:13:58:I1:WU1:       Time: 19:24:44
+20:13:58:I1:WU1:   Compiler: GNU 8.3.0
+20:13:58:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:13:58:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+20:13:58:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:13:58:I1:WU1:       Bits: 64
+20:13:58:I1:WU1:       Mode: Release
+20:13:58:I1:WU1:       SIMD: avx2_256
+20:13:58:I1:WU1:     OpenMP: ON
+20:13:58:I1:WU1:       CUDA: OFF
+20:13:58:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+20:13:58:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 1
+20:13:58:I1:WU1:************************************ libFAH ************************************
+20:13:58:I1:WU1:       Date: Jan 16 2021
+20:13:58:I1:WU1:       Time: 19:21:38
+20:13:58:I1:WU1:   Compiler: GNU 8.3.0
+20:13:58:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:13:58:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+20:13:58:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:13:58:I1:WU1:       Bits: 64
+20:13:58:I1:WU1:       Mode: Release
+20:13:58:I1:WU1:************************************ CBang *************************************
+20:13:58:I1:WU1:       Date: Jan 16 2021
+20:13:58:I1:WU1:       Time: 19:21:24
+20:13:58:I1:WU1:   Compiler: GNU 8.3.0
+20:13:58:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:13:58:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+20:13:58:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:13:58:I1:WU1:       Bits: 64
+20:13:58:I1:WU1:       Mode: Release
+20:13:58:I1:WU1:************************************ System ************************************
+20:13:58:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+20:13:58:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+20:13:58:I1:WU1:       CPUs: 8
+20:13:58:I1:WU1:     Memory: 15.31GiB
+20:13:58:I1:WU1:Free Memory: 2.96GiB
+20:13:58:I1:WU1:    Threads: POSIX_THREADS
+20:13:58:I1:WU1: OS Version: 6.19
+20:13:58:I1:WU1:Has Battery: true
+20:13:58:I1:WU1: On Battery: false
+20:13:58:I1:WU1: UTC Offset: 1
+20:13:58:I1:WU1:        PID: 58528
+20:13:58:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+20:13:58:I1:WU1:********************************************************************************
+20:13:58:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+20:13:58:I1:WU1:Unit: 0x00000000000000000000000000000000
+20:13:58:I1:WU1:Digital signatures verified
+20:13:58:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 1 -ntmpi 1
+20:13:58:I1:WU1:Steps: first=785000000 total=787500000
+20:13:58:I1:WU1:Completed 271502 out of 2500000 steps (10%)
+20:14:21:I1:WU1:Caught signal SIGINT(2) on PID 58528
+20:14:21:I1:WU1:Exiting, please wait. . .
+20:14:22:I1:WU1:Folding@home Core Shutdown: INTERRUPTED
+20:14:23:I1:WU1:Core returned INTERRUPTED (102)
+20:14:23:I3:Running FahCore: /home/nixboom/dotfiles/nixos/modules/common/cores/fahcore-a8-lin-64bit-avx2_256-0.0.12/FahCore_a8 -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01 -version 8.5.3 -lifeline 42303 -np 8
+20:14:23:I3:WU1:Started FahCore on PID 58544
+20:14:23:I1:WU1:*********************** Log Started 2026-04-03T20:14:23Z ***********************
+20:14:23:I1:WU1:************************** Gromacs Folding@home Core ***************************
+20:14:23:I1:WU1:       Core: Gromacs
+20:14:23:I1:WU1:       Type: 0xa8
+20:14:23:I1:WU1:    Version: 0.0.12
+20:14:23:I1:WU1:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+20:14:23:I1:WU1:  Copyright: 2020 foldingathome.org
+20:14:23:I1:WU1:   Homepage: https://foldingathome.org/
+20:14:23:I1:WU1:       Date: Jan 16 2021
+20:14:23:I1:WU1:       Time: 19:24:44
+20:14:23:I1:WU1:   Compiler: GNU 8.3.0
+20:14:23:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:14:23:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+20:14:23:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:14:23:I1:WU1:       Bits: 64
+20:14:23:I1:WU1:       Mode: Release
+20:14:23:I1:WU1:       SIMD: avx2_256
+20:14:23:I1:WU1:     OpenMP: ON
+20:14:23:I1:WU1:       CUDA: OFF
+20:14:23:I1:WU1:       Args: -dir B6xsS98HwM0SodVDp958lywBwDLtIec8fQs_tEgwc0s -suffix 01
+20:14:23:I1:WU1:             -version 8.5.3 -lifeline 42303 -np 8
+20:14:23:I1:WU1:************************************ libFAH ************************************
+20:14:23:I1:WU1:       Date: Jan 16 2021
+20:14:23:I1:WU1:       Time: 19:21:38
+20:14:23:I1:WU1:   Compiler: GNU 8.3.0
+20:14:23:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:14:23:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie
+20:14:23:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:14:23:I1:WU1:       Bits: 64
+20:14:23:I1:WU1:       Mode: Release
+20:14:23:I1:WU1:************************************ CBang *************************************
+20:14:23:I1:WU1:       Date: Jan 16 2021
+20:14:23:I1:WU1:       Time: 19:21:24
+20:14:23:I1:WU1:   Compiler: GNU 8.3.0
+20:14:23:I1:WU1:    Options: -faligned-new -std=c++14 -fsigned-char -ffunction-sections
+20:14:23:I1:WU1:             -fdata-sections -O3 -funroll-loops -fno-pie -fPIC
+20:14:23:I1:WU1:   Platform: linux2 4.15.0-128-generic
+20:14:23:I1:WU1:       Bits: 64
+20:14:23:I1:WU1:       Mode: Release
+20:14:23:I1:WU1:************************************ System ************************************
+20:14:23:I1:WU1:        CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+20:14:23:I1:WU1:     CPU ID: GenuineIntel Family 6 Model 140 Stepping 1
+20:14:23:I1:WU1:       CPUs: 8
+20:14:23:I1:WU1:     Memory: 15.31GiB
+20:14:23:I1:WU1:Free Memory: 3.00GiB
+20:14:23:I1:WU1:    Threads: POSIX_THREADS
+20:14:23:I1:WU1: OS Version: 6.19
+20:14:23:I1:WU1:Has Battery: true
+20:14:23:I1:WU1: On Battery: false
+20:14:23:I1:WU1: UTC Offset: 1
+20:14:23:I1:WU1:        PID: 58544
+20:14:23:I1:WU1:        CWD: /home/nixboom/dotfiles/nixos/modules/common/work
+20:14:23:I1:WU1:********************************************************************************
+20:14:23:I1:WU1:Project: 16969 (Run 4, Clone 713, Gen 314)
+20:14:23:I1:WU1:Unit: 0x00000000000000000000000000000000
+20:14:23:I1:WU1:Digital signatures verified
+20:14:23:I1:WU1:Calling: mdrun -c frame314.gro -s frame314.tpr -x frame314.xtc -cpi state.cpt -cpt 5 -nt 8 -ntmpi 1
+20:14:23:I1:WU1:Steps: first=785000000 total=787500000
+20:14:23:I1:WU1:Completed 272052 out of 2500000 steps (10%)
+20:14:47:I2:REQ27:< GET /api/websocket HTTP/1.1
+20:15:32:I1:WU1:Completed 275000 out of 2500000 steps (11%)
+20:18:09:I1:Machine state pause
+20:18:09:I1:WU1:Caught signal SIGINT(2) on PID 58544
+20:18:09:I1:WU1:Exiting, please wait. . .
+20:18:10:I1:WU1:Folding@home Core Shutdown: INTERRUPTED
+20:18:10:I1:WU1:Core returned INTERRUPTED (102)
