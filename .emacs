@@ -6,6 +6,11 @@
       version-control        t  
       delete-old-versions    t  
       kept-old-versions      1) 
+(setq corfu-auto t
+      corfu-auto-delay 0
+      corfu-auto-trigger "."
+      )
+
 
 
 (require 'tree-sitter)
@@ -47,8 +52,9 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-windowt company corfu eglot-inactive-regions flycheck lsp-latex
-		 lsp-mode lsp-python-ms lsp-ui lua-mode
+   '(ace-windowt avy-embark-collect corfu corfu-candidate-overlay
+		 eglot-inactive-regions flycheck
+		 lsp-latex lsp-mode lsp-python-ms lsp-ui lua-mode
 		 multiple-cursors qml-mode tree-inspector tree-sitter
 		 tree-sitter-indent tree-sitter-langs)))
 (custom-set-faces
