@@ -3,7 +3,9 @@
     ly
     efibootmgr
     os-prober
-    curl 
+
+    curl
+    nodejs_24
 
     mangohud
     protonup-qt
