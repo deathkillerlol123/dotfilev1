@@ -45,7 +45,7 @@
     xdg-desktop-portal-wlr
 
     firefox-devedition
-    surf
+    ladybird
     whatsapp-electron
     discord
     wezterm
