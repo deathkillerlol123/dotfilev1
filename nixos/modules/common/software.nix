@@ -74,6 +74,7 @@
     pywal
     kdePackages.gwenview  
     ntfs3g
+    smartmontools
 
     mangowc
     glibc
