@@ -8,6 +8,8 @@
     wget
     nodejs_24
 
+    fahclient
+
     mangohud
     protonup-qt
     heroic
