@@ -5,6 +5,7 @@
     os-prober
 
     curl
+    wget
     nodejs_24
 
     mangohud
