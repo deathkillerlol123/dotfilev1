@@ -8,6 +8,7 @@
     wget
     nodejs_24
 
+    touchegg
     evtest
     libimobiledevice
     fahclient
