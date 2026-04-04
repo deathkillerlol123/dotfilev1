@@ -59,9 +59,6 @@ in
         ${username} = import ./home.nix;
       };
   };
-  environment.systemPackages = [
-    inputs.helium.packages.${system}.default
-  ];
   programs.dconf.enable = true;
   services.suricata.settings.logging.outputs.syslog.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
