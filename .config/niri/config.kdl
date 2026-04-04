@@ -23,20 +23,6 @@ input{
     trackpoint{
     }
 }
-output "eDP-1"{
-    mode "1920x1080@60.00"
-    scale 1.5
-    transform "normal"
-    position x=1920 y=0
-    focus-at-startup   
-}
-output "HDMI-A-1"{
-    mode "1920x1080@60.00"
-    scale 1
-    transform "normal"
-    position x=1920 y=1080
-    focus-at-startup
-}
 layout{
     gaps 0
     center-focused-column "never"
@@ -121,12 +107,12 @@ window-rule{
 binds{
     //Alt+Shift+Slash{ show-hotkey-overlay; }
 //main_keys
-    Alt+R                                          { spawn "kitty"; }
+    Alt+R                                          { spawn "wezterm"; }
     Alt+Q                                          { close-window;}
 
     Alt+Space                                      { spawn-sh "rofi -show drun";}
     Alt+E                                          { spawn-sh "nautilus";}
-    Alt+O                                          { spawn-sh "killall niri";}
+    Alt+O                                          { spawn-sh "~/dotfiles/scripts/exit_cleanup/clean.sh";}
     Alt+V                                          { spawn-sh "copyq toggle";} 
     Alt+C                                          { spawn "sh" "-c" "pgrep -x waybar > /dev/null && killall waybar || waybar";}
     Alt+G                                          { spawn-sh "whatsdesk --ozone-platform=wayland";}

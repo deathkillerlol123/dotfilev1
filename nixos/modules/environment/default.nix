@@ -22,7 +22,7 @@
     };
   };
   programs = {
-    niri.enable = true;
+    niri.enable = false;
     mangowc.enable = true;
     hyprland = {
       enable = false; #takes too long
