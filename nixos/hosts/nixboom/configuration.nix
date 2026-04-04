@@ -59,6 +59,7 @@ in
         ${username} = import ./home.nix;
       };
   };
+  systemd.services.home-manager-nixboom.wantedBy = [ ];
   programs.dconf.enable = true;
   services.suricata.settings.logging.outputs.syslog.enable = true;
 #  services.syslog-ng.enable = true;
