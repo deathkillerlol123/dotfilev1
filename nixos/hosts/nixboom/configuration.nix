@@ -67,6 +67,8 @@ in
   systemd.services.NetworkManager-wait-online.enable = false;
 
   networking.firewall.allowedTCPPorts = [ 1701 ];
+  hardware.uinput.enable = true;
+  users.groups.uinput.members = [ "nixboom" ];
 
   system.stateVersion = "25.11";
 }
