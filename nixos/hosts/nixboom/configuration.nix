@@ -61,7 +61,7 @@ in
   };
   programs.dconf.enable = true;
   services.suricata.settings.logging.outputs.syslog.enable = true;
-  services.syslog-ng.enable = true;
+#  services.syslog-ng.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 
   system.stateVersion = "25.11";
