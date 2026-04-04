@@ -11,6 +11,7 @@
     weylus
     libimobiledevice
     fahclient
+    meshlab
 
     mangohud
     protonup-qt
