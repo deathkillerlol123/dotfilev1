@@ -17,12 +17,12 @@
        dwm.enable = false;
        fluxbox.enable = false;
        nimdow.enable = false;
-       leftwm.enable = true;
+       leftwm.enable = false;
      };
     };
   };
   programs = {
-    niri.enable = false;
+    niri.enable = true;
     mangowc.enable = true;
     hyprland = {
       enable = false; #takes too long

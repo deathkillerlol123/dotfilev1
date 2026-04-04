@@ -40,7 +40,6 @@ in
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
   };
-  boot.initrd.unl0kr.allowVendorDrivers = true;
   main-user = {
     enable = true;
     userName = username;
@@ -67,14 +66,10 @@ in
   services.suricata.settings.logging.outputs.syslog.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 
-  networking.firewall.allowedTCPPorts = [ 1701 ];
   hardware.uinput.enable = true;
 
   services.xserver = {
-    libinput = {
-      enable = true;
-      tapping = true;
-    };
+    libinput.enable = true;
     wacom.enable = true;
   };
 
