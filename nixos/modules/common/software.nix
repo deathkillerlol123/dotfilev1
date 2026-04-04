@@ -8,7 +8,6 @@
     wget
     nodejs_24
 
-    wayvnc
     libimobiledevice
     fahclient
 
