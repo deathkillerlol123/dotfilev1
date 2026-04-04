@@ -45,6 +45,7 @@
     xdg-desktop-portal-wlr
 
     firefox-devedition
+    qutebrowser
 #    ladybird
     whatsapp-electron
     discord
