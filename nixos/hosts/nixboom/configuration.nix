@@ -69,5 +69,16 @@ in
   networking.firewall.allowedTCPPorts = [ 1701 ];
   hardware.uinput.enable = true;
 
+  services.xserver = {
+    multitouch = {
+      enable = true;
+    };
+    libinput = {
+      enable = true;
+      tapping = true;
+    };
+    wacom.enable = true;
+  };
+
   system.stateVersion = "25.11";
 }
