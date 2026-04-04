@@ -40,6 +40,7 @@ in
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
   };
+  boot.initrd.unl0kr.allowVendorDrivers = true;
   main-user = {
     enable = true;
     userName = username;
