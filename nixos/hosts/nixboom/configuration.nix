@@ -37,12 +37,12 @@ in
       };
     };
     kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
-    boot.extraModprobeConfig = ''
-      options wacom force_i2c=1
-    '';
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
   };
+  boot.extraModprobeConfig = ''
+    options wacom force_i2c=1
+  '';
   main-user = {
     enable = true;
     userName = username;
