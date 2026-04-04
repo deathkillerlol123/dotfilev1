@@ -40,15 +40,12 @@ in
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
   };
-  boot.extraModprobeConfig = ''
-    options wacom force_i2c=1
-  '';
   main-user = {
     enable = true;
     userName = username;
     shell = "fish";
   };
-  users.users.${username}.extraGroups = ["wheel" "gamemode"];
+  users.users.${username}.extraGroups = ["wheel" "gamemode" "uinput"];
   cleaner = {
     enable = true;
     flake-location = flake_pos;
@@ -71,7 +68,6 @@ in
 
   networking.firewall.allowedTCPPorts = [ 1701 ];
   hardware.uinput.enable = true;
-  users.groups.uinput.members = [ "nixboom" ];
 
   system.stateVersion = "25.11";
 }

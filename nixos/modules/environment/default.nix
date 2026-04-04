@@ -17,6 +17,7 @@
        dwm.enable = false;
        fluxbox.enable = false;
        nimdow.enable = false;
+       leftwm.enable = true;
      };
     };
   };
