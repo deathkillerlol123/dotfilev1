@@ -1,6 +1,5 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-   libimobiledevice
     ly
     efibootmgr
     os-prober
@@ -9,6 +8,8 @@
     wget
     nodejs_24
 
+    weylus
+    libimobiledevice
     fahclient
 
     mangohud
