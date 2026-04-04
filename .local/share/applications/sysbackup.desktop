@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Backup System
-Exec=kitty /home/archboom/dotfiles/scripts/backup_sys.sh
-Icon=preferences-desktop-wallpaper
-Terminal=true
-Type=Application
-Categories=Utility;
-
