@@ -8,8 +8,6 @@
     wget
     nodejs_24
 
-    xorg.xhost
-    weylus
     libimobiledevice
     fahclient
 
