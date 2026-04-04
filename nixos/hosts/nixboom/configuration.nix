@@ -60,7 +60,7 @@ in
       };
   };
   environment.systemPackages = [
-    inputs.helium.packages.${pkgs.system}.default
+#    inputs.helium.packages.${pkgs.system}.default
   ];
   programs.dconf.enable = true;
   services.suricata.settings.logging.outputs.syslog.enable = true;
