@@ -1,5 +1,6 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+   libimobiledevice
     ly
     efibootmgr
     os-prober
