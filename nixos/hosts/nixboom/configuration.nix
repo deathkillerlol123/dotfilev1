@@ -66,5 +66,7 @@ in
   services.suricata.settings.logging.outputs.syslog.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
 
+  networking.firewall.allowedTCPPorts = [ 1701 ];
+
   system.stateVersion = "25.11";
 }
