@@ -45,7 +45,6 @@
     xdg-desktop-portal-wlr
 
     firefox-devedition
-    ungoogled-chromium
     qutebrowser
 #    ladybird
     whatsapp-electron
