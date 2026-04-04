@@ -5,7 +5,7 @@
 
 config.load_autoconfig(True)
 
-c.tabs.position = "left"
+c.tabs.position = "bottom"
 c.completion.shrink = True
 config.set("colors.webpage.darkmode.enabled", True)
 
