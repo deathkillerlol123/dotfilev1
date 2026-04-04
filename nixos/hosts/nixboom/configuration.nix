@@ -70,9 +70,6 @@ in
   hardware.uinput.enable = true;
 
   services.xserver = {
-    multitouch = {
-      enable = true;
-    };
     libinput = {
       enable = true;
       tapping = true;
