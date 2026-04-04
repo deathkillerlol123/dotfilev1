@@ -1,7 +1,5 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    inputs.helium.packages.${system}.default
-
     ly
     efibootmgr
     os-prober
