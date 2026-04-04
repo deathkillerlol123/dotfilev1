@@ -8,6 +8,7 @@
     wget
     nodejs_24
 
+    evtest
     libimobiledevice
     fahclient
 
