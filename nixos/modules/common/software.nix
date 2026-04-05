@@ -82,7 +82,7 @@
     kdePackages.gwenview  
     ntfs3g
     smartmontools
-    qbittorent
+#    qbittorent
 
     mangowc
     glibc
