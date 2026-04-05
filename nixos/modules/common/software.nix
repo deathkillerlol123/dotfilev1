@@ -59,13 +59,11 @@
 
     neovim
     zoxide
-
     emacs
     nixd
     nil
 
     yazi
-    
     zellij
     viu
     copyq
@@ -77,7 +75,6 @@
     eza
     btop
     cmatrix
-    clock-rs
     neofetch
     swww
     fd
@@ -85,6 +82,7 @@
     kdePackages.gwenview  
     ntfs3g
     smartmontools
+    qbittorent
 
     mangowc
     glibc

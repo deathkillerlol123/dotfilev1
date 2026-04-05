@@ -1,5 +1,7 @@
 import Quickshell
 import Quickshell.Io
+import Quickshell.Services.SystemTray
+import Quickshell.Services.Notifications
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Wayland
@@ -16,7 +18,7 @@ PanelWindow {
     color: "#888FFF"
 
     Rectangle {
-	width: 95
+	width: 65
 	height: 30
 	color: "red"
 	border {
@@ -25,7 +27,7 @@ PanelWindow {
 	}
 	radius: 7
 	anchors.right: parent.right
-	anchors.rightMargin: 170
+	anchors.rightMargin: 120
 	Text {
 	    id: clock
 	    anchors.centerIn: parent
@@ -47,14 +49,14 @@ PanelWindow {
     }
     Rectangle {
 	id:left
-	width: 80
+	width: 45
 	height: 30
 	color: "red"
 	border.color: "black"
 	border.width: 5
 	radius: 7
 	anchors.right: parent.right
-	anchors.rightMargin: 90
+	anchors.rightMargin: 75
 	Text {
 	    id: battery
 	    anchors.centerIn: parent
@@ -73,8 +75,8 @@ PanelWindow {
 			else if (capacity <= 80) batteryIcon = "󰂁"
 			else batteryIcon = "󰂂"
 			
-			const symbol = status === "Charging" ? "🔌" : batteryIcon
-			battery.text = `${symbol} ${capacity}%`
+			const symbol = status === "Charging" ? "${capacity}" : "Full"
+			battery.text = `${symbol}`
 		    }
 		}
 	    }      
@@ -83,6 +85,42 @@ PanelWindow {
 		running: hasBattery
 		repeat: true
 		onTriggered: batteryProc.running = true		
+	    }
+	}
+    }
+    Rectangle {
+	id:tray
+	width: 75
+	height: 30
+	border.width: 5
+	radius: 7
+	color: "#8888ff"
+	anchors.right:parent.right
+	anchors.rightMargin: 0
+
+	Row {
+	    id: trayRow
+	    spacing:0
+	    Repeater {
+		model: SystemTray.items
+		delegate: Rectangle {
+		    height: 23
+		    width: 23
+		    color: "transparent"
+		    Image {
+			source: modelData.icon
+			anchors.fill: parent
+			anchors.topMargin: 3
+			anchors.bottomMargin: -3
+			anchors.leftMargin:2
+		    }
+		    MouseArea {
+			anchors.fill: parent
+			onClicked: {
+			    modelData.activate()
+			}
+		    }
+		}
 	    }
 	}
     }
