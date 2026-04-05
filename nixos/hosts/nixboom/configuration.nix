@@ -65,7 +65,7 @@ in
 
   hardware.uinput.enable = true;
 
-  services.xserver = {
+  services = {
     libinput.enable = true;
     wacom.enable = true;
   };
