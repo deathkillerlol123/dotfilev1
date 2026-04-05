@@ -67,7 +67,7 @@ in
 
   services = {
     libinput.enable = true;
-    wacom.enable = true;
+    xserver.wacom.enable = true;
   };
 
   system.stateVersion = "25.11";
