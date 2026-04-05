@@ -3,6 +3,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
+    "io.github.ilya_zlobintsev.LACT"
 #    "sh.ppy.osu"
   ];
 in {
