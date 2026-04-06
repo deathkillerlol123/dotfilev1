@@ -28,7 +28,6 @@
       		    modules = [
       			./hosts/nixboom/configuration.nix
       			inputs.home-manager.nixosModules.default
-			inputs.import-tree ./modules
     		    ];
 		};
 	    };
