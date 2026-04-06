@@ -8,7 +8,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../main.nix    
+    ../main.nix    
     "${mod}/environment/"
     "${mod}/portals"
     "${mod}/login/"
