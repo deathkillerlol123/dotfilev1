@@ -152,7 +152,7 @@ windowrule=appid:steam,isfullscreen:1
 
 windowrule=appid:org.wezfurlong.wezterm,isfakefullscreen:1
 windowrule=appid:org.wezfurlong.wezterm,focused_opacity:0.85
-windowrule=appid:org.wezfurlong.wezterm,unfocused_opacity:0.85
+windowrule=appid:org.wezfurlong.wezterm,unfocused_opacity:0.815
 
 windowrule=isglobal:1,isoverlay:1
 
