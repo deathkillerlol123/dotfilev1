@@ -19,6 +19,7 @@
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
+	(inputs.import-tree ./modules);
 	flake = {
 	    nixosConfigurations = {
       		nixbtw = nixpkgs.lib.nixosSystem {
@@ -36,7 +37,5 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
-        import-tree ./modules;	
-    });
-    
+    });    
 }
