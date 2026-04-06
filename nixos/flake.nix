@@ -18,7 +18,7 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; }
+    flake-parts.lib.mkFlake { inherit inputs; }
     {
 	flake = {
 	    nixosConfigurations = {
