@@ -12,6 +12,7 @@ in
     ];
   };
   flake.nixosModules.myMachineModule = {pkgs,...}: {
+    systems = ["x86_64-linux"];
     imports = [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
