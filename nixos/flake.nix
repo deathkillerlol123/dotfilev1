@@ -23,5 +23,5 @@
         imports = [
             ./nixos.nix
         ];
-    };;
+    };
 }
