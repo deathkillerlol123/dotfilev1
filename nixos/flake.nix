@@ -28,7 +28,6 @@
       		    modules = [
       			./hosts/nixboom/configuration.nix
       			inputs.home-manager.nixosModules.default
-			inputs.import-tree ./modules
     		    ];
 		};
 	    };
@@ -39,4 +38,5 @@
 	    "aarch64-darwin"
 	];
     };
+    (inputs.import-tree ./modules);
 }
