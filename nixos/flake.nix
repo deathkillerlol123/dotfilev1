@@ -17,27 +17,25 @@
       import-tree.url = "github:vic/import-tree";
   };
 
-    outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; }
-    (
-	top@{ config, withSystem, moduleWithSystem, ... }: {
-	    flake = {
-		nixosConfigurations = {
-      		    nixbtw = nixpkgs.lib.nixosSystem {
-      			system = "x86_64-linux";
-      			specialArgs = {inherit inputs;};
-      			modules = [
-      			    ./hosts/nixboom/configuration.nix
-      			    inputs.home-manager.nixosModules.default
-    			];
-		    };
+  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
+	flake = {
+	    nixosConfigurations = {
+      		nixbtw = nixpkgs.lib.nixosSystem {
+      		    system = "x86_64-linux";
+      		    specialArgs = {inherit inputs;};
+      		    modules = [
+      			./hosts/nixboom/configuration.nix
+      			inputs.home-manager.nixosModules.default
+    		    ];
 		};
 	    };
-	    systems = [
-		"x86_64-linux"
-		"aarch64-linux"
-		"aarch64-darwin"
-	    ];
-	}
-    );
+	};
+	systems = [
+	    "x86_64-linux"
+	    "aarch64-linux"
+	    "aarch64-darwin"
+	];
+(inputs.import-tree ./modules);    });
+    
 }
