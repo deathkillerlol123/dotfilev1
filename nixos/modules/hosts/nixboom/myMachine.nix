@@ -9,7 +9,7 @@ in
     modules = [
       self.nixosModules.myMachinemodule
       self.nixosModules.fonts
-      self.nixosModules.laptop-harware
+      self.nixosModules.laptop-hardware
     ];
   };
   flake.nixosModules.myMachineModule = {pkgs,...}: {
