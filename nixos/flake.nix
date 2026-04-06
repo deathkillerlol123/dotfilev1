@@ -39,7 +39,7 @@
 	];
 	imports = [
 	    ./modules/common/fonts.nix
-	    inputs.import-tree ./modules
+	    (inputs.import-tree ./modules)
 	];
     };
 }
