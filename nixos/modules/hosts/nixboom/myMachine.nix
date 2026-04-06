@@ -8,7 +8,8 @@ in
   flake.nixosConfigurations.myMachine = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.myMachinemodule
-      self.nixosModulesfonts
+      self.nixosModules.fonts
+      self.nixosModules.laptop-harware
     ];
   };
   flake.nixosModules.myMachineModule = {pkgs,...}: {
