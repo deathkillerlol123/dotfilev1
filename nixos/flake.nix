@@ -17,17 +17,18 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; }
-    flake ={
-	nixosConfigurations = {
-      	    nixbtw = nixpkgs.lib.nixosSystem {
-      		system = "x86_64-linux";
-      		specialArgs = {inherit inputs;};
-      		modules = [
-      		    ./hosts/nixboom/configuration.nix
-      		    inputs.home-manager.nixosModules.default
-    		];
+    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
+	flake = {
+	    nixosConfigurations = {
+      		nixbtw = nixpkgs.lib.nixosSystem {
+      		    system = "x86_64-linux";
+      		    specialArgs = {inherit inputs;};
+      		    modules = [
+      			./hosts/nixboom/configuration.nix
+      			inputs.home-manager.nixosModules.default
+    		    ];
+		};
 	    };
 	};
-    };
+    })    
 }
