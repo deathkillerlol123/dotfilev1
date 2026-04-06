@@ -103,8 +103,7 @@
     libdisplay-info
     seatd
     pcre2
-    python313
-    python313Packages.numpy
+    python315
     pipx
  ];
 }
