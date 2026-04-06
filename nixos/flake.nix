@@ -42,8 +42,8 @@
 		    "aarch64-linux"
 		    "aarch64-darwin"
 		];
-		import = mods
-	    }
+		import = mods;
+	    };
 	);
-    }
+    };
 }
