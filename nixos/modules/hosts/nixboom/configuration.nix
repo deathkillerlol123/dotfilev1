@@ -17,11 +17,9 @@ in
     "${mod}/gaming/"
     "${mod}/settings/"
   ];
-  services.fwupd.enable = false;  
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
-      #systemd-boot.enable = true;
       limine = {
         enable = true;
         maxGenerations = 3;
@@ -60,15 +58,13 @@ in
       };
   };
   programs.dconf.enable = true;
-  services.suricata.settings.logging.outputs.syslog.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
-
   hardware.uinput.enable = true;
-
   services = {
     libinput.enable = true;
     xserver.wacom.enable = true;
+    fwupd.enable = false;
+    suricata.settings.logging.outputs.syslog.enable = true;
   };
-
   system.stateVersion = "25.11";
 }
