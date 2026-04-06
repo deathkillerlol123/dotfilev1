@@ -17,7 +17,7 @@
       import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+  outputs =inputs:
     flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
 	(inputs.import-tree ./modules);
 	flake = {
