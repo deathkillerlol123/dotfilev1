@@ -36,5 +36,7 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+        (inputs.import-tree ./modules);	
     });
+    
 }
