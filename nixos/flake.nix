@@ -37,6 +37,5 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
-	modules = [inputs.import-tree ./modules];
     };
 }
