@@ -5,11 +5,9 @@ let
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
- imports = [
-   ./hardware-configuration.nix
-   inputs.home-manager.nixosModules.default
-   ../main.nix    
- ];
+ imports = lib.fileset.toList(
+   lib.fileset.fileFilter (file.name =="default.nix") ./.
+   );
  boot = {
    loader = {
      efi.canTouchEfiVariables = true;
