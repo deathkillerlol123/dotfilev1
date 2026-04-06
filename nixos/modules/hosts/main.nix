@@ -5,7 +5,11 @@
     blueman.enable = true;
     flatpak.enable = true;
     libinput.enable = true;
+    xserver.wacom.enable = true;
+    fwupd.enable = false
   };
+  programs.dconf.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false;  
   time.timeZone = "Europe/London"; 
   networking = {
     hostName = "nixbtw";
@@ -26,6 +30,7 @@
     allowUnfree = true;
   };  
   hardware = {
+    uinput.enable = true;
     bluetooth = {
       enable = true;
       powerOnBoot = true;

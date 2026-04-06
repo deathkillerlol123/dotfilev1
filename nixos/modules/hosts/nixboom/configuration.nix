@@ -57,14 +57,5 @@ in
         ${username} = import ./home.nix;
       };
   };
-  programs.dconf.enable = true;
-  systemd.services.NetworkManager-wait-online.enable = false;
-  hardware.uinput.enable = true;
-  services = {
-    libinput.enable = true;
-    xserver.wacom.enable = true;
-    fwupd.enable = false;
-    suricata.settings.logging.outputs.syslog.enable = true;
-  };
   system.stateVersion = "25.11";
 }
