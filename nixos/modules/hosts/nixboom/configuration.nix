@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
-  mod=../../modules;
+  mod=../..;
   username="nixboom";
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
