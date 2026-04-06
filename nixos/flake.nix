@@ -38,7 +38,7 @@
 	    "aarch64-darwin"
 	];
 	modules = [
-	    ./mods/first.nix
+	    ./mods/myFirstModule.nix
 	];
     };
 }
