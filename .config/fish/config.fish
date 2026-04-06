@@ -7,3 +7,6 @@ end
 set -U fish_greeting
 starship init fish | source
 zoxide init fish | source
+
+# Created by `pipx` on 2026-04-06 14:38:47
+set PATH $PATH /home/nixboom/.local/bin
