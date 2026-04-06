@@ -1,7 +1,7 @@
 {inputs,...}:{
   flake.nixosModules.myFirstModule = { pkgs,...}: {
     programs.firefox.enable = true;
-    evironment.systemPackagess = [
+    evironment.systemPackagess = with pkgs; [
       cowsay
     ];
   };
