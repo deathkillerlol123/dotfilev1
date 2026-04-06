@@ -20,8 +20,8 @@
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }
     (
-	(inputs.import-tree ./modules);
 	top@{ config, withSystem, moduleWithSystem, ... }: {
+	    imports = inputs.import-tree ./modules;
 	    flake = {
 		nixosConfigurations = {
       		    nixbtw = nixpkgs.lib.nixosSystem {
