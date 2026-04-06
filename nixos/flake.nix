@@ -30,12 +30,12 @@
     		    ];
 		};
 	    };
-	    (inputs.import-tree ./modules);
 	};
 	systems = [
 	    "x86_64-linux"
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+	(inputs.import-tree ./modules);
     });
 }
