@@ -20,10 +20,6 @@ in
     boot = {
       loader = {
         efi.canTouchEfiVariables = true;
-	grub = {
-	  enable = true;
-	  devices = ["nodev"];
-	};
         limine = {
           enable = false;
           maxGenerations = 3;
