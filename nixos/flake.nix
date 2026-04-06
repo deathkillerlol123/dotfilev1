@@ -13,20 +13,21 @@
 	  url = "github:nix-community/NUR";
 	  inputs.nixpkgs.follows = "nixpkgs";
       };
-      
+      flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs,... }@inputs:
-    {
-      nixosConfigurations = {
-      	  nixbtw = nixpkgs.lib.nixosSystem {
-      	    system = "x86_64-linux";
-      	    specialArgs = {inherit inputs;};
-      	    modules = [ 
-      	      ./hosts/nixboom/configuration.nix
-      	      inputs.home-manager.nixosModules.default
-    	      ];
-	  };         
+  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; }
+    flake ={
+	nixosConfigurations = {
+      	    nixbtw = nixpkgs.lib.nixosSystem {
+      		system = "x86_64-linux";
+      		specialArgs = {inherit inputs;};
+      		modules = [
+      		    ./hosts/nixboom/configuration.nix
+      		    inputs.home-manager.nixosModules.default
+    		];
+	    };
+	};
     };
-  };
 }
