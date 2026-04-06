@@ -37,7 +37,8 @@
 	    "aarch64-darwin"
 	];
 	imports = [
-	    (inputs.import-tree ./modules)
+	    ./modules/common/fonts.nix
+	    ./modules/hosts/nixboom/myMachine.nix
 	];
     };
 }
