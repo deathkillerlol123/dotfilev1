@@ -37,7 +37,7 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
-	modules = [
+	imports = [
 	    ./mods/myFirstModule.nix
 	];
     };
