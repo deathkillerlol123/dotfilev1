@@ -22,7 +22,7 @@ in
         efi.canTouchEfiVariables = true;
 	grub = {
 	  enable = true;
-	  devices = ["nodev"]
+	  devices = ["nodev"];
 	};
         limine = {
           enable = false;
