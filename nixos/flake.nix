@@ -1,5 +1,5 @@
 {
-  imports = [ ./modules/hosts/nixboom/hardware-configuration.nix]
+    imports = [ ./modules/hosts/nixboom/hardware-configuration.nix];
   inputs = {
       nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
       home-manager = {
