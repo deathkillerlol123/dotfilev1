@@ -12,7 +12,6 @@ in
     ];
   };
   flake.nixosModules.myMachineModule = {pkgs,...}: {
-    systems = ["x86_64-linux"];
     imports = [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
@@ -22,7 +21,7 @@ in
       loader = {
         efi.canTouchEfiVariables = true;
         limine = {
-          enable = false;
+          enable = true;
           maxGenerations = 3;
           style = {
             wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
