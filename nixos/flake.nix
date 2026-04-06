@@ -37,5 +37,8 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+	import = [
+	    ./modules/common/fonts.nix
+	];
     };
 }
