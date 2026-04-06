@@ -11,7 +11,7 @@ in
    ../main.nix
    "${mod}/settings"
    "${mod}/common"   
-   "${mod}/environmen"
+   "${mod}/environment"
    "${mod}/gaming"
    "${mod}/login"
    "${mod}/portals"
