@@ -39,8 +39,5 @@
 		"aarch64-darwin"
 	    ];
 	}
-    );
-    inputs.flake-parts.lib.mkFlake {inherit inputs;}
-      (inputs.import-tree ./mods);
-      
+    );     
 }
