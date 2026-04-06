@@ -13,7 +13,6 @@ in
   };
   flake.nixosModules.myMachineModule = {pkgs,...}: {
     imports = [
-      /home/nixboom/dotfiles/nixos/modules/hosts/nixboom/hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../main.nix    
     ];
