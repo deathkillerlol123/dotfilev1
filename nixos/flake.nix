@@ -18,7 +18,7 @@
   };
 
     outputs = inputs:
-    flake-parts.lib.mkFlake { inherit inputs; }
+      inputs.flake-parts.lib.mkFlake { inherit inputs; }
     (
 	top@{ config, withSystem, moduleWithSystem, ... }: {
 	    flake = {
