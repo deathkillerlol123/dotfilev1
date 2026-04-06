@@ -18,7 +18,7 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
+    flake-parts.lib.mkFlake { inherit inputs; } {
 	flake = {
 	    nixosConfigurations = {
       		nixbtw = nixpkgs.lib.nixosSystem {
