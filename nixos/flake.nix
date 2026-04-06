@@ -18,8 +18,7 @@
   };
 
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; }
-    (inputs.import-tree ./modules);
+    flake-parts.lib.mkFlake { inherit inputs; }
     (
 	top@{ config, withSystem, moduleWithSystem, ... }: {
 	    flake = {
