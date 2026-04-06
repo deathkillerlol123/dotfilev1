@@ -53,6 +53,7 @@
     whatsapp-electron
     discord
     wezterm
+    w3m
     starship
     bash
     fish
