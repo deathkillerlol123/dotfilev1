@@ -17,12 +17,15 @@ in
       inputs.home-manager.nixosModules.default
       ../main.nix    
     ];
-    boot.loader.grub.enable = false;
     boot = {
       loader = {
         efi.canTouchEfiVariables = true;
+	grub = {
+	  enable = true;
+	  devices = ["nodev"]
+	};
         limine = {
-          enable = true;
+          enable = false;
           maxGenerations = 3;
           style = {
             wallpapers = lib.filesystem.listFilesRecursive ../../themes/limine_wallpaper;        
