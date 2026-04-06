@@ -21,7 +21,6 @@
     flake-parts.lib.mkFlake { inherit inputs; }
     (
 	top@{ config, withSystem, moduleWithSystem, ... }: {
-	    imports = inputs.import-tree ./modules;
 	    flake = {
 		nixosConfigurations = {
       		    nixbtw = nixpkgs.lib.nixosSystem {
