@@ -9,7 +9,13 @@ in
    ./hardware-configuration.nix
    inputs.home-manager.nixosModules.default
    ../main.nix
-   "${mod}/settings/"
+   "${mod}/settings"
+   "${mod}/common"   
+   "${mod}/environmen"
+   "${mod}/gaming"
+   "${mod}/login"
+   "${mod}/portals"
+   "${mod}/sound"
  ];
  boot = {
    loader = {
