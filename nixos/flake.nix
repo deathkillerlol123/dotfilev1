@@ -39,6 +39,7 @@
 	];
 	imports = [
 	    ./modules/common/fonts.nix
+	    ./modules/hosts/nixboom/configuration.nix
 	];
     };
 }
