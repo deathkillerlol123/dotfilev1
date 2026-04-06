@@ -1,0 +1,38 @@
+import math
+
+def sigmoid(h):
+    return 1/(1+(math.exp(-h)))
+
+def neuron(x1,x2,w1,w2,b):
+    h=x1*w1 + x2*w2 +b
+
+    return sigmoid(h)
+
+def network( x1,x2,
+             w11,w21,b1,
+             w12,w22,b2,
+             v1,v2,c):
+    h1 = neuron(x1,x2,w11,w21,b1)
+    h2 = neuron(x1,x2,w12,w22,b2)
+
+    y_hat = neuron(h1,h2,v1,v2,c)
+
+    return h1,h2, y_hat
+
+
+
+data= [
+    (0,0,0),
+    (0,1,1),
+    (1,0,1),
+    (1,1,0)
+    ]
+w11,w21,b1 = 0.3,-0.2,0
+w12,w22,b2 = -0.4,0.1,0
+v1,v2,c = 0.2,-0.3,0
+
+for (x1,x2,y) in data:
+    _, _, y_hat = network(x1, x2, w11, w21, b1, w12, w22, b2, v1, v2, c)
+    print(f"input=({x1},{x2})  target={y}  y_hat={y_hat:.4f}")    
+
+
