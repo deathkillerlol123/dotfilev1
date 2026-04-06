@@ -105,6 +105,5 @@
     pcre2
     python315
     pipx
-    pip
  ];
 }
