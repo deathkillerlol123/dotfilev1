@@ -4,7 +4,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  flake.modules.laptop-hardware =
+  flake.nixosModules.laptop-hardware =
     {modulesPath,lib,...}:
     {
       imports =
