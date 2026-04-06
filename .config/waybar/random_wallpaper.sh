@@ -25,8 +25,8 @@ if [ -n "$FILE" ]; then
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
   pkill -f rofi
 
-  cd ~/dotfiles/nixos/themes/limine_wallpaper/
+  cd ~/dotfiles/nixos/modules/themes/limine_wallpaper/
   rm -rf *
-  cp "$FILE" "$HOME/dotfiles/nixos/themes/limine_wallpaper/"
+  cp "$FILE" "$HOME/dotfiles/nixos/modules/themes/limine_wallpaper/"
 
 fi
