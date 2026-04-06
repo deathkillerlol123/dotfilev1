@@ -17,7 +17,7 @@
       import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }
     (
 	top@{ config, withSystem, moduleWithSystem, ... }: {
@@ -39,5 +39,5 @@
 		"aarch64-darwin"
 	    ];
 	}
-    );     
+    );
 }
