@@ -17,9 +17,9 @@
       import-tree.url = "github:vic/import-tree";
   };
 
-  outputs =inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
-	(inputs.import-tree ./modules);
+  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; }
+    (top@{ config, withSystem, moduleWithSystem, ... }: {
 	flake = {
 	    nixosConfigurations = {
       		nixbtw = nixpkgs.lib.nixosSystem {
