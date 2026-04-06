@@ -17,6 +17,7 @@ in
       inputs.home-manager.nixosModules.default
       ../main.nix    
     ];
+    boot.loader.grub.enable = false;
     boot = {
       loader = {
         efi.canTouchEfiVariables = true;
