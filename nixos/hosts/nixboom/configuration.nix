@@ -5,12 +5,13 @@ let
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
-  flake.nixosConfigurations.nixboom = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.myMachine = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.myFirstModule
+      self.nixosModules.myMachine
     ];
   };
-  flake.nixosModules.nixboom = {pkgs,...}:  {
+  flake.nixosModules.myMachine = {pkgs,...}:  {
     imports = [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
