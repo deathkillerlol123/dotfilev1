@@ -6,7 +6,7 @@ let
 in
 {
  imports = lib.fileset.toList(
-   lib.fileset.fileFilter (file.name =="default.nix") ./.
+   lib.fileset.fileFilter (file: file.name =="default.nix") ./.
    );
  boot = {
    loader = {
