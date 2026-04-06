@@ -40,5 +40,4 @@
 	    ];
 	}
     );
-    (inputs.import-tree ./modules);
 }
