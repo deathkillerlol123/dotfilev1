@@ -26,6 +26,7 @@
       		    system = "x86_64-linux";
       		    specialArgs = {inherit inputs;};
       		    modules = [
+			./modules/hosts/nixboom/myMachine.nix
       			inputs.home-manager.nixosModules.default
     		    ];
 		};
@@ -38,8 +39,6 @@
 	];
 	imports = [
 	    ./modules/common/fonts.nix
-	    ./modules/hosts/nixboom/myMachine.nix
-	    ./modules/hosts/nixboom/hardware-configuration.nix
 	];
     };
 }
