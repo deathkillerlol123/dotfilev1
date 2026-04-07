@@ -18,6 +18,7 @@
       		    system = "x86_64-linux";
       		    specialArgs = {inherit inputs;};
       		    modules = [
+		    	./modules/hosts/nixboom/laptop.nix
       			inputs.home-manager.nixosModules.default
     		    ];
 		};
