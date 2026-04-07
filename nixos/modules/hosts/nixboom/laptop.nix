@@ -2,10 +2,11 @@
 {
  flake.nixosConfigurations.main = inputs.nixpkgs.lib.nixosSystem {
    modules = [
-     self.nixosModules.hostMain
+     self.nixosModules.laptop-hardware
+     self.nixosModules.laptop
    ];
  };
- flake.nixosModules.hostMain = {pkgs, ...}: {
+ flake.nixosModules.laptop = {pkgs, ...}: {
 
    boot = {
      loader = {
