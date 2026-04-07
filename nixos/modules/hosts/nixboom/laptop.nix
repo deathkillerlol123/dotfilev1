@@ -9,6 +9,7 @@ in
    modules = [
      self.nixosModules.laptopModule
      ];
+ };
  flake.nixosModules.laptopModule = {pkgs, ...}: {
    imports = [
      ./hardware-configuration.nix
