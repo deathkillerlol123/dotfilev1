@@ -2,6 +2,7 @@
 {
    imports = [
      inputs.home-manager.nixosModules.default
+     ./laptop-hardware.nix
      ../main.nix
      ../../settings
      ../../common
