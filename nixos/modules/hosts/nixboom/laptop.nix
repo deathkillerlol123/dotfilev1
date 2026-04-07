@@ -2,6 +2,7 @@
 {
  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
    modules = [
+     self.nixosModules.laptopos
    ];
  };
  flake.nixosModules.laptopos = {pkgs, ...}: {
