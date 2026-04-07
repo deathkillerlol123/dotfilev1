@@ -8,11 +8,12 @@ in
  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
    modules = [
      self.nixosModules.laptopModule
+     self.nixos
    ];
  };
  flake.nixosModules.laptopModule = {pkgs, ...}: {
    imports = [
-     ./hardware-configuration.nix
+     ./laptop-hardware.nix
      inputs.home-manager.nixosModules.default
      ../main.nix
      "${mod}/settings"
