@@ -37,5 +37,6 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+	imports = lib.fileset.toList ( lib.fileset.fileFilter (file: file.name =="default.nix") ./. );
     };
 }
