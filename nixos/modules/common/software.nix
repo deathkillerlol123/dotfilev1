@@ -7,6 +7,7 @@
     curl
     wget
     nodejs_24
+    cachix
 
     touchegg
     evtest
