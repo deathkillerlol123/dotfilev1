@@ -10,7 +10,8 @@
       import-tree.url = "github:vic/import-tree";
   };
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+    flake-parts.lib.mkFlake { inherit inputs; }
+    {
 	flake = {
 	    nixosConfigurations = {
       		nixbtw = nixpkgs.lib.nixosSystem {
@@ -27,4 +28,9 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+	imports = [
+	  ./modules/hosts/nixboom/laptop.nix
+	  ./modules/hosts/nixboom/laptop-hardware.nix
+	];
+    };
 }
