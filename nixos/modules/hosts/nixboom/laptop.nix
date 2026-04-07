@@ -13,7 +13,6 @@ in
  };
  flake.nixosModules.laptopModule = {pkgs, ...}: {
    imports = [
-     ./laptop-hardware.nix
      inputs.home-manager.nixosModules.default
      ../main.nix
      "${mod}/settings"
