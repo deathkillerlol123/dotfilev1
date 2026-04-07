@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, self, ... }:
 let
-  mod=../..;
+  mod=;
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
@@ -14,13 +14,13 @@ in
      ./laptop-hardware.nix
      inputs.home-manager.nixosModules.default
      ../main.nix
-     "${mod}/settings"
-     "${mod}/common"   
-     "${mod}/environment"
-     "${mod}/gaming"
-     "${mod}/login"
-     "${mod}/portals"
-     "${mod}/sound"
+     ../../settings
+     ../../common"  
+     ../../environment
+     ../../gaming
+     ../../login
+     ../../portals
+     ../../sound
    ];
    boot = {
      loader = {
