@@ -7,6 +7,7 @@
    ];
  };
  flake.nixosModules.laptopconf = {pkgs, ...}: {
+   system.stateVersion = "25.11";
    boot = {
      loader = {
        efi.canTouchEfiVariables = true;
@@ -46,6 +47,6 @@
          nixboom = import ./home.nix;
        };
    };
-   system.stateVersion = "25.11";
+ 
   };
 }
