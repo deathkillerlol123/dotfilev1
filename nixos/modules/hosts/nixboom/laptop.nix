@@ -6,7 +6,17 @@
    ];
  };
  flake.nixosModules.laptop = {pkgs, ...}: {
-
+   imports = [
+     inputs.home-manager.nixosModules.default
+     ../main.nix
+     ../../settings
+     ../../common
+     ../../environment
+     ../../gaming
+     ../../login
+     ../../portals
+     ../../sound
+   ];
    boot = {
      loader = {
        efi.canTouchEfiVariables = true;
@@ -37,15 +47,7 @@
      enable = true;
      flake-location = "/home/nixboom/dotfiles/nixos/";
    };
-   home-manager = {
-     useUserPackages = true;
-     useGlobalPkgs = true;
-     backupFileExtension = "hm-backup";
-     extraSpecialArgs = { inherit inputs ; };
-       users = {
-         nixboom = import ./home.nix;
-       };
-   };
+
    system.stateVersion = "25.11";
   };
 }
