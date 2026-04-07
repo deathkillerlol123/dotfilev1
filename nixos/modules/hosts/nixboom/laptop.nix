@@ -62,6 +62,6 @@ in
          ${username} = import ./home.nix;
        };
    };
+   system.stateVersion = "25.11";
   };
-  system.stateVersion = "25.11"; 
 }
