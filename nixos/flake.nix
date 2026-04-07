@@ -17,7 +17,7 @@
       		nixbtw = nixpkgs.lib.nixosSystem {
       		    system = "x86_64-linux";
       		    specialArgs = {inherit inputs;};
-      		    modules =
+      		    modules = [
 	      	      inputs.home-manager.nixosModules.default
     		    ];
 		};
