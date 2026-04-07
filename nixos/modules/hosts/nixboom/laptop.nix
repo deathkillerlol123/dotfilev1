@@ -14,7 +14,7 @@ in
      inputs.home-manager.nixosModules.default
      ../main.nix
      ../../settings
-     ../../common"  
+     ../../common
      ../../environment
      ../../gaming
      ../../login
