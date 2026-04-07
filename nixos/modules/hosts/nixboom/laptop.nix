@@ -8,7 +8,7 @@ in
  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
    modules = [
      self.nixosModules.laptopModule
-     ];
+   ];
  };
  flake.nixosModules.laptopModule = {pkgs, ...}: {
    imports = [
