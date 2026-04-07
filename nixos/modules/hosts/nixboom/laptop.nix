@@ -2,11 +2,10 @@
 {
  flake.nixosConfigurations.main = inputs.nixpkgs.lib.nixosSystem {
    modules = [
-     self.nixosModules.laptop
-     self.nixosModules.laptop-hardware
+     self.nixosModules.hostMain
    ];
  };
- flake.nixosModules.laptop = {pkgs, ...}: {
+ flake.nixosModules.hostMain = {pkgs, ...}: {
    imports = [
      inputs.home-manager.nixosModules.default
      ../main.nix
