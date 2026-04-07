@@ -1,5 +1,16 @@
 { config, lib, pkgs, inputs, self, ... }:
 {
+   imports = [
+     inputs.home-manager.nixosModules.default
+     ../main.nix
+     ../../settings
+     ../../common
+     ../../environment
+     ../../gaming
+     ../../login
+     ../../portals
+     ../../sound
+   ];
    boot = {
      loader = {
        efi.canTouchEfiVariables = true;
