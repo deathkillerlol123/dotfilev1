@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.laptop-hardware = {
+  flake.nixosModules.laptopos = {
     config,
     lib,
     pkgs,
