@@ -18,8 +18,6 @@
       		    system = "x86_64-linux";
       		    specialArgs = {inherit inputs;};
       		    modules = [
-		      self.nixosModules.laptopconf
-		      self.nixosModules.laptopos
 	      	      inputs.home-manager.nixosModules.default
     		    ];
 		};
@@ -29,6 +27,10 @@
 	    "x86_64-linux"
 	    "aarch64-linux"
 	    "aarch64-darwin"
+	];
+	imports = [
+          ./modules/hosts/nixboom/laptop-hardware.nix	
+          ./modules/hosts/nixboom/laptop.nix
 	];
     };
 }
