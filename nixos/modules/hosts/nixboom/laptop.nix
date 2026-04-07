@@ -44,7 +44,7 @@ in
    };
    main-user = {
      enable = true;
-     userName = nixboom;
+     userName = "nixboom";
      shell = "fish";
    };
    users.users.nixboom.extraGroups = ["wheel" "gamemode" "uinput"];
