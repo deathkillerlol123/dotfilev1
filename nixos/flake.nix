@@ -1,3 +1,4 @@
+
 {
   inputs = {
       nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -28,6 +29,6 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
-	imports = (inputs.import-tree ./modules);
+	imports = inputs.import-tree ./modules;
     };
 }
