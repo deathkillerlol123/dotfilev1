@@ -1,6 +1,5 @@
 { config, lib, pkgs, inputs, self, ... }:
 let
-  mod=;
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
