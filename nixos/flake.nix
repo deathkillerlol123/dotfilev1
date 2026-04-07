@@ -19,7 +19,6 @@
       		    specialArgs = {inherit inputs;};
       		    modules = [
 		    	./modules/hosts/nixboom/laptop.nix
-			./modules/hosts/nixboom/laptop-hardware.nix
       			inputs.home-manager.nixosModules.default
     		    ];
 		};
@@ -29,6 +28,9 @@
 	    "x86_64-linux"
 	    "aarch64-linux"
 	    "aarch64-darwin"
+	];
+	imports = [
+	  ./modules/hosts/nixboom/laptop.nix
 	];
     };
 }
