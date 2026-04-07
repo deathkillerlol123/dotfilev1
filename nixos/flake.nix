@@ -5,14 +5,6 @@
     	  url = "github:nix-community/home-manager";
 	  inputs.nixpkgs.follows = "nixpkgs";
       };
-      helium = {
-	  url = "github:AlvaroParker/helium-nix";
-	  inputs.nixpkgs.follows = "nixpkgs";
-      };
-      nur = {
-	  url = "github:nix-community/NUR";
-	  inputs.nixpkgs.follows = "nixpkgs";
-      };
       flake-parts.url = "github:hercules-ci/flake-parts";
       import-tree.url = "github:vic/import-tree";
   };
