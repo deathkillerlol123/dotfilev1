@@ -36,5 +36,8 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
+	imports = [
+	  ./modules/hosts/nixboom/laptop.nix
+	];
     };
 }
