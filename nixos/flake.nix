@@ -12,14 +12,6 @@
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }
     {
-	flake = {
-	    nixosConfigurations = {
-      		nixbtw = nixpkgs.lib.nixosSystem {
-      		    system = "x86_64-linux";
-      		    specialArgs = {inherit inputs;};
-		};
-	    };
-	};
 	systems = [
 	    "x86_64-linux"
 	    "aarch64-linux"
