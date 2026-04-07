@@ -2,8 +2,8 @@
 {
  flake.nixosConfigurations.main = inputs.nixpkgs.lib.nixosSystem {
    modules = [
-     self.nixosModules.laptop-hardware
      self.nixosModules.laptop
+     self.nixosModules.laptop-hardware
    ];
  };
  flake.nixosModules.laptop = {pkgs, ...}: {
