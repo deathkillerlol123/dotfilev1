@@ -1,7 +1,6 @@
 { config, lib, pkgs, inputs, self, ... }:
 let
   mod=../..;
-  username="nixboom";
   flake_pos="/home/nixboom/dotfiles/nixos/";
 in
 {
@@ -45,10 +44,10 @@ in
    };
    main-user = {
      enable = true;
-     userName = username;
+     userName = nixboom;
      shell = "fish";
    };
-   users.users.${username}.extraGroups = ["wheel" "gamemode" "uinput"];
+   users.users.nixboom.extraGroups = ["wheel" "gamemode" "uinput"];
    cleaner = {
      enable = true;
      flake-location = flake_pos;
@@ -59,7 +58,7 @@ in
      backupFileExtension = "hm-backup";
      extraSpecialArgs = { inherit inputs ; };
        users = {
-         ${username} = import ./home.nix;
+         nixboom = import ./home.nix;
        };
    };
    system.stateVersion = "25.11";
