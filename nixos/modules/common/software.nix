@@ -7,9 +7,7 @@
     curl
     wget
     nodejs_24
-    cachix
 
-    touchegg
     evtest
     libimobiledevice
     fahclient
@@ -17,7 +15,6 @@
     mangohud
     protonup-qt
     heroic
-    lutris
     gamescope
     gamemode
 
@@ -54,7 +51,6 @@
     whatsapp-electron
     discord
     wezterm
-    w3m
     starship
     bash
     fish
@@ -84,7 +80,7 @@
     kdePackages.gwenview  
     ntfs3g
     smartmontools
-#    qbittorent
+    qbittorrent
 
     mangowc
     glibc
