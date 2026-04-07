@@ -1,7 +1,4 @@
 { config, lib, pkgs, inputs, self, ... }:
-let
-  flake_pos="/home/nixboom/dotfiles/nixos/";
-in
 {
  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
    modules = [
@@ -49,7 +46,7 @@ in
    users.users.nixboom.extraGroups = ["wheel" "gamemode" "uinput"];
    cleaner = {
      enable = true;
-     flake-location = flake_pos;
+     flake-location = "/home/nixboom/dotfiles/nixos/";
    };
    home-manager = {
      useUserPackages = true;
