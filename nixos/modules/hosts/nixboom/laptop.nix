@@ -2,10 +2,11 @@
 {
  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
    modules = [
-     self.nixosModules.laptopos
+     self.nixosModules.laptopconf
+     self.nixosModules.laptopo
    ];
  };
- flake.nixosModules.laptopos = {pkgs, ...}: {
+ flake.nixosModules.laptopconf = {pkgs, ...}: {
    boot = {
      loader = {
        efi.canTouchEfiVariables = true;
