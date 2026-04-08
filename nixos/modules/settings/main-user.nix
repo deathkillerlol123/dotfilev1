@@ -21,7 +21,7 @@
     users.users.${config.main-user.userName} = {
       isNormalUser = true;
       shell = pkgs.${config.main-user.shell};
-      extraGroups = config.mainuser.groups;
+      extraGroups = config.main-user.groups;
     };
     security = {
       sudo.extraRules = [{
