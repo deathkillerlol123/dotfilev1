@@ -1,7 +1,7 @@
 {lib,config,pkgs,...}:
 {
   options = {
-    lime.enable = lib.mkOption "limine";
+    lime.enable = lib.mkEnableOption "limi";
     lime = {
       generations = lib.mkOption {
         default = 3;
