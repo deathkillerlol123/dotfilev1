@@ -9,6 +9,9 @@
       wallpapers = lib.mkOption {
        default = "$HOME/Pictures/Wallpapers";
       };
+      params = lib.mkOption {
+        default = [""];
+      };
     };
   };
   config = lib.mkIf config.lime.enable {
@@ -21,6 +24,7 @@
 	 style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
        };
      };
+     kernelParams = config.lime.params;
    };
   };
 }
