@@ -23,7 +23,7 @@
    };
    home-man = {
      enable = true;
-     ext = "hm-backup";
+     ext = "hm-backupidk";
      home = ./home.nix;
    };
    programs = {
