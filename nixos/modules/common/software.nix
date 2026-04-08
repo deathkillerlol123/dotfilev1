@@ -6,9 +6,7 @@
 
     curl
     wget
-    nodejs_24
 
-    evtest
     libimobiledevice
     fahclient
 
@@ -34,7 +32,6 @@
     swaynotificationcenter
     swaybg
     swaylock
-    wlogout
     nautilus  
     rofi
     bzmenu
@@ -58,8 +55,6 @@
     neovim
     zoxide
     emacs
-    nixd
-    nil
 
     yazi
     copyq
