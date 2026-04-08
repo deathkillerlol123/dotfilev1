@@ -10,6 +10,10 @@
     ../sound
   ];
   documentation.enable = false;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    consoleLogLevel = 3;
+  };
   services = {
     blueman.enable = true;
     flatpak.enable = true;
