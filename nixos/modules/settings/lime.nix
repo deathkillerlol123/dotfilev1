@@ -18,7 +18,7 @@
        limine = {
          enable = true;
 	 maxGenerations = config.lime.generations;
-	 style.wallpapers =lib.filesystem.listFilesRecursive config.lime.wallpapers;
+	 style.wallpapers =lib.filesystem.listFilesRecursive ${config.lime.wallpapers};
        };
      };
    };
