@@ -4,6 +4,5 @@
   ./main-user.nix
   ./home-man.nix
   ./lime.nix
-  ./windows.nix
   ];
 }
