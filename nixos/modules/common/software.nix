@@ -71,6 +71,7 @@
     btop
     cmatrix
     neofetch
+    fastfetch
     swww
     fd
     pywal
