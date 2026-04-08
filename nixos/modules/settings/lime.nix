@@ -1,5 +1,4 @@
-{lib,config,pkgs,...}:
-{
+{lib,config,pkgs,...}:{
   options = {
     lime.enable = lib.mkEnableOption "limine";
     lime = {

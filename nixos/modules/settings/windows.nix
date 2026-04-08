@@ -1,5 +1,4 @@
-{inputs,lib,config,pkgs,...}:
-{
+{inputs,lib,config,pkgs,...}:{
   options = {
     windows.enable = lib.mkEnableOption "windows";
     windows = {
