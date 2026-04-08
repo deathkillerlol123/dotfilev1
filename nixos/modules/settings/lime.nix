@@ -13,8 +13,8 @@
   };
   config = lib.mkIf config.lime.enable {
    boot = {
-     efi.canTouchEfiVariables = true;
      loader = {
+       efi.canTouchEfiVariables = true;    
        limine = {
          enable = true;
 	 maxGenerations = config.lime.generations;
