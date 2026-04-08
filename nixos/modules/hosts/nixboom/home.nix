@@ -9,7 +9,7 @@ in
 #  imports = [
 #   ./home_files/firefox.nix
 #  ];
-  home.username = "nixboom";
+  hasdasome.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
   home.sessionVariables = {
     EDITOR = "nvim";
