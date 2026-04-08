@@ -12,6 +12,11 @@
         default = [""];
       };
       triangle.enable = lib.mkEnableOption "test";
+      triangle = {
+        hello = lib.mkOption {
+	  default = "hello";
+        };
+      };
     };
   };
   config = lib.mkIf config.lime.enable {
