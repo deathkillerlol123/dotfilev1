@@ -10,11 +10,6 @@
        default = "$HOME/Pictures/Wallpapers";
       };
     };
-    windows.enable = lib.mkOption "windows";
-    windows = {
-      location = lib.mkOption {
-        default = "";
-      };
   };
   config = lib.mkIf config.lime.enable {
    boot = {
@@ -27,14 +22,5 @@
        };
      };
    };
-  };
-  config = lib.mkIf config.windows.enable {
-    boot.loader.limine = {
-      extraEntries = ''
-        /Windows
-          protocol: efi
-	  path: config.windows.location
-      '';
-    };
   };
 }
