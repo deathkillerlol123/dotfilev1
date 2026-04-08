@@ -21,4 +21,5 @@
           nixboom = import config.home-man.home;
         };
     };
+  };
 }
