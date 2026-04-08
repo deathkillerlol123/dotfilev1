@@ -6,7 +6,7 @@
    ];
    lime = {
      enable = true;
-     generations = 3;
+     generations = "3";
      wallpapers = ../../themes/limine_wallpaper;
    };
    windows = {
