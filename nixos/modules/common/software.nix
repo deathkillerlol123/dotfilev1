@@ -64,7 +64,7 @@
     yazi
     copyq
     grim
-    slur
+    slurp
     swappy
     wl-clipboard
     eza
