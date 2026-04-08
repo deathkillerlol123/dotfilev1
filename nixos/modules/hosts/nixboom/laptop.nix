@@ -26,5 +26,10 @@
      ext = "hm-backup";
      home = ./home.nix;
    };
+   programs = {
+     bat = {
+       enable = true;
+     };
+   };
    system.stateVersion = "25.11";
 }
