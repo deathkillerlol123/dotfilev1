@@ -1,6 +1,5 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    emptty
     ly
     efibootmgr
     os-prober
