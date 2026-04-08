@@ -9,6 +9,9 @@
       shell = lib.mkOption {
         default = "bash";
       };
+      flake-location = lib.mkOption {
+        default = "/etc/nixos/";
+      };	
     };
   };
   config = lib.mkIf config.main-user.enable {
@@ -26,6 +29,14 @@
     };
     programs = {
       ${config.main-user.shell}.enable = true;
-    };    
+      nh = {
+        enable = true;
+	clean.enable = true;
+	flake = config.main-user.flake-location;
+      };
+      nix-ld = {
+        enable = true;
+      };
+    };
  };
 }
