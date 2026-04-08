@@ -27,7 +27,7 @@
          enable = true;
 	 maxGenerations = config.lime.generations;
 	 style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
-	 extraEntries = '
+	 extraEntries = ''
 	   /Windows
 	     protocol: efi
 	     path: config.lime.windows.location
