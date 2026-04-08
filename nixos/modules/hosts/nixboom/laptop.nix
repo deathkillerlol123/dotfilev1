@@ -4,13 +4,6 @@
      inputs.home-manager.nixosModules.default
      ./laptop-hardware.nix
      ../main.nix
-     ../../settings
-     ../../common
-     ../../environment
-     ../../gaming
-     ../../login
-     ../../portals
-     ../../sound
    ];
    boot = {
      loader = {

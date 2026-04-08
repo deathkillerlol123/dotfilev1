@@ -1,5 +1,14 @@
 {config, lib, pkgs, inputs, ...}:
 {
+  imports = [
+    ../settings
+    ../common    
+    ../environment
+    ../gaming
+    ../login
+    ../portals
+    ../sound
+  ];
   documentation.enable = false;
   services = {
     blueman.enable = true;
