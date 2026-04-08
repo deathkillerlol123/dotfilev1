@@ -2,6 +2,5 @@
 {
   imports = [
   ./main-user.nix
-  ./cleaner.nix
   ];
 }
