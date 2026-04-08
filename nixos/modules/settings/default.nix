@@ -2,5 +2,6 @@
 {
   imports = [
   ./main-user.nix
+  ./home-man.nix
   ];
 }
