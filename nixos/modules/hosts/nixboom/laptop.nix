@@ -31,14 +31,10 @@
      shell = "fish";
      flake-location = "/home/nixboom/dotfiles/nixos/";
    };
-   home-manager = {
-     useUserPackages = true;
-     useGlobalPkgs = true;
-     backupFileExtension = "hm-backup";
-     extraSpecialArgs = { inherit inputs ; };
-       users = {
-         nixboom = import ./home.nix;
-       };
+   home-man = {
+     enable = true;
+     ext = "hm-backup";
+     home = ./home.nix
    };
    system.stateVersion = "25.11";
 }
