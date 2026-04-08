@@ -4,6 +4,7 @@
     efibootmgr
     os-prober
 
+    curl
     wget
     nodejs_24
 
@@ -61,13 +62,10 @@
     nil
 
     yazi
-    zellij
-    viu
     copyq
     grim
     slurp
     wl-clipboard
-    swappy 
     eza
     btop
     cmatrix
@@ -75,7 +73,7 @@
     swww
     fd
     pywal
-    kdePackages.gwenview  
+    viu
     ntfs3g
     smartmontools
     qbittorrent
