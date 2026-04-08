@@ -69,7 +69,6 @@
     slurp
     wl-clipboard
     swappy 
-    bat
     eza
     btop
     cmatrix
