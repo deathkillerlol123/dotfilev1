@@ -51,7 +51,6 @@ in
     };
     ".config/swaylock" = {
       source = "${dotfiles}/.config/swaylock";
-      recursive = true;
     };
     ".config/rofi" = {
       source = "${dotfiles}/.config/rofi";
@@ -67,11 +66,12 @@ in
     };
     ".config/neofetch" = {
       source = "${dotfiles}/.config/neofetch";
-      recursive = true;
+    };
+    ".config/fastfetch" = {
+      source = "${dotfiles}/.config/fastfetch";
     };
     ".config/mango" = {
       source = "${dotfiles}/.config/mango";
-      recursive = true;
     };
     ".config/mako" = {
       source = "${dotfiles}/.config/mako";
