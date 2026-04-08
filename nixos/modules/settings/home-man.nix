@@ -1,4 +1,4 @@
-{lib,config,pkgs,...}:
+{inputs,lib,config,pkgs,...}:
 {
   options = {
     home-man.enable = lib.mkEnableOption "enable home manager";
