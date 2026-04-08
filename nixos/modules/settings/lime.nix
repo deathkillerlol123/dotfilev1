@@ -30,7 +30,7 @@
 	 extraEntries = ''
 	   /Windows
 	     protocol: efi
-	     path: config.lime.windows.location
+	     path: config.windows.location
 	 '';
        };
      };
