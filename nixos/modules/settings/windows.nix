@@ -4,7 +4,7 @@
     windows.enable = lib.mkEnableOption2 "windows";
     windows = {
       location = lib.mkOption {
-        default = "";
+        default = " ";
       };
     };
   };
