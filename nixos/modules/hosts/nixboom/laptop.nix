@@ -24,7 +24,6 @@
      kernelPackages = pkgs.linuxPackages_latest;
      consoleLogLevel = 3;
    };
-   users.users.nixboom.extraGroups = ["wheel" "gamemode" "uinput"];   
    main-user = {
      enable = true;
      userName = "nixboom";
