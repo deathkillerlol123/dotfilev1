@@ -11,7 +11,7 @@
       params = lib.mkOption {
         default = [""];
       };
-      triangle.enable = lib.mkEnableoption "test";
+      triangle.enable = lib.mkEnableOption "test";
     };
   };
   config = lib.mkIf config.lime.enable {
