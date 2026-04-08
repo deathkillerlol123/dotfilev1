@@ -1,5 +1,4 @@
 { config, pkgs,inputs, ... }:
-
 let
   dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
@@ -9,7 +8,7 @@ in
 #  imports = [
 #   ./home_files/firefox.nix
 #  ];
-  hasdasome.username = "nixboom";
+  home.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
   home.sessionVariables = {
     EDITOR = "nvim";

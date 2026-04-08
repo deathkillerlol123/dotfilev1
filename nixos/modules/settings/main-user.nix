@@ -11,13 +11,17 @@
       };
       flake-location = lib.mkOption {
         default = "/etc/nixos/";
-      };	
+      };
+      groups = lib.mkOption {
+        default = ["wheel"];
+      };
     };
   };
   config = lib.mkIf config.main-user.enable {
     users.users.${config.main-user.userName} = {
       isNormalUser = true;
       shell = pkgs.${config.main-user.shell};
+      extraGroups = config.mainuser.groups;
     };
     security = {
       sudo.extraRules = [{
