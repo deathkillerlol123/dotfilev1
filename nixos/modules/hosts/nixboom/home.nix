@@ -64,9 +64,6 @@ in
       source = "${dotfiles}/.config/niri";
       recursive = true;
     };
-    ".config/neofetch" = {
-      source = "${dotfiles}/.config/neofetch";
-    };
     ".config/fastfetch" = {
       source = "${dotfiles}/.config/fastfetch";
     };
