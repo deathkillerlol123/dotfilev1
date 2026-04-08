@@ -7,7 +7,7 @@
         default = "backup";
       };
       home = lib.mkOption {
-        default = "";
+        default = ./home.nix;
       };
     };
   };
