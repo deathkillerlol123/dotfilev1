@@ -11,10 +11,10 @@
       params = lib.mkOption {
         default = [""];
       };
-      triangle.enable = lib.mkEnableOption "test";
-      triangle = {
-        hello = lib.mkOption {
-	  default = "hello";
+      windows.enable = lib.mkEnableOption "test";
+      windows = {
+        location = lib.mkOption {
+	  default = "";
         };
       };
     };
@@ -27,6 +27,11 @@
          enable = true;
 	 maxGenerations = config.lime.generations;
 	 style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
+	 extraEntries = '
+	   /Windows
+	     protocol: efi
+	     path: config.lime.windows.location
+	 '';
        };
      };
      kernelParams = config.lime.params;
