@@ -1,5 +1,5 @@
 { config, lib, pkgs, inputs, self, ... }:{
-   ximports = [
+   imports = [
      inputs.home-manager.nixosModules.default
      ./laptop-hardware.nix
      ../main.nix
