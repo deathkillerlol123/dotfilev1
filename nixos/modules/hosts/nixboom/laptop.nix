@@ -17,7 +17,6 @@
    main-users = {
      enable = true;
      userName = "nixboom";
-     enable = true;
      shell = "fish";
      groups = ["wheel" "gamemode" "uinput"];
      flakelocation = "/home/nixboom/dotfiles/nixos/";
