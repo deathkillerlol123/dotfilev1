@@ -10,7 +10,16 @@
       corfu-auto-delay 0
       corfu-auto-trigger "."
       )
-
+(use-package colorful-mode
+  ;; :diminish
+  ;; :ensure t ; Optional
+  :custom
+  (colorful-use-prefix t)
+  (colorful-only-strings 'only-prog)
+  (css-fontify-colors nil)
+  :config
+  (global-colorful-mode t)
+  (add-to-list 'global-colorful-modes 'helpful-mode))
 
 
 (require 'tree-sitter)
@@ -52,12 +61,12 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-windowt avy-embark-collect corfu
+   '(ace-windowt avy-embark-collect colorful-mode corfu
 		 corfu-candidate-overlay eglot-inactive-regions
 		 flycheck json-mode lsp-latex lsp-mode lsp-python-ms
 		 lsp-ui lua-mode multiple-cursors qml-mode
-		 tree-inspector tree-sitter tree-sitter-indent
-		 tree-sitter-langs)))
+		 rainbow-mode tree-inspector tree-sitter
+		 tree-sitter-indent tree-sitter-langs)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,6 +77,7 @@
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
 (global-corfu-mode)
+
 
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
