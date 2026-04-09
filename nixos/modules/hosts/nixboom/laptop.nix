@@ -14,16 +14,12 @@
        location = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
      };
    };
-   main-users = {
+   main-user = {
      enable = true;
-     users = [
-       {
-         userName = "nixboom";
-	 shell = "fish";
-	 groups = ["wheel" "gamemode" "uinput"];
-	 flakelocation = "/home/nixboom/dotfiles/nixos/";
-       }
-     ];
+     userName = "nixboom";
+     shell = "fish";
+     groups = ["wheel" "gamemode" "uinput"];
+     flakelocation = "/home/nixboom/dotfiles/nixos/";
    };
    home-man = {
      enable = true;
