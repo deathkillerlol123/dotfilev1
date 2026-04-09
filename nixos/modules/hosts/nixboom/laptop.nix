@@ -15,12 +15,12 @@
      };
    };
    main-users = {
-     nixboom = {
-       enable = true;
-       shell = "fish";
-       groups = ["wheel" "gamemode" "uinput"];
-       flakelocation = "/home/nixboom/dotfiles/nixos/";
-     };
+     enable = true;
+     userName = "nixboom";
+     enable = true;
+     shell = "fish";
+     groups = ["wheel" "gamemode" "uinput"];
+     flakelocation = "/home/nixboom/dotfiles/nixos/";
    };
    home-man = {
      enable = true;
