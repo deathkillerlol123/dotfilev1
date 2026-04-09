@@ -22,7 +22,7 @@
 	 shell = "fish";
 	 groups = ["wheel" "gamemode" "uinput"];
 	 flakelocation = "/home/nixboom/dotfiles/nixos/";
-       };
+       }
      ];
    };
    home-man = {
