@@ -1,45 +1,42 @@
-{lib,config,pkgs,...}:{
-  options  = {
-    main-user.enable = lib.mkEnableOption "enable user module";
-    main-user = {
-      userName = lib.mkOption {
-        default = "mainuser";
-      };
-      shell = lib.mkOption {
-        default = "bash";
-      };
-      flakelocation = lib.mkOption {
-        default = "/etc/nixos/";
-      };
-      groups = lib.mkOption {
-        default = ["wheel"];
-      };
+{ lib, config, pkgs, ... }:
+
+{
+  options = {
+    main-user.enable = lib.mkEnableOption "Enable main user module";
+
+    main-user.users = lib.mkOption {
+      type = lib.types.listOf (lib.types.attrsOf lib.types.any);
+      default = [
+        { username = "alice"; shell = "bash"; groups = ["wheel"]; flakelocation = "/etc/nixos"; }
+        { username = "bob";   shell = "zsh";  groups = ["wheel"]; flakelocation = "/etc/nixos"; }
+      ];
+      description = "List of users to create with username, shell, groups, and flakelocation";
     };
   };
+
   config = lib.mkIf config.main-user.enable {
-    users.users.${config.main-user.userName} = {
-      isNormalUser = true;
-      shell = pkgs.${config.main-user.shell};
-      extraGroups = config.main-user.groups;
-    };
-    security = {
-      sudo.extraRules = [{
-        users = [config.main-user.userName];
-        commands = [{ command = "ALL";
-          options = ["NOPASSWD"];
-        }];
-      }];
-    };
-    programs = {
-      ${config.main-user.shell}.enable = true;
-      nh = {
-        enable = true;
-	clean.enable = true;
-	flake = config.main-user.flakelocation;
+
+    # Create each user dynamically
+    users.users = builtins.listToAttrs (map (user: {
+      name = user.username;
+      value = {
+        isNormalUser = true;
+        shell = builtins.getAttr user.shell pkgs;
+        extraGroups = user.groups;
       };
-      nix-ld = {
-        enable = true;
-      };
-    };
- };
+    }) config.main-user.users);
+
+    # Add sudo rules per user
+    security.sudo.extraRules = map (user: {
+      users = [ user.username ];
+      commands = [ { command = "ALL"; options = ["NOPASSWD"]; } ];
+    }) config.main-user.users;
+
+    # Enable nh and nix-ld globally
+    programs.nh.enable = true;
+    programs.nh.clean.enable = true;
+    programs.nh.flake = "/etc/nixos";
+
+    programs.nix-ld.enable = true;
+  };
 }
