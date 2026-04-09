@@ -14,7 +14,7 @@
        location = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
      };
    };
-   main-users = {
+   main-user = {
      enable = true;
      userName = "nixboom";
      shell = "fish";
