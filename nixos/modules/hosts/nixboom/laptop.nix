@@ -19,7 +19,7 @@
        enable = true;
        userName = "nixboom";
        shell = "fish";
-       groups = ["wheel" "gamemode" "uinput"];
+       groups = ["wheel","gamemode","uinput"];
        flakelocation = "/home/nixboom/dotfiles/nixos/";
      }    
    ];
