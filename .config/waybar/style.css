@@ -2,7 +2,7 @@
 
 @define-color background-color @color0;
 @define-color border @color2;
-@define-color texts @color5;
+@define-color texts @color4;
 * {
   font-family: "FiraCode Nerd Font";
   font-weight: bold;
@@ -35,7 +35,7 @@ tooltip label {
 
 .modules-right,
 .modules-left {
-  border: 1px solid @texts;
+    border: 1px solid @border;
 }
 #taskbar {
     border: 1px solid @texts;
