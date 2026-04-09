@@ -22,7 +22,6 @@
      flake-location = "/home/nixboom/dotfiles/nixos/";
    };
    main-user = {
-     enable = true;
      userName = "test";
      shell = "fish";
      groups = ["wheel"];
