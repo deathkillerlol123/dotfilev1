@@ -8,7 +8,7 @@
       shell = lib.mkOption {
         default = "bash";
       };
-      flake-location = lib.mkOption {
+      flakelocation = lib.mkOption {
         default = "/etc/nixos/";
       };
       groups = lib.mkOption {
@@ -35,7 +35,7 @@
       nh = {
         enable = true;
 	clean.enable = true;
-	flake = config.main-user.flake-location;
+	flake = config.main-user.flakelocation;
       };
       nix-ld = {
         enable = true;
