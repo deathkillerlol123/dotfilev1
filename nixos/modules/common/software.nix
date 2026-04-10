@@ -63,6 +63,7 @@
     swappy
     wl-clipboard
     eza
+    bat
     btop
     cmatrix
     fastfetch

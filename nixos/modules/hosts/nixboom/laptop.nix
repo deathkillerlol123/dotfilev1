@@ -26,13 +26,5 @@
      ext = "hm-backupidk";
      home = ./home.nix;
    };
-   programs = {
-     bat = {
-       enable = true;
-       settings = {
-         theme = "Dracula";
-       };
-     };
-   };
    system.stateVersion = "25.11";
 }
