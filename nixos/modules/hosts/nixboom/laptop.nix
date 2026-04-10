@@ -23,7 +23,7 @@
    };
    home-man = {
      enable = true;
-     ext = "hm-backupidk";
+     ext = "hm-backup";
      home = ./home.nix;
    };
    system.stateVersion = "25.11";
