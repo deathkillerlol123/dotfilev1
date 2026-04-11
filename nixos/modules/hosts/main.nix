@@ -41,7 +41,10 @@
   };
   nixpkgs.config = {
     allowUnfree = true;
-  };  
+  };
+  security = {
+    pam.services.swaylock = {};
+  };
   hardware = {
     uinput.enable = true;
     bluetooth = {
