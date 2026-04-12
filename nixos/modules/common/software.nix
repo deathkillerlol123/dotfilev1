@@ -4,7 +4,6 @@
     efibootmgr
     os-prober
 
-
     curl
     wget
 
@@ -28,7 +27,6 @@
     git
     gh
     dysk
-    gparted
     libnotify
 
     swaynotificationcenter
