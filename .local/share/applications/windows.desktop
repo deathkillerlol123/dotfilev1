@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Windows 10
+Exec="/home/nixboom/dotfiles/scripts/Boot-Windows10.sh"
+Icon=system-shutdown
+Terminal=false
+Type=Application
+Categories=Utility;
