@@ -1,13 +1,13 @@
 borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-%S)" \
-  --exclude '~/Downloads/*.iso' \
-  --exclude '~/Downloads/*.tar.gz' \
-  --exclude '~/Downloads/tmp*' \
-  --exclude '~/Documents/tmp*' \
-  --exclude '~/dotfiles/.git' \
-  --exclude '~/dotfiles/.gitignore' \
-  --exclude '~/Documents/codes/venv/' \
-  --exclude '~/Downloads/isoss/' \
-  --exclude '~/dotfiles/.mozilla' \
+  --exclude "$HOME/Downloads/*.iso" \
+  --exclude "$HOME/Downloads/*.tar.gz" \
+  --exclude "$HOME/Downloads/tmp*" \
+  --exclude "$HOME/Documents/tmp*" \
+  --exclude "$HOME/dotfiles/.git" \
+  --exclude "$HOME/dotfiles/.gitignore" \
+  --exclude "$HOME/Documents/codes/venv" \
+  --exclude "$HOME/Downloads/isoss" \
+  --exclude "$HOME/dotfiles/.mozilla" \
   ~/Documents \
   ~/Downloads \
   ~/Pictures/Screenshots \

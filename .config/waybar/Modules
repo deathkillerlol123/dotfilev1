@@ -209,7 +209,7 @@
 
 "pulseaudio": {
 	"format": "{icon} {volume}%",
-	"format-bluetooth": "󰂰  {icon}  {volume}%",
+	"format-bluetooth": "{icon} {volume}% 󰂰 ",
 	"format-muted": "󰖁",
 	"format-icons": {
 		"default": [
@@ -259,24 +259,11 @@
 	"tooltip-format": "{source_desc} | {source_volume}%",
 	"scroll-step": 5,
 },
-
-"tray": {
+    "tray": {
 	"icon-size": 15,
 	"spacing": 1,
-  "expand": true,
-  "show-passive-items": false
-},
-
-"wireplumber": {
-	"format": "{icon}   {volume} %",
-	"format-muted": " Mute",
-	"on-click": "$HOME/.config/hypr/scripts/volume.sh --toggle",
-	"on-click-right": "pavucontrol -t 3",
-	"on-scroll-up": "$HOME/.config/hypr/scripts/volume.sh --inc",
-	"on-scroll-down": "$HOME/.config/hypr/scripts/volume.sh --dec",
-	"format-icons": [
-		"", "", "󰕾", ""
-	],
+	"expand": true,
+	"show-passive-items": true
 },
 
 "wlr/taskbar": {
