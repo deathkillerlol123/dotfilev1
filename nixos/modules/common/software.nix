@@ -11,7 +11,6 @@
     fahclient
 
     mangohud
-    winetricks
     protonup-qt
     heroic
     gamescope
