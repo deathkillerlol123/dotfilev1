@@ -14,4 +14,4 @@
     bemoji
     waybar
   ];
-};
+}
