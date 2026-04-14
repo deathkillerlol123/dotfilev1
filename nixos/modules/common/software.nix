@@ -13,7 +13,6 @@
     mangohud
     protonup-qt
     heroic
-    opengamepadui
     gamescope
     gamemode
 
