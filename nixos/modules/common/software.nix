@@ -10,12 +10,6 @@
     libimobiledevice
     fahclient
 
-    mangohud
-    protonup-qt
-    heroic
-    gamescope
-    gamemode
-
     brightnessctl
     wlr-randr
     borgbackup

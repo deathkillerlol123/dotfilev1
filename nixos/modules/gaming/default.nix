@@ -1,5 +1,8 @@
 {pkgs, ...}:
 {
+  imports = [
+    ../common/game.nix
+  ];
   programs = {
     gamemode.enable = true;
     gamescope = {
