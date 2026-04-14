@@ -4,5 +4,9 @@
     ./software.nix
     ./flatpak.nix
     ./fonts.nix
+    ./aesthetics.nix
+    ./system.nix
+    ./terminal.nix
+    ./mango.nix
   ];
 }
