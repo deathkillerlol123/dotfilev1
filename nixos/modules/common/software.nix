@@ -9,6 +9,7 @@
     discord
 
     copyq
+    uxplay
     grim
     slurp
     swappy
