@@ -2,7 +2,7 @@
   services = {
     desktopManager = {
       cosmic.enable = false;
-      plasma6.enable = true; #KDE plasma cannot be true with gnome
+      plasma6.enable = false; #KDE plasma cannot be true with gnome
       gnome = {
         enable = false;
       };
@@ -27,7 +27,7 @@
     hyprland = {
       enable = false; #takes too long
       withUWSM = false;
-      xwayland.enable = false;
+      xwayland.enable = true;
     };
   };
 }
