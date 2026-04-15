@@ -8,5 +8,6 @@
     ./system.nix
     ./terminal.nix
     ./mango.nix
+    ./uxplay.nix
   ];
 }
