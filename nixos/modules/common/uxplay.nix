@@ -9,8 +9,8 @@
   services = {
     avahi = {
       enable = true;
-      nssmdns = true;  # printing
-      openFirewall = true; # ensuring that firewall ports are open as needed
+      nssmdns4 = true;
+      openFirewall = true;
       publish = {
         enable = true;
         addresses = true;
