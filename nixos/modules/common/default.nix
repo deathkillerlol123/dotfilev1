@@ -7,7 +7,7 @@
     ./aesthetics.nix
     ./system.nix
     ./terminal.nix
-    ./mango.nix
-    ./uxplay.nix
+    ../applications/mango.nix
+    ../applications/uxplay.nix
   ];
 }
