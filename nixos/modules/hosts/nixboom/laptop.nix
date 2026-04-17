@@ -16,7 +16,7 @@
    main-user = {
      enable = true;
      userName = "nixboom";
-     groups = ["wheel" "gamemode" "uinput"];
+     groups = ["wheel" "gamemode" "uinput" "docker"];
      flakelocation = "/home/nixboom/dotfiles/nixos/";
    };
    home-man = {
