@@ -6,7 +6,6 @@
    ];
    lime = {
      enable = true;
-     generations = 3;
      wallpapers = ../../themes/limine_wallpaper;
      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
      windows = {
