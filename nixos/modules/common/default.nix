@@ -7,6 +7,5 @@
     ./aesthetics.nix
     ./system.nix
     ./terminal.nix
-    ../applications/docker.nix
   ];
 }
