@@ -1,7 +1,7 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     wdisplays   
-
+    immich
     firefox-devedition
     qutebrowser
 #    ladybird
