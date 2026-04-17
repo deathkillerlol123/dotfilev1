@@ -5,6 +5,6 @@
     port = 2283;
     host = "0.0.0.0";
     openFirewall = true;
-    mediaLocation = "/mnt/data1";
+    mediaLocation = "/mnt/data1/photos";
   };
 }
