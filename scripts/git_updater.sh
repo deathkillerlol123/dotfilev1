@@ -7,7 +7,7 @@ if [ ! -d ".git" ]; then
 fi
 
 git add .
-git commit -m "Update repository with latest changes"
+git commit -m "$(date -u)"
 git push -u origin main
 
 echo "Repository updated successfully!"
