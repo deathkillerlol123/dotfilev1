@@ -7,5 +7,6 @@
     ./aesthetics.nix
     ./system.nix
     ./terminal.nix
+    ../applications/ios.nix
   ];
 }

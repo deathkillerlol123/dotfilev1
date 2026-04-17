@@ -7,7 +7,6 @@
     curl
     wget
 
-    libimobiledevice
     git
     gh
 
