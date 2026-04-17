@@ -6,7 +6,7 @@
         default = "mainuser";
       };
       shell = lib.mkOption {
-        default = "bash";
+        default = "fish";
       };
       flakelocation = lib.mkOption {
         default = "/etc/nixos/";
