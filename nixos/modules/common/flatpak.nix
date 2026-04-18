@@ -3,6 +3,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "ch.openboard.OpenBoard"
+    "org.vinegarhq.Sober"
 #    "sh.ppy.osu"
   ];
 in {
