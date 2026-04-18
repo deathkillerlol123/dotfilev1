@@ -1,13 +1,9 @@
-{ config, pkgs,inputs, ... }:
+{config, pkgs,inputs, ... }:
 let
   dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
-
 in
 {
-#  imports = [
-#   ./home_files/firefox.nix
-#  ];
   home.username = "nixboom";
   home.homeDirectory = "/home/nixboom";
   home.sessionVariables = {
@@ -29,10 +25,6 @@ in
       source = "${dotfiles}/.config/fish";
       recursive = true;
     };    
-    ".config/zellij" = {
-      source = "${dotfiles}/.config/zellij";
-      recursive = true;
-    };
     ".config/waybar" = {
       source = "${dotfiles}/.config/waybar";
       recursive = true;
@@ -72,10 +64,6 @@ in
     };
     ".config/mako" = {
       source = "${dotfiles}/.config/mako";
-      recursive = true;
-    };
-    ".config/kitty" = {
-      source = "${dotfiles}/.config/kitty";
       recursive = true;
     };
     ".config/eww" = {
