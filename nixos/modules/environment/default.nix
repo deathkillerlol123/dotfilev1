@@ -19,7 +19,7 @@
        nimdow.enable = false;
        leftwm.enable = false;
        exwm = {
-         enable = true;
+         enable = false;
        };
      };
     };
