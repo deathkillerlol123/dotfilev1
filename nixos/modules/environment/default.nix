@@ -18,6 +18,9 @@
        fluxbox.enable = false;
        nimdow.enable = false;
        leftwm.enable = false;
+       exwm = {
+         enable = true;
+       };
      };
     };
   };
