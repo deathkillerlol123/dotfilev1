@@ -18,8 +18,8 @@ if [ -n "$FILE" ]; then
 
   cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
  # cp "${COLORS}/colors.css" "${OUPUT}/swaync/"
-  cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
-  cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
+#  cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
+#  cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
 
   "$HOME/dotfiles/.config/waybar/css_rasi.sh"
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
