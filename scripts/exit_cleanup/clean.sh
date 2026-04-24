@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-pkill -u $USER
+loginctl terminate-session $XDG_SESSION_ID
