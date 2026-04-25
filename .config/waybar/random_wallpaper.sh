@@ -16,7 +16,7 @@ if [ -n "$FILE" ]; then
   swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7 &
   wal -i "$FILE" -n
 
-#  cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
+  cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
  # cp "${COLORS}/colors.css" "${OUPUT}/swaync/"
 #  cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
 #  cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
