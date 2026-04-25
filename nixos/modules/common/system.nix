@@ -14,7 +14,8 @@
     brightnessctl
     borgbackup
     ntfs3g
-    smartmontools    
+    smartmontools
+    stress-ng
 
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr

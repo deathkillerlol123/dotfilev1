@@ -12,6 +12,7 @@
     bat
     dysk    
     btop
+    bottom
     cmatrix
     fastfetch
     fd

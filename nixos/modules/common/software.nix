@@ -13,7 +13,5 @@
     swappy
     wl-clipboard
     qbittorrent
-
-    stress-ng
  ];
 }
