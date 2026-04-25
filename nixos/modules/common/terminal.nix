@@ -16,6 +16,7 @@
     cmatrix
     fastfetch
     fd
-    viu    
+    viu
+    clock-rs
   ];
 }
