@@ -78,22 +78,12 @@ show_milliseconds = true
 disabled = true
 style = "bold italic red"
 
-
 [time]
-disabled = false
+disabled = true
 format = '[$time]($style)'
 time_format = '%T'
 utc_time_offset = '+1'
 time_range = '00:00:00-23:59:59'
-
-
-#[python]
-#symbol = " "
-#format = '$symbol'
-#style = "bold yellow"
-#pyenv_prefix = "venv "
-#python_binary = ["./venv/bin/python", "python", "python3", "python2"]
-#detect_extensions = ["py"]
 
 [shlvl]
 symbol = " "
