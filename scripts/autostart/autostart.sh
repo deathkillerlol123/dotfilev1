@@ -10,5 +10,5 @@ brightnessctl set 10% &
 
 "$HOME/dotfiles/scripts/colorschem/start_wall.sh" &
 
-"$HOME/dotfiles/scripts/way.sh" &
+#"$HOME/dotfiles/scripts/way.sh" &
 

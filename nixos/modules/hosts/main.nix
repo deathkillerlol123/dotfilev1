@@ -13,6 +13,12 @@
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     consoleLogLevel = 3;
+    kernelParams = [
+      "zswap.enabled=1"
+      "zswap.compressor=lz4"
+      "zswap.max_pool_percent=20"      
+      "zswap.shrinker.enabled=1"
+    ];
   };
   services = {
     blueman.enable = true;
