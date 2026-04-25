@@ -14,5 +14,6 @@
     wl-clipboard
     qbittorrent
 
+    stress-ng
  ];
 }
