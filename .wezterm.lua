@@ -32,16 +32,16 @@ config.window_padding = {
 
 
 config.color_scheme = 'Tokyo Night Storm'
-
-
 config.font_size = 13
+config.font = wezterm.font ('JetBrains Mono')
 config.adjust_window_size_when_changing_font_size = false
+
 
 config.colors = {
   cursor_bg = "#7aa2f7",
   cursor_border = "#7aa2f7",
 }
 
-warn_about_missing_glyphs = false
+config.warn_about_missing_glyphs = false
 return config
 
