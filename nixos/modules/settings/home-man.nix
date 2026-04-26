@@ -1,4 +1,7 @@
 {inputs,lib,config,pkgs,...}:{
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
   options = {
     home-man.enable = lib.mkEnableOption "enable home manager";
     home-man = {
@@ -11,9 +14,6 @@
     };
   };
   config = lib.mkIf config.home-man.enable {
-    imports = [
-      inputs.home-manager.nixosModules.default
-    ];
     home-manager = {
       useUserPackages = true;
       useGlobalPkgs = true;
