@@ -1,7 +1,6 @@
 { config, lib, pkgs, inputs, self, ... }:{
    imports = [
      (inputs.import-tree ./extras)
-     ../main.nix
    ];
    lime = {
      enable = true;
