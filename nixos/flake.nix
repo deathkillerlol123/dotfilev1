@@ -11,7 +11,10 @@
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
-	imports = nixpkgs.lib.flatten (builtins.attrValues (inputs.import-tree ./modules));
+	imports = [
+	    (inputs.import-tree ./modules)
+	    inputs.home-manager.nixosModules.default
+	];
 	systems = [
 	    "x86_64-linux"
 	    "aarch64-linux"
