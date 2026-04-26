@@ -9,7 +9,7 @@ in
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  programs.home-manager.enable = true;
+a  programs.home-manager.enable = true;
   # You should not change this value, even if you update Home Manager. If you do
   home.stateVersion = "25.11"; # Please read the comment before changing.
   home.packages = with pkgs; [ ];
