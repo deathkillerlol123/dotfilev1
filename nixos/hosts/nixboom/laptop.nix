@@ -3,7 +3,8 @@
     system = "x86_64-linux";
     modules = [
       self.laptopmodule
-      self.aesthetics      
+      self.aesthetics
+      self.flatpak
     ];
   };
   flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs, self, ... }:{
