@@ -9,9 +9,6 @@
     ];
   };
   flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs,... }:{
-    imports = [
-      ./laptop-hardware.nix
-    ];
     lime = {
       enable = true;
       wallpapers = ../../themes/limine_wallpaper;
