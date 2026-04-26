@@ -36,7 +36,7 @@
         nh = {
           enable = true;
     	  clean.enable = true;
-  	  flake = config.main-user.flakelocation;
+  	  flake = "/home/nixboom/dotfiles/nixos";
         };
         nix-ld = {
           enable = true;

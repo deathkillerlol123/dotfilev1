@@ -25,7 +25,6 @@
       enable = true;
       userName = "nixboom";
       groups = ["wheel" "gamemode" "uinput"];
-      flakelocation = "/home/nixboom/dotfiles/nixos/";
     };
     home-man = {
       enable = true;

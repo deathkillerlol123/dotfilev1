@@ -20,7 +20,7 @@
 	nixosConfigurations = {
               nixbtw = nixpkgs.lib.nixosSystem {
                   system = "x86_64-linux";
-                  specialArgs = {inherit inputs;};
+                  specialArgs = {inherit inputs self;};
                   modules = [
                     ./modules/hosts/nixboom/laptop.nix
                     inputs.home-manager.nixosModules.default
