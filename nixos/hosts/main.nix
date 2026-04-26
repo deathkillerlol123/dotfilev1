@@ -1,7 +1,7 @@
 {config, lib, pkgs, inputs, ...}:
 {
   imports = [
-    (inputs.import-tree ../modules);
+    (inputs.import-tree ../modules)
   ];
   documentation.enable = false;
   boot = {
