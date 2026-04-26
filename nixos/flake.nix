@@ -11,7 +11,7 @@
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
-	imports = builtins.attrValues (inputs.import-tree ./modules);	
+	imports = (inputs.import-tree ./modules);	
 	flake = {
 	    nixosConfigurations = {
       		nixbtw = nixpkgs.lib.nixosSystem {
