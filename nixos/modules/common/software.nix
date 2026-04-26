@@ -3,7 +3,6 @@
     wdisplays   
     firefox-devedition
     qutebrowser
-#    ladybird
     whatsapp-electron
     discord
 
@@ -12,6 +11,7 @@
     slurp
     swappy
     wl-clipboard
-    qbittorrent
+#    qbittorrent
+#    ladybird    
  ];
 }
