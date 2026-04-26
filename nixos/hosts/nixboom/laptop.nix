@@ -1,8 +1,8 @@
 {inputs,self,...}:{
   flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.aesthetics
       self.laptopmodule
+      self.aesthetics      
     ];
   };
   flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs, self, ... }:{
