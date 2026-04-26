@@ -1,4 +1,3 @@
-
 {
   inputs = {
       nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -19,7 +18,6 @@
       		    specialArgs = {inherit inputs;};
       		    modules = [
 		      ./modules/hosts/nixboom/laptop.nix
-	      	      inputs.home-manager.nixosModules.default
     		    ];
 		};
 	    };
