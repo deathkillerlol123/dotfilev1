@@ -7,7 +7,7 @@
       };
     };
   };
-  config = lib.mkIf config.flatpak.enable {
+  config = lib.mkIf config.flatpak.enable (
     let
       grep = pkgs.gnugrep;
       desiredFlatpaks = config.flatpak.apps;
@@ -32,5 +32,5 @@
         '';
       };
     }
-  };
+  );
 };
