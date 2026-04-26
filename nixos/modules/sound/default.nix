@@ -26,7 +26,6 @@
     pulseaudio
     wireplumber
     easyeffects
-    qpwgraph    
   ];
 
   security.wrappers.noisetorch = {
