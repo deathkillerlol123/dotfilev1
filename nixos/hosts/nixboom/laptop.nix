@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, self, ... }:{
    imports = [
-     ./laptop-hardware.nix
+     (inputs.import-tree ./extras)
      ../main.nix
    ];
    lime = {
@@ -25,10 +25,7 @@
    };
    flatpak = {
      enable = true;
-     apps = [
-       "org.vinegarhq.Sober"
-       "ch.openboard.OpenBoard"
-     ];
+     apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
    };
    system.stateVersion = "25.11";
 }
