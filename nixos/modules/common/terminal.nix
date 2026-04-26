@@ -11,7 +11,6 @@
     eza
     bat
     dysk    
-    btop
     bottom
     cmatrix
     fastfetch
