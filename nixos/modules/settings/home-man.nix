@@ -12,7 +12,7 @@
   };
   config = lib.mkIf config.home-man.enable {
     imports = [
-      inputs.home-manager.nixosModules.default
+      inputs.home-manager.nixosModules.home-manager
     ];
     home-manager = {
       useUserPackages = true;
