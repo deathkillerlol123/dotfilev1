@@ -1,27 +1,28 @@
-{pkgs, ...}:
 {
-  programs = {
-    gamemode.enable = true;
-    gamescope = {
-      enable = true;
-      capSysNice = true;
+  flake.nixosModules.terminal = {pkgs, ...}: {
+    programs = {
+      gamemode.enable = true;
+      gamescope = {
+        enable = true;
+        capSysNice = true;
+      };
+      steam = {
+        enable = true;
+        remotePlay.openFirewall = true;
+        dedicatedServer.openFirewall = true;
+        gamescopeSession.enable = true;
+      };  
     };
-    steam = {
+    hardware.graphics = {
       enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      gamescopeSession.enable = true;
-    };  
+      enable32Bit = true;
+    };
+    environment.systemPackages = with pkgs; [
+      mangohud
+      protonup-qt
+      heroic
+      gamescope
+      gamemode
+    ];
   };
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-  environment.systemPackages = with pkgs; [
-    mangohud
-    protonup-qt
-    heroic
-    gamescope
-    gamemode
-  ];
 }

@@ -1,21 +1,23 @@
-{pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    wezterm
-    starship
-    bash
-    fish
-    neovim
-    zoxide
-    emacs
-    yazi
-    eza
-    bat
-    dysk    
-    bottom
-    cmatrix
-    fastfetch
-    fd
-    viu
-    clock-rs
-  ];
+{
+  flake.nixosModules.terminal = {pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      wezterm
+      starship
+      bash
+      fish
+      neovim
+      zoxide
+      emacs
+      yazi
+      eza
+      bat
+      dysk    
+      bottom
+      cmatrix
+      fastfetch
+      fd
+      viu
+      clock-rs
+    ];
+  };
 }
