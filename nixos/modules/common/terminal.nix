@@ -1,4 +1,4 @@
-{
+{inputs,...}:{
   flake.nixosModules.terminal = {pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       wezterm

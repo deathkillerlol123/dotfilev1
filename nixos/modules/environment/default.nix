@@ -1,4 +1,4 @@
-{
+{inputs,...}:{
   flake.nixosModules.terminal = {pkgs, ... }: {
     services = {
       desktopManager = {

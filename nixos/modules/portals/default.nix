@@ -1,4 +1,4 @@
-{
+{inputs,...}:{
   flake.nixosModules.terminal = {pkgs, ...}: {
     xdg.portal = {
      enable = true;

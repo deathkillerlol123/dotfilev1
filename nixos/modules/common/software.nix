@@ -1,4 +1,4 @@
-{
+{inputs,...}:{
   flake.nixosModules.software = {pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       wdisplays   

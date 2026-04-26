@@ -1,4 +1,4 @@
-{
+{inputs,...}:{
   flake.nixosModules.system = {pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       ly
