@@ -2,7 +2,6 @@
    imports = [
      ./laptop-hardware.nix
      ../main.nix
-     (inputs.import-tree ./tests)
    ];
    lime = {
      enable = true;

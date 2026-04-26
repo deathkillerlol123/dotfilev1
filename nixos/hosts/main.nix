@@ -1,13 +1,7 @@
 {config, lib, pkgs, inputs, ...}:
 {
   imports = [
-    ../settings
-    ../common    
-    ../environment
-    ../gaming
-    ../login
-    ../portals
-    ../sound
+    (inputs.import-tree ../modules);
   ];
   documentation.enable = false;
   boot = {
