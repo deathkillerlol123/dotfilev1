@@ -27,6 +27,7 @@
      enable = true;
      apps = [
        "org.vinegarhq.Sober"
+       "ch.openboard.OpenBoard"
      ];
    };
    system.stateVersion = "25.11";
