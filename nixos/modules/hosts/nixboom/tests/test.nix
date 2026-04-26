@@ -1,5 +1,5 @@
 {config,lib,pkgs,inputs,...};{
-  environment.systemPackages = with pgs; [
+  environment.systemPackages = with pkgs; [
     vim
   ];
 }
