@@ -1,6 +1,7 @@
 { config, lib, pkgs, inputs, self, ... }:{
    imports = [
-     (inputs.import-tree ./extras)
+     ./aesthetics.nix
+     ./laptop-hardware.nix
    ];
    lime = {
      enable = true;
