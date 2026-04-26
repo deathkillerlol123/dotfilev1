@@ -17,14 +17,5 @@
 	    "aarch64-linux"
 	    "aarch64-darwin"
 	];
-	nixosConfigurations = {
-            nixbtw = nixpkgs.lib.nixosSystem {
-		system = "x86_64-linux";
-                specialArgs = {inherit inputs;};
-                modules = [
-                    inputs.home-manager.nixosModules.default
-                ];
-            };
-	};
     };
 }
