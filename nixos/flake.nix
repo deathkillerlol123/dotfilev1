@@ -13,7 +13,6 @@
     {
 	imports = [
 	    (inputs.import-tree ./modules)
-	    inputs.home-manager.nixosModules.default
 	];
 	systems = [
 	    "x86_64-linux"
