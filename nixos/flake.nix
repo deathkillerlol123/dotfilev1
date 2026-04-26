@@ -11,7 +11,7 @@
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
-	imports = lib.flatten (builtins.attrValues (inputs.import-tree ./modules));
+	imports = nixpkgs.lib.flatten (builtins.attrValues (inputs.import-tree ./modules));
 	systems = [
 	    "x86_64-linux"
 	    "aarch64-linux"
