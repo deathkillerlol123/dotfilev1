@@ -8,7 +8,7 @@
       self.nixosModules.flatpak
     ];
   };
-  flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs, self, ... }:{
+  flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs,... }:{
     imports = [
       ./laptop-hardware.nix
     ];
