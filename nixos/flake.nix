@@ -23,7 +23,7 @@
                   specialArgs = {inherit inputs;};
 		  modules = [
 		      ./modules/hosts/nixboom/laptop.nix
-		      inputs.home-manager.default
+		      inputs.home-manager.nixosModules.default
 		  ];
 	      };
 	};
