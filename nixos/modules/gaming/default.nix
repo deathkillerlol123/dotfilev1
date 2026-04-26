@@ -1,8 +1,5 @@
 {pkgs, ...}:
 {
-  imports = [
-    ../common/game.nix
-  ];
   programs = {
     gamemode.enable = true;
     gamescope = {
@@ -20,4 +17,11 @@
     enable = true;
     enable32Bit = true;
   };
+  environment.systemPackages = with pkgs; [
+    mangohud
+    protonup-qt
+    heroic
+    gamescope
+    gamemode
+  ];
 }
