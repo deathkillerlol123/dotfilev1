@@ -11,6 +11,7 @@
      desktopManager = {
      #  budgie.enable = true; #cannot be true with gnome
        xfce.enable = false;
+       xterm.enable = false;
      };
      windowManager = {
        openbox.enable = false;
