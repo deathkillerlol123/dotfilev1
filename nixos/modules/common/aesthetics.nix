@@ -1,7 +1,5 @@
 {pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    quickshell
-    eww
     swww    
     pywal
     swaynotificationcenter
@@ -11,7 +9,5 @@
     rofi
     bzmenu
     pwmenu
-    bemoji
-    waybar
   ];
 }

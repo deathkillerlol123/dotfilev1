@@ -23,5 +23,11 @@
      ext = "hm-backup";
      home = ./home.nix;
    };
+   flatpak = {
+     enable = true;
+     apps = [
+       "org.vinegarhq.Sober"
+     ];
+   };
    system.stateVersion = "25.11";
 }
