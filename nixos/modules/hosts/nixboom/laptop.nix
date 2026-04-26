@@ -1,14 +1,11 @@
 {inputs,self,...}:{
-  flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    modules = [
+  flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
+    imports = [
       self.nixosModules.laptopmodule
       self.nixosModules.lapware
       self.nixosModules.aesthetics
       self.nixosModules.flatpak
     ];
-  };
-  flake.nixosModules.laptopmodule = { config, lib, pkgs, inputs,... }:{
     lime = {
       enable = true;
       wallpapers = ../../themes/limine_wallpaper;
