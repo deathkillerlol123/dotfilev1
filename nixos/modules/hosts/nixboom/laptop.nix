@@ -7,8 +7,6 @@
       self.nixosModules.main
       self.nixosModules.laptopConfiguration
       self.nixosModules.lapware
-      self.nixosModules.aesthetics
-
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
