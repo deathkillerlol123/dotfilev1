@@ -3,7 +3,6 @@
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
     modules =[
-      inputs.home-manager.nixosModules.home-manager
       self.nixosModules.main
       self.nixosModules.laptopConfiguration
       self.nixosModules.lapware
@@ -16,6 +15,10 @@
       self.nixosModules.terminal
       self.nixosModules.gaming
       self.nixosModules.portals
+      self.nixosModules.flatpak
+      self.nixosModules.lime
+      self.nixosModules.main-user
+      self.nixosModules.home-man      
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
