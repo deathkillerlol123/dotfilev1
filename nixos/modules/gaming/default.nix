@@ -1,5 +1,5 @@
 {inputs,...}:{
-  flake.nixosModules.terminal = {pkgs, ...}: {
+  flake.nixosModules.gaming = {pkgs, ...}: {
     programs = {
       gamemode.enable = true;
       gamescope = {

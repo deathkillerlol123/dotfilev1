@@ -9,6 +9,12 @@
       self.nixosModules.lapware
       self.nixosModules.aesthetics
       self.nixosModules.login
+      self.nixosModules.environment
+      self.nixosModules.fonts
+      self.nixosModules.software
+      self.nixosModules.system
+      self.nixosModules.terminal
+      self.nixosModules.gaming
       self.nixosModules.portals
       self.nixosModules.flatpak
       self.nixosModules.lime

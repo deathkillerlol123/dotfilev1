@@ -1,5 +1,5 @@
 {inputs,...}:{
-  flake.nixosModules.terminal = {pkgs, ... }: {
+  flake.nixosModules.environment = {pkgs, ... }: {
     services = {
       desktopManager = {
         cosmic.enable = false;
