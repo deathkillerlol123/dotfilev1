@@ -31,7 +31,7 @@
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = ./home.nix;
+      home = self.nixosModules.home;
     };
     flatpak = {
       enable = true;
