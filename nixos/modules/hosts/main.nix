@@ -1,8 +1,5 @@
 {inputs,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
-    imports = [
-      (inputs.import-tree ../modules)
-    ];
     documentation.enable = false;
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
