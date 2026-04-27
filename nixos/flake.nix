@@ -18,11 +18,8 @@
 	    "x86_64-linux"
 	];
 	flake = {
-            nixosConfigurations = {
-		nixbtw = nixpkgs.lib.nixosSystem {
-                    system = "x86_64-linux";
-		};
-	    };
+	    nixosModules ={};
+	    homeModules = {};
 	};
     };
 }
