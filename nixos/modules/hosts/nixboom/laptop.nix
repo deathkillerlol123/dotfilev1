@@ -33,7 +33,7 @@
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = "${self.outPath}/modules/hosts/nixboom/home.nix";     
+      home = "${self.outPath}/modules/hosts/nixboom/_home.nix";
     };
     system.stateVersion = "25.11";
   };
