@@ -1,4 +1,4 @@
-{inputs,...}:{
+{inputs,self,...}:{
   flake.nixosModules.flatpak = {inputs,lib,config,pkgs,...}:{
     options = {
       flatpak.enable = lib.mkEnableOption "apps";
