@@ -4,9 +4,10 @@
       self.nixosModules.login
       self.nixosModules.system
       self.nixosModules.environment
-      self.nixosModules.software      
+      self.nixosModules.software
+      self.nixosModules.aesthetics
       self.nixosModules.gaming
-      self.nixosModules.portals
+      self.nixosModules.portals     
       self.nixosModules.sound
       self.nixosModules.flatpak
       self.nixosModules.lime
