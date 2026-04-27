@@ -3,6 +3,7 @@
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
     modules =[
+      inputs.home-manager.nixosModules.home-manager
       self.nixosModules.main
       self.nixosModules.laptopConfiguration
       self.nixosModules.lapware
