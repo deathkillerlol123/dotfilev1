@@ -19,6 +19,7 @@
       self.nixosModules.flatpak
       self.nixosModules.lime
       self.nixosModules.main-user
+      self.nixosModules.home-man
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
@@ -39,6 +40,11 @@
     flatpak = {
       enable = true;
       apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
+    };
+    home-man = {
+      enable = true;
+      ext = "hm-backup";
+      home = "${self.outPath}/modules/hosts/nixboom/_home.nix";     
     };
     system.stateVersion = "25.11";
   };
