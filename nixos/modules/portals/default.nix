@@ -1,5 +1,5 @@
 {inputs,...}:{
-  flake.nixosModules.terminal = {pkgs, ...}: {
+  flake.nixosModules.portals = {pkgs, ...}: {
     xdg.portal = {
      enable = true;
      extraPortals = with pkgs; [

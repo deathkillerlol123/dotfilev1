@@ -9,6 +9,7 @@
       self.nixosModules.lapware
       self.nixosModules.aesthetics
       self.nixosModules.login
+      self.nixosModules.portals
       self.nixosModules.flatpak
       self.nixosModules.lime
       self.nixosModules.main-user
