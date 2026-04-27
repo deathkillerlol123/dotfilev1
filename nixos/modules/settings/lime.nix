@@ -7,7 +7,7 @@
           default = 3;
         };
         wallpapers = lib.mkOption {
-         default = "$HOME/Pictures/Wallpapers";
+         default = "${builtins.getEnv "HOME"}/Pictures/Wallpapers";
         };
         params = lib.mkOption {
           default = [""];
