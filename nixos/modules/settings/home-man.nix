@@ -1,5 +1,8 @@
 {inputs,self,...}:{
   flake.nixosModules.home-man = {inputs,lib,config,pkgs,...}:{
+    imports= [
+      inputs.home-manager.nixosModules.home-manager
+    ];
     options = {
       home-man.enable = lib.mkEnableOption "enable home manager";
       home-man = {
