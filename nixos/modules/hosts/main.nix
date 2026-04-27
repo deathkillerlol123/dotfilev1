@@ -1,6 +1,18 @@
 {inputs,self,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
-    modules = [ self.nixosModules.lime];
+    imports = [
+      self.nixosModules.login
+      self.nixosModules.system
+      self.nixosModules.environment
+      self.nixosModules.software      
+      self.nixosModules.gaming
+      self.nixosModules.portals
+      self.nixosModules.sound
+      self.nixosModules.flatpak
+      self.nixosModules.lime
+      self.nixosModules.main-user
+      self.nixosModules.home-man                  
+    ];
     documentation.enable = false;
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;

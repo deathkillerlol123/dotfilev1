@@ -8,17 +8,7 @@
       self.nixosModules.laptopConfiguration
       self.nixosModules.lapware
       self.nixosModules.aesthetics
-      self.nixosModules.login
-      self.nixosModules.environment
-      self.nixosModules.software
-      self.nixosModules.system
-      self.nixosModules.gaming
-      self.nixosModules.portals
-      self.nixosModules.sound
-      self.nixosModules.flatpak
-      self.nixosModules.lime
-      self.nixosModules.main-user
-      self.nixosModules.home-man      
+
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
