@@ -27,11 +27,6 @@
       userName = "nixboom";
       groups = ["wheel" "gamemode" "uinput"];
     };
-    home-man = {
-      enable = true;
-      ext = "hm-backup";
-      home = self.nixosModules.home;
-    };
     flatpak = {
       enable = true;
       apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
