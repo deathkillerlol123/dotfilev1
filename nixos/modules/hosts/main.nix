@@ -1,5 +1,6 @@
 {inputs,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
+    modules = [ self.nixosModules.lime];
     documentation.enable = false;
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
