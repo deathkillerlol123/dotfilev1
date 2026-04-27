@@ -7,6 +7,8 @@
       self.nixosModules.aesthetics
       self.nixosModules.flatpak
       self.nixosModules.home-man
+      self.nixosModules.lime
+      self.nixosModules.main-user
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
