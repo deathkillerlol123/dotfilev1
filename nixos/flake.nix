@@ -12,6 +12,7 @@
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
+	    inputs.home-manager.nixosModules.home-manager
 	    (inputs.import-tree ./modules)
 	];
 	systems = [
