@@ -3,7 +3,6 @@
     system = "x86_64-linux";
     modules =[
       self.nixosModules.laptopConfiguration
-      self.nixosModules.laptopmodule
       self.nixosModules.lapware
       self.nixosModules.aesthetics
       self.nixosModules.flatpak
