@@ -1,5 +1,5 @@
-{inputs,self,...}:{
-  flake.nixosModules.login = {pkgs, ... }: {
+{inputs,...}:{
+  flake.nixosModules.terminal = {pkgs, ... }: {
     services = {
       displayManager = {
         sddm = {
