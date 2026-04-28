@@ -5,22 +5,26 @@ let
   cfg = "${dotfiles}/.config";
   
   # Helper to create file entries
-  mkFile = src: { source = src; };
-  mkFileRec = src: { source = src; recursive = true; };
+  mkFile = src: { source = src; recursive = true; };
   
   # Non-recursive files
   files = {
     ".zshrc" = mkFile "${dotfiles}/.zshrc";
     ".emacs" = mkFile "${dotfiles}/.emacs";
     ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
-    ".config/mozilla/firefox/hcq4c6te.dev-edition-default/chrome/userChrome.css" = 
-      mkFile "${dotfiles}/.config/mozilla/userChrome.css";
-  };
-  
-  # Recursive config directories
-  configDirs = [
-    "fish" "waybar" "walrus" "wallust" "swaync" "rofi" "nvim"
-    "niri" "mako" "eww" "quickshell" "qutebrowser"
+    ".config/mozilla/firefox/hcq4c6te.dev-edition-default/chrome/userChrome.css" =   mkFile "${dotfiles}/.config/mozilla/userChrome.css";
+    "fish" = mkFile "${dotfiles}/fish";
+    "waybar" = mkFile "${dotfiles}/waybar";
+    "walrus" = mkFile "${dotfiles}/walrus";
+    "wallust" = mkFile "${dotfiles}/wallust";
+    "swaync" = mkFile "${dotfiles}/swaync";
+    "rofi" = mkFile "${dotfiles}/rofi";
+    "nvim" = mkFile "${dotfiles}/nvim";
+    "niri" = mkFile "${dotfiles}/niri";
+    "mako" = mkFile "${dotfiles}/mako";
+    "eww" = mkFile "${dotfiles}/eww";
+    "quickshell" = mkFile "${dotfiles}/quickshell";
+    "qutebrowser" = mkFile "${dotfiles}/qutebrowser";
   ];
   
   # Generate .config/* entries
