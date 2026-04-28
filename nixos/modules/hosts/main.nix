@@ -1,7 +1,7 @@
 {inputs,self,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
     imports = [
-      self.nixosmodules.nur
+      self.nixosModules.nur
       self.nixosModules.login
       self.nixosModules.system
       self.nixosModules.environment
