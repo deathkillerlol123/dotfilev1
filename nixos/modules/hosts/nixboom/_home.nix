@@ -1,64 +1,46 @@
-{config, pkgs, inputs, ...}:
+{config, pkgs,inputs, ... }:
 let
-  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
+  dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
+  firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
-  cfg = "${dotfiles}/.config";
-  
-  # Helper to create file entries
-  mkFile = src: { source = src; recursive = true; };
-  
-  # Non-recursive files
-  files = {
-    ".zshrc" = mkFile "${dotfiles}/.zshrc";
-    ".emacs" = mkFile "${dotfiles}/.emacs";
-    ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
-    ".config/mozilla/firefox/hcq4c6te.dev-edition-default/chrome/userChrome.css" =   mkFile "${dotfiles}/.config/mozilla/userChrome.css";
-    "fish" = mkFile "${dotfiles}/fish";
-    "waybar" = mkFile "${dotfiles}/waybar";
-    "walrus" = mkFile "${dotfiles}/walrus";
-    "wallust" = mkFile "${dotfiles}/wallust";
-    "swaync" = mkFile "${dotfiles}/swaync";
-    "rofi" = mkFile "${dotfiles}/rofi";
-    "nvim" = mkFile "${dotfiles}/nvim";
-    "niri" = mkFile "${dotfiles}/niri";
-    "mako" = mkFile "${dotfiles}/mako";
-    "eww" = mkFile "${dotfiles}/eww";
-    "quickshell" = mkFile "${dotfiles}/quickshell";
-    "qutebrowser" = mkFile "${dotfiles}/qutebrowser";
-  };
-  
-  # Generate .config/* entries
-  configFiles = builtins.listToAttrs (map (dir: {
-    name = ".config/${dir}";
-    value = mkFileRec "${cfg}/${dir}";
-  }) configDirs);
-  
-  # Single-file configs in .config
-  singleConfigFiles = {
-    "mango" = mkFile "${cfg}/mango";
-    "swaylock" = mkFile "${cfg}/swaylock";
-    "fastfetch" = mkFile "${cfg}/fastfetch";
-    "starship.toml" = mkFile "${cfg}/starship.toml";
-  };
-  
-  # Merge all file configurations
-  allFiles = files // configFiles // singleConfigFiles // {
-    ".local/share/applications" = mkFileRec "${dotfiles}/.local/share/applications";
-  };
+  conf ="${dotfiles}/.config";
 in
 {
   home = {
     username = user;
     homeDirectory = "/home/${user}";
-    stateVersion = "25.11";
+    packages = with pkgs; [ ];    
+    stateVersion = "25.11"; # Please read the comment before changing.    
   };
-  
-  programs.home-manager.enable = true;
-  home.file = allFiles;
-  
+  programs.home-manager.enable = true;  
+  home.file = {
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css";};      
+    ".zshrc" = {source = "${dotfiles}/.zshrc";};
+    ".emacs" = {source = "${dotfiles}/.emacs";};    
+    ".wezterm.lua" = {source = "${dotfiles}/.wezterm.lua";};
+    ".config/mango" = {source = "${conf}/mango";};    
+    ".config/swaylock" = {source = "${conf}/swaylock";};
+    ".config/fastfetch" = {source = "${conf}/fastfetch";};
+    ".config/starship.toml" = {source = "${dotfiles}/.config/starship.toml";};
+    ".config/fish" = {source = "${conf}/fish"; recursive = true;};    
+    ".config/waybar" = {source = "${conf}/waybar"; recursive = true;};
+    ".config/walrus" = {source = "${conf}/walrus"; recursive = true;};
+    ".config/wallust" = {source = "${conf}/wallust"; recursive = true;};
+    ".config/swaync" = {source = "${conf}/swaync"; recursive = true;};
+    ".config/rofi" = {source = "${conf}/rofi"; recursive = true;};
+    ".config/nvim" = {source = "${conf}/nvim"; recursive = true;};
+    ".config/niri" = {source = "${conf}/niri"; recursive = true;};
+    ".config/mako" = {source = "${conf}/mako"; recursive = true;};
+    ".config/eww" = {source = "${conf}/eww"; recursive = true;};
+    ".config/quickshell" = {source = "${conf}/quickshell"; recursive = true;};
+    ".config/qutebrowser" = {source = "${conf}/qutebrowser"; recursive = true;};    
+    ".local/share/applications" = {source = "${dotfiles}/.local/share/applications"; recursive = true;};
+  };
   gtk = {
     enable = true;
-    theme.package = pkgs.orchis-theme;
-    theme.name = "Orchis-Grey-Dark";
+    theme = {
+      package = pkgs.orchis-theme;
+      name = "Orchis-Grey-Dark";
+    };
   };
 }
