@@ -2,10 +2,11 @@
 let
   dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
+  user = "nixboom";
 in
 {
-  home.username = "nixboom";
-  home.homeDirectory = "/home/nixboom";
+  home.username = user;
+  home.homeDirectory = "/home/${user}";
   home.sessionVariables = {
     EDITOR = "nvim";
   };
