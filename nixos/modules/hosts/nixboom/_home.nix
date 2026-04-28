@@ -3,6 +3,7 @@
 let
   dotfiles = "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
+  user = "nixboom";
 
   files = [
     ".zshrc"
