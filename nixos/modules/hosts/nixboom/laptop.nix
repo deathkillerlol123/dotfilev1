@@ -1,12 +1,16 @@
-{inputs,self,...}:{
+{inputs,self,...}:
+let
+  any = self.nixosModules;
+in
+{
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
     modules =[
       inputs.home-manager.nixosModules.home-manager
-      self.nixosModules.main
-      self.nixosModules.laptopConfiguration
-      self.nixosModules.lapware
+      any.main
+      any.laptopConfiguration
+      any.nixosModules.lapware
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{    
