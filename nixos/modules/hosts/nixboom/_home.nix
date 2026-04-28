@@ -4,7 +4,7 @@ let
   firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
   conf ="${dotfiles}/.config";
-  mkFile = src: { source = src; recursive = true };
+  mkFile = src: { source = src; recursive = true;};
 in
 {
   home = {
