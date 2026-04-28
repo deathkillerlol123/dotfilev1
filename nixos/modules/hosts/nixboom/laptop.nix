@@ -9,7 +9,7 @@
       self.nixosModules.lapware
     ];
   };
-  flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{
+  flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{    
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
