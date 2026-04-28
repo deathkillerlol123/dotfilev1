@@ -10,7 +10,7 @@ in
       inputs.home-manager.nixosModules.home-manager
       any.main
       any.laptopConfiguration
-      any.nixosModules.lapware
+      any.lapware
     ];
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{    
