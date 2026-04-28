@@ -2,7 +2,7 @@
 let
   user = "nixboom";
   firefox_user = "hcq4c6te.dev-edition-default";
-  
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles";  
   # Directories (recursive = true)
   dirs = [
     ".config/fish" ".config/waybar" ".config/walrus" ".config/wallust"
@@ -28,7 +28,6 @@ in
   programs.home-manager.enable = true;
   
   # Define dotfiles path where config IS available
-  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles";
   src = path: "${dotfiles}/${path}";
   
   # Generate file entries
