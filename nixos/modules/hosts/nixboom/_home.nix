@@ -16,16 +16,9 @@ in
   };
   programs.home-manager.enable = true;  
   home.file = {
-    ".zshrc" = {
-      source = "${dotfiles}/.zshrc";
-    };
-    ".wezterm.lua" = {
-      source = "${dotfiles}/.wezterm.lua";
-    };    
-    ".config/fish" = {
-      source = "${dotfiles}/.config/fish";
-      recursive = true;
-    };    
+    ".zshrc" = {source = "${dotfiles}/.zshrc";};
+    ".wezterm.lua" = {source = "${dotfiles}/.wezterm.lua";};    
+    ".config/fish" = {source = "${dotfiles}/.config/fish"; recursive = true;};    
     ".config/waybar" = {
       source = "${dotfiles}/.config/waybar";
       recursive = true;
