@@ -1,53 +1,108 @@
-{ config, pkgs, inputs, ... }:
+{config, pkgs,inputs, ... }:
 let
-  user = "nixboom";
+  dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
-  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles";  
-  # Directories (recursive = true)
-  dirs = [
-    ".config/fish" ".config/waybar" ".config/walrus" ".config/wallust"
-    ".config/swaync" ".config/rofi" ".config/nvim" ".config/niri"
-    ".config/mako" ".config/eww" ".config/quickshell" ".local/share/applications"
-    ".config/qutebrowser"
-  ];
-  
-  # Single files (recursive = false)
-  files = [
-    ".zshrc" ".wezterm.lua" ".config/swaylock" ".config/fastfetch"
-    ".config/mango" ".config/starship.toml" ".emacs"
-  ];
+  user = "nixboom";
 in
 {
   home = {
     username = user;
     homeDirectory = "/home/${user}";
     packages = with pkgs; [ ];    
-    sessionVariables = { EDITOR = "nvim"; };    
-    stateVersion = "25.11";
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    stateVersion = "25.11"; # Please read the comment before changing.    
   };
-  programs.home-manager.enable = true;
-  
-  # Define dotfiles path where config IS available
-  src = path: "${dotfiles}/${path}";
-  
-  # Generate file entries
-  mkFile = path: { source = src path; };
-  mkDir = path: { source = src path; recursive = true; };
-  
-  recursiveFiles = builtins.listToAttrs (map (p: { name = p; value = mkDir p; }) dirs);
-  singleFiles = builtins.listToAttrs (map (p: { name = p; value = mkFile p; }) files);
-  
-  # Special case for Firefox
-  firefoxEntry = {
+  programs.home-manager.enable = true;  
+  home.file = {
+    ".zshrc" = {
+      source = "${dotfiles}/.zshrc";
+    };
+    ".wezterm.lua" = {
+      source = "${dotfiles}/.wezterm.lua";
+    };    
+    ".config/fish" = {
+      source = "${dotfiles}/.config/fish";
+      recursive = true;
+    };    
+    ".config/waybar" = {
+      source = "${dotfiles}/.config/waybar";
+      recursive = true;
+    };
+    ".config/walrus" = {
+      source = "${dotfiles}/.config/walrus";
+      recursive = true;
+    };
+    ".config/wallust" = {
+      source = "${dotfiles}/.config/wallust";
+      recursive = true;
+    };
+    ".config/swaync" = {
+      source = "${dotfiles}/.config/swaync";
+      recursive = true;
+    };
+    ".config/swaylock" = {
+      source = "${dotfiles}/.config/swaylock";
+    };
+    ".config/rofi" = {
+      source = "${dotfiles}/.config/rofi";
+      recursive = true;
+    };
+    ".config/nvim" = {
+      source = "${dotfiles}/.config/nvim";
+      recursive = true;
+    };
+    ".config/niri" = {
+      source = "${dotfiles}/.config/niri";
+      recursive = true;
+    };
+    ".config/fastfetch" = {
+      source = "${dotfiles}/.config/fastfetch";
+    };
+    ".config/mango" = {
+      source = "${dotfiles}/.config/mango";
+    };
+    ".config/mako" = {
+      source = "${dotfiles}/.config/mako";
+      recursive = true;
+    };
+    ".config/eww" = {
+      source = "${dotfiles}/.config/eww";
+      recursive = true;
+    };
+    ".config/quickshell" = {
+      source = "${dotfiles}/.config/quickshell";
+      recursive = true;
+    };  
+    ".config/starship.toml" = {
+      source = "${dotfiles}/.config/starship.toml";
+    };
+    ".local/share/applications" = {
+      source = "${dotfiles}/.local/share/applications";
+      recursive = true;
+    };
+    ".config/qutebrowser" = {
+      source = "${dotfiles}/.config/qutebrowser";
+      recursive = true;
+    };
+    ".emacs" = {
+        source = "${dotfiles}/.emacs";
+    };
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
-      source = src ".config/mozilla/userChrome.css";
+      source = "${dotfiles}/.config/mozilla/userChrome.css";
     };
   };
-  
-  home.file = recursiveFiles // singleFiles // firefoxEntry;
-  
   gtk = {
     enable = true;
-    theme = { package = pkgs.orchis-theme; name = "Orchis-Grey-Dark"; };
+    theme = {
+      package = pkgs.orchis-theme;
+      name = "Orchis-Grey-Dark";
+    };
+#    cursorTheme = {
+ #     package = pkgs.lyra-cursors;
+  #    name = "LyraB Cursors";
+   #   size = 16;
+   #};
   };
 }
