@@ -5,6 +5,7 @@ let
   user = "nixboom";
   conf ="${dotfiles}/.config";
   mkFile = src: { source = src; recursive = true;};
+  mkconf = = src: { source = "${dotfiles}/${src}"; recursive = true;};
 in
 {
   home = {
@@ -15,7 +16,8 @@ in
   };
   programs.home-manager.enable = true;  
   home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = mkFile "${dotfiles}/.config/mozilla/userChrome.css";      
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = mkFile "${dotfiles}/.config/mozilla/userChrome.css";
+    ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications";     
     ".zshrc" = mkFile "${dotfiles}/.zshrc";
     ".emacs" = mkFile "${dotfiles}/.emacs";  
     ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
@@ -35,7 +37,7 @@ in
     ".config/eww" = mkFile "${conf}/eww"; 
     ".config/quickshell" = mkFile "${conf}/quickshell"; 
     ".config/qutebrowser" = mkFile "${conf}/qutebrowser"; 
-    ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications"; 
+
   };
   gtk = {
     enable = true;
