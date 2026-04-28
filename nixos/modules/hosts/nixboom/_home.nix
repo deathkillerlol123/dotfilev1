@@ -1,9 +1,7 @@
+{ config, pkgs, inputs, ... }:
 let
-  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
-  firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
-  
-  src = path: "${dotfiles}/${path}";
+  firefox_user = "hcq4c6te.dev-edition-default";
   
   # Directories (recursive = true)
   dirs = [
@@ -18,6 +16,20 @@ let
     ".zshrc" ".wezterm.lua" ".config/swaylock" ".config/fastfetch"
     ".config/mango" ".config/starship.toml" ".emacs"
   ];
+in
+{
+  home = {
+    username = user;
+    homeDirectory = "/home/${user}";
+    packages = with pkgs; [ ];    
+    sessionVariables = { EDITOR = "nvim"; };    
+    stateVersion = "25.11";
+  };
+  programs.home-manager.enable = true;
+  
+  # Define dotfiles path where config IS available
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles";
+  src = path: "${dotfiles}/${path}";
   
   # Generate file entries
   mkFile = path: { source = src path; };
@@ -33,18 +45,8 @@ let
     };
   };
   
-  allFiles = recursiveFiles // singleFiles // firefoxEntry;
-in
-{
-  home = {
-    username = user;
-    homeDirectory = "/home/${user}";
-    packages = with pkgs; [ ];    
-    sessionVariables = { EDITOR = "nvim"; };    
-    stateVersion = "25.11";
-  };
-  programs.home-manager.enable = true;  
-  home.file = allFiles;
+  home.file = recursiveFiles // singleFiles // firefoxEntry;
+  
   gtk = {
     enable = true;
     theme = { package = pkgs.orchis-theme; name = "Orchis-Grey-Dark"; };
