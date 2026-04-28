@@ -5,7 +5,7 @@ let
   user = "nixboom";
   conf ="${dotfiles}/.config";
   mkFile = src: { source = src; recursive = true;};
-  mkconf = src: { source = "${dotfiles}/${src}"; recursive = true;};
+  mkconf = src: { source = "${conf}/${src}"; recursive = true;};
 in
 {
   home = {
