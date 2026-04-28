@@ -4,6 +4,7 @@ let
   firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
   conf ="${dotfiles}/.config";
+  mkFile = src: { source = src; recursive = true };
 in
 {
   home = {
@@ -14,27 +15,27 @@ in
   };
   programs.home-manager.enable = true;  
   home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css";};      
-    ".zshrc" = {source = "${dotfiles}/.zshrc";};
-    ".emacs" = {source = "${dotfiles}/.emacs";};    
-    ".wezterm.lua" = {source = "${dotfiles}/.wezterm.lua";};
-    ".config/mango" = {source = "${conf}/mango";};    
-    ".config/swaylock" = {source = "${conf}/swaylock";};
-    ".config/fastfetch" = {source = "${conf}/fastfetch";};
-    ".config/starship.toml" = {source = "${dotfiles}/.config/starship.toml";};
-    ".config/fish" = {source = "${conf}/fish"; recursive = true;};    
-    ".config/waybar" = {source = "${conf}/waybar"; recursive = true;};
-    ".config/walrus" = {source = "${conf}/walrus"; recursive = true;};
-    ".config/wallust" = {source = "${conf}/wallust"; recursive = true;};
-    ".config/swaync" = {source = "${conf}/swaync"; recursive = true;};
-    ".config/rofi" = {source = "${conf}/rofi"; recursive = true;};
-    ".config/nvim" = {source = "${conf}/nvim"; recursive = true;};
-    ".config/niri" = {source = "${conf}/niri"; recursive = true;};
-    ".config/mako" = {source = "${conf}/mako"; recursive = true;};
-    ".config/eww" = {source = "${conf}/eww"; recursive = true;};
-    ".config/quickshell" = {source = "${conf}/quickshell"; recursive = true;};
-    ".config/qutebrowser" = {source = "${conf}/qutebrowser"; recursive = true;};    
-    ".local/share/applications" = {source = "${dotfiles}/.local/share/applications"; recursive = true;};
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = mkFile "${dotfiles}/.config/mozilla/userChrome.css";      
+    ".zshrc" = mkFile "${dotfiles}/.zshrc";
+    ".emacs" = mkFile "${dotfiles}/.emacs";  
+    ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
+    ".config/mango" = mkFile "${conf}/mango";
+    ".config/swaylock" = mkFile "${conf}/swaylock";
+    ".config/fastfetch" = mkFile "${conf}/fastfetch";
+    ".config/starship.toml" = mkFile "${dotfiles}/.config/starship.toml";
+    ".config/fish" = mkFile "${conf}/fish";  
+    ".config/waybar" = mkFile "${conf}/waybar";
+    ".config/walrus" = mkFile "${conf}/walrus";
+    ".config/wallust" = mkFile "${conf}/wallust";
+    ".config/swaync" = mkFile "${conf}/swaync";
+    ".config/rofi" = mkFile "${conf}/rofi";
+    ".config/nvim" = mkFile "${conf}/nvim";
+    ".config/niri" = mkFile "${conf}/niri";
+    ".config/mako" = mkFile "${conf}/mako";
+    ".config/eww" = mkFile "${conf}/eww"; 
+    ".config/quickshell" = mkFile "${conf}/quickshell"; 
+    ".config/qutebrowser" = mkFile "${conf}/qutebrowser"; 
+    ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications"; 
   };
   gtk = {
     enable = true;
