@@ -25,7 +25,7 @@ let
     "eww" = mkFile "${dotfiles}/eww";
     "quickshell" = mkFile "${dotfiles}/quickshell";
     "qutebrowser" = mkFile "${dotfiles}/qutebrowser";
-  ];
+  };
   
   # Generate .config/* entries
   configFiles = builtins.listToAttrs (map (dir: {
