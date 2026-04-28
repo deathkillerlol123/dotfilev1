@@ -5,16 +5,16 @@ let
   user = "nixboom";
 in
 {
-  home.username = user;
-  home.homeDirectory = "/home/${user}";
-  home.sessionVariables = {
-    EDITOR = "nvim";
+  home = {
+    username = user;
+    homeDirectory = "/home/${user}";
+    packages = with pkgs; [ ];    
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    stateVersion = "25.11"; # Please read the comment before changing.    
   };
-  programs.home-manager.enable = true;
-  # You should not change this value, even if you update Home Manager. If you do
-  home.stateVersion = "25.11"; # Please read the comment before changing.
-  home.packages = with pkgs; [ ];
-  
+  programs.home-manager.enable = true;  
   home.file = {
     ".zshrc" = {
       source = "${dotfiles}/.zshrc";
