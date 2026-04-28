@@ -58,4 +58,14 @@ in {
         force = true;
       };
     };
+    home = {
+      username = user;
+      homeDirectory = "/home/${user}";
+      packages = with pkgs; [ ];
+      sessionVariables = {
+        EDITOR = "nvim";
+      };
+      stateVersion = "25.11"; # Please read the comment before changing.
+    };
+    programs.home-manager.enable = true;    
 }
