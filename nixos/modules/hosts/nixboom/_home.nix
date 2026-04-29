@@ -49,7 +49,9 @@ in
   };
   programs.home-manager.enable = true;  
   home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = mkFile "${dotfiles}/.config/mozilla/userChrome.css";
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
+      source = "${dotfiles}/.config/mozilla/userChrome.css";
+    };
     ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications";     
   } // configs;
   gtk = {
