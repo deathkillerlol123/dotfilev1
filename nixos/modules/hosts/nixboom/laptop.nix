@@ -7,7 +7,7 @@
     [
       inputs.home-manager.nixosModules.home-manager
     ]++
-    (with self.nixoModules; [
+    (with self.nixosModules; [
       main
       laptopConfiguration
       lapware
