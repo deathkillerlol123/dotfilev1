@@ -5,7 +5,13 @@ let
   user = "nixboom";
   conf ="${dotfiles}/.config";
   mkFile = src: { source = src; recursive = true;};
-  mkconf = src: { source = "${conf}/${src}"; recursive = true;};
+  mkconf = name: {
+    name = ".config/${name}";
+    value = {
+      source = "${conf}/${src}";
+      recursive = true;
+    };
+  };
 in
 {
   home = {
@@ -21,24 +27,25 @@ in
     ".zshrc" = mkFile "${dotfiles}/.zshrc";
     ".emacs" = mkFile "${dotfiles}/.emacs";  
     ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
-    ".config/mango" = mkconf "mango";
-    ".config/swaylock" = mkconf "swaylock";
-    ".config/fastfetch" = mkconf "fastfetch";
-    ".config/starship.toml" = mkconf "starship.toml";
-    ".config/fish" = mkconf "fish";  
-    ".config/waybar" = mkconf "waybar";
-    ".config/walrus" = mkconf "walrus";
-    ".config/wallust" = mkconf "wallust";
-    ".config/swaync" = mkconf "swaync";
-    ".config/rofi" = mkconf "rofi";
-    ".config/nvim" = mkconf "nvim";
-    ".config/niri" = mkconf "niri";
-    ".config/mako" = mkconf "mako";
-    ".config/eww" = mkconf "eww"; 
-    ".config/quickshell" = mkconf "quickshell"; 
-    ".config/qutebrowser" = mkconf "qutebrowser"; 
-
   };
+  home.file = builtins.listToAttrs [
+    (mkconf "mango")
+    (mkconf "swaylock")
+    (mkconf "fastfetch")
+    (mkconf "starship.toml")
+    (mkconf "fish")
+    (mkconf "waybar")
+    (mkconf "walrus")
+    (mkconf "wallust")
+    (mkconf "swaync")
+    (mkconf "rofi")
+    (mkconf "nvim")
+    (mkconf "niri")
+    (mkconf "mako")
+    (mkconf "eww")
+    (mkconf "quickshell")
+    (mkconf "qutebrowser")
+  ];
   gtk = {
     enable = true;
     theme = {
