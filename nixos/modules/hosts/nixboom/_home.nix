@@ -8,7 +8,6 @@ let
     name = name;
     value = {
       source = "${dotfiles}/${name}";
-      recursive = true;
     };
   };    
   mkconf = name: {
@@ -38,6 +37,7 @@ let
     (mkFile ".zshrc")
     (mkFile ".emacs")
     (mkFile ".wezterm.lua")
+    (mkFile ".local/share/applications")
   ];
 in
 {
@@ -51,8 +51,7 @@ in
   home.file = {
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
-    };
-    ".local/share/applications" = mkFile ".local/share/applications";     
+    };    
   } // configs;
   gtk = {
     enable = true;
