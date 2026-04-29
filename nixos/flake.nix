@@ -11,7 +11,6 @@
       };
       flake-parts.url = "github:hercules-ci/flake-parts";
       import-tree.url = "github:vic/import-tree";
-      treefmt-nix.url = "github:numtide/treefmt-nix";      
   };
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
