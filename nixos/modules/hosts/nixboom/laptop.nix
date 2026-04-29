@@ -37,6 +37,7 @@ in
       ext = "hm-backup";
       home = "${self.outPath}/modules/hosts/nixboom/_home.nix";
     };
+    nix.settings.trusted-users = [ "root" "nixboom" ];
     system.stateVersion = "25.11";
   };
 }
