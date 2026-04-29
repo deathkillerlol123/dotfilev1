@@ -4,7 +4,9 @@
       wdisplays   
       firefox-devedition
       whatsapp-electron
-      discord
+      (discord.override {
+        withOpenASAR = true;
+      })
       copyq
       grim
       slurp
