@@ -22,6 +22,7 @@
     };
     config = lib.mkIf config.lime.enable {
      boot = {
+       kernelParams = config.lime.params;     
        loader = {
          efi.canTouchEfiVariables = true;    
          limine = {
@@ -35,7 +36,6 @@
   	 '';
          };
        };
-       kernelParams = config.lime.params;
      };
     };
   };
