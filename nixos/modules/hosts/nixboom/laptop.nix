@@ -1,7 +1,4 @@
 {inputs,self,...}:
-let
-  any = self.nixosModules;
-in
 {
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
@@ -9,10 +6,8 @@ in
     modules =
     [
       inputs.home-manager.nixosModules.home-manager
-    ]
-    ++
-    (with any;
-      [
+    ]++
+    (with self.nixoModules; [
       main
       laptopConfiguration
       lapware
