@@ -12,6 +12,24 @@ let
       recursive = true;
     };
   };
+  configs = builtins.listToAttrs [
+    (mkconf "mango")
+    (mkconf "swaylock")
+    (mkconf "fastfetch")
+    (mkconf "starship.toml")
+    (mkconf "fish")
+    (mkconf "waybar")
+    (mkconf "walrus")
+    (mkconf "wallust")
+    (mkconf "swaync")
+    (mkconf "rofi")
+    (mkconf "nvim")
+    (mkconf "niri")
+    (mkconf "mako")
+    (mkconf "eww")
+    (mkconf "quickshell")
+    (mkconf "qutebrowser")
+  ];
 in
 {
   home = {
@@ -27,25 +45,7 @@ in
     ".zshrc" = mkFile "${dotfiles}/.zshrc";
     ".emacs" = mkFile "${dotfiles}/.emacs";  
     ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
-    builtins.listToAttrs [
-      (mkconf "mango")
-      (mkconf "swaylock")
-      (mkconf "fastfetch")
-      (mkconf "starship.toml")
-      (mkconf "fish")
-      (mkconf "waybar")
-      (mkconf "walrus")
-      (mkconf "wallust")
-      (mkconf "swaync")
-      (mkconf "rofi")
-      (mkconf "nvim")
-      (mkconf "niri")
-      (mkconf "mako")
-      (mkconf "eww")
-      (mkconf "quickshell")
-      (mkconf "qutebrowser")
-    ];
-  };
+  } // configs;
   gtk = {
     enable = true;
     theme = {
