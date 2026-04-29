@@ -31,7 +31,8 @@
       fd
       viu
       clock-rs
-      statix      
+      statix
+      cachix
     ];
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
