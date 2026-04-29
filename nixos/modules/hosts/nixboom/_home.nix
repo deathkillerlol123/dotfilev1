@@ -18,7 +18,7 @@ let
     };
   };
   mkdirs = path: {
-    inherit path;
+    name = path;
     value = {
       source = "${dotfiles}/${path}";
       recursive = true;
