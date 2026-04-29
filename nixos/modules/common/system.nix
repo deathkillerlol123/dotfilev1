@@ -34,10 +34,10 @@
       statix
       cachix
     ];
-    fonts.packages = with pkgs; [
-      nerd-fonts.fira-code
-      nerd-fonts.droid-sans-mono
-      nerd-fonts.dejavu-sans-mono      
+    fonts.packages = with pkgs; with nerd-fonts; [
+      fira-code
+      droid-sans-mono
+      dejavu-sans-mono      
     ];
    };
 }

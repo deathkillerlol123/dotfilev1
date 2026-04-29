@@ -1,5 +1,5 @@
 {inputs,...}:{
-  flake.nixosModules.lapware = { config,lib,pkgs,modulesPath, ...}:  {
+  flake.nixosModules.boomware = { config,lib,pkgs,modulesPath, ...}:  {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
       ];

@@ -9,11 +9,11 @@
     ]++
     (with self.nixosModules; [
       main
-      laptopConfiguration
-      lapware
+      boomlaptopconf
+      boomware
     ]);    
   };
-  flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{    
+  flake.nixosModules.boomlaptopconf = { config, lib, pkgs, inputs,... }:{    
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
