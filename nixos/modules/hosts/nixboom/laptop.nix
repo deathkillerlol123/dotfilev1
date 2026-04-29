@@ -6,6 +6,8 @@ in
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
+  };
+  flake.nixosModules.boomlaptopconf = { config, lib, pkgs, inputs,... }:{
     modules =
     [
       inputs.home-manager.nixosModules.home-manager
@@ -14,9 +16,7 @@ in
       main
       boomlaptopconf
       boomware
-    ]);    
-  };
-  flake.nixosModules.boomlaptopconf = { config, lib, pkgs, inputs,... }:{    
+    ]);      
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
