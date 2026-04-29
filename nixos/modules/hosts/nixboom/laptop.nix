@@ -6,6 +6,8 @@ in
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
+  };
+  flake.nixosModules.boomlaptopconf = { config, lib, pkgs, inputs,... }:{
     modules =
     [
       inputs.home-manager.nixosModules.home-manager
@@ -14,9 +16,7 @@ in
       main
       boomlaptopconf
       boomware
-    ]);    
-  };
-  flake.nixosModules.boomlaptopconf = { config, lib, pkgs, inputs,... }:{    
+    ]);      
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
@@ -28,7 +28,7 @@ in
     };
     main-user = {
       enable = true;
-      userName = "nixboom";
+      userName = user;
       groups = ["wheel" "gamemode" "uinput"];
       flakelocation = self.outPath;
     };
@@ -39,7 +39,7 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = "${self.outPath}/modules/hosts/nixboom/_home.nix";
+      home = "${self.outPath}/modules/hosts/${user}/_home.nix";
     };
     nix.settings.trusted-users = [ "root" "nixboom" ];
     system.stateVersion = "25.11";
