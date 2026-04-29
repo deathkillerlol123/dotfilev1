@@ -36,7 +36,7 @@
         nh = {
           enable = true;
     	  clean.enable = true;
-  	  flake = config.main-user.flakelocation;;
+  	  flake = config.main-user.flakelocation;
         };
         nix-ld = {
           enable = true;
