@@ -12,11 +12,11 @@ in
     ]++
     (with self.nixosModules; [
       main
-      dragboomfly
+      dragboom
       dragboomware
     ]);    
   };
-  flake.nixosModules.dragboomfly = { config, lib, pkgs, inputs,... }:{    
+  flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{    
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
@@ -39,7 +39,7 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = "${self.outPath}/modules/hosts/${user}/dragonfly/_homedragonfly.nix";
+      home = "${self.outPath}/modules/hosts/${user}/dragonfly/_homedragboom.nix";
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
