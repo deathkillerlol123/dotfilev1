@@ -8,7 +8,7 @@ let
   mkconf = name: {
     name = ".config/${name}";
     value = {
-      source = "${conf}/${src}";
+      source = "${conf}/${name}";
       recursive = true;
     };
   };
@@ -27,25 +27,25 @@ in
     ".zshrc" = mkFile "${dotfiles}/.zshrc";
     ".emacs" = mkFile "${dotfiles}/.emacs";  
     ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
+    builtins.listToAttrs [
+      (mkconf "mango")
+      (mkconf "swaylock")
+      (mkconf "fastfetch")
+      (mkconf "starship.toml")
+      (mkconf "fish")
+      (mkconf "waybar")
+      (mkconf "walrus")
+      (mkconf "wallust")
+      (mkconf "swaync")
+      (mkconf "rofi")
+      (mkconf "nvim")
+      (mkconf "niri")
+      (mkconf "mako")
+      (mkconf "eww")
+      (mkconf "quickshell")
+      (mkconf "qutebrowser")
+    ];
   };
-  home.file = builtins.listToAttrs [
-    (mkconf "mango")
-    (mkconf "swaylock")
-    (mkconf "fastfetch")
-    (mkconf "starship.toml")
-    (mkconf "fish")
-    (mkconf "waybar")
-    (mkconf "walrus")
-    (mkconf "wallust")
-    (mkconf "swaync")
-    (mkconf "rofi")
-    (mkconf "nvim")
-    (mkconf "niri")
-    (mkconf "mako")
-    (mkconf "eww")
-    (mkconf "quickshell")
-    (mkconf "qutebrowser")
-  ];
   gtk = {
     enable = true;
     theme = {
