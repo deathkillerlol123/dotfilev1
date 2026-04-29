@@ -11,6 +11,7 @@
       swappy
       wl-clipboard
       wezterm
+      cowsay
   #    qbittorrent qutebrowser
 
    ];
