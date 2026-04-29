@@ -9,10 +9,14 @@ in
     modules =
     [
       inputs.home-manager.nixosModules.home-manager
-      any.main
-      any.laptopConfiguration
-      any.lapware
-    ];
+    ]
+    ++
+    (with any;
+      [
+      main
+      laptopConfiguration
+      lapware
+    ]);    
   };
   flake.nixosModules.laptopConfiguration = { config, lib, pkgs, inputs,... }:{    
     lime = {
