@@ -52,7 +52,7 @@ in
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
       source = "${dotfiles}/.config/mozilla/userChrome.css";
     };
-    ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications";     
+    ".local/share/applications" = mkFile ".local/share/applications";     
   } // configs;
   gtk = {
     enable = true;
