@@ -5,7 +5,7 @@ let
   user = "nixboom";
   conf ="${dotfiles}/.config";
   mkFile = name: {
-    name = name;
+    inherit name;
     value = {
       source = "${dotfiles}/${name}";
     };
@@ -18,7 +18,7 @@ let
     };
   };
   mkdirs = path: {
-    name = path;
+    inherit path;
     value = {
       source = "${dotfiles}/${path}";
       recursive = true;
@@ -51,14 +51,11 @@ in
   home = {
     username = user;
     homeDirectory = "/home/${user}";
-    packages = with pkgs; [ ];    
     stateVersion = "25.11"; # Please read the comment before changing.    
   };
   programs.home-manager.enable = true;  
   home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
-      source = "${dotfiles}/.config/mozilla/userChrome.css";
-    };    
+    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css"; };    
   } // configs;
   gtk = {
     enable = true;
