@@ -39,7 +39,7 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = "${self.outPath}/modules/hosts/${user}/_home.nix";
+      home = "${self.outPath}/modules/hosts/home/_homelap.nix";
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
