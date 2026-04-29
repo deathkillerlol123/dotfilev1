@@ -41,7 +41,7 @@
         nix-ld = {
           enable = true;
         };
-      };
+     };
    };
  };
 }

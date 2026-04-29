@@ -1,4 +1,7 @@
 {inputs,self,...}:
+let
+  user = "nixboom";
+in
 {
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
