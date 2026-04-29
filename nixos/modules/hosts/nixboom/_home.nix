@@ -4,7 +4,13 @@ let
   firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
   conf ="${dotfiles}/.config";
-  mkFile = src: { source = src; recursive = true;};
+  mkFile = name: {
+    name = name;
+    value = {
+      source = "${dotfiles}/${name}";
+      recursive = true;
+    };
+  };    
   mkconf = name: {
     name = ".config/${name}";
     value = {
@@ -29,6 +35,9 @@ let
     (mkconf "eww")
     (mkconf "quickshell")
     (mkconf "qutebrowser")
+    (mkFile ".zshrc")
+    (mkFile ".emacs")
+    (mkFile ".wezterm.lua")
   ];
 in
 {
@@ -42,9 +51,6 @@ in
   home.file = {
     ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = mkFile "${dotfiles}/.config/mozilla/userChrome.css";
     ".local/share/applications" = mkFile "${dotfiles}/.local/share/applications";     
-    ".zshrc" = mkFile "${dotfiles}/.zshrc";
-    ".emacs" = mkFile "${dotfiles}/.emacs";  
-    ".wezterm.lua" = mkFile "${dotfiles}/.wezterm.lua";
   } // configs;
   gtk = {
     enable = true;
