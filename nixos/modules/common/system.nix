@@ -39,5 +39,6 @@
       nerd-fonts.droid-sans-mono
       nerd-fonts.dejavu-sans-mono      
     ];
+    cachix.pull = [ "nix-community"];
   };
 }
