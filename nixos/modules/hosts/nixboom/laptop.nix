@@ -27,7 +27,7 @@
       enable = true;
       userName = "nixboom";
       groups = ["wheel" "gamemode" "uinput"];
-      flake = self.outpath;
+      flake = self.outPath;
     };
     flatpak = {
       enable = true;
