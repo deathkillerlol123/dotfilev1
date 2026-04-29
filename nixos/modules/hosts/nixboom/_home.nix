@@ -17,6 +17,13 @@ let
       recursive = true;
     };
   };
+  mkdirs = path: {
+    name = path;
+    value = {
+      source = "${dotfiles}/${path}";
+      recursive = true;
+    };
+  };  
   configs = builtins.listToAttrs [
     (mkconf "mango")
     (mkconf "swaylock")
@@ -37,7 +44,7 @@ let
     (mkFile ".zshrc")
     (mkFile ".emacs")
     (mkFile ".wezterm.lua")
-    (mkFile ".local/share/applications")
+    (mkdirs ".local/share/applications")
   ];
 in
 {
