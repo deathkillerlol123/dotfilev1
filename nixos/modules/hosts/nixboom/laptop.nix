@@ -6,7 +6,8 @@ in
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
-    modules =[
+    modules =
+    [
       inputs.home-manager.nixosModules.home-manager
       any.main
       any.laptopConfiguration
