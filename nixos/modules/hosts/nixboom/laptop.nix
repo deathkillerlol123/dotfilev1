@@ -29,8 +29,8 @@ in
     main-user = {
       enable = true;
       userName = user;
+      flakelocation = self.outPath;      
       groups = ["wheel" "gamemode" "uinput"];
-      flakelocation = self.outPath;
     };
     flatpak = {
       enable = true;
