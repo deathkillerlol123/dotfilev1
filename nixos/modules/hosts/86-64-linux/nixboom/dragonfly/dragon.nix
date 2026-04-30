@@ -32,7 +32,7 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = self.nixosModules.boomhom;
+      home = self.nixosModules.boomhome;
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
