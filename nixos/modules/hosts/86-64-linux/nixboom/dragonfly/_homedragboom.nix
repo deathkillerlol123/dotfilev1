@@ -48,20 +48,22 @@ let
   ];
 in
 {
-  home = {
-    username = user;
-    homeDirectory = "/home/${user}";
-    stateVersion = "25.11"; # Please read the comment before changing.    
-  };
-  programs.home-manager.enable = true;  
-  home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css"; };    
-  } // configs;
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.orchis-theme;
-      name = "Orchis-Grey-Dark";
+  flake.nixosModules.boomhome = {config, pkgs,inputs, ... }:{
+    home = {
+      username = user;
+      homeDirectory = "/home/${user}";
+      stateVersion = "25.11"; # Please read the comment before changing.    
+    };
+    programs.home-manager.enable = true;  
+    home.file = {
+      ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css"; };    
+    } // configs;
+    gtk = {
+      enable = true;
+      theme = {
+        package = pkgs.orchis-theme;
+        name = "Orchis-Grey-Dark";
+      };
     };
   };
 }
