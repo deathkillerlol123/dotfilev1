@@ -3,7 +3,19 @@ let
   user = "nixboom";
 in
 {
-  flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{    
+  flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
+    system = "x86_64-linux";
+    specialArgs = {inherit inputs;};
+    modules =
+    [
+      inputs.home-manager.nixosModules.home-manager
+    ];
+  };
+  flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{
+    imports = with self.nixosModules; [
+      main      
+      dragonboomware
+    ];
     lime = {
       enable = true;
       wallpapers = "${self.outPath}/themes/limine_wallpaper";      
@@ -32,4 +44,3 @@ in
     system.stateVersion = "25.11";
   };
 }
- 
