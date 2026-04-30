@@ -1,19 +1,12 @@
+#86-64-linux
 {inputs,self,...}:
 let
   user = "nixboom";
 in
 {
-  flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    specialArgs = {inherit inputs;};
-    modules =
-    [
-      inputs.home-manager.nixosModules.home-manager
-      self.nixosModules.dragboom
-    ];
-  };
   flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
+      inputs.home-manager.nixosModules.home-manager    
       main      
       dragboomware
     ];
