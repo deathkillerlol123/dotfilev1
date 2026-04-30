@@ -24,7 +24,7 @@
         backupFileExtension = config.home-man.ext;
         extraSpecialArgs = { inherit inputs ; };
           users = {
-            config.home-man.user = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/_home.nix";
+            config.home-man.username = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/_home.nix";
           };
       };
     };
