@@ -38,7 +38,6 @@ in
       device = position;
       file = home;
     };
-    nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
   };
 }

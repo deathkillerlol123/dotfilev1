@@ -32,8 +32,7 @@
       viu
       clock-rs
       statix
-      cachix
-    ];
+     ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
       droid-sans-mono
