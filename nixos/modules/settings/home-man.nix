@@ -18,7 +18,7 @@
         backupFileExtension = config.home-man.ext;
         extraSpecialArgs = { inherit inputs ; };
           users = {
-            nixboom = import "config.home-man.home";
+            nixboom = import config.home-man.home;
           };
       };
     };
