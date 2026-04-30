@@ -1,6 +1,9 @@
 {inputs,self,...}:
 let
+  type = "x86_64-linux";
   user = "nixboom";
+  position = "dragonfly";
+  home = "_home.nix";
 in
 {
   flake.nixosModules.dragon = { config, lib, pkgs, inputs,... }:{
@@ -11,7 +14,6 @@ in
     ];
     lime = {
       enable = true;
-      wallpapers = "${self.outPath}/themes/limine_wallpaper";      
       params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
       windows = {
         enable = true;
@@ -21,7 +23,6 @@ in
     main-user = {
       enable = true;
       userName = user;
-      flakelocation = self.outPath;      
       groups = ["wheel" "gamemode" "uinput"];
     };
     flatpak = {
@@ -31,10 +32,10 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      system = "x86_64-linux";
+      system = type;
       username = user;
-      device = "dragonfly";
-      file = "_home.nix";
+      device = position;
+      file = home;
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";

@@ -7,7 +7,7 @@
           default = 3;
         };
         wallpapers = lib.mkOption {
-         default = "${builtins.getEnv "HOME"}/Pictures/Wallpapers";
+	  default = "${self.outPath}/themes/limine_wallpaper";
         };
         params = lib.mkOption {
           default = [""];
