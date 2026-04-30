@@ -6,9 +6,15 @@
         ext = lib.mkOption {
           default = "backup";
         };
-        home = lib.mkOption {
-          default = "";
-        };
+	system = lib.mkOption {
+	  default = "x86_64-linux";
+	};
+	username = lib.mkOption {
+	  default = "nixboom";
+	};
+	device = lib.mkOption {
+	  default = "dragonfly";
+	};
       };
     };
     config = lib.mkIf config.home-man.enable {
@@ -18,7 +24,7 @@
         backupFileExtension = config.home-man.ext;
         extraSpecialArgs = { inherit inputs ; };
           users = {
-            nixboom = import config.home-man.home;
+            config.home-man.user = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/_home.nix";
           };
       };
     };

@@ -32,7 +32,10 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = "${self.outPath}/modules/hosts/86-64-linux/${user}/dragonfly/_homedragboom.nix";
+      system = "x86_64-linux";
+      username = user;
+      device = "dragonfly";
+#      home = "${self.outPath}/modules/hosts/86-64-linux/${user}/dragonfly/_homedragboom.nix";
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
