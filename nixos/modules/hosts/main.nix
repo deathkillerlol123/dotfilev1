@@ -1,18 +1,18 @@
 {inputs,self,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
-    imports = [
-      self.nixosModules.login
-      self.nixosModules.system
-      self.nixosModules.environment
-      self.nixosModules.software
-      self.nixosModules.aesthetics
-      self.nixosModules.gaming
-      self.nixosModules.portals     
-      self.nixosModules.sound
-      self.nixosModules.flatpak
-      self.nixosModules.lime
-      self.nixosModules.main-user
-      self.nixosModules.home-man                  
+    imports = with self.nixosModules; [
+      login
+      system
+      environment
+      software
+      aesthetics
+      gaming
+      portals     
+      sound
+      flatpak
+      lime
+      main-user
+      home-man                  
     ];
     documentation.enable = false;
     boot = {
