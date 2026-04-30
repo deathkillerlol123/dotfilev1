@@ -15,7 +15,7 @@
         groups = lib.mkOption {
           default = ["wheel"];
         };
-	home-manager.enable = lib.mkEnableoption "homemanager";
+	home-man.enable = lib.mkEnableoption "homemanager";
         home-man = {
           ext = lib.mkOption {
             default = "backup";
