@@ -3,9 +3,8 @@
   flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
-    modules =
-    [
-      self.nixosModules.dragon
+    modules = with self.nixosModules; [
+      dragon
     ];
   };
 }
