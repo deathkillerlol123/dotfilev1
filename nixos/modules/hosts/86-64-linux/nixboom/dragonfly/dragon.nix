@@ -32,7 +32,7 @@ in
     home-man = {
       enable = true;
       ext = "hm-backup";
-      home = self.nixosModules.boomhome;
+      home = "${self.outPath}/modules/hosts/86-64-linux/${user}/dragonfly/_homedragboom.nix";
     };
     nix.settings.trusted-users = [ "root" user ];
     system.stateVersion = "25.11";
