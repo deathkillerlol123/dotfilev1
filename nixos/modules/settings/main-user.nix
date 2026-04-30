@@ -10,7 +10,7 @@
           default = "fish";
         };
         flakelocation = lib.mkOption {
-          default = "/etc/nixos/";
+          default = "${self.outPath}";
         };
         groups = lib.mkOption {
           default = ["wheel"];
@@ -36,7 +36,7 @@
         nh = {
           enable = true;
     	  clean.enable = true;
-  	  flake = config.main-user.flakelocation;
+  	  flake = "${self.outPath}";
         };
         nix-ld = {
           enable = true;
