@@ -13,14 +13,6 @@ in
       main      
       dragboomware
     ];
-    lime = {
-      enable = true;
-      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
-      windows = {
-        enable = true;
-        location = windows_efi;
-      };
-    };
     main-user = {
       username = user;
       groups = ["wheel" "gamemode" "uinput"];
@@ -32,6 +24,14 @@ in
 	file = home;
       };
     };
+    lime = {
+      enable = true;
+      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
+      windows = {
+        enable = true;
+        location = windows_efi;
+      };
+    };    
     flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
     system.stateVersion = "25.11";
   };
