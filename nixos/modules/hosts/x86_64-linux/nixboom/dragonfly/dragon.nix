@@ -23,7 +23,7 @@ in
     };
     main-user = {
       enable = true;
-      userName = user;
+      username = user;
       groups = ["wheel" "gamemode" "uinput"];
       home-man = {
         enable = true;
