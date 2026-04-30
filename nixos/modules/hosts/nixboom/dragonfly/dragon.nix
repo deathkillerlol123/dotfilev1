@@ -15,7 +15,7 @@ in
   flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
       main      
-      dragonboomware
+      dragboomware
     ];
     lime = {
       enable = true;
