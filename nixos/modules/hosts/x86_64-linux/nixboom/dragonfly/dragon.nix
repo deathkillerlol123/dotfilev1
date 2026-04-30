@@ -29,7 +29,6 @@ in
         enable = true;
 	ext = "hm-backup";
 	system = type;
-	username = user;
 	device = position;
 	file = home;
       };
