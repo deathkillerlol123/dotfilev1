@@ -1,14 +1,13 @@
 {inputs,self,...}:{
   flake.nixosModules.flatpak = {inputs,lib,config,pkgs,...}:{
     options = {
-      flatpak.enable = lib.mkEnableOption "apps";
       flatpak = {
         apps = lib.mkOption {
           default = "";
         };
       };
     };
-    config = lib.mkIf config.flatpak.enable (
+    config = (
       let
         grep = pkgs.gnugrep;
         desiredFlatpaks = config.flatpak.apps;
