@@ -3,19 +3,6 @@ let
   user = "nixboom";
 in
 {
-  flake.nixosConfigurations.nixbtw = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    specialArgs = {inherit inputs;};
-    modules =
-    [
-      inputs.home-manager.nixosModules.home-manager
-    ]++
-    (with self.nixosModules; [
-      main
-      dragboom
-      dragboomware
-    ]);    
-  };
   flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{    
     lime = {
       enable = true;
