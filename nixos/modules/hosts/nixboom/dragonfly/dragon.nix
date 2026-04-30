@@ -9,6 +9,7 @@ in
     modules =
     [
       inputs.home-manager.nixosModules.home-manager
+      self.nixosModules.dragonboom
     ];
   };
   flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{
