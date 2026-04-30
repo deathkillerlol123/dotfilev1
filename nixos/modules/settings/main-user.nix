@@ -3,8 +3,8 @@
     options  = {
       main-user.enable = lib.mkEnableOption "enable user module";
       main-user = {
-        userName = lib.mkOption {
-          default = "mainuser";
+        username = lib.mkOption {
+          default = "nixboom";
         };
         shell = lib.mkOption {
           default = "fish";
@@ -23,9 +23,6 @@
    	  system = lib.mkOption {
    	    default = "x86_64-linux";
    	  };
-     	  username = lib.mkOption {
-   	    default = "nixboom";
-   	  };
    	  device = lib.mkOption {
    	    default = "dragonfly";
    	  };
@@ -36,14 +33,14 @@
       };
     };
     config = lib.mkIf config.main-user.enable {
-      users.users.${config.main-user.userName} = {
+      users.users.${config.main-user.username} = {
         isNormalUser = true;
         shell = pkgs.${config.main-user.shell};
         extraGroups = config.main-user.groups;
       };
       security = {
         sudo.extraRules = [{
-          users = [config.main-user.userName];
+          users = [config.main-user.username];
           commands = [{ command = "ALL";
             options = ["NOPASSWD"];
           }];
@@ -63,10 +60,11 @@
      home-manager = {
        useUserPackages = true;
        useGlobalPkgs = true;
-       backupFileExtension = config.home-man.ext;
+       backupFileExtension = config.main-user.home-man.ext;
        extraSpecialArgs = { inherit inputs ; };
        users = {
-         "${config.home-man.username}" = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/${config.home-man.file}";
+         "${config.main-user.home-man.username}" =
+	 import "${self.outPath}/modules/hosts/${config.main-user.home-man.system}/${config.main-user.username}/${config.main-user.home-man.device}/${config.main-user.home-man.file}";
        };
       };
     };     
