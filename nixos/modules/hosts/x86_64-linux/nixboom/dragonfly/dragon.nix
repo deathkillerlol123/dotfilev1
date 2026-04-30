@@ -25,19 +25,19 @@ in
       enable = true;
       userName = user;
       groups = ["wheel" "gamemode" "uinput"];
+      home-man = {
+        enable = true;
+	ext = "hm-backup";
+	system = type;
+	username = user;
+	device = position;
+	file = home;
+      };
     };
     flatpak = {
       enable = true;
       apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
-    };
-    home-man = {
-      enable = true;
-      ext = "hm-backup";
-      system = type;
-      username = user;
-      device = position;
-      file = home;
-    };
+    };    
     system.stateVersion = "25.11";
   };
 }

@@ -15,6 +15,24 @@
         groups = lib.mkOption {
           default = ["wheel"];
         };
+	home-manager.enable = lib.mkEnableoption "homemanager";
+        home-man = {
+          ext = lib.mkOption {
+            default = "backup";
+          };
+   	  system = lib.mkOption {
+   	    default = "x86_64-linux";
+   	  };
+     	  username = lib.mkOption {
+   	    default = "nixboom";
+   	  };
+   	  device = lib.mkOption {
+   	    default = "dragonfly";
+   	  };
+   	  file = lib.mkOption {
+   	    default = "_home.nix";
+   	  };
+	};	
       };
     };
     config = lib.mkIf config.main-user.enable {
@@ -42,6 +60,15 @@
           enable = true;
         };
      };
-   };
- };
+     home-manager = {
+       useUserPackages = true;
+       useGlobalPkgs = true;
+       backupFileExtension = config.home-man.ext;
+       extraSpecialArgs = { inherit inputs ; };
+       users = {
+         "${config.home-man.username}" = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/${config.home-man.file}";
+       };
+      };
+    };     
+  };
 }
