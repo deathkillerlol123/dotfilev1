@@ -57,14 +57,14 @@
           enable = true;
         };
       };
-    };
-    home-manager = {
-      useUserPackages = true;
-      useGlobalPkgs = true;
-      backupFileExtension = config.main-user.home-man.ext;
-      extraSpecialArgs = { inherit inputs ; };
-      users = {
-        "${config.main-user.username}" = import "${self.outPath}/modules/hosts/${config.main-user.home-man.system}/${config.main-user.username}/${config.main-user.home-man.device}/${config.main-user.home-man.file}";
+      home-manager = {
+        useUserPackages = true;
+	useGlobalPkgs = true;
+	backupFileExtension = config.main-user.home-man.ext;
+	extraSpecialArgs = { inherit inputs ; };
+	users = {
+          "${config.main-user.username}" = import "${self.outPath}/modules/hosts/${config.main-user.home-man.system}/${config.main-user.username}/${config.main-user.home-man.device}/${config.main-user.home-man.file}";
+        };
       };
     };
   };
