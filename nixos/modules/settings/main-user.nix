@@ -32,7 +32,7 @@
 	};	
       };
     };
-    config = lib.mkIf config.main-user.enable {
+    config = {
       users.users.${config.main-user.username} = {
         isNormalUser = true;
         shell = pkgs.${config.main-user.shell};

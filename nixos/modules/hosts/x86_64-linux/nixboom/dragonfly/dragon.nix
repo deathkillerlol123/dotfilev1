@@ -22,7 +22,6 @@ in
       };
     };
     main-user = {
-      enable = true;
       username = user;
       groups = ["wheel" "gamemode" "uinput"];
       home-man = {
@@ -33,9 +32,7 @@ in
 	file = home;
       };
     };
-    flatpak = {
-       apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
-    };    
+    flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
     system.stateVersion = "25.11";
   };
 }
