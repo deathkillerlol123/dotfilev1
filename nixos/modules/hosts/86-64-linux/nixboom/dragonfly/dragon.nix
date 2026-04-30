@@ -4,7 +4,7 @@ let
   user = "nixboom";
 in
 {
-  flake.nixosModules.dragboom = { config, lib, pkgs, inputs,... }:{
+  flake.nixosModules.dragon = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
       inputs.home-manager.nixosModules.home-manager    
       main      

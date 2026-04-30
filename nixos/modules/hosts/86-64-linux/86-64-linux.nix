@@ -5,7 +5,7 @@
     specialArgs = {inherit inputs;};
     modules =
     [
-      self.nixosModules.dragboom
+      self.nixosModules.dragon
     ];
   };
 }
