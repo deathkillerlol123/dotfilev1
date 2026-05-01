@@ -18,13 +18,12 @@ in
       groups = ["wheel" "gamemode" "uinput"];
     };
     home-man = {
-        enable = true;
-	username = user;
-	ext = "hm-backup";
-	system = type;
-	device = position;
-	file = home;
-      };
+      enable = true;
+      username = user;
+      ext = "hm-backup";
+      system = type;
+      device = position;
+      file = home;
     };
     lime = {
       enable = true;
