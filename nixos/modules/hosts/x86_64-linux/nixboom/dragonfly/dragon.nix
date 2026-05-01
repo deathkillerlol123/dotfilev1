@@ -32,7 +32,7 @@ in
         location = windows_efi;
       };
     };    
-    flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard" ];
+    flatpak.apps = ["org.vinegarhq.Sober" ];
     system.stateVersion = "25.11";
   };
 }
