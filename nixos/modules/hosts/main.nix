@@ -11,6 +11,7 @@
       sound
       flatpak
       lime
+      main-user
     ];
     documentation.enable = false;
     boot = {
