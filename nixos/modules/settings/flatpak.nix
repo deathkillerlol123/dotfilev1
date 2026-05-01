@@ -7,7 +7,7 @@
         };
       };
     };
-    config = (
+    config = 
       let
         grep = pkgs.gnugrep;
         desiredFlatpaks = config.flatpak.apps;
@@ -31,7 +31,6 @@
             ${pkgs.flatpak}/bin/flatpak update -y
           '';
         };
-      }
-    );
+      };
   };
 }
