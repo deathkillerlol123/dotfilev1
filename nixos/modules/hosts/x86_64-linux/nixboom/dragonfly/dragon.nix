@@ -16,8 +16,10 @@ in
     main-user = {
       username = user;
       groups = ["wheel" "gamemode" "uinput"];
-      home-man = {
+    };
+    home-man = {
         enable = true;
+	username = user;
 	ext = "hm-backup";
 	system = type;
 	device = position;

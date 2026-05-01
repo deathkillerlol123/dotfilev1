@@ -12,6 +12,7 @@
       flatpak
       lime
       main-user
+      home-man
     ];
     documentation.enable = false;
     boot = {
