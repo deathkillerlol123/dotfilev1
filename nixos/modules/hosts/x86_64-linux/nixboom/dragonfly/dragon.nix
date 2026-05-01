@@ -11,7 +11,6 @@ in
     imports = with self.nixosModules; [
       inputs.home-manager.nixosModules.home-manager    
       main
-      main-user
       dragboomware
     ];
     main-user = {
