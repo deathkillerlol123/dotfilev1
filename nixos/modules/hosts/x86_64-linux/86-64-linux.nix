@@ -5,7 +5,6 @@
     specialArgs = {inherit inputs;};
     modules = with self.nixosModules; [
       dragon
-      trial
     ];
   };
 }

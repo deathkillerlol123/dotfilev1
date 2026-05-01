@@ -10,7 +10,8 @@ in
   flake.nixosModules.dragon = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
       inputs.home-manager.nixosModules.home-manager    
-      main      
+      main
+      main-user
       dragboomware
     ];
     main-user = {
