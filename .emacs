@@ -43,6 +43,19 @@
  (kbd "C-x k")
  'volatile-kill-buffer)
 
+(defun mm/generate-temp-buffer (buf)
+  "A function to generate temprory buffers using either
+a random name or given name"
+  (interactive "sNew temp buffer name: ")
+  (switch-to-buffer
+   (get-buffer-create
+    (concat "*tmp*"
+            (if (equal buf "")
+                (make-temp-name "")
+              buf)
+            "*")
+    )))
+
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
 (setq vc-follow-symlinks t)

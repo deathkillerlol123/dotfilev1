@@ -1,47 +1,77 @@
-{inputs,self,...}:{
-  flake.nixosModules.main-user = {lib,config,pkgs,...}:{
-    options  = {
-      main-user.enable = lib.mkEnableOption "enable user module";
-      main-user = {
-        username = lib.mkOption {
-          default = "nixboom";
-        };
-        shell = lib.mkOption {
-          default = "fish";
-        };
-        flakelocation = lib.mkOption {
-          default = "${self.outPath}";
-        };
-        groups = lib.mkOption {
-          default = ["wheel"];
-        };	
+{ inputs, self, ... }:
+{
+  flake.nixosModules.users = { lib, config, pkgs, ... }:
+
+  let
+    cfg = config.usersConfig;
+  in
+  {
+    options.usersConfig = {
+      enable = lib.mkEnableOption "enable multi-user module";
+
+      users = lib.mkOption {
+        type = lib.types.attrsOf (lib.types.submodule ({ name, ... }: {
+          options = {
+            shell = lib.mkOption {
+              type = lib.types.str;
+              default = "bash";
+            };
+
+            groups = lib.mkOption {
+              type = lib.types.listOf lib.types.str;
+              default = [];
+            };
+          };
+        }));
+
+        default = {};
+        description = "Attribute set of users to create on the system";
       };
     };
-    config = {
-      users.users.${config.main-user.username} = {
+
+    config = lib.mkIf cfg.enable {
+
+      # -------------------------
+      # Users
+      # -------------------------
+      users.users = lib.mapAttrs (name: u: {
         isNormalUser = true;
-        shell = pkgs.${config.main-user.shell};
-        extraGroups = config.main-user.groups;
-      };
-      security = {
-        sudo.extraRules = [{
-          users = [config.main-user.username];
-          commands = [{ command = "ALL";
-            options = ["NOPASSWD"];
+        shell = lib.getAttr u.shell pkgs;
+        extraGroups = u.groups;
+      }) cfg.users;
+
+      # -------------------------
+      # Sudo rules (passwordless)
+      # -------------------------
+      security.sudo.extraRules =
+        lib.mapAttrsToList (name: _: {
+          users = [ name ];
+          commands = [{
+            command = "ALL";
+            options = [ "NOPASSWD" ];
           }];
-        }];
-      };
-      programs = {
-        ${config.main-user.shell}.enable = true;
-        nh = {
-          enable = true;
-    	  clean.enable = true;
-  	  flake = "${self.outPath}";
-        };
-        nix-ld = {
-          enable = true;
-        };
-      };
+        }) cfg.users;
+
+      # -------------------------
+      # Programs
+      # -------------------------
+      programs =
+        {
+          nh = {
+            enable = true;
+            clean.enable = true;
+            flake = self.outPath;
+          };
+
+          nix-ld.enable = true;
+        }
+
+        # Enable fish only if any user uses it
+        // lib.optionalAttrs
+          (lib.any (u: u.shell == "fish") (lib.attrValues cfg.users))
+          {
+            fish.enable = true;
+          };
     };
   };
 }

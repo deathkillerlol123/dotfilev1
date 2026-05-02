@@ -11,7 +11,7 @@
       sound
       flatpak
       lime
-      main-user
+      users
       home-man
     ];
     documentation.enable = false;
