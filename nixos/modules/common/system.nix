@@ -13,7 +13,6 @@
       ntfs3g
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
-      wlr-randr
 
       starship
       bash
@@ -30,7 +29,6 @@
       fastfetch
       fd
       viu
-      clock-rs
       statix
      ];
     fonts.packages = with pkgs; with nerd-fonts; [
