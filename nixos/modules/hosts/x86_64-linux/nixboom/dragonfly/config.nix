@@ -13,6 +13,10 @@ in
       main
       dragboomware
     ];
+    main-user = {
+      username = user;
+      groups = ["wheel" "gamemode" "uinput"];
+    };
     home-man = {
       enable = true;
       username = user;
