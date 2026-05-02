@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-cd ~/dotfiles/scripts/colorschem/
-value="$(cat last_wall.txt)"
+cd ~/dotfiles/nixos/themes/limine_wallpaper/
+value="$(ls)"
 
 swww img "$value" --transition-type outer --transition-step 90
 
