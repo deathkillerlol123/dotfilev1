@@ -33,7 +33,6 @@ in
         location = windows_efi;
       };
     };    
-    flatpak.apps = ["org.vinegarhq.Sober" ];
     system.stateVersion = "25.11";
   };
 }
