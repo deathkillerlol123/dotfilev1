@@ -23,7 +23,6 @@
       yazi
       eza
       bat
-      dysk    
       bottom
       cmatrix
       fastfetch
