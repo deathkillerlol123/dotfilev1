@@ -221,7 +221,7 @@
       "showUnknown": false,
       "folders": "",
       "hideFolders": "/efi:/boot:/boot/*",
-      "hideFS": "",
+      "hideFS": "true",
       "useAvailable": false,
       "percent": {
         "green": 50,
@@ -232,7 +232,7 @@
     {
       "type": "cpu",
       "keyIcon": "",
-      "temp": true,
+      "temp": false,
       "showPeCoreCount": false
     },
     {
