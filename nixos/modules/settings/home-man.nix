@@ -9,9 +9,6 @@
    	system = lib.mkOption {
    	  default = "x86_64-linux";
    	};
-   	device = lib.mkOption {
-   	  default = "dragonfly";
-   	};
    	file = lib.mkOption {
    	  default = "_home.nix";
    	};
@@ -27,7 +24,7 @@
 	backupFileExtension = config.home-man.ext;
 	extraSpecialArgs = { inherit inputs ; };
 	users = {
-          "${config.main-user.username}" = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.device}/${config.home-man.file}";
+          "${config.main-user.username}" = import "${self.outPath}/modules/hosts/${config.home-man.system}/${config.home-man.username}/${config.home-man.file}";
         };
       };
     };
