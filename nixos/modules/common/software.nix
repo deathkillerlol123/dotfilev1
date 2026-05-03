@@ -14,6 +14,7 @@
       swappy
       wl-clipboard
       wezterm
+      alarm-clock-applet
   #    qbittorrent qutebrowser
 
    ];
