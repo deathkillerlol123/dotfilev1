@@ -7,7 +7,6 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
   --exclude "$HOME/dotfiles/.gitignore" \
   --exclude "$HOME/Documents/codes/venv" \
   --exclude "$HOME/Downloads/isoss" \
-  --exclude "$HOME/dotfiles/.mozilla" \
   ~/Documents \
   ~/Downloads \
   ~/Pictures/Screenshots \
