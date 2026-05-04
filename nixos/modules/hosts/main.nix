@@ -16,6 +16,7 @@
     ];
     documentation.enable = false;
     boot = {
+      tmp.cleanOnBoot = true;    
       kernelPackages = pkgs.linuxPackages_latest;
       consoleLogLevel = 3;
       kernelParams = [
@@ -24,7 +25,6 @@
         "zswap.max_pool_percent=20"      
         "zswap.shrinker.enabled=1"
       ];
-      tmp.cleanOnBoot = true;
     };
     services = {
       blueman.enable = true;
