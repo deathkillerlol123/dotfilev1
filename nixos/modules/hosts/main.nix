@@ -24,7 +24,7 @@
         "zswap.max_pool_percent=20"      
         "zswap.shrinker.enabled=1"
       ];
-      cleanTmpDir = true;
+      tmp.cleanOnBoot = true;
     };
     services = {
       blueman.enable = true;
