@@ -11,10 +11,6 @@
 	    type = lib.types.nullOr lib.types.package;
 	    default = null;	  
 	  };
-	  flakelocation = lib.mkOption {
-	    type = lib.types.str;
-            default = "${self.outPath}";
-	  };
 	  groups = lib.mkOption {
 	    type = lib.types.listOf lib.types.str;
             default = ["wheel"];
