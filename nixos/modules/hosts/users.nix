@@ -1,4 +1,3 @@
-{inputs,self,...}:
 {
   flake.nixosModules.users = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
@@ -8,10 +7,8 @@
     main-user.users = {
       nixboom = {
         enable = true;
-	shell = pkgs.fish;
-	groups = ["wheel" "gamemode" "uinput"];
+        groups = ["wheel" "gamemode" "uinput"];
       };
     };
   };
 }
-    

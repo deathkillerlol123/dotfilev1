@@ -24,7 +24,6 @@
     };
     config = let
       cfg = config.main-user.users;
-    
       enabledUsers = lib.filterAttrs (_: u: u.enable) cfg;
     in {
       users.users = lib.mapAttrs (name: u: {
