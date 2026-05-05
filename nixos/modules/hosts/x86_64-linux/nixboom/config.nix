@@ -15,7 +15,7 @@ in
     main-user.users = {
       nixboom = {
         enable = true;
-	shell = "fish";
+	shell = pkgs.fish;
         groups = ["wheel" "gamemode" "uinput"];
       };
     };
