@@ -12,9 +12,12 @@ in
       main
       dragboomware
     ];
-    main-user = {
-      username = user;
-      groups = ["wheel" "gamemode" "uinput"];
+    main-user.users = {
+      nixboom = {
+        enable = true;
+	shell = "fish";
+        groups = ["wheel" "gamemode" "uinput"];
+      };
     };
     home-man = {
       enable = true;

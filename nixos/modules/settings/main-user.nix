@@ -1,44 +1,52 @@
 {inputs,self,...}:{
   flake.nixosModules.main-user = {lib,config,pkgs,...}:{
-    options.main-user  = {
-      enable = lib.mkEnableOption "enable user module";
-      username = lib.mkOption {
-        default = "nixboom";
-      };
-      shell = lib.mkOption {
-        default = "fish";
-      };
-      flakelocation = lib.mkOption {
-        default = "${self.outPath}";
-      };
-      groups = lib.mkOption {
-        default = ["wheel"];
-      };
+    options.main-user.users= lib.mkOption {
+      type = lib.types.attrsOf (lib.types.submodule ({ name, ... }: {
+        options = {
+	  enable = lib.mkEnableOption "enable user module";
+	  username = lib.mkOption {
+            default = "nixboom";
+	  };
+	  shell = lib.mkOption {
+	    type = lib.types.str;
+            default = pkgs.fish;
+	  };
+	  flakelocation = lib.mkOption {
+	    type = lib.types.str;
+            default = "${self.outPath}";
+	  };
+	  groups = lib.mkOption {
+	    type = lib.types.listOf lib.types.str;
+            default = ["wheel"];
+	  };
+        };
+      }));
     };
-    config = {
-      users.users.${config.main-user.username} = {
+    config = let
+      cfg = config.main-user.users;
+    
+      enabledUsers = lib.filterAttrs (_: u: u.enable) cfg;
+    in {
+      users.users = lib.mapAttrs (name: u: {
         isNormalUser = true;
-        shell = pkgs.${config.main-user.shell};
-        extraGroups = config.main-user.groups;
-      };
-      security = {
-        sudo.extraRules = [{
-          users = [config.main-user.username];
-          commands = [{ command = "ALL";
-            options = ["NOPASSWD"];
+        shell = pkgs.${u.shell};
+        extraGroups = u.groups;
+      }) enabledUsers;
+      security.sudo.extraRules =
+        lib.mapAttrsToList (name: _: {
+          users = [ name ];
+          commands = [{
+            command = "ALL";
+            options = [ "NOPASSWD" ];
           }];
-        }];
-      };
+        }) enabledUsers;
       programs = {
-        ${config.main-user.shell}.enable = true;
         nh = {
           enable = true;
-    	  clean.enable = true;
-  	  flake = "${self.outPath}";
+          clean.enable = true;
+          flake = "${self.outPath}";
         };
-        nix-ld = {
-          enable = true;
-        };
+        nix-ld.enable = true;
       };
     };
   };
