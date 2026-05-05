@@ -8,8 +8,8 @@
             default = "nixboom";
 	  };
 	  shell = lib.mkOption {
-	    type = lib.types.str;
-            default = pkgs.fish;
+	    type = lib.types.nullOr lib.types.package;
+	    default = null;	  
 	  };
 	  flakelocation = lib.mkOption {
 	    type = lib.types.str;
@@ -29,7 +29,7 @@
     in {
       users.users = lib.mapAttrs (name: u: {
         isNormalUser = true;
-        shell = pkgs.${u.shell};
+	shell = if u.shell == null then pkgs.fish else u.shell;
         extraGroups = u.groups;
       }) enabledUsers;
       security.sudo.extraRules =
