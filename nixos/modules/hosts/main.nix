@@ -29,7 +29,7 @@
     services = {
       blueman.enable = true;
       flatpak.enable = true;
-      logind.killUserProcesses = true;
+      logind.settings.Login.KillUserProcesses = true;
       libinput.enable = true;
       xserver.wacom.enable = true;
       fwupd.enable = false;
