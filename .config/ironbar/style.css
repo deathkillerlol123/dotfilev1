@@ -1,7 +1,0 @@
-@import "colors.css";
-
-@define-color background-color @color3;
-
-box, menubar {
-    background-color: @background-color;
-}
