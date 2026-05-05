@@ -18,6 +18,11 @@ in
 	shell = pkgs.fish;
         groups = ["wheel" "gamemode" "uinput"];
       };
+      triangle = {
+        enable = true;
+	shell = pkgs.fish;
+	groups = ["wheel" "gamemode"];
+      };
     };
     home-man = {
       enable = true;
