@@ -3,7 +3,7 @@
   flake.nixosModules.users = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
       main-user
-      dragon
+      nixdrag
     ];
     main-user.users = {
       nixboom = {
