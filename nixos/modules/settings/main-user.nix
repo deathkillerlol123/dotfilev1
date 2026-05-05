@@ -47,6 +47,7 @@
           flake = "${self.outPath}";
         };
         nix-ld.enable = true;
+	fish.enable = true;	
       };
     };
   };
