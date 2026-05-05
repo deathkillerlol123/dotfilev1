@@ -16,7 +16,7 @@ in
       nixboom = {
         enable = true;
 	shell = pkgs.fish;
-        groups = ["wheel" "gamemode"];
+        groups = ["wheel" "gamemode" "uinput"];
       };
     };
     home-man = {
