@@ -8,7 +8,6 @@ in
 {
   flake.nixosModules.nixboom = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
-      inputs.home-manager.nixosModules.home-manager    
       main
       dragboomware
     ];
