@@ -4,9 +4,6 @@
       type = lib.types.attrsOf (lib.types.submodule ({ name, ... }: {
         options = {
 	  enable = lib.mkEnableOption "enable user module";
-	  username = lib.mkOption {
-            default = "nixboom";
-	  };
 	  shell = lib.mkOption {
 	    type = lib.types.nullOr lib.types.package;
 	    default = null;	  
