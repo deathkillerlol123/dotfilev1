@@ -27,10 +27,6 @@ in
       };
     };    
     flatpak.apps = ["org.vinegarhq.Sober" ];
-    services.flatpak.packages = [
-      { appId = "com.brave.Browser"; origin = "flathub";  }
-      "ch.openboard.OpenBoard"
-    ];    
     system.stateVersion = "25.11";
   };
 }
