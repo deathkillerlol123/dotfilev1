@@ -12,6 +12,7 @@
       flatpak
       lime
       home-man
+      nixvim
     ];
     documentation.enable = false;
     boot = {
