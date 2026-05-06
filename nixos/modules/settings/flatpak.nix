@@ -1,5 +1,8 @@
 {inputs,self,...}:{
   flake.nixosModules.flatpak = {inputs,lib,config,pkgs,...}:{
+    imports = [
+      nix-flatpak.nixosModules.nix-flatpak
+    ];
     options = {
       flatpak = {
         apps = lib.mkOption {
