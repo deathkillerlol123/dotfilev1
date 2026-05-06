@@ -17,7 +17,6 @@
       starship
       bash
       fish
-      neovim
       zoxide
       emacs
       yazi
