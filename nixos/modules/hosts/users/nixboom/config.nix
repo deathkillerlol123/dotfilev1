@@ -27,6 +27,9 @@ in
       };
     };    
     flatpak.apps = ["org.vinegarhq.Sober" ];
+    services.flatpak.packages = [
+      "com.obsproject.Studio"
+    ];
     system.stateVersion = "25.11";
   };
 }
