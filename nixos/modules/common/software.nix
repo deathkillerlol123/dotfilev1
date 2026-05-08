@@ -15,8 +15,7 @@
       wl-clipboard
       wezterm
       alarm-clock-applet
-  #    qbittorrent qutebrowser
-
+      python315
    ];
   };
 }
