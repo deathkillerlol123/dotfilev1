@@ -16,7 +16,7 @@
       wezterm
       alarm-clock-applet
       python315
-      pip
+      pipx
    ];
   };
 }
