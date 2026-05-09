@@ -27,6 +27,8 @@ in
       };
     };    
     flatpak.apps = ["org.vinegarhq.Sober" ];
+    networking.firewall.allowedTCPPorts = [ 6642 ];
+    networking.firewall.allowedUDPPorts = [ 6642 ];    
     system.stateVersion = "25.11";
   };
 }
