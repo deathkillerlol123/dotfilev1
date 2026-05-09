@@ -25,7 +25,6 @@
       alsa-utils
       pulseaudio
       wireplumber
-      easyeffects
     ];
     security.wrappers.noisetorch = {
       owner = "root";
