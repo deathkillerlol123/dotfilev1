@@ -13,7 +13,7 @@
       ntfs3g
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
-
+      qbittorrent
       starship
       bash
       fish
