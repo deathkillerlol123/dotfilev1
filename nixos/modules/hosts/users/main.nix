@@ -32,13 +32,16 @@
       libinput.enable = true;
       xserver.wacom.enable = true;
       fwupd.enable = false;
+      thermald.enable = true;
     };
     programs.dconf.enable = true;
     systemd.services.NetworkManager-wait-online.enable = false;  
     time.timeZone = "Europe/London"; 
     networking = {
       hostName = "nixbtw";
-      networkmanager.enable = true;  };
+      networkmanager.enable = true;
+      nameservers = [ "1.1.1.1" "8.8.8.8" ];      
+    };
     system = {
       autoUpgrade = {
         enable = true;
