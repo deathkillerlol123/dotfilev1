@@ -34,8 +34,10 @@
       fwupd.enable = false;
       thermald.enable = true;
     };
-    programs.dconf.enable = true;
-    programs.kdeconnect.enable = true;
+    programs = {
+      dconf.enable = true;
+      kdeconnect.enable = true;
+    };
     systemd.services.NetworkManager-wait-online.enable = false;  
     time.timeZone = "Europe/London"; 
     networking = {

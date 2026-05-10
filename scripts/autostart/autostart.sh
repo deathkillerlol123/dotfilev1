@@ -6,6 +6,7 @@ swaync &
 
 brightnessctl set 10% &
 
+kdeconnectd &
 "$HOME/dotfiles/scripts/niri_monitors/placement.sh" &
 
 "$HOME/dotfiles/scripts/colorschem/start_wall.sh" &
