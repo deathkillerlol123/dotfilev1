@@ -28,7 +28,6 @@
       fd
       viu
       statix
-      kdePackages.kdeconnect-kde      
      ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
