@@ -16,7 +16,7 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
   };
-    outputs = { self, nixpkgs,flake-parts, denix, ... }@inputs:
+    outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
