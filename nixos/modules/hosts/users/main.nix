@@ -33,6 +33,7 @@
       xserver.wacom.enable = true;
       fwupd.enable = false;
       thermald.enable = true;
+      power-profiles-daemon.enable = true;
     };
     programs = {
       dconf.enable = true;
