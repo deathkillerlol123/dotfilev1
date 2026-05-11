@@ -8,15 +8,13 @@
         Type = "oneshot";
 
         ExecStart = ''
-          ${pkgs.bash}/bin/bash -euc "
-            STATE=$(cat /sys/class/power_supply/AC/online 2>/dev/null || echo 0)
+          ${pkgs.coreutils}/bin/test -f /sys/class/power_supply/AC/online
 
-            if [ \"$STATE\" = \"1\" ]; then
-              ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
-            else
-              ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
-            fi
-          "
+          STATE=$(${pkgs.coreutils}/bin/cat /sys/class/power_supply/AC/online 2>/dev/null || echo 0)
+
+          ${pkgs.coreutils}/bin/test "$STATE" = "1" \
+            && ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance \
+            || ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
         '';
       };
     };
@@ -35,15 +33,13 @@
         Type = "oneshot";
 
         ExecStart = ''
-          ${pkgs.bash}/bin/bash -euc "
-            STATE=$(cat /sys/class/power_supply/AC/online 2>/dev/null || echo 0)
+          ${pkgs.coreutils}/bin/test -f /sys/class/power_supply/AC/online
 
-            if [ \"$STATE\" = \"1\" ]; then
-              ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
-            else
-              ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
-            fi
-          "
+          STATE=$(${pkgs.coreutils}/bin/cat /sys/class/power_supply/AC/online 2>/dev/null || echo 0)
+
+          ${pkgs.coreutils}/bin/test "$STATE" = "1" \
+            && ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance \
+            || ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
         '';
       };
     };
