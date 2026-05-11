@@ -28,6 +28,7 @@
       fd
       viu
       statix
+      inotify-tools
      ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
