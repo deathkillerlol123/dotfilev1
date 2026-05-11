@@ -28,7 +28,7 @@
       fd
       viu
       statix
-      gnomeExtensions.auto-power-profile
+      gnomeExtensions.power-profile-switcher
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
