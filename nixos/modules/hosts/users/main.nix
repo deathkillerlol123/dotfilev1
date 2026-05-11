@@ -33,7 +33,6 @@
       xserver.wacom.enable = true;
       fwupd.enable = false;
       thermald.enable = true;
-      power-profiles-daemon.enable = true;
       tlp = {
         enable = true;
 	settings = {
