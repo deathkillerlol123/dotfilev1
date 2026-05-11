@@ -9,14 +9,18 @@
     	  url = "github:nix-community/home-manager";
 	  inputs.nixpkgs.follows = "nixpkgs";
       };
-      flake-parts.url = "github:hercules-ci/flake-parts";
-      import-tree.url = "github:vic/import-tree";
-      denix = {
-        url = "github:yunfachi/denix";
-        inputs.nixpkgs.follows = "nixpkgs";
-        inputs.home-manager.follows = "home-manager";
-        inputs.nix-darwin.follows = "nix-darwin";
-      };	
+	flake-parts.url = "github:hercules-ci/flake-parts";
+	import-tree.url = "github:vic/import-tree";
+	nix-darwin = {
+	    url = "github:nix-darwin/nix-darwin/master";
+	    inputs.nixpkgs.follows = "nixpkgs";
+	};
+	denix = {
+            url = "github:yunfachi/denix";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.home-manager.follows = "home-manager";
+            inputs.nix-darwin.follows = "nix-darwin";
+	};	
   };
   outputs = { self, nixpkgs,flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
