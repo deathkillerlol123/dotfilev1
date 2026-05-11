@@ -28,8 +28,8 @@
       fd
       viu
       statix
-      inotify-tools
-     ];
+      gnomeExtensions.auto-power-profile
+      ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
       droid-sans-mono
