@@ -22,7 +22,7 @@
             inputs.nix-darwin.follows = "nix-darwin";
 	};	
   };
-  outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    outputs = { self, nixpkgs,flake-parts, denix, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
