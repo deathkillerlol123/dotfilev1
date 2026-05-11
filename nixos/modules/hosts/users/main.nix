@@ -12,7 +12,6 @@
       flatpak
       lime
       home-man
-      switcher
     ];
     documentation.enable = false;
     boot = {
