@@ -20,15 +20,17 @@ in
     };
     lime = {
       enable = true;
-      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "quiet"];
+      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
       windows = {
         enable = true;
         location = windows_efi;
       };
     };    
     flatpak.apps = ["org.vinegarhq.Sober" ];
-    networking.firewall.allowedTCPPorts = [ 6642 ];
-    networking.firewall.allowedUDPPorts = [ 6642 ];    
+    networking.firewall = {
+      allowedTCPPorts = [ 6642 ];
+      allowedUDPPorts = [ 6642 ];
+    };
     system.stateVersion = "25.11";
   };
 }
