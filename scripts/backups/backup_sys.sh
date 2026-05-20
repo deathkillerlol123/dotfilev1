@@ -13,5 +13,5 @@ borg create --progress "/mnt/Backups/ArchB/BorgBackups2::$(date +%Y-%m-%d_%H-%M-
   ~/dotfiles
 
 borg list /mnt/Backups/ArchB/BorgBackups2/
-
 borg list /mnt/Backups/ArchB/BorgBackups2/ >~/list.txt
+sudo umount /mnt/Backups/
