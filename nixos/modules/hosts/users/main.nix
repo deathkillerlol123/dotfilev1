@@ -29,13 +29,7 @@
         "zswap.shrinker.enabled=1"
       ];
     };
-    services = enabledServices [
-      "blueman"
-      "flatpak"
-      "libinput"
-      "fwupd"
-      "thermald"
-    ] //
+    services = enabledServices [ "blueman" "flatpak" "libinput" "fwupd" "thermald" ] //
     {
       logind.settings.Login.KillUserProcesses = true;    
       xserver.wacom.enable = true;    

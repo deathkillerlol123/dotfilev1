@@ -13,7 +13,6 @@
       ntfs3g
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
-      qbittorrent
       starship
       bash
       fish
@@ -23,12 +22,9 @@
       eza
       bat
       bottom
-      cmatrix
       fastfetch
       fd
-      viu
       statix
-      gnomeExtensions.power-profile-switcher
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
