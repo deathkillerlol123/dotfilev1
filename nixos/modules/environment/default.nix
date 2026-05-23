@@ -4,24 +4,18 @@
       desktopManager = {
         cosmic.enable = false;
         plasma6.enable = false; #KDE plasma cannot be true with gnome
-        gnome = {
-          enable = false;
-        };
+        gnome.enable = false;
       };
       xserver ={
        desktopManager = {
        #  budgie.enable = true; #cannot be true with gnome
          xfce.enable = false;
-         xterm.enable = false;
        };
        windowManager = {
          openbox.enable = false;
          dwm.enable = false;
-         fluxbox.enable = false;
-         nimdow.enable = false;
          leftwm.enable = false;
-         exwm = {
-           enable = false;
+         exwm.enable = false;
          };
        };
       };
