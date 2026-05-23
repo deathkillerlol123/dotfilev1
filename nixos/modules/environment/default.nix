@@ -17,7 +17,6 @@
          leftwm.enable = false;
          exwm.enable = false;
          };
-       };
       };
     };
     programs = {
