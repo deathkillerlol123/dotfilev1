@@ -43,12 +43,14 @@
           CPU_SCALING_GOVERNOR_ON_AC = "performance";
           CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
           STOP_CHARGE_THRESH_BAT0 = 95;
-	  wantedBy = [ "multi-user.target" ];
-	  after = [ "multi-user.target" ];	  
 	};
       };
     };
-    systemd.services.NetworkManager-wait-online.enable = false;  
+    systemd.services.NetworkManager-wait-online.enable = false;
+    systemd.services.tlp = {
+      wantedBy = [ "multi-user.target" ];
+      after = [ "multi-user.target" ];
+    };    
     time.timeZone = "Europe/London"; 
     networking = {
       hostName = "nixbtw";
