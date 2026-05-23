@@ -29,9 +29,11 @@
         "zswap.shrinker.enabled=1"
       ];
     };
-    services = enabledServices [ "blueman" "flatpak" "libinput" "fwupd" "thermald" ] //
+    programs = enabledservices [ "dconf" "kdeconnect" ];    
+    services = enabledServices [ "blueman" "flatpak" "libinput" "thermald" ] //
     {
-      logind.settings.Login.KillUserProcesses = true;    
+      logind.settings.Login.KillUserProcesses = true;
+      fwupd.enable = false;
       xserver.wacom.enable = true;    
       tlp = {
         enable = true;
@@ -41,12 +43,10 @@
           CPU_SCALING_GOVERNOR_ON_AC = "performance";
           CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
           STOP_CHARGE_THRESH_BAT0 = 95;
+	  wantedBy = [ "multi-user.target" ];
+	  after = [ "multi-user.target" ];	  
 	};
       };
-    };
-    programs = {
-      dconf.enable = true;
-      kdeconnect.enable = true;
     };
     systemd.services.NetworkManager-wait-online.enable = false;  
     time.timeZone = "Europe/London"; 
