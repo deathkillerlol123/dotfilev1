@@ -1,6 +1,5 @@
 {inputs,self,...}:
 let
-  type = "x86_64-linux";
   user = "nixboom";
   home = "_home.nix";
   windows_efi = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
@@ -10,13 +9,11 @@ in
     imports = with self.nixosModules; [
       main
       dragboomware
-      uxplay
     ];
     home-man = {
       enable = true;
       username = user;
       ext = "hm-backup";
-      system = type;
       file = home;
     };
     lime = {

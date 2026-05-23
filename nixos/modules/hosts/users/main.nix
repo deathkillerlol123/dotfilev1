@@ -16,6 +16,7 @@
       flatpak
       lime
       home-man
+      uxplay
     ];
     documentation.enable = false;
     boot = {

@@ -9,9 +9,6 @@
         ext = lib.mkOption {
           default = "backup";
         };
-   	system = lib.mkOption {
-   	  default = "x86_64-linux";
-   	};
    	file = lib.mkOption {
    	  default = "_home.nix";
    	};
