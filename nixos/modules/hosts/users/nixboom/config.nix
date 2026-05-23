@@ -13,7 +13,6 @@ in
     home-man = {
       enable = true;
       username = user;
-      ext = "hm-backup";
       file = home;
     };
     lime = {
