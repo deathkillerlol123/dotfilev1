@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Uxplay
-Exec=uxplay -p
-Terminal=true
+Exec=wezterm start -- uxplay -p
+Terminal=false
 Type=Application
 Icon=terminal
 Categories=Utility;
