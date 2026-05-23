@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Uxplay
 Exec=uxplay -p
-Terminal=false
+Terminal=true
 Type=Application
 Icon=terminal
 Categories=Utility;
