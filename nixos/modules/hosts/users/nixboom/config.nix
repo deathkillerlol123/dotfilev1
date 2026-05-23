@@ -10,6 +10,7 @@ in
     imports = with self.nixosModules; [
       main
       dragboomware
+      uxplay
     ];
     home-man = {
       enable = true;
