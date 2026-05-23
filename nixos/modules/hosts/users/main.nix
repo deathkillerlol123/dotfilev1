@@ -1,7 +1,7 @@
 {inputs,self,...}:{
   flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:
     let
-      enabledServices = names: lib.genAttrs names (_: { enable = true; });
+      enabledservices = names: lib.genAttrs names (_: { enable = true; });
     in
     {
     imports = with self.nixosModules; [
@@ -30,7 +30,7 @@
       ];
     };
     programs = enabledservices [ "dconf" "kdeconnect" ];    
-    services = enabledServices [ "blueman" "flatpak" "libinput" "thermald" ] //
+    services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" ] //
     {
       logind.settings.Login.KillUserProcesses = true;
       fwupd.enable = false;
