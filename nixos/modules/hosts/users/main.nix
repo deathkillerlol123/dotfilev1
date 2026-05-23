@@ -1,5 +1,9 @@
 {inputs,self,...}:{
-  flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:{
+  flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:
+    let
+      enabledServices = names: lib.genAttrs names (_: { enable = true; });
+    in
+    {
     imports = with self.nixosModules; [
       login
       system
@@ -25,14 +29,16 @@
         "zswap.shrinker.enabled=1"
       ];
     };
-    services = {
-      blueman.enable = true;
-      flatpak.enable = true;
-      logind.settings.Login.KillUserProcesses = true;
-      libinput.enable = true;
-      xserver.wacom.enable = true;
-      fwupd.enable = false;
-      thermald.enable = true;
+    services = enabledServices [
+      "blueman"
+      "flatpak"
+      "libinput"
+      "fwupd"
+      "thermald"
+    ] //
+    {
+      logind.settings.Login.KillUserProcesses = true;    
+      xserver.wacom.enable = true;    
       tlp = {
         enable = true;
 	settings = {
