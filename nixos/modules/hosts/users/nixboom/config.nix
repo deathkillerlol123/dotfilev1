@@ -15,14 +15,15 @@ in
       username = user;
       file = home;
     };
-    lime = {
-      enable = true;
-      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
-      windows = {
-        enable = true;
-        location = windows_efi;
+    boot = {
+      kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
+      loader = {
+        refind = {
+	  enable = true;
+	  maxGenerations = 4;
+	};
       };
-    };    
+    };
     flatpak.apps = ["org.vinegarhq.Sober" ];
     networking.firewall = {
       allowedTCPPorts = [ 6642 ];
