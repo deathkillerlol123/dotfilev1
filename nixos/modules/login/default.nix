@@ -13,7 +13,7 @@
           wayland = true;
         };
         ly = {
-          enable = true;
+          enable = false;
           settings = {
             clear_screen = true;
           };
