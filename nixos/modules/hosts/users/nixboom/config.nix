@@ -15,14 +15,12 @@ in
       username = user;
       file = home;
     };
-    boot = {
-      kernelParams = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
-      loader = {
-        efi.canTouchEfiVariables = true;
-        refind = {
-	  enable = true;
-	  maxGenerations = 4;
-	};
+    lime = {
+      enable = true;
+      params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
+      windows = {
+        enable = true;
+	location = windows_efi;
       };
     };
     flatpak.apps = ["org.vinegarhq.Sober" ];
