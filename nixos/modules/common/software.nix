@@ -17,6 +17,7 @@
       alarm-clock-applet
       python315
       kdePackages.kdeconnect-kde
+      libreoffice      
    ];
   };
 }
