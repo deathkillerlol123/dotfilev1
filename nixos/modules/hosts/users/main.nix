@@ -71,10 +71,10 @@
           General = {
             Experimental = true;
             FastConnectable = true;
-         	};
+          };
           Policy = {
-         	  AutoEnable = true;
-         	};
+            AutoEnable = true;
+          };
         };
       };
     };  
