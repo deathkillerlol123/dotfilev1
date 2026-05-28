@@ -45,7 +45,6 @@
   	  e="emacs -nw";
   	  y="yazi";
   	  s="statix check ~/dotfiles/nixos";
-	  try="echo 'test'";
         };
       };
     };
