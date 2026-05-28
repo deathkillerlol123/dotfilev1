@@ -14,9 +14,7 @@
       portals     
       sound
       bluetooth
-      flatpak
-      lime
-      home-man
+      settings
     ];
     documentation.enable = false;
     boot = {
