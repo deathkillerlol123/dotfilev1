@@ -8,6 +8,7 @@ in
     imports = with self.nixosModules; [
       main
       uxplay
+      fish
       dragboomware
     ];
     home-man = {
