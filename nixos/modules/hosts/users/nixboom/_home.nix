@@ -1,62 +1,63 @@
-{config, pkgs,inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
-  dotfiles =  config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
+  dotfiles =
+    config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles";
   firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
-  conf ="${dotfiles}/.config";
-  mkFile = name: {
-    inherit name;
-    value = {
+  conf = "${dotfiles}/.config";
+  mkFile = names:
+    lib.genAttrs names (name: {
       source = "${dotfiles}/${name}";
-    };
-  };    
-  mkconf = name: {
-    name = ".config/${name}";
-    value = {
+    });
+  mkconf = names:
+    lib.genAttrs names (name: {
       source = "${conf}/${name}";
       recursive = true;
-    };
-  };
-  mkdirs = path: {
-    name = path;
-    value = {
+    });
+  mkdirs = paths:
+    lib.genAttrs paths (path: {
       source = "${dotfiles}/${path}";
       recursive = true;
-    };
-  };  
-  configs = builtins.listToAttrs [
-    (mkconf "mango")
-    (mkconf "swaylock")
-    (mkconf "fastfetch")
-    (mkconf "starship.toml")
-    (mkconf "fish")
-    (mkconf "waybar")
-    (mkconf "walrus")
-    (mkconf "wallust")
-    (mkconf "swaync")
-    (mkconf "rofi")
-    (mkconf "nvim")
-    (mkconf "niri")
-    (mkconf "mako")
-    (mkconf "eww")
-    (mkconf "quickshell")
-    (mkconf "qutebrowser")
-    (mkFile ".zshrc")
-    (mkFile ".emacs")
-    (mkFile ".wezterm.lua")
-    (mkdirs ".local/share/applications")
-  ];
-in
-{
+    });
+in {
   home = {
     username = user;
     homeDirectory = "/home/${user}";
-    stateVersion = "25.11"; # Please read the comment before changing.    
+    stateVersion = "25.11";
   };
-  programs.home-manager.enable = true;  
-  home.file = {
-    ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {source = "${dotfiles}/.config/mozilla/userChrome.css"; };    
-  } // configs;
+  programs.home-manager.enable = true;
+  home.file =
+    {
+      ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
+        source = "${dotfiles}/.config/mozilla/userChrome.css";
+      };
+    }
+    // (mkconf [
+      "mango"
+      "swaylock"
+      "fastfetch"
+      "fish"
+      "waybar"
+      "walrus"
+      "wallust"
+      "swaync"
+      "rofi"
+      "nvim"
+      "niri"
+      "mako"
+      "eww"
+      "quickshell"
+      "qutebrowser"
+    ])
+    // (mkFile [
+      ".zshrc"
+      ".emacs"
+      ".wezterm.lua"
+      ".config/starship.toml"
+    ])
+    // (mkdirs [
+      ".local/share/applications"
+    ]);
   gtk = {
     enable = true;
     theme = {
