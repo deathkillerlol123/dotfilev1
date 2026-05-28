@@ -23,7 +23,7 @@ in
 	location = windows_efi;
       };
     };
-    flatpak.apps = ["org.vinegarhq.Sober" ];
+    flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard"];
     networking.firewall = {
       allowedTCPPorts = [ 6642 ];
       allowedUDPPorts = [ 6642 ];
