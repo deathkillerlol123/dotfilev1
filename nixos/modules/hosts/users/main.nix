@@ -13,6 +13,7 @@
       gaming
       portals     
       sound
+      bluetooth
       flatpak
       lime
       home-man
@@ -61,21 +62,6 @@
     };
     security = {
       pam.services.swaylock = {};
-    };
-    hardware = {
-      bluetooth = {
-        enable = true;
-        powerOnBoot = true;
-        settings = {
-          General = {
-            Experimental = true;
-            FastConnectable = true;
-          };
-          Policy = {
-            AutoEnable = true;
-          };
-        };
-      };
     };  
   };
 }

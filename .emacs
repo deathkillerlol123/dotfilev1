@@ -77,12 +77,12 @@ a random name or given name"
  '(package-selected-packages
    '(ace-windowt avy-embark-collect colorful-mode corfu
 		 corfu-candidate-overlay eglot-inactive-regions
-		 flycheck json-mode lsp-latex lsp-mode lsp-pyright
-		 lsp-python-ms lsp-ui lua-mode multiple-cursors
-		 org-beautify-theme org-bullets org-pretty-tags
-		 org-roam python-mode qml-mode rainbow-mode
-		 tree-inspector tree-sitter tree-sitter-indent
-		 tree-sitter-langs zetteldeft)))
+		 electric-cursor flycheck json-mode lsp-latex lsp-mode
+		 lsp-pyright lsp-python-ms lsp-ui lua-mode
+		 multiple-cursors org-beautify-theme org-bullets
+		 org-pretty-tags org-roam python-mode qml-mode
+		 rainbow-mode tree-inspector tree-sitter
+		 tree-sitter-indent tree-sitter-langs zetteldeft)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
