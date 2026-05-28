@@ -3,7 +3,7 @@
     services = {
       displayManager = {
         sddm = {
-          enable = true;
+          enable = false;
           wayland.enable = true;
           package = pkgs.kdePackages.sddm;
           theme = "sddm-astronaut-theme";
@@ -13,7 +13,7 @@
           wayland = true;
         };
         ly = {
-          enable = false;
+          enable = true;
           settings = {
             clear_screen = true;
           };
