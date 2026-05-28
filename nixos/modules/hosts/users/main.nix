@@ -63,7 +63,6 @@
       pam.services.swaylock = {};
     };
     hardware = {
-      uinput.enable = true;
       bluetooth = {
         enable = true;
         powerOnBoot = true;
