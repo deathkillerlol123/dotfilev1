@@ -3,12 +3,12 @@
     services = {
       desktopManager = {
         cosmic.enable = false;
-        plasma6.enable = true; #KDE plasma cannot be true with gnome
+        plasma6.enable = false;
         gnome.enable = false;
       };
       xserver ={
        desktopManager = {
-       #  budgie.enable = true; #cannot be true with gnome
+       #  budgie.enable = true;
          xfce.enable = false;
        };
        windowManager = {
