@@ -36,7 +36,7 @@ in {
       };
     }
     // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync"
-                "rofi" "nvim" "niri" "mako" "eww" "quickshell" "qutebrowser"
+                "rofi" "nvim" "niri" "mako" "eww" "quickshell" "qutebrowser" "hypr"
     ])
     // (mkFile [".zshrc" ".emacs" ".wezterm.lua" ".config/starship.toml"
     ])
