@@ -3,6 +3,7 @@
   {
     environment.systemPackages = with pkgs; [
       python312Packages.evdev
+      libinput
     ];
   };
 }
