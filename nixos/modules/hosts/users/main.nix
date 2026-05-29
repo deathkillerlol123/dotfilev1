@@ -14,6 +14,7 @@
       portals     
       sound
       bluetooth
+      touch
       settings
     ];
     documentation.enable = false;
