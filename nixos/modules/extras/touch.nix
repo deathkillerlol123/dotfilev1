@@ -1,5 +1,5 @@
 {inputs,self,...}:{
-  flake.nixosModules.touch = {config,lib,packages,inputs,...}:
+  flake.nixosModules.touch = {config,lib,pkgs,inputs,...}:
   {
     environmen.systemPackages = with pkgs; [
       evdev-proto
