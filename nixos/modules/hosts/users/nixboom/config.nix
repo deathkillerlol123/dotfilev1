@@ -9,6 +9,7 @@ in
       main
       uxplay
       fish
+      clamav
       dragboomware
     ];
     home-man = {
