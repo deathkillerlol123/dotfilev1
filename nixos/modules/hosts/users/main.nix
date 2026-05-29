@@ -14,7 +14,6 @@
       portals     
       sound
       bluetooth
-      clamav
       settings
     ];
     documentation.enable = false;
