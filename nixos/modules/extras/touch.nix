@@ -2,7 +2,7 @@
   flake.nixosModules.touch = {config,lib,pkgs,inputs,...}:
   {
     environment.systemPackages = with pkgs; [
-      evdev-proto
+      python312Packages.evdev
     ];
   };
 }
