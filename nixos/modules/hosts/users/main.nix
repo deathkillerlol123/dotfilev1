@@ -16,7 +16,6 @@
       portals
       system
       clamav
-      default
       settings
     ];
     documentation.enable = false;
