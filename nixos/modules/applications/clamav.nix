@@ -1,4 +1,4 @@
-{inputs,pkgs,...}:
+{inputs,pkgs,lib,...}:
 let
   enabledservices = names: lib.genAttrs names (_: { enable = true; });
 in
