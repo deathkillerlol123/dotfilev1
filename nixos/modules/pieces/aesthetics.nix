@@ -4,9 +4,7 @@
       swww    
       pywal
       swaynotificationcenter
-      swaybg
       swaylock
-      swayidle
       nautilus  
       rofi
       bzmenu
