@@ -11,7 +11,6 @@
   	t="gu && up";
   	ls="eza -a --tree -L 1";
   	e="emacs -nw";
-  	y="yazi";
   	s="statix check ~/dotfiles/nixos";
       };
     };
