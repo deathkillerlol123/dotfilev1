@@ -6,10 +6,8 @@ in
 {
   flake.nixosModules.nixboom = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
-      main
-      uxplay
-      fish
-      dragware
+      uxplay fish
+      dragware main
     ];
     home-man = {
       enable = true;
