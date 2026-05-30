@@ -1,3 +1,6 @@
+let
+  m = flake.nixosModules;
+in
 {
     inputs = {
       nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -16,7 +19,7 @@
 	    url = "github:nix-darwin/nix-darwin/master";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
-  };
+    };
     outputs = { self, nixpkgs,flake-parts,hyprland, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
