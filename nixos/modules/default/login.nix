@@ -12,8 +12,9 @@
           enable = false;
           wayland = true;
         };
+	cosmic-greeter.enable = true;
         ly = {
-          enable = true;
+          enable = false;
           settings = {
             clear_screen = true;
           };
