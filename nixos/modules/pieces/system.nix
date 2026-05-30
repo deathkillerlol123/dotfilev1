@@ -12,6 +12,7 @@
       brightnessctl
       borgbackup
       ntfs3g
+      wlr-randr
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
       starship
@@ -19,7 +20,6 @@
       fish
       zoxide
       emacs
-      yazi
       eza
       bat
       bottom
