@@ -18,9 +18,6 @@
 	};
     };
     outputs = { self, nixpkgs,flake-parts,hyprland, ... }@inputs:
-    let
-      m = flake.nixosModules;
-    in
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
