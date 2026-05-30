@@ -24,6 +24,10 @@
       mangowc = {
         enable = true;
       };
+      sway = {
+        enable = true;
+	xwayland.enable = true;
+      };
       hyprland = {
         enable = false;
         withUWSM = false;
