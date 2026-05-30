@@ -13,7 +13,7 @@
           wayland = true;
         };
         ly = {
-          enable = false;
+          enable = true;
           settings = {
             clear_screen = true;
           };
@@ -23,7 +23,7 @@
         enable = true;
         displayManager = {
           lightdm = {
-            enable = true;
+            enable = false;
           };
         };
       };
