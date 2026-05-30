@@ -5,6 +5,7 @@
       efibootmgr
       os-prober  
       curl
+      zip
       git
       gh
       libnotify
