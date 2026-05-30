@@ -18,6 +18,9 @@
 	};
     };
     outputs = { self, nixpkgs,flake-parts,hyprland, ... }@inputs:
+    let
+      maze = flake.nixosModules;
+    in
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
