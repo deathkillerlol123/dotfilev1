@@ -5,7 +5,6 @@
       pywal
       swaynotificationcenter
       swaylock
-      nautilus  
       rofi
       bzmenu
       pwmenu
