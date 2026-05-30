@@ -1,5 +1,5 @@
 {inputs,...}:{
-  flake.nixosModules.dragboomware = { config,lib,pkgs,modulesPath, ...}:  {
+  flake.nixosModules.dragware = { config,lib,pkgs,modulesPath, ...}:  {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
       ];

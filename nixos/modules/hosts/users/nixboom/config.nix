@@ -9,7 +9,7 @@ in
       main
       uxplay
       fish
-      dragboomware
+      dragware
     ];
     home-man = {
       enable = true;
