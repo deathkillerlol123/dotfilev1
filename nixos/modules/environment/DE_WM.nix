@@ -23,7 +23,6 @@
       niri.enable = false;
       mangowc = {
         enable = true;
-	xwayland.enable = true;
       };
       hyprland = {
         enable = false;
