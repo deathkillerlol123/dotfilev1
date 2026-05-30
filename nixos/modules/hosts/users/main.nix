@@ -5,17 +5,16 @@
     in
     {
     imports = with self.nixosModules; [
-      login
       system
       environment
       software
       aesthetics
       gaming
-      portals     
       sound
       bluetooth
       touch
       clamav
+      default
       settings
     ];
     documentation.enable = false;
