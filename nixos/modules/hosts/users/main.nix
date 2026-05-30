@@ -15,6 +15,7 @@
       sound
       bluetooth
       touch
+      clamav
       settings
     ];
     documentation.enable = false;
