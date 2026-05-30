@@ -1,6 +1,6 @@
 {inputs,self,...}:
 let
- m = flake.nixosModules;
+ m = self.nixosModules;
 in
 {
   flake.nixosModules.users = { config, lib, pkgs, inputs,... }:{
