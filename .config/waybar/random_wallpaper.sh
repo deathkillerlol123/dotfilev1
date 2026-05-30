@@ -10,7 +10,7 @@ FILE=$(find ~/Pictures/Wallpapers/ -type f -print0 | shuf -zn1 | xargs -0 echo)
 echo "$FILE"
 if [ -n "$FILE" ]; then
 
-  swww img "$FILE" --transition-type fade --transition-step 90 --transition-duration 7 &
+  swww img "$FILE" --transition-step 90 --transition-duration 7 &
   wal -i "$FILE" -n
 
   cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"

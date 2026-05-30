@@ -25,7 +25,7 @@
         enable = true;
       };
       sway = {
-        enable = true;
+        enable = false;
 	xwayland.enable = true;
       };
       hyprland = {
