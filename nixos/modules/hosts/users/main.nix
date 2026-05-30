@@ -5,7 +5,6 @@
     in
     {
     imports = with self.nixosModules; [
-      system
       environment
       software
       aesthetics
@@ -13,6 +12,9 @@
       sound
       bluetooth
       touch
+      login
+      portals
+      system
       clamav
       default
       settings
