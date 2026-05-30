@@ -15,7 +15,8 @@
       wl-clipboard
       wezterm
       alarm-clock-applet
-      python315
+      python312
+      python312Packages.pip
       kdePackages.kdeconnect-kde
       kitty
    ];
