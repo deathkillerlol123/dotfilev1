@@ -23,7 +23,7 @@
       niri.enable = false;
       mangowc.enable = true;
       hyprland = {
-        enable = true; #takes too long
+        enable = false;
         withUWSM = false;
         xwayland.enable = true;
 	package = inputs.hyprland.packages.${pkgs.system}.hyprland;

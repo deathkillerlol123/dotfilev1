@@ -12,9 +12,8 @@ wezterm.on('window-focus-changed', function(window, pane)
 end)
 
 
-config.window_decorations = 'RESIZE'
+config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'NeverPrompt'
-
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
