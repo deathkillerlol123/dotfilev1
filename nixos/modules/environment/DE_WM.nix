@@ -23,9 +23,11 @@
       niri.enable = false;
       mangowc.enable = true;
       hyprland = {
-        enable = false; #takes too long
+        enable = true; #takes too long
         withUWSM = false;
         xwayland.enable = true;
+	package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+	portalPackage = = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
       };
     };
   };

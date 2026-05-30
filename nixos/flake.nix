@@ -9,6 +9,7 @@
     	  url = "github:nix-community/home-manager";
 	  inputs.nixpkgs.follows = "nixpkgs";
       };
+	hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
 	flake-parts.url = "github:hercules-ci/flake-parts";
 	import-tree.url = "github:vic/import-tree";
 	nix-darwin = {
@@ -16,7 +17,7 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
   };
-    outputs = { self, nixpkgs,flake-parts, ... }@inputs:
+    outputs = { self, nixpkgs,flake-parts,hyprland ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }  
     {
 	imports = [
