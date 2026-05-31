@@ -1,15 +1,19 @@
 {
     inputs = {
-      nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-      nur = {
-        url = "github:nix-community/NUR";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-      home-manager = {
-    	  url = "github:nix-community/home-manager";
-	  inputs.nixpkgs.follows = "nixpkgs";
-      };
+	nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+	nur = {
+            url = "github:nix-community/NUR";
+            inputs.nixpkgs.follows = "nixpkgs";
+	};
+	home-manager = {
+    	    url = "github:nix-community/home-manager";
+	    inputs.nixpkgs.follows = "nixpkgs";
+	};
 	hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
+	helium = {
+	    url = "github:schembriaiden/helium-browser-nix-flake";
+	    inputs.nixpkgs.follows = "nixpkgs";
+	};
 	flake-parts.url = "github:hercules-ci/flake-parts";
 	import-tree.url = "github:vic/import-tree";
 	nix-darwin = {
@@ -18,7 +22,7 @@
 	};
     };
     outputs = { self, nixpkgs,flake-parts,hyprland, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; }  
+    flake-parts.lib.mkFlake { inherit inputs; }
     {
 	imports = [
 	    (inputs.import-tree ./modules)
