@@ -6,13 +6,7 @@
        xdg-desktop-portal-gtk
        xdg-desktop-portal-wlr
      ];
-     wlr.enable = true;
-      config = {
-        kde = {
-          default = ["kde" "gtk" "gnome"];
-          "org.freedesktop.portal.openuri" = ["kde"];
-        };
-     };
-    };  
+      config.common =["kde" "gtk" "gnome"];
+     }; 
   };
 }
