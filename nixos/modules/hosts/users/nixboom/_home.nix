@@ -38,7 +38,7 @@ in {
     // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync"
                 "rofi" "nvim" "niri" "mako" "eww" "quickshell" "qutebrowser"
     ])
-    // (mkFile [".zshrc" ".emacs" ".wezterm.lua" ".config/starship.toml"
+    // (mkFile [".emacs" ".wezterm.lua" ".config/starship.toml"
     ])
     // (mkdirs [
       ".local/share/applications"
