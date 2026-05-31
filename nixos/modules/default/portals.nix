@@ -6,7 +6,7 @@
        xdg-desktop-portal-gtk
        xdg-desktop-portal-wlr
      ];
-      config.common =["wlr" "gtk"];
+      config.common.default =["wlr" "gtk"];
      }; 
   };
 }
