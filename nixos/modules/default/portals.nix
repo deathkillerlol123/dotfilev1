@@ -6,7 +6,7 @@
        xdg-desktop-portal-gtk
        xdg-desktop-portal-wlr
      ];
-      config.common =["kde" "gtk" "gnome"];
+      config.common =["wlr" "gtk"];
      }; 
   };
 }
