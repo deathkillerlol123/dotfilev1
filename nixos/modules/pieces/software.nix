@@ -4,7 +4,7 @@
       wdisplays
       firefox-devedition
       whatsapp-electron
-      whatsie
+      zapzap
       (discord.override {
         withOpenASAR = true;
       })
