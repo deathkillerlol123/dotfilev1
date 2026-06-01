@@ -4,7 +4,12 @@ swww-daemon &
 copyq &
 swaync &
 
-systemctl --user status xdg-desktop-portal-wlr
+#screnshares with discords
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+systemctl --user start xdg-desktop-portal-wlr.service
+
+
 brightnessctl set 10% &
 
 "$HOME/dotfiles/scripts/niri_monitors/placement.sh" &
