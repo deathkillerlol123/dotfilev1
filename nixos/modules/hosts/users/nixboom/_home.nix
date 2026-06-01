@@ -50,4 +50,5 @@ in {
       name = "Orchis-Grey-Dark";
     };
   };
+  services.emacs.defaultEditor = true;
 }
