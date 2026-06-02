@@ -25,8 +25,8 @@
       bottom
       fastfetch
       fd
-      statix
       nixoscope
+      statix
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
