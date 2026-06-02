@@ -1,3 +1,4 @@
+{pkgs,...}:
 let
   bootWindows = pkgs.writeShellScriptBin "boot-windows" ''
     set -euo pipefail
