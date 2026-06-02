@@ -1,4 +1,4 @@
-{inputs,self, pkgs, ... }:
+{pkgs, ... }:
 let
   bootWindows = pkgs.writeShellScriptBin "boot-windows" ''
     set -e
@@ -15,17 +15,15 @@ let
   '';
 in
 {
-  flake.nixosModules.bluescreen = {config,lib,inputs,pkgs,...}:{
-    environment.systemPackages = [
-      bootWindows
-      pkgs.efibootmgr
-    ];
-    environment.etc."xsessions/windows.desktop".text = ''
-      [Desktop Entry]
-      Name=Windows
-      Comment=Boot into Windows via EFI BootNext
-      Exec=${bootWindows}/bin/boot-windows
-      Type=Application
-    '';
-  };
+  environment.systemPackages = [
+    bootWindows
+    pkgs.efibootmgr
+  ];
+  environment.etc."xsessions/windows.desktop".text = ''
+    [Desktop Entry]
+    Name=Windows
+    Comment=Boot into Windows via EFI BootNext
+    Exec=${bootWindows}/bin/boot-windows
+    Type=Application
+  '';
 }
