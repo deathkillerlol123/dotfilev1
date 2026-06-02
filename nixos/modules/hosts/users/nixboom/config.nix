@@ -6,7 +6,7 @@ in
 {
   flake.nixosModules.nixboom = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
-      uxplay fish bluescreen
+      uxplay fish
       dragware main
     ];
     home-man = {
