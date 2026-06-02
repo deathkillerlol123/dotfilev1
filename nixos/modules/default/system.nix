@@ -27,6 +27,7 @@
       fd
       statix
       nix-output-monitor
+ 
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
