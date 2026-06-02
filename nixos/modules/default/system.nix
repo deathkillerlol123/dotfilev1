@@ -2,7 +2,8 @@
   flake.nixosModules.system = {pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       ly
-      os-prober  
+      os-prober
+      efibootmgr
       curl
       zip
       git
