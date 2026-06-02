@@ -24,7 +24,7 @@ let
   '';
 in
 {
-  flake.nixosModules.bluescreen = {config,inputs,pkgs,...}:{
+  flake.nixosModules.bluescreen = {config,inputs,...}:{
     environment.systemPackages = [
       bootWindows
     ];
