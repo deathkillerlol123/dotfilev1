@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = [
+    pkgs.efibootmgr
     (pkgs.writeShellScriptBin "reboot-windows" ''
       set -euo pipefail
 
