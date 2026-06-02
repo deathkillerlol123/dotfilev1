@@ -16,10 +16,7 @@ in
     lime = {
       enable = true;
       params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
-      windows = {
-        enable = true;
-	location = windows_efi;
-      };
+      windows.location = windows_efi;
     };
     flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard"];
     networking.firewall = {

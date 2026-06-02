@@ -12,7 +12,6 @@
         params = lib.mkOption {
           default = [""];
         };
-        windows.enable = lib.mkEnableOption "test";
         windows = {
           location = lib.mkOption {
   	  default = "";
