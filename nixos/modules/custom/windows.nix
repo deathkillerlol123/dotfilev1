@@ -26,7 +26,6 @@ in
 {
   flake.nixosModules.bluescreen = {config,inputs,pkgs,...}:{
     environment.systemPackages = [
-      bootWindows
       pkgs.efibootmgr
     ];
   };
