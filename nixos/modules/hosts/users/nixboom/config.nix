@@ -4,7 +4,7 @@ let
   windows_efi = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
 in
 {
-  flake.nixosModules.nixboom = { config, lib,inputs,... }:{
+  flake.nixosModules.nixboom = { config, lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
       uxplay fish bluescreen
       dragware main
