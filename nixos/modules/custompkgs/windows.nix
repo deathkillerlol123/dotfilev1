@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 let
   bootWindows = pkgs.writeShellScriptBin "boot-windows" ''
     set -euo pipefail
@@ -25,8 +24,10 @@ let
   '';
 in
 {
-  environment.systemPackages = [
-    bootWindows
-    pkgs.efibootmgr
-  ];
+  flake.nixosModules.bluescreen = {config,inputs,pkgs,...}:{
+    environment.systemPackages = [
+      bootWindows
+      pkgs.efibootmgr
+    ];
+  };
 }
