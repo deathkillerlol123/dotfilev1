@@ -7,7 +7,7 @@
           default = 3;
         };
         wallpapers = lib.mkOption {
-	  default = "${self.outPath}/themes/limine_wallpaper";
+	  default = "${self.outPath}/themes/boot_wallpaper";
         };
         params = lib.mkOption {
           default = [""];
@@ -26,13 +26,13 @@
          efi.canTouchEfiVariables = true;    
          limine = {
            enable = true;
-  	 maxGenerations = config.lime.generations;
-  	 style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
-  	 extraEntries = ''
-  	   /Windows
-  	     protocol: efi
-  	     path: ${config.lime.windows.location}
-  	 '';
+     	   maxGenerations = config.lime.generations;
+     	   style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
+     	   extraEntries = ''
+     	     /Windows
+     	       protocol: efi
+     	       path: ${config.lime.windows.location}
+  	    '';
          };
        };
      };
