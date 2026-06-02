@@ -1,4 +1,6 @@
 { config, pkgs, ... }:
+{ pkgs, ... }:
+
 let
   windows-session = pkgs.writeTextFile {
     name = "windows-session";
@@ -10,12 +12,10 @@ let
       Exec=systemctl reboot --boot-loader-entry=Windows Boot Manager
       Type=Application
     '';
-};
+  };
 in
 {
-  flake.nixosModules.bluescreen = {config,pkgs,inputs,lib,...}:{
-    environment.systemPackages = [
-      windows-session
-    ];
-  };
+  services.displayManager.sessionPackages = [
+    windows-session
+  ];
 }
