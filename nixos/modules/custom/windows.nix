@@ -1,6 +1,4 @@
 { config, pkgs, ... }:
-{ pkgs, ... }:
-
 let
   windows-session = pkgs.writeTextFile {
     name = "windows-session";
