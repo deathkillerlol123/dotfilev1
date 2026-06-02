@@ -13,7 +13,9 @@ let
   };
 in
 {
-  services.displayManager.sessionPackages = [
-    windows-session
-  ];
+  flake.nixosModules.bluescreen = {config,pkgs,...}:{
+    services.displayManager.sessionPackages = [
+      windows-session
+    ];
+  };
 }
