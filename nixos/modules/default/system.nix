@@ -25,7 +25,6 @@
       bottom
       fastfetch
       fd
-      nixoscope
       statix
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
