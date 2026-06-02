@@ -15,7 +15,7 @@ let
   '';
 in
 {
-  flake.nixosModules.windows = {pkgs,...}:{
+  flake.nixosModules.windows = {config,lib,inputs,pkgs,...}:{
     environment.systemPackages = [
       bootWindows
       pkgs.efibootmgr
