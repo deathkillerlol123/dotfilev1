@@ -8,7 +8,7 @@
           [Desktop Entry]
           Name=Windows
           Comment=Boot Windows
-          Exec=/home/nixboom/dotfiles/scripts/Boot-Windows10.sh
+          Exec=${self.outPath}/scripts/Boot-Windows10.sh
           Type=Application
 	'';
       } // {
