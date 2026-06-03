@@ -12,9 +12,8 @@ systemctl --user start xdg-desktop-portal-wlr.service
 
 brightnessctl set 10% &
 
-"$HOME/dotfiles/scripts/niri_monitors/placement.sh" &
-
-"$HOME/dotfiles/scripts/colorschem/start_wall.sh" &
+"$HOME/dotfiles/nixos/scripts/niri_monitors/placement.sh" &
+"$HOME/dotfiles/nixos/scripts/colorschem/start_wall.sh" &
 
 #"$HOME/dotfiles/scripts/way.sh" &
 
