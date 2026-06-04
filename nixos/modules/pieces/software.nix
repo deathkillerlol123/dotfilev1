@@ -11,7 +11,6 @@
       grim
       slurp
       swappy
-      wayscriber
       wl-clipboard
       wezterm
       python312
