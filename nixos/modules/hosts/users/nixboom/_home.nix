@@ -30,9 +30,7 @@ in {
   programs.home-manager.enable = true;
   home.file =
     {
-      ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = {
-        source = "${dotfiles}/.config/mozilla/userChrome.css";
-      };
+      ".config/mozilla/firefox/${firefox_user}/chrome/userChrome.css" = { source = "${dotfiles}/.config/mozilla/userChrome.css"; };
     }
     // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync"
                 "rofi" "nvim" "niri" "mako" "eww" "quickshell" "qutebrowser"
@@ -49,5 +47,4 @@ in {
       name = "Orchis-Grey-Dark";
     };
   };
-  services.emacs.defaultEditor = true;
 }
