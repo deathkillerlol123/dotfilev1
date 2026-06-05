@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Sound
-Exec=pwmenu -l rofi
-Terminal=false
-Type=Application
-Icon=org.pulseaudio.pavucontrol
-Categories=Utility;
-

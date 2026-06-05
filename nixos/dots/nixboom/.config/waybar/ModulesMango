@@ -1,0 +1,11 @@
+{
+"ext/workspaces" :{
+  "format": "{icon}",
+  "ignore-hidden": false,
+  "on-click"  : "activate",
+  "sort-by-id":true
+},
+"dwl/window" :{
+  "format": "{layout}",  
+}
+}

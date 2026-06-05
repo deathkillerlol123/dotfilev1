@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Bluetooth
+Exec=bzmenu -l rofi
+Terminal=false
+Type=Application
+Icon=blueman
+Categories=Utility;
+
