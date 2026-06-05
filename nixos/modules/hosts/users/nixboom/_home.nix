@@ -1,9 +1,8 @@
 { config, pkgs, lib, inputs, ... }:
 let
-  dotfiles =
-    config.lib.file.mkOutOfStoreSymlink "/home/nixboom/dotfiles/nixos/dots/nixboom/";
-  firefox_user = "hcq4c6te.dev-edition-default";
   user = "nixboom";
+  dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
+  firefox_user = "hcq4c6te.dev-edition-default";
   conf = "${dotfiles}/.config";
   mkFile = names:
     lib.genAttrs names (name: {

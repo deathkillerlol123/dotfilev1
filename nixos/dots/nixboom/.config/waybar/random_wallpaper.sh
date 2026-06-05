@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-cd ~/dotfiles/.config/waybar/
+cd ~/dotfiles/nixos/dots/nixboom/.config/waybar/
 
 COLORS="$HOME/.cache/wal"
-OUPUT="$HOME/dotfiles/.config"
+OUPUT="$HOME/dotfiles/nixos/dots/nixboom/.config"
 
 # Pick wallpaper
 FILE=$(find ~/Pictures/Wallpapers/ -type f -print0 | shuf -zn1 | xargs -0 echo)
@@ -17,7 +17,7 @@ if [ -n "$FILE" ]; then
 #  cp "${COLORS}/colors-kitty.conf" "${OUPUT}/kitty/"
 #  cp "${COLORS}/colors-zed.json" "${OUPUT}/zed/themes/pywal.json"
 
-  "$HOME/dotfiles/.config/waybar/css_rasi.sh"
+  "$HOME/dotfiles/nixos/dots/nixboom/.config/waybar/css_rasi.sh"
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
   pkill -f rofi
 
