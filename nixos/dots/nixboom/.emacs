@@ -40,7 +40,7 @@
 (defun gitupdater(message)
   (interactive "sCommit Message: ")
   (magit-stage-modified)
-  (magit-commit (list "-m" message)))
+  (magit-commit (listP "-m" message)))
 
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
