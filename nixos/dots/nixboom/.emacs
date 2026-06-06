@@ -37,12 +37,10 @@
  (kbd "C-.")
  'mc/mark-next-like-this)
 
-(defun gitshortener ()
-  (interactive)
-  (magit-call-git "add" "-A")
-  (magit-call-git "commit" "-m" "UPDATE")
-  (magit-call-git "push" "origin" "main"))
-
+(defun gitupdater(message)
+  (interactive "sCommit Message: ")
+  (magit-stage-modified)
+  (magit-commit (list "-m" message)))
 
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
