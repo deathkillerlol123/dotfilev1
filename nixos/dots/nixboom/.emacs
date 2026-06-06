@@ -41,7 +41,7 @@
 (defun gitshortener()
   (interactive)
   (magit-stage-modified)
-  (magit-commit (list "-m" "UPDATE")))
+  )
 
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
