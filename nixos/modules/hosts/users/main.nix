@@ -6,7 +6,7 @@
     {
     imports = with self.nixosModules; [
       environment software aesthetics gaming
-      sound bluetooth touch
+      sound bluetooth touch windows
       login portals bash system
       flatpak home-man lime
     ];
@@ -45,7 +45,6 @@
       settings.experimental-features = ["nix-command" "flakes"];
       optimise = {
         automatic = true;
-        dates = ["20:00"];
       };
     };
     nixpkgs.config = {

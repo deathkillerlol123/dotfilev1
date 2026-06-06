@@ -37,11 +37,6 @@
  (kbd "C-.")
  'mc/mark-next-like-this)
 
-(defun gitupdater(message)
-  (interactive "sCommit Message: ")
-  (magit-stage-modified)
-  (magit-commit-squash))
-
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
   (interactive)
