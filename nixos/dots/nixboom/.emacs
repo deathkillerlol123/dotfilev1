@@ -41,6 +41,11 @@
  (kbd "C-q")
  'ace-swap-window)
 
+(defun my-magit-stage-all-and-commit(message)
+  (interactive "sCommit Message: ")
+  (magit-stage-modified)
+  (magit-commit (list "-m" message)))
+
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
   (interactive)
