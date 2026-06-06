@@ -20,8 +20,8 @@ in
     };
     flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard"];
     networking.firewall = {
-      allowedTCPPorts = [ 6642 ];
-      allowedUDPPorts = [ 6642 ];
+      allowedTCPPorts = [ 6642 443 ];
+      allowedUDPPorts = [ 6642 443];
     };
     system.stateVersion = "25.11";
   };
