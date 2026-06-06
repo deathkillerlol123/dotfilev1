@@ -1,3 +1,4 @@
+(require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
@@ -78,6 +79,10 @@ a random name or given name"
 (line-number-mode 1)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(auto-save-interval 20)
  '(auto-save-timeout 3)
  '(custom-enabled-themes '(modus-vivendi-tinted))
@@ -86,12 +91,17 @@ a random name or given name"
    '(ace-windowt avy-embark-collect colorful-mode corfu
 		 corfu-candidate-overlay eglot-inactive-regions
 		 electric-cursor flycheck json-mode lsp-latex lsp-mode
-		 lsp-pyright lsp-python-ms lsp-ui lua-mode
+		 lsp-pyright lsp-python-ms lsp-ui lua-mode magit
 		 multiple-cursors org-beautify-theme org-bullets
 		 org-pretty-tags org-roam python-mode qml-mode
 		 rainbow-mode tree-inspector tree-sitter
 		 tree-sitter-indent tree-sitter-langs zetteldeft)))
-(custom-set-faces )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)

@@ -8,7 +8,7 @@
       environment software aesthetics gaming
       sound bluetooth touch
       login portals bash system
-      settings
+      flatpak home-man lime
     ];
     documentation.enable = false;
     boot = {
