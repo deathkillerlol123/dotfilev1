@@ -37,14 +37,12 @@
  (kbd "C-.")
  'mc/mark-next-like-this)
 
-(global-set-key
- (kbd "C-q")
- 'ace-swap-window)
 
-(defun my-magit-stage-all-and-commit(message)
-  (interactive "sCommit Message: ")
+(defun gitshortener()
+  (interactive)
   (magit-stage-modified)
-  (magit-commit (list "-m" message)))
+  (magit-commit (list "-m" "update")))
+
 
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
@@ -57,7 +55,7 @@
 
 (defun mm/generate-temp-buffer (buf)
   "A function to generate temprory buffers using either
-a random name or given name"
+  a random name or given name"
   (interactive "sNew temp buffer name: ")
   (switch-to-buffer
    (get-buffer-create
