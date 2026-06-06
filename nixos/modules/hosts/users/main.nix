@@ -7,7 +7,7 @@
     imports = with self.nixosModules; [
       environment software aesthetics gaming
       sound bluetooth touch
-      login portals bash system clamav
+      login portals bash system
       settings
     ];
     documentation.enable = false;
