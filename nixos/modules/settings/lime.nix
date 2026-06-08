@@ -7,7 +7,7 @@
           default = 3;
         };
         wallpapers = lib.mkOption {
-	  default = "${self.outPath}/themes/boot_wallpaper";
+	  default = "${self.outPath}/bootloader";
         };
         params = lib.mkOption {
           default = [""];
