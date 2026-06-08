@@ -21,8 +21,8 @@ if [ -n "$FILE" ]; then
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
   pkill -f rofi
 
-  cd ~/dotfiles/nixos/themes/
+  cd ~/dotfiles/nixos/bootloader/
   rm -rf *
-  cp "$FILE" "$HOME/dotfiles/nixos/themes/"
+  cp "$FILE" "$HOME/dotfiles/nixos/bootloader/"
 
 fi
