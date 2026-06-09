@@ -26,6 +26,7 @@
       fastfetch
       fd
       statix
+      yazi
       ];
     fonts.packages = with pkgs; with nerd-fonts; [
       fira-code
