@@ -8,5 +8,10 @@
      ];
      config.common.default =["gtk" "wlr"];
    };
+   environment.systemPackages = with pkgs; [
+     wlr-randr
+     xdg-desktop-portal-gtk
+     xdg-desktop-portal-wlr
+   ];
  };
 }

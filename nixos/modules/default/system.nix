@@ -12,12 +12,8 @@
       brightnessctl
       borgbackup
       ntfs3g
-      wlr-randr
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
       starship
       bash
-      fish
       zoxide
       emacs
       eza
