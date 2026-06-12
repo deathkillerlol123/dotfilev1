@@ -5,7 +5,7 @@
     in
     {
     imports = with self.nixosModules; [
-      environment software aesthetics gaming
+      environment software aesthetics 
       sound bluetooth touch windows
       login portals bash system
       flatpak home-man lime

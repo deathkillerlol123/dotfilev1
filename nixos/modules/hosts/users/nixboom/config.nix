@@ -6,7 +6,8 @@ in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
-      uxplay fish
+      uxplay
+      gaming fish
       dragware main
     ];
     home-man = {
