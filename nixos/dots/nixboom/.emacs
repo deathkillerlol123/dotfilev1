@@ -42,7 +42,7 @@
   (start-process-shell-command
    "Update-System"
    nil
-   "t")
+   "~/dotfiles/nixos/scripts/system_updaters/updatesys_Nixos.sh")
   (message "Updating"))
 
 
