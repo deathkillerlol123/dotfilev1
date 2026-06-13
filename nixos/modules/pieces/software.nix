@@ -15,7 +15,7 @@
       wezterm
       python312
       kdePackages.kdeconnect-kde
-      kdePackages.filelight
+      #kdePackages.filelight
    ];
   };
 }
