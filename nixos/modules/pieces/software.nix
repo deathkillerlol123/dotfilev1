@@ -16,6 +16,7 @@
       python312
       kdePackages.kdeconnect-kde
       #kdePackages.filelight
+      qutebrowser 
    ];
   };
 }

@@ -16,14 +16,14 @@
       corfu-auto-trigger "."
       )
 (use-package colorful-mode
-  :custom
+  :custom 
   (colorful-use-prefix t)
   (colorful-only-strings 'only-prog)
   (css-fontify-colors nil)
   :config
   (global-colorful-mode t)
   (add-to-list 'global-colorful-modes 'helpful-mode))
-(use-package which-key
+(use-package which-key  
   :ensure t
   :config
   (which-key-mode))
@@ -36,6 +36,15 @@
 (global-set-key
  (kbd "C-.")
  'mc/mark-next-like-this)
+
+(defun update-system ()
+  (interactive)
+  (start-process-shell-command
+   "Update-System"
+   nil
+   "t")
+  (message "Updating"))
+
 
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
