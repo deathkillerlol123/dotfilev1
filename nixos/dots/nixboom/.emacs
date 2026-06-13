@@ -37,15 +37,6 @@
  (kbd "C-.")
  'mc/mark-next-like-this)
 
-(defun update-system ()
-  (interactive)
-  (start-process-shell-command
-   "Update-System"
-   nil
-   "~/dotfiles/nixos/scripts/system_updaters/updatesys_Nixos.sh")
-  (message "Updating"))
-
-
 (defun volatile-kill-buffer()
   "Kill current buffer unconditionally"
   (interactive)
@@ -56,8 +47,7 @@
  'volatile-kill-buffer)
 
 (defun mm/generate-temp-buffer (buf)
-  "A function to generate temprory buffers using either
-  a random name or given name"
+  "A function to generate temprory buffers using either  a random name or given name"
   (interactive "sNew temp buffer name: ")
   (switch-to-buffer
    (get-buffer-create
