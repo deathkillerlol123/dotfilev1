@@ -89,8 +89,9 @@
 		 lsp-pyright lsp-python-ms lsp-ui lua-mode magit
 		 multiple-cursors org-beautify-theme org-bullets
 		 org-pretty-tags org-roam python-mode qml-mode
-		 rainbow-mode tree-inspector tree-sitter
-		 tree-sitter-indent tree-sitter-langs zetteldeft)))
+		 rainbow-mode transpose-frame tree-inspector
+		 tree-sitter tree-sitter-indent tree-sitter-langs
+		 zetteldeft)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
