@@ -26,6 +26,11 @@ in
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
   ];
+  services.flatpak.packages = [
+    { appId = "com.brave.Browser"; origin = "flathub";  }
+    "im.riot.Riot"
+    "com.logseq.Logseq"
+  ];  
   home = {
     username = user;
     homeDirectory = "/home/${user}";
