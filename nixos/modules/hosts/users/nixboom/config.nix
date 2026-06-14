@@ -27,11 +27,7 @@ in
       windows.location = windows_efi;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    services.flatpak.packages = [
-      { appId = "com.brave.Browser"; origin = "flathub";  }
-      "ch.openboard.OpenBoard"
-      "org.vinegarhq.Sober"
-    ];
+    flat.apps = [ "ch.openboard.OpenBoard" "org.vinegarhq.Sober" ];
     programs.mangowc.enable = true;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
