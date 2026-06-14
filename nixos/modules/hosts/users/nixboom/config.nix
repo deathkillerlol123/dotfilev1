@@ -31,6 +31,7 @@ in
     services.flatpak.packages = [
       { appId = "com.brave.Browser"; origin = "flathub";  }
       "com.obsproject.Studio"
+      "ch.openboard.OpenBoard"
     ];
     programs.mangowc.enable = true;
     networking.firewall = {
