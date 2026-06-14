@@ -18,6 +18,7 @@
           { appId = "com.brave.Browser"; origin = "flathub"; }
         ] ++ map (appId: { inherit appId; origin = "flathub"; }) config.flat.apps;
       };
+      services.flatpak.update.onActivation = true;
     };
   };
 }
