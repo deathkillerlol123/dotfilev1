@@ -9,6 +9,7 @@
     	    url = "github:nix-community/home-manager";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
+	nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 	hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
 	helium = {
 	    url = "github:schembriaiden/helium-browser-nix-flake";
