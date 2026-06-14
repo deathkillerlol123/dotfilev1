@@ -24,7 +24,7 @@ let
 in
 {
   imports = [
-    flake-inputs.flatpaks.homeManagerModules.nix-flatpak
+    inputs.flatpaks.homeManagerModules.nix-flatpak
   ];
   home = {
     username = user;
