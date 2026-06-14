@@ -27,10 +27,8 @@ in
       windows.location = windows_efi;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    flat.apps = ["org.vinegarhq.Sober"];
     services.flatpak.packages = [
       { appId = "com.brave.Browser"; origin = "flathub";  }
-      "com.obsproject.Studio"
       "ch.openboard.OpenBoard"
     ];
     programs.mangowc.enable = true;
