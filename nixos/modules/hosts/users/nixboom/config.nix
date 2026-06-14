@@ -30,6 +30,7 @@ in
     services.flatpak.packages = [
       { appId = "com.brave.Browser"; origin = "flathub";  }
       "ch.openboard.OpenBoard"
+      "org.vinegarhq.Sober"
     ];
     programs.mangowc.enable = true;
     networking.firewall = {
