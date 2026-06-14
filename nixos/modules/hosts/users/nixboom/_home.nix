@@ -25,7 +25,7 @@ in
 {
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
-    self.nixosModules.flatpak
+    flake..nixosModules.flatpak
   ];
   services.flatpak.packages = [
     { appId = "com.brave.Browser"; origin = "flathub";  }
