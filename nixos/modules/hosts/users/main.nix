@@ -6,7 +6,7 @@
     {
     imports = with self.nixosModules; [
       software aesthetics 
-      sound bluetooth touch windows
+      sound bluetooth touch 
       login portals bash system
       flatpak
     ];

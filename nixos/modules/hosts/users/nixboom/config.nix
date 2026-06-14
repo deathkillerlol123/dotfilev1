@@ -7,9 +7,9 @@ in
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
       uxplay
-      gaming fish
+      gaming fish windows
       dragware main
-      lime home-man
+      lime home-man  
     ];
     home-man = {
       enable = true;
