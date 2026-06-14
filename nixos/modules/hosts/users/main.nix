@@ -8,7 +8,6 @@
       software aesthetics 
       sound bluetooth touch 
       login portals bash system
-      flatpk
     ];
     documentation.enable = false;
     boot = {
