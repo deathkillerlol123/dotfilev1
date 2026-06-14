@@ -20,6 +20,7 @@ in
       windows.location = windows_efi;
     };
     flatpak.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard"];
+    programs.mangowc.enable = true;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
       allowedUDPPorts = [ 6642 443];
