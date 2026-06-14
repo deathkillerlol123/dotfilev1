@@ -8,7 +8,7 @@
       software aesthetics 
       sound bluetooth touch windows
       login portals bash system
-      flatpak home-man lime
+      flatpak
     ];
     documentation.enable = false;
     boot = {

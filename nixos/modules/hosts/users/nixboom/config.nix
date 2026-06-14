@@ -9,6 +9,7 @@ in
       uxplay
       gaming fish
       dragware main
+      lime home-man
     ];
     home-man = {
       enable = true;
