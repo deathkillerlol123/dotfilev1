@@ -26,10 +26,13 @@ in
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
   ];
-  services.flatpak.packages = [
-    { appId = "com.brave.Browser"; origin = "flathub";  }
-    "ch.openboard.OpenBoard" "org.vinegarhq.Sober"
-  ];  
+  services.flatpak = {
+    update.onActivation = true;
+    packages = [
+      { appId = "com.brave.Browser"; origin = "flathub";  }
+      "ch.openboard.OpenBoard" "org.vinegarhq.Sober"
+    ];
+  };
   home = {
     username = user;
     homeDirectory = "/home/${user}";
