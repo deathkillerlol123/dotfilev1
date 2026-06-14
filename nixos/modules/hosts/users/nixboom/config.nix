@@ -15,6 +15,7 @@ in
        self.nixosModules.lime
        self.nixosModules.home-man
        self.nixosModules.flatpak
+       inputs nix-flatpak.nixosModules.nix-flatpak
     ];
     home-man = {
       enable = true;
