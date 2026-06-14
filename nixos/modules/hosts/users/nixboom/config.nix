@@ -5,11 +5,16 @@ let
 in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
-    imports = with self.nixosModules; [
-      uxplay
-      gaming fish windows
-      dragware main
-      lime home-man flatpak
+    imports = [
+       self.nixosModules.uxplay
+       self.nixosModules.gaming
+       self.nixosModules.fish
+       self.nixosModules.windows
+       self.nixosModules.dragware
+       self.nixosModules.main
+       self.nixosModules.lime
+       self.nixosModules.home-man
+       self.nixosModules.flatpak
     ];
     home-man = {
       enable = true;
