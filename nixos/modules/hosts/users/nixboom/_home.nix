@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs,flake-inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
   user = "nixboom";
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
@@ -24,7 +24,7 @@ let
 in
 {
   imports = [
-    flake-inputs.flatpaks.homeManagerModules.nix-flatpak
+    inputs.flatpaks.homeManagerModules.nix-flatpak
   ];
   home = {
     username = user;
