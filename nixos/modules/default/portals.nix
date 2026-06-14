@@ -13,10 +13,6 @@
      xdg-desktop-portal-gtk
      xdg-desktop-portal-wlr
    ];
-   systemd.user.services.xdg-desktop-portal-wlr = {
-     after = [ "graphical-session.target" ];
-     wants = [ "graphical-session.target" ];
-   };
  };
 }
 
