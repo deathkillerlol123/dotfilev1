@@ -1,7 +1,7 @@
 {inputs,self,...}:{
   flake.nixosModules.flatpak = {inputs,lib,config,pkgs,...}:{
     options = {
-      flatpak = {
+      flat = {
         apps = lib.mkOption {
           default = "";
         };
@@ -10,7 +10,7 @@
     config = 
       let
         grep = pkgs.gnugrep;
-        desiredFlatpaks = config.flatpak.apps;
+        desiredFlatpaks = config.flat.apps;
       in {
         system.userActivationScripts.flatpakManagement = {
           text = ''
