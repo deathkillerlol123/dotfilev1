@@ -28,6 +28,11 @@ in
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
     flat.apps = ["org.vinegarhq.Sober"];
+    services.flatpak.packages = [
+      { appId = "com.brave.Browser"; origin = "flathub";  }
+      "com.obsproject.Studio"
+      "im.riot.Riot"
+    ];
     programs.mangowc.enable = true;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
