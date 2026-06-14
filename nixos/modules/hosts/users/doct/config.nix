@@ -7,6 +7,8 @@ in
     imports = with self.nixosModules; [
       uxplay
       main
+      flatpak
     ];
+    flat.apps = ["ch.openboard.OpenBoard"];
   };
 }
