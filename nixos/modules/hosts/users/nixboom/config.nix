@@ -14,7 +14,6 @@ in
        self.nixosModules.main
        self.nixosModules.lime
        self.nixosModules.home-man
-       self.nixosModules.flatpak
     ];
     home-man = {
       enable = true;
@@ -25,7 +24,6 @@ in
       params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
       windows.location = windows_efi;
     };
-    flat.apps = [ "ch.openboard.OpenBoard" "org.vinegarhq.Sober" ];
     programs.mangowc.enable = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;    
     networking.firewall = {

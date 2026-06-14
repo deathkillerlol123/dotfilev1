@@ -1,4 +1,4 @@
-{ config, pkgs, lib,flake, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 let
   user = "nixboom";
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
@@ -25,12 +25,10 @@ in
 {
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
-    flake.nixosModules.flatpak
   ];
   services.flatpak.packages = [
     { appId = "com.brave.Browser"; origin = "flathub";  }
-    "im.riot.Riot"
-    "com.logseq.Logseq"
+    "ch.openboard.OpenBoard" "org.vinegarhq.Sober"
   ];  
   home = {
     username = user;

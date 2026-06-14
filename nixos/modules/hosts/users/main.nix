@@ -22,6 +22,7 @@
       ];
     };
     programs = enabledservices [ "dconf" "kdeconnect" ];
+    services.flatpak.update.onActivation = true;
     services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" ] //
     {
       logind.settings.Login.KillUserProcesses = true;
