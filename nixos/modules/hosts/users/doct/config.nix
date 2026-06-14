@@ -8,6 +8,5 @@ in
       uxplay
       main
     ];
-    flatpak.apps = ["ch.openboard.OpenBoard"];
   };
 }
