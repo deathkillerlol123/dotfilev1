@@ -24,7 +24,7 @@ let
 in
 {
   imports = [
-    inputs.flatpaks.homeManagerModules.nix-flatpak
+    inputs.nix-flatpak.homeManagerModules.nix-flatpak
   ];
   home = {
     username = user;
