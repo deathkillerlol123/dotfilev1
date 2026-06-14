@@ -1,4 +1,4 @@
-{ config, pkgs, lib,self, inputs, ... }:
+{ config, pkgs, lib,flake, inputs, ... }:
 let
   user = "nixboom";
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
