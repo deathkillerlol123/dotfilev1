@@ -9,7 +9,7 @@ in
       uxplay
       gaming fish windows
       dragware main
-      lime home-man  
+      lime home-man flatpak
     ];
     home-man = {
       enable = true;
@@ -21,6 +21,7 @@ in
       windows.location = windows_efi;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
+    flat.apps = ["org.vinegarhq.Sober"];
     programs.mangowc.enable = true;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];

@@ -1,5 +1,5 @@
 {inputs,self,...}:{
-  flake.nixosModules.flatpk = {inputs,lib,config,pkgs,...}:{
+  flake.nixosModules.flatpak = {inputs,lib,config,pkgs,...}:{
     options = {
       flat = {
         apps = lib.mkOption {
