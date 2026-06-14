@@ -21,7 +21,6 @@ in
       windows.location = windows_efi;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    flat.apps = ["org.vinegarhq.Sober" "ch.openboard.OpenBoard"];
     programs.mangowc.enable = true;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
