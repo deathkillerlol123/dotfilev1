@@ -47,7 +47,4 @@ in {
       name = "Orchis-Grey-Dark";
     };
   };
-  flatpak.apps = [
-    "ch.openboard.OpenBoard"
-  ];
 }
