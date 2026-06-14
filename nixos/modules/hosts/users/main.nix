@@ -12,7 +12,7 @@
     documentation.enable = false;
     boot = {
       tmp.cleanOnBoot = true;
-      kernelPackages = pkgs.linuxPackages_latest;
+
       consoleLogLevel = 3;
       kernelParams = [
         "zswap.enabled=1"

@@ -27,6 +27,7 @@ in
     };
     flat.apps = [ "ch.openboard.OpenBoard" "org.vinegarhq.Sober" ];
     programs.mangowc.enable = true;
+    boot.kernelPackages = pkgs.linuxPackages_latest;    
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
       allowedUDPPorts = [ 6642 443];

@@ -21,7 +21,11 @@ let
       source = "${dotfiles}/${path}";
       recursive = true;
     });
-in {
+in
+{
+  imports = [
+    flake-inputs.flatpaks.homeManagerModules.nix-flatpak
+  ];
   home = {
     username = user;
     homeDirectory = "/home/${user}";
