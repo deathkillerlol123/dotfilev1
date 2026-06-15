@@ -14,10 +14,6 @@ in
        self.nixosModules.main
        self.nixosModules.lime
     ];
-    home-man = {
-      enable = true;
-      username = user;
-    };
     lime = {
       enable = true;
       params = [ "snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1"];
