@@ -10,8 +10,8 @@
       options.home-man = {
         enable = lib.mkEnableOption "Home Manager";
         backupFileExtension = lib.mkOption {
-          TYPE = LIB.TYPES.STR;
-          DEFAULT = "BACKUP";
+          type = lib.types.str;
+          default = "backup";
         };
         users = lib.mkOption {
           type = lib.types.listOf lib.types.str;
