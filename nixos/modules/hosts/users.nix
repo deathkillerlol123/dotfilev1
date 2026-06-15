@@ -4,7 +4,6 @@
       main-user
       home-man
       nixboom
-      doct
     ];
     main-user.users = {
       nixboom = {
