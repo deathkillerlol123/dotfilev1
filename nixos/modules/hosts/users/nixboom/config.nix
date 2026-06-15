@@ -5,14 +5,9 @@ let
 in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
-    imports = [
-       self.nixosModules.uxplay
-       self.nixosModules.gaming
-       self.nixosModules.fish
-       self.nixosModules.windows
-       self.nixosModules.dragware
-       self.nixosModules.main
-       self.nixosModules.lime
+    imports = with self.nixosModules; [
+       uxplay gaming fish
+       windows dragware main lime
     ];
     lime = {
       enable = true;
@@ -20,7 +15,11 @@ in
       windows.location = windows_efi;
     };
     programs.mangowc.enable = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;    
+    services.displayManager.ly.enable = true;
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+    environment.systemPackages = with pkgs; [
+      ly
+    ];
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
       allowedUDPPorts = [ 6642 443];

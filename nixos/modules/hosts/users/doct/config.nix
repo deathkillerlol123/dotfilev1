@@ -7,6 +7,12 @@ in
     imports = with self.nixosModules; [
       uxplay
       main
+      kde
+    ];
+    environment.systemPackages = with pkgs; [
+      firefox
+      anki
+      whatsapp-electron
     ];
   };
 }

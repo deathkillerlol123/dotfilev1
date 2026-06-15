@@ -1,9 +1,8 @@
 {inputs,...}:{
-  flake.nixosModules.environment = {pkgs, ... }: {
+  flake.nixosModules.kde = {pkgs, ... }: {
     services = {
       desktopManager = {
-        plasma6.enable = false;
-        gnome.enable = false;
+        plasma6.enable = true;
       };
     };
   };
