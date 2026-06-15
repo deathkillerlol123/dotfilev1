@@ -1,5 +1,8 @@
 {inputs,self,...}:{
   flake.nixosModules.main-user = {lib,config,pkgs,...}:{
+    imports = [
+      inputs.home-manager.nixosModules.home-manager
+    ];
     options.main-user.users= lib.mkOption {
       type = lib.types.attrsOf (lib.types.submodule ({ name, ... }: {
         options = {
