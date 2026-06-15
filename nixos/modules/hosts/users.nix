@@ -2,6 +2,7 @@
   flake.nixosModules.users = { config, lib, pkgs, inputs,... }:{
     imports = with self.nixosModules; [
       main-user
+      home-man
       nixboom
       doct
     ];
@@ -14,6 +15,12 @@
         enable = false;
 	groups = ["wheel" "gamemode"];
       };
+    };
+    home-man = {
+      enable = true;
+      users = [
+        "nixboom"
+      ];
     };
   };
 }

@@ -13,7 +13,6 @@ in
        self.nixosModules.dragware
        self.nixosModules.main
        self.nixosModules.lime
-       self.nixosModules.home-man
     ];
     home-man = {
       enable = true;
