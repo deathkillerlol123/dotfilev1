@@ -13,6 +13,7 @@ in
       firefox
       anki
       whatsapp-electron
+      libreoffice
     ];
   };
 }
