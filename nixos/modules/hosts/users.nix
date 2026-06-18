@@ -11,7 +11,7 @@
         groups = ["wheel" "gamemode"];
       };
       doct = {
-        enable = true;
+        enable = false;
 	groups = ["wheel" "gamemode"];
       };
     };
