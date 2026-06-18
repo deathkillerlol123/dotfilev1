@@ -11,7 +11,6 @@ in
   services.flatpak = {
     update.onActivation = true;
     packages = [
-      { appId = "com.brave.Browser"; origin = "flathub";  }
       "ch.openboard.OpenBoard" "org.vinegarhq.Sober"
     ];
   };
