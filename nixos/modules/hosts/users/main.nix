@@ -12,7 +12,6 @@
     documentation.enable = false;
     boot = {
       tmp.cleanOnBoot = true;
-
       consoleLogLevel = 3;
       kernelParams = [
         "zswap.enabled=1"
