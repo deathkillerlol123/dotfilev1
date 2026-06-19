@@ -37,7 +37,7 @@ in
     homeDirectory = "/home/${user}";
     stateVersion = "25.11";
     packages = [
-      pkgs.nixfat
+      pkgs.nixfmt
     ];
   };
   programs.home-manager.enable = true;
