@@ -36,6 +36,9 @@ in
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = "25.11";
+    packages = [
+      pkgs.nixfat
+    ];
   };
   programs.home-manager.enable = true;
   home.file =
