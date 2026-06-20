@@ -20,4 +20,11 @@ in
     stateVersion = "25.11";
   };
   programs.home-manager.enable = true;
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.orchis-theme;
+      name = "Orchis-Grey-Dark";
+    };
+  };  
 }
