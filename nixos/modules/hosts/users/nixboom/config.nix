@@ -16,7 +16,6 @@ in
     };
     programs.mangowc.enable = true;
     services.displayManager.ly.enable = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
       allowedUDPPorts = [ 6642 443];
