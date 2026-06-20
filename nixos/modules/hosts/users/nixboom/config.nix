@@ -17,13 +17,19 @@ in
     programs.mangowc.enable = true;
     services.displayManager.ly.enable = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    environment.systemPackages = with pkgs; [
-      ly
-    ];
     networking.firewall = {
       allowedTCPPorts = [ 6642 443 ];
       allowedUDPPorts = [ 6642 443];
-    };
+    };    
+    environment.systemPackages = with pkgs; [
+      ly wdisplays firefox-devedition whatsapp-electron
+      (discord.override {
+        withOpenASAR = true;
+      })
+      swww pywal swaynotificationcenter swaylock rofi bzmenu
+      pwmenu copyq grim slurp swappy wl-clipboard wezterm
+      python312 kdePackages.kdeconnect-kde
+   ];    
     system.stateVersion = "25.11";
   };
 }

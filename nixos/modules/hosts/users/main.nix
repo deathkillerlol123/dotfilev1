@@ -5,7 +5,6 @@
     in
     {
     imports = with self.nixosModules; [
-      software aesthetics 
       sound bluetooth touch 
       portals bash system
     ];
@@ -13,6 +12,7 @@
     boot = {
       tmp.cleanOnBoot = true;
       consoleLogLevel = 3;
+      kernelPackages = pkgs.linuxPackages_latest;
       kernelParams = [
         "zswap.enabled=1"
         "zswap.compressor=lz4"
