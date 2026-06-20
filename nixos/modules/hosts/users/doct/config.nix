@@ -15,5 +15,6 @@ in
       whatsapp-electron
       libreoffice
     ];
+    services.displayManager.cosmic-greeter.enable = true;
   };
 }

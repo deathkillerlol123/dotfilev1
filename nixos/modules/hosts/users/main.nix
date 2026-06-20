@@ -7,7 +7,7 @@
     imports = with self.nixosModules; [
       software aesthetics 
       sound bluetooth touch 
-      login portals bash system
+      portals bash system
     ];
     documentation.enable = false;
     boot = {
