@@ -23,7 +23,7 @@
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          backupFileExtension = cfg.backupFileExtension;
+          inherit (cfg) backupFileExtension;
           extraSpecialArgs = {
             inherit inputs self;
           };
