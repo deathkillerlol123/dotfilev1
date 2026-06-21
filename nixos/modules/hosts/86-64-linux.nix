@@ -8,6 +8,13 @@ in
     specialArgs = {inherit inputs;};
     modules = with self.nixosModules; [
       users
+      {
+        home-manager.users.nixboom = {
+	  imports = [
+	    config.flake.homeModules.nixhome
+	  ];
+	};
+      }
     ];
   };
 }
