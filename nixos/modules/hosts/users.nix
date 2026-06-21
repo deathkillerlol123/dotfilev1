@@ -18,7 +18,6 @@
     home-man = {
       enable = true;
       users = [
-        "nixboom"
       ];
     };
   };

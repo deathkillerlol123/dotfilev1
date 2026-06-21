@@ -7,7 +7,7 @@ in
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
        gaming fish
-       windows dragware main lime
+       windows dragware main lime nixhome
     ];
     lime = {
       enable = true;
