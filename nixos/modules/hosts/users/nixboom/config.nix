@@ -9,7 +9,6 @@ in
        inputs.home-manager.flakeModules.home-manager
        gaming fish
        windows dragware main lime
-       nixhome
     ];
     lime = {
       enable = true;
