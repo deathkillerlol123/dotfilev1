@@ -6,6 +6,7 @@ in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
+       inputs.home-manager.flakeModules.home-manager
        gaming fish
        windows dragware main lime
        nixhome
