@@ -5,8 +5,7 @@
     in
     {
     imports = with self.nixosModules; [
-      sound bluetooth touch 
-      portals bash system
+      sound bluetooth touch portals bash system
     ];
     documentation.enable = false;
     boot = {
@@ -21,9 +20,8 @@
       ];
     };
     programs = enabledservices [ "dconf" "kdeconnect" ];
-    services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" ] //
+    services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" "logind.settings.Login.KillUserProcesses" ] //
     {
-      logind.settings.Login.KillUserProcesses = true;
       fwupd.enable = false;
       xserver.wacom.enable = true;    
     };
