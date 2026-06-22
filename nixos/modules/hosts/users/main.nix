@@ -20,7 +20,7 @@
       ];
     };
     programs = enabledservices [ "dconf" "kdeconnect" ];
-    services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" "logind.settings.Login.KillUserProcesses" ] //
+    services = enabledservices [ "blueman" "flatpak" "libinput" "thermald" logind.settings.Login.KillUserProcesses ] //
     {
       fwupd.enable = false;
       xserver.wacom.enable = true;    
