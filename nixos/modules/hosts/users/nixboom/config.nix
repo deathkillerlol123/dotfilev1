@@ -6,8 +6,7 @@ in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
-       gaming fish
-       windows dragware main lime
+       gaming fish windows main dragware lime
     ];
     lime = {
       enable = true;
@@ -21,7 +20,7 @@ in
       allowedUDPPorts = [ 6642 443];
     };    
     environment.systemPackages = with pkgs; [
-      ly wdisplays firefox-devedition whatsapp-electron
+      wdisplays firefox-devedition whatsapp-electron
       (discord.override {
         withOpenASAR = true;
       })
