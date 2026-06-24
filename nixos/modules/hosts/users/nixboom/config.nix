@@ -28,16 +28,6 @@ in
       pwmenu copyq grim slurp swappy wl-clipboard wezterm
       python312 kdePackages.kdeconnect-kde
    ];
-   programs.weylus.enable = true;
-   programs.weylus.openFirewall = true; # Opens ports 1701 and 9001
-   programs.weylus.users = [ "your_username" ]; # Replace with your actual username
- 
-   # Allow access to uinput for stylus/multitouch support
-   boot.kernelModules = [ "uinput" ];
-   hardware.uinput.enable = true; 
-   services.udev.extraRules = ''
-     KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"
-   '' ;    
     system.stateVersion = "25.11";
   };
 }
