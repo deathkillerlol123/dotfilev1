@@ -8,7 +8,7 @@
     main-user.users = {
       nixboom = {
         enable = true;
-        groups = ["wheel" "gamemode"];
+        groups = ["wheel" "gamemode" "uinput"];
       };
       doct = {
         enable = false;
