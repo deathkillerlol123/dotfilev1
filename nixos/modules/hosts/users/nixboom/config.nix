@@ -6,7 +6,7 @@ in
 {
   flake.nixosModules.nixboom = {config,lib,pkgs,inputs,... }:{
     imports = with self.nixosModules; [
-       gaming fish windows main dragware lime
+       uxplay gaming fish windows main dragware lime
     ];
     lime = {
       enable = true;
