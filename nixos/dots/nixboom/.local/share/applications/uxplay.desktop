@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Uxplay Toggle
-Exec=/home/nixboom/dotfiles/scripts/rofi_dmen/uxplay-toggle
+Exec=/home/nixboom/dotfiles/nixos/scripts/rofi_dmen/uxplay-toggle
 Terminal=false
 Type=Application
 Icon=terminal
