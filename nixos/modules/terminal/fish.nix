@@ -4,10 +4,10 @@
     programs.fish = {
       enable = true;
       shellAliases = {
-        gu="~/dotfiles/nixos/scripts/git_updater.sh";
-  	w="~/dotfiles/nixos/scripts/Boot-Windows10.sh";
-  	n="gu && sudo nixos-rebuild switch --flake ~/dotfiles/nixos";	
-  	t="~/dotfiles/nixos/scripts/system_updaters/updatesys_Nixos.sh";
+        gu="${self.outPath}/scripts/git_updater.sh";
+  	w="${self.outPath}/scripts/Boot-Windows10.sh";
+  	t="${self.outPath}/scripts/system_updaters/updatesys_Nixos.sh";
+  	n="gu && sudo nixos-rebuild switch --flake ~/dotfiles/nixos";		
   	ls="eza -a --tree -L 1";
   	e="emacs -nw";
   	s="statix check ~/dotfiles/nixos";
