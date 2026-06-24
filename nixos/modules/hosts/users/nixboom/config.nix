@@ -28,11 +28,6 @@ in
       pwmenu copyq grim slurp swappy wl-clipboard wezterm
       python312 kdePackages.kdeconnect-kde
    ];
-    services.sunshine = {
-      enable = true;
-      autoStart = true;
-      openFirewall = true;
-    };   
     system.stateVersion = "25.11";
   };
 }
