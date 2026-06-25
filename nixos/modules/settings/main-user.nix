@@ -35,8 +35,11 @@
       programs = {
         nh = {
           enable = true;
-          clean.enable = true;
-          flake = "${self.outPath}";
+          flake = "${self.outPath}";	  
+          clean = {
+	    enable = true;
+            extraArgs = "--keep 5";
+	  };
         };
         nix-ld.enable = true;
       };
