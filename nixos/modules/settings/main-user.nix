@@ -38,7 +38,7 @@
           flake = "${self.outPath}";	  
           clean = {
 	    enable = true;
-            extraArgs = "--keep 5";
+            extraArgs = "--keep 3";
 	  };
         };
         nix-ld.enable = true;
