@@ -11,7 +11,7 @@
     boot = {
       tmp.cleanOnBoot = true;
       consoleLogLevel = 3;
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_zen;
       kernelParams = [
         "zswap.enabled=1"
         "zswap.compressor=lz4"
