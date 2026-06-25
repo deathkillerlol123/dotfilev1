@@ -1,1 +1,1 @@
-hello triangle
+Nixos Config
