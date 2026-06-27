@@ -22,7 +22,7 @@
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
     };
-    outputs = { self, nixpkgs,flake-parts,hyprland, ... }@inputs:
+    outputs = {flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; }
     {
 	imports = [
