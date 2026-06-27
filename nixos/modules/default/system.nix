@@ -19,6 +19,7 @@
         zoxide
         emacs
         nixd
+        nixfmt
         eza
         bat
         bottom
