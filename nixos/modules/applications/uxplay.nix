@@ -10,7 +10,7 @@
         publish = {
           enable = true;
           addresses = true;
-          hinfo = true;
+        hinfo = true;
           userServices = true;
           workstation = true;
 	  domain = true;

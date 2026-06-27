@@ -15,6 +15,7 @@
       bash
       zoxide
       emacs
+      nixfmt
       eza
       bat
       bottom

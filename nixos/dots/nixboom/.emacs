@@ -1,4 +1,6 @@
 (require 'package)
+(require 'nix-mode)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
@@ -87,7 +89,8 @@
 		 corfu-candidate-overlay eglot-inactive-regions
 		 electric-cursor flycheck json-mode lsp-latex lsp-mode
 		 lsp-pyright lsp-python-ms lsp-treemacs lsp-ui
-		 lua-mode magit multiple-cursors org-beautify-theme
+		 lua-mode magit multiple-cursors nix-mode
+		 nixos-options nixpkgs-fmt org-beautify-theme
 		 org-bullets org-pretty-tags org-roam python-mode
 		 qml-mode rainbow-mode transpose-frame tree-inspector
 		 tree-sitter tree-sitter-indent tree-sitter-langs
@@ -98,6 +101,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(add-hook 'nix-mode-hook 'nixpkgs-fmt-on-save-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
