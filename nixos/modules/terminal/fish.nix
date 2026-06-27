@@ -10,7 +10,7 @@
   	n="gu && sudo nixos-rebuild switch --flake ~/dotfiles/nixos";		
   	ls="eza -a --tree -L 1";
   	e="emacs -nw";
-  	s="statix check ~/dotfiles/nixos";
+  	s="statix check ~/dotfiles/nixos && deadnix";
       };
     };
     environment.systemPackages = with pkgs; [
