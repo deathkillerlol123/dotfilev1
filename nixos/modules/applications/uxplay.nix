@@ -1,4 +1,4 @@
-{_}:
+{self,...}:
 {
   flake.nixosModules.uxplay =
     { pkgs, ... }:
