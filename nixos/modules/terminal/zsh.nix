@@ -1,7 +1,7 @@
-{ _ }:
+{ ... }:
 {
   flake.nixosModules.zsh =
-    { __ }:
+    {... }:
     {
       programs.zsh = {
         enable = true;
