@@ -48,7 +48,9 @@
 (global-set-key
  (kbd "C-x k")
  'volatile-kill-buffer)
-
+(global-set-key
+ (kbd "C-x f")
+ 'nix-format-buffer)
 (defun mm/generate-temp-buffer (buf)
   "A function to generate temprory buffers using either  a random name or given name"
   (interactive "sNew temp buffer name: ")

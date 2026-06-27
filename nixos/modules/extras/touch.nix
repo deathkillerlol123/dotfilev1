@@ -1,8 +1,10 @@
-{...}:{
-  flake.nixosModules.touch = {pkgs,...}:
-  {
-    environment.systemPackages = with pkgs; [
-      libinput
-    ];
-  };
+{ ... }:
+{
+  flake.nixosModules.touch =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = with pkgs; [
+        libinput
+      ];
+    };
 }

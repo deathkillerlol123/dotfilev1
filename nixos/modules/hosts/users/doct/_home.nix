@@ -1,4 +1,10 @@
-{config,pkgs,lib,inputs,...}:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 let
   user = "doct";
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
@@ -11,7 +17,8 @@ in
   services.flatpak = {
     update.onActivation = true;
     packages = [
-      "ch.openboard.OpenBoard" "org.vinegarhq.Sober"
+      "ch.openboard.OpenBoard"
+      "org.vinegarhq.Sober"
     ];
   };
   home = {
@@ -26,5 +33,5 @@ in
       package = pkgs.orchis-theme;
       name = "Orchis-Grey-Dark";
     };
-  };  
+  };
 }
