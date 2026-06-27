@@ -1,10 +1,16 @@
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
 
 (menu-bar-mode -1) 
 (toggle-scroll-bar -1) 
 (tool-bar-mode -1) 
+
+(define-abbrev-table 'global-abbrev-table
+  '(("fx" "{config,inputs,lib,pkgs,...}:{\n  flake.nixosModules.")))
+(setq-default abbrev-mode t)
 
 (use-package eglot
   :hook (nix-mode . eglot-ensure))
