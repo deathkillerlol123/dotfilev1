@@ -88,18 +88,15 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(aggressive-indent auto-complete avy-embark-collect colorful-mode
-		       company corfu eglot-inactive-regions
-		       electric-cursor evil flycheck golden-ratio jinx
-		       json-mode latex-extra lsp-latex lsp-pyright
-		       lsp-python-ms lsp-treemacs lsp-ui lua-mode
-		       magit multiple-cursors nix-buffer nix-mode
-		       nixos-options nixpkgs-fmt org-beautify-theme
-		       org-bullets org-mime org-pretty-tags
-		       python-mode qml-mode rainbow-mode
-		       transpose-frame tree-inspector
-		       tree-sitter-indent tree-sitter-langs
-		       yasnippet-snippets zetteldeft)))
+   '(## aggressive-indent auto-complete avy-embark-collect colorful-mode
+	company corfu eglot-inactive-regions electric-cursor evil
+	flycheck golden-ratio jinx json-mode latex-extra lsp-latex
+	lsp-pyright lsp-python-ms lsp-treemacs lsp-ui lua-mode magit
+	multiple-cursors nix-buffer nix-mode nixos-options nixpkgs-fmt
+	org-beautify-theme org-bullets org-mime org-pretty-tags
+	python-mode qml-mode rainbow-mode transpose-frame
+	tree-inspector tree-sitter-indent tree-sitter-langs
+	yasnippet-classic-snippets yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-hook 'after-init-hook 'global-company-mode)
