@@ -1,7 +1,7 @@
-{ _ }:
+{self,... }:
 {
   flake.nixosModules.bash =
-    { _ }:
+    { ... }:
     {
       programs.bash = {
         enable = true;
