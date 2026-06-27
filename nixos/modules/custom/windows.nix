@@ -1,4 +1,4 @@
-{inputs,self,...}:{
+{self,...}:{
   flake.nixosModules.windows = {pkgs,...}:{
     services.displayManager.sessionPackages = [
       (pkgs.writeTextFile {

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{_}:
 {
   flake.nixosModules.uxplay =
     { pkgs, ... }:

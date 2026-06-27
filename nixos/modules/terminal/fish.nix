@@ -1,5 +1,5 @@
-{inputs,self,...}:{
-  flake.nixosModules.fish = {config,lib,pkgs,inputs,...}:
+{self,...}:{
+1;277;0c  flake.nixosModules.fish = {pkgs,...}:
   {
     programs.fish = {
       enable = true;
@@ -10,7 +10,7 @@
   	n="gu && sudo nixos-rebuild switch --flake ~/dotfiles/nixos";		
   	ls="eza -a --tree -L 1";
   	e="emacs -nw";
-  	s="statix check ~/dotfiles/nixos && deadnix";
+  	s="statix check ~/dotfiles/nixos";
       };
     };
     environment.systemPackages = with pkgs; [

@@ -1,5 +1,5 @@
-{inputs,self,...}:{
-  flake.nixosModules.lime = {lib,config,pkgs,...}:{
+{self,...}:{
+  flake.nixosModules.lime = {lib,config,...}:{
     options = {
       lime.enable = lib.mkEnableOption "limine";
       lime = {

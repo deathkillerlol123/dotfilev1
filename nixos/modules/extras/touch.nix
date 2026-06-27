@@ -1,5 +1,5 @@
-{inputs,self,...}:{
-  flake.nixosModules.touch = {config,lib,pkgs,inputs,...}:
+{_}:{
+  flake.nixosModules.touch = {pkgs,...}:
   {
     environment.systemPackages = with pkgs; [
       libinput

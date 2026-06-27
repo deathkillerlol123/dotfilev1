@@ -1,5 +1,5 @@
-{inputs,self,...}:{
-  flake.nixosModules.users = { config, lib, pkgs, inputs,... }:{
+{self,...}:{
+  flake.nixosModules.users = { ... }:{
     imports = with self.nixosModules; [
       main-user
       home-man

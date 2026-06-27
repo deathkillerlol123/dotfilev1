@@ -1,4 +1,4 @@
-{inputs,self,...}:{
+{self,...}:{
   flake.nixosModules.main-user = {lib,config,pkgs,...}:{
     options.main-user.users= lib.mkOption {
       type = lib.types.attrsOf (lib.types.submodule ({ name, ... }: {

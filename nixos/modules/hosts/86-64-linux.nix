@@ -1,4 +1,4 @@
-{inputs,self,pkgs,config,...}:
+{inputs,self,...}:
 let
   hostname = "nixbtw";
 in

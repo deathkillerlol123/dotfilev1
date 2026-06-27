@@ -1,5 +1,5 @@
 {inputs,self,...}:{
-  flake.nixosModules.main = {config, lib, pkgs, inputs, ...}:
+  flake.nixosModules.main = { lib, pkgs, ...}:
     let
       enabledservices = names: lib.genAttrs names (_: { enable = true; });
     in
