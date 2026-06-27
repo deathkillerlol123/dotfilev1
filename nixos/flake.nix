@@ -32,7 +32,9 @@
       imports = [
         (inputs.import-tree ./modules)
       ];
-      nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay];
+      flake = {
+        nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay];
+      };
       systems = [
         "x86_64-linux"
         "aarch64-linux"
