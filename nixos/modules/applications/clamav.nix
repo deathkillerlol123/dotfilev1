@@ -1,4 +1,4 @@
-{_}:
+{lib,...}:
 let
   enabledservices =
     names:
