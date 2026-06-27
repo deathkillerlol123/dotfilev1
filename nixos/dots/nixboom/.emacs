@@ -1,12 +1,13 @@
 (require 'package)
-(require 'nix-mode)
-(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (menu-bar-mode -1) 
 (toggle-scroll-bar -1) 
 (tool-bar-mode -1) 
+
+(use-package eglot
+  :hook (nix-mode . eglot-ensure))
 
 (setq backup-directory-alist '(("." . "/tmp"))
       backup-by-copying      t  
@@ -85,29 +86,38 @@
  '(custom-enabled-themes '(modus-vivendi-tinted))
  '(evil-auto-indent t)
  '(package-selected-packages
-   '(ace-windowt avy-embark-collect colorful-mode corfu
-		 corfu-candidate-overlay eglot-inactive-regions
-		 electric-cursor flycheck json-mode lsp-latex lsp-mode
-		 lsp-pyright lsp-python-ms lsp-treemacs lsp-ui
-		 lua-mode magit multiple-cursors nix-mode
-		 nixos-options nixpkgs-fmt org-beautify-theme
-		 org-bullets org-pretty-tags org-roam python-mode
-		 qml-mode rainbow-mode transpose-frame tree-inspector
-		 tree-sitter tree-sitter-indent tree-sitter-langs
-		 zetteldeft)))
+   '(aggressive-indent auto-complete avy-embark-collect colorful-mode
+		       company corfu eglot-inactive-regions
+		       electric-cursor evil flycheck golden-ratio jinx
+		       json-mode latex-extra lsp-latex lsp-pyright
+		       lsp-python-ms lsp-treemacs lsp-ui lua-mode
+		       magit multiple-cursors nix-mode nixos-options
+		       nixpkgs-fmt org-beautify-theme org-bullets
+		       org-mime org-pretty-tags python-mode qml-mode
+		       rainbow-mode transpose-frame tree-inspector
+		       tree-sitter-indent tree-sitter-langs
+		       yasnippet-snippets zetteldeft)))
+(require 'nix-mode)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
+(use-package reformatter
+  :ensure t)
+(use-package nix-mode
+  :mode "\\.nix\\'")
+(reformatter-define nixfmt
+  :program "nixfmt")
+
+(add-hook 'nix-mode-hook #'nixfmt-on-save-mode)
+(add-hook 'after-init-hook 'global-company-mode)
+(global-display-line-numbers-mode)
+(global-tree-sitter-mode)
+(global-corfu-mode)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(add-hook 'nix-mode-hook 'nixpkgs-fmt-on-save-mode)
-(add-hook 'after-init-hook 'global-company-mode)
-(global-display-line-numbers-mode)
-(global-tree-sitter-mode)
-(global-corfu-mode)
-
-
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'css-mode-hook #'aggressive-indent-mode)

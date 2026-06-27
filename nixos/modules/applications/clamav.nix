@@ -1,10 +1,24 @@
-{inputs,pkgs,lib,...}:
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}:
 let
-  enabledservices = names: lib.genAttrs names (_: { enable = true; });
+  enabledservices =
+    names:
+    lib.genAttrs names (_: {
+      enable = true;
+    });
 in
 {
-  flake.nixosModules.clamav = {pkgs,...}:{
-    environment.systemPackages = [pkgs.clamav];
-    services.clamav= enabledservices ["daemon" "updater"];
-  };
+  flake.nixosModules.clamav =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = [ pkgs.clamav ];
+      services.clamav = enabledservices [
+        "daemon"
+        "updater"
+      ];
+    };
 }
