@@ -100,7 +100,6 @@
 		       yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
-(add-hook 'nix-mode-hook #'nixfmt-on-save-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)

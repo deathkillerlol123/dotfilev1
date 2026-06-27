@@ -18,8 +18,6 @@
         bash
         zoxide
         emacs
-        nixfmt
-        deadnix
         nixd
         eza
         bat
