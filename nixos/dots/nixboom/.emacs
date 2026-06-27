@@ -99,13 +99,6 @@
 		       yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
-(use-package reformatter
-  :ensure t)
-(use-package nix-mode
-  :mode "\\.nix\\'")
-(reformatter-define nixfmt
-  :program "nixfmt")
-
 (add-hook 'nix-mode-hook #'nixfmt-on-save-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (global-display-line-numbers-mode)
