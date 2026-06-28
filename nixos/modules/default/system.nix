@@ -11,7 +11,6 @@
         git
         gh
         go
-        haskellPackages.ditto
         libnotify
         brightnessctl
         borgbackup
