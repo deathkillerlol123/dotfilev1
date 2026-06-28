@@ -21,6 +21,7 @@
         emacs
         nixd
         nixfmt
+        zathura
         eza
         bat
         bottom
