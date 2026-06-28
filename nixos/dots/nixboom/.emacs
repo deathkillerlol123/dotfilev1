@@ -158,3 +158,55 @@
 (font-lock-add-keywords 'org-mode
                         '(("^ *\\([+]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "◦"))))))
+
+
+
+
+;; opeing docx and pdf
+(defvar-local my/docx-generated-pdf nil)
+(defvar-local my/zathura-process nil)
+
+(defun my/delete-docx-pdf ()
+  (when (and my/docx-generated-pdf
+             (file-exists-p my/docx-generated-pdf))
+    (delete-file my/docx-generated-pdf)))
+
+(defun my/open-zathura (file delete-after)
+  (setq my/zathura-process
+        (start-process "zathura" nil "zathura" file))
+
+  (set-process-sentinel
+   my/zathura-process
+   (lambda (proc event)
+     (when (memq (process-status proc) '(exit signal))
+       (when delete-after
+         (my/delete-docx-pdf))))))
+
+(defun my/open-docx ()
+  (let* ((file (expand-file-name buffer-file-name))
+         (dir (file-name-directory file))
+         (name (file-name-sans-extension
+                (file-name-nondirectory file)))
+         (pdf (concat dir name ".pdf")))
+
+    (unless (file-exists-p pdf)
+      (call-process "libreoffice" nil "*docx-convert*" nil
+                    "--headless"
+                    "--convert-to" "pdf"
+                    file))
+
+    (setq my/docx-generated-pdf pdf)
+    (my/open-zathura pdf t)))
+
+(defun my/open-pdf ()
+  (my/open-zathura buffer-file-name nil))
+
+(defun my/doc-handler ()
+  (when buffer-file-name
+    (cond
+     ((string-match "\\.docx\\'" buffer-file-name)
+      (my/open-docx))
+     ((string-match "\\.pdf\\'" buffer-file-name)
+      (my/open-pdf)))))
+
+(add-hook 'find-file-hook #'my/doc-handler)
