@@ -16,7 +16,6 @@
           gamescopeSession.enable = true;
           protontricks.enable = true;
           extest.enable = true;
-          platformOptimizations.enable = true;
         };
       };
       hardware.graphics = {
