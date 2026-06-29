@@ -13,6 +13,7 @@
           ls = "eza -a --tree -L 1";
           e = "emacs -nw";
           s = "statix check ~/dotfiles/nixos";
+          key = "wshowkeys -a bottom -m 20 -b 00000000"
         };
       };
       environment.systemPackages = with pkgs; [
