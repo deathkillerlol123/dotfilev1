@@ -3,7 +3,7 @@
   flake.nixosModules.fish =
     { pkgs, ... }:
     {
-      imports = [ alias ];
+      imports = [ self.nixosModules.alias ];
       programs.fish = {
         enable = true;
         shellAliases = self.lib.shellAliases;
