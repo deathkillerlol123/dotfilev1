@@ -57,7 +57,7 @@
           xserver.wacom.enable = true;
           journald.extraConfig = "SystemMaxUse=50M";
           tuned = {
-            enable = true;
+            enable = false;
             settings.dynamic_tuning = true;
             ppdSupport = true;
             ppdSettings.main.default = "performance";
