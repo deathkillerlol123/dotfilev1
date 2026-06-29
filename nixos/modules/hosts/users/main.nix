@@ -64,6 +64,10 @@
           };
         };
       systemd.services.NetworkManager-wait-online.enable = false;
+      systemd.services.NetworkManager = {
+        wantedBy = lib.mkForce [ "graphical.target" ];
+        after = [ "graphical.target" ];
+      };
       time.timeZone = "Europe/London";
       networking = {
         hostName = "nixbtw";
