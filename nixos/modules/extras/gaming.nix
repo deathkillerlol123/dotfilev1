@@ -4,6 +4,7 @@
     { pkgs, ... }:
     {
       programs = {
+        platfornOptimizations.enable = true;
         gamemode.enable = true;
         gamescope = {
           enable = true;
