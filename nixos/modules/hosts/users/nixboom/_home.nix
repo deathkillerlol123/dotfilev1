@@ -87,4 +87,5 @@ in
       name = "Orchis-Grey-Dark";
     };
   };
+  programs.emacs.enable = true;
 }
