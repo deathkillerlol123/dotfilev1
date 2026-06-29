@@ -15,8 +15,8 @@
         bluetooth
         touch
         portals
-        bash
         alias
+        bash
         system
       ];
       documentation.enable = false;
@@ -24,7 +24,7 @@
         tmp.cleanOnBoot = true;
         consoleLogLevel = 3;
         kernelPackages = pkgs.linuxPackages_zen;
-        loader.timeout = 0;        
+        loader.timeout = 0;
         kernelParams = [
           "random.trust_cpu=on"
         ];
@@ -39,7 +39,7 @@
         "vm.swappiness" = lib.mkDefault 180;
         "vm.watermark_boost_factor" = lib.mkDefault 0;
         "vm.watermark_scale_factor" = lib.mkDefault 125;
-        "vm.page-cluster" = lib.mkDefault 0;        
+        "vm.page-cluster" = lib.mkDefault 0;
       };
       programs = enabledservices [
         "dconf"
