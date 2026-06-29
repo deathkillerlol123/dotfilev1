@@ -16,6 +16,7 @@
         touch
         portals
         bash
+        alias
         system
       ];
       documentation.enable = false;
