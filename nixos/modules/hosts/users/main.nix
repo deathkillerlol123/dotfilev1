@@ -48,6 +48,12 @@
           fwupd.enable = false;
           xserver.wacom.enable = true;
           journald.extraConfig = "SystemMaxUse=50M";
+          tuned = {
+            enable = true;
+            settings.dynamic_tuning = true;
+            ppdSupport = true;
+            ppdSettings.main.default = "performance";
+          };
         };
       systemd.services.NetworkManager-wait-online.enable = false;
       time.timeZone = "Europe/London";
