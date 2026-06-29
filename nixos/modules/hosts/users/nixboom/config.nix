@@ -7,8 +7,14 @@ in
       imports = with self.nixosModules; [ uxplay gaming fish windows main dragware lime ];
       lime = {
         enable = true;
-        params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];
+        params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" "random.trust_cpu=on"];
         windows.location = windows_efi;
+      };
+      boot.loader.timeout = 0;
+      virtualisation.libvirtd = {
+        enable = true;
+        onBoot = "ignore";
+        onShutdown = "shutdown";
       };
       programs.mangowc.enable = true;
       services.displayManager.ly.enable = true;
