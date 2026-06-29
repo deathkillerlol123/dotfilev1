@@ -23,7 +23,9 @@
         tmp.cleanOnBoot = true;
         consoleLogLevel = 3;
         kernelPackages = pkgs.linuxPackages_zen;
+        loader.timeout = 0;        
         kernelParams = [
+          "random.trust_cpu=on"
           "zswap.enabled=1"
           "zswap.compressor=lz4"
           "zswap.max_pool_percent=20"
