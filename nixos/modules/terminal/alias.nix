@@ -1,7 +1,7 @@
 {self,config,inputs,lib,pkgs,...}:{
   flake.nixosModules.alias = {config,inputs,lib,pkgs,...}:
     {
-      lib.shellAliases = {
+      config.shellAliases = {
         gu = "${self.outPath}/scripts/git_updater.sh";
         w  = "${self.outPath}/scripts/Boot-Windows10.sh";
         t  = "${self.outPath}/scripts/system_updaters/updatesys_Nixos.sh";
