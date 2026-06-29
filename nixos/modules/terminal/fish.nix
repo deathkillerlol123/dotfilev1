@@ -1,12 +1,12 @@
 { config,self,lib, ... }:
 {
   flake.nixosModules.fish =
-    { self,lib,pkgs, ... }:
+    { config,self,lib,pkgs, ... }:
     {
       imports = [ self.nixosModules.alias ];
       programs.fish = {
         enable = true;
-        shellAliases = config.alias.lib.shellAliases;
+        shellAliases = config.shellAliases;
       };
       environment.systemPackages = [ pkgs.fish ];
     };
