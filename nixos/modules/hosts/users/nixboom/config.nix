@@ -4,7 +4,7 @@ let
 in
 {
   flake.nixosModules.nixboom =  { pkgs, ... }: {
-      imports = with self.nixosModules; [ uxplay gaming fish windows main dragware lime ];
+      imports = with self.nixosModules; [ uxplay gaming fish windows main dragware lime alias ];
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];
