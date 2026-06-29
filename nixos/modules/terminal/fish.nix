@@ -6,7 +6,7 @@
       imports = [ self.nixosModules.alias ];
       programs.fish = {
         enable = true;
-        shellAliases = config.shellAliases;
+        shellAliases = lib.mkDefault config.shellAliases;
       };
       environment.systemPackages = [ pkgs.fish ];
     };
