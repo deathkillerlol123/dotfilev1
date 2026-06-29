@@ -1,7 +1,7 @@
 { self,lib, ... }:
 {
   flake.nixosModules.fish =
-    { pkgs, ... }:
+    { self,lib,pkgs, ... }:
     {
       imports = [ self.nixosModules.alias ];
       programs.fish = {
