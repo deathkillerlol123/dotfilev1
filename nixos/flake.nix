@@ -30,10 +30,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-gaming.url = "github:fufexan/nix-gaming";
-    wshowkeys = {
-      url = DreamMaoMao/wshowkeys;
-      flake = false;
-    };
   };
   outputs =
     { flake-parts, ... }@inputs:
