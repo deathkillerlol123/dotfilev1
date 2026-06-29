@@ -1,5 +1,5 @@
-{self,config,inputs,lib,pkgs,...}:{
-  flake.nixosModules.alias = {config,inputs,lib,pkgs,...}:
+{self,...}:{
+  flake.nixosModules.alias = {...}:
     {
       environment.shellAliases = {
         gu = "${self.outPath}/scripts/git_updater.sh";
