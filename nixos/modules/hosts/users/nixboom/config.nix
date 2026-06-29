@@ -15,6 +15,7 @@ in
         onBoot = "ignore";
         onShutdown = "shutdown";
       };
+      programs.wshowkeys.enable = true;
       programs.mangowc.enable = true;
       services.displayManager.ly.enable = true;
       networking.firewall = {
