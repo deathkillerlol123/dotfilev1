@@ -26,11 +26,13 @@
         loader.timeout = 0;        
         kernelParams = [
           "random.trust_cpu=on"
-          "zswap.enabled=1"
-          "zswap.compressor=lz4"
-          "zswap.max_pool_percent=20"
-          "zswap.shrinker.enabled=1"
         ];
+      };
+      zramSwap = {
+        enable = true;
+        algorithm = "zstd";
+        priority = lib.mkDefault 100;
+        memoryPercent = lib.mkDefault 50;
       };
       programs = enabledservices [
         "dconf"
