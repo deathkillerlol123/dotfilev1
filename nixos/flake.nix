@@ -1,5 +1,7 @@
 {
   inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nur = {
       url = "github:nix-community/NUR";
@@ -14,13 +16,15 @@
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:vic/import-tree";
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,7 +37,7 @@
         (inputs.import-tree ./modules)
       ];
       flake = {
-        nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay];
+        nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
       };
       systems = [
         "x86_64-linux"
