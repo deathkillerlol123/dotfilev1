@@ -18,5 +18,9 @@
           };
         };
       };
+      systemd.user.services.bluetooth-autostart = {
+        wantedBy = [ "default.target" ];
+        after = [ "default.target" ];
+      };
     };
 }
