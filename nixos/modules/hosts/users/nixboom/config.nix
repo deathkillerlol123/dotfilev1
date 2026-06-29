@@ -11,7 +11,7 @@ in
         windows.location = windows_efi;
       };
       virtualisation.libvirtd = {
-        enable = true;
+        enable = false;
         onBoot = "ignore";
         onShutdown = "shutdown";
       };
