@@ -53,7 +53,7 @@
         ]
         // {
           logind.settings.Login.KillUserProcesses = true;
-          fwupd.enable = true;
+          fwupd.enable = false;
           xserver.wacom.enable = true;
           journald.extraConfig = "SystemMaxUse=50M";
           tuned = {
