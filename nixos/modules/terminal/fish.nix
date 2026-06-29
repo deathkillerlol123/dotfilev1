@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self,lib, ... }:
 {
   flake.nixosModules.fish =
     { pkgs, ... }:
