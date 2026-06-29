@@ -1,6 +1,6 @@
 { config,self,lib, ... }:
 let
-  shared = import self.nixosModules.alias
+  shared = import self.nixosModules.alias;
 in    
 {
   flake.nixosModules.fish =
