@@ -950,7 +950,8 @@
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-wayland": "nixpkgs-wayland",
-        "nur": "nur"
+        "nur": "nur",
+        "wshowkeys": "wshowkeys"
       }
     },
     "rust-overlay": {
@@ -1036,6 +1037,18 @@
         "repo": "flake-utils",
         "type": "github"
       }
+    },
+    "wshowkeys": {
+      "flake": false,
+      "locked": {
+        "path": "DreamMaoMao/wshowkeys",
+        "type": "path"
+      },
+      "original": {
+        "path": "DreamMaoMao/wshowkeys",
+        "type": "path"
+      },
+      "parent": []
     },
     "xdph": {
       "inputs": {
