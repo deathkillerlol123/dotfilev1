@@ -1,4 +1,4 @@
-{config,inputs,lib,pkgs,...}:{
+{self,config,inputs,lib,pkgs,...}:{
   flake.nixosModules.alias = {config,inputs,lib,pkgs,...}:
     {
       lib.shellAliases = {
