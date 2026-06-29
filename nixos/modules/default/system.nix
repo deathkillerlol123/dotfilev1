@@ -15,6 +15,7 @@
         brightnessctl
         borgbackup
         ntfs3g
+        graphviz
         starship
         bash
         zoxide
