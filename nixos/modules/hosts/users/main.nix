@@ -47,6 +47,7 @@
           logind.settings.Login.KillUserProcesses = true;
           fwupd.enable = false;
           xserver.wacom.enable = true;
+          journald.extraConfig = "SystemMaxUse=50M";
         };
       systemd.services.NetworkManager-wait-online.enable = false;
       time.timeZone = "Europe/London";
