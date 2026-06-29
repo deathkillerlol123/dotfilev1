@@ -4,7 +4,6 @@
     { pkgs, ... }:
     {
       programs = {
-        platfornOptimizations.enable = true;
         gamemode.enable = true;
         gamescope = {
           enable = true;
@@ -17,6 +16,7 @@
           gamescopeSession.enable = true;
           protontricks.enable = true;
           extest.enable = true;
+          platfornOptimizations.enable = true;          
         };
       };
       hardware.graphics = {
