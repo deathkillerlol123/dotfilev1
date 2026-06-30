@@ -26,7 +26,7 @@
         };
       };
       home-man = {
-        enable = true;
+        enable = false;
         users = [
           "nixboom"
         ];

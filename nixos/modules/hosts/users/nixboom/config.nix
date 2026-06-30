@@ -13,7 +13,12 @@
         uxplay gaming lime main dragware 
         inputs.home-manager.nixosModules.home-manager
         inputs.mangowm.nixosModules.mango
+        nixhome inputs.home-manager.nixosModules.home-manager
       ];
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+      };
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];

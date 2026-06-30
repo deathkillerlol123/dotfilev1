@@ -19,7 +19,10 @@
         bash
         system
       ];
-      documentation.enable = false;
+      documentation = {
+        enable = false;
+        man.cache.enable = false;
+      };
       virtualisation.libvirtd = {
         enable = false;
         onBoot = "ignore";
@@ -69,8 +72,20 @@
             ppdSupport = true;
             ppdSettings.main.default = "performance";
           };
+          earlyoom = {
+            enable = lib.mkDefault true;
+            freeMemThreshold = lib.mkDefault 5;
+            freeSwapThreshold = lib.mkDefault 10;
+            enableNotifications = lib.mkDefault true;
+          };
         };
-      systemd.services.NetworkManager-wait-online.enable = false;
+      systemd = {
+        services = {
+          NetworkManager-wait-online.enable = false;
+          nix-daemon.enable = lib.mkDefault true;
+        };
+      };
+      hardware.enableAllFirmware = true;
       time.timeZone = "Europe/London";
       networking = {
         hostName = "nixbtw";
