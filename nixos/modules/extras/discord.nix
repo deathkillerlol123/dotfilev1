@@ -20,6 +20,7 @@
         enable = true;
         discord = lib.mkForce { enable = false; };
         vesktop.enable = true;
+        user = "nixboom";
       };
     };
 }
