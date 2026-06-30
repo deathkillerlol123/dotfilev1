@@ -9,7 +9,7 @@
         });
     in
     {
-      imports = with self.nixosModules; [ uxplay gaming lime windows main dragware];
+      imports = with self.nixosModules; [ uxplay gaming lime main dragware];
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];

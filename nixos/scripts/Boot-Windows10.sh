@@ -2,7 +2,6 @@
 win_boot=$(efibootmgr | awk -F'Boot|\\*' '/Windows Boot Manager/ {print $2; exit}')
 if [[ -n "$win_boot" ]]; then
     sudo efibootmgr -n "$win_boot"
-    sleep 2
     sudo reboot
 else
     echo "Windows Boot Manager entry not found."
