@@ -31,7 +31,7 @@
      	   extraEntries = ''
      	     /Windows
      	       protocol: efi
-     	       path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+     	       path: ${config.lime.windows.location}
   	    '';
          };
        };

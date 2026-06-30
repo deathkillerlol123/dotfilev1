@@ -10,7 +10,6 @@
         zip
         git
         gh
-        go
         libnotify
         brightnessctl
         borgbackup

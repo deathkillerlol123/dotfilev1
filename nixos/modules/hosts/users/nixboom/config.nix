@@ -22,10 +22,8 @@
         (discord.override {
           withOpenASAR = true;
         })
-        libreoffice
-        swww pywal swaynotificationcenter swaylock rofi
-        bzmenu pwmenu copyq grim slurp swappy wl-clipboard
-        wezterm python312 kdePackages.kdeconnect-kde
+        libreoffice swww pywal swaynotificationcenter swaylock rofi bzmenu pwmenu copyq
+        grim slurp swappy wl-clipboard wezterm python312 kdePackages.kdeconnect-kde
       ];
       system.stateVersion = "25.11";
     };
