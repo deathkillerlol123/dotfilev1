@@ -55,7 +55,6 @@
               }
             ];
           }) enabledUsers;
-
           programs = lib.mkMerge [
             {
               nh = {

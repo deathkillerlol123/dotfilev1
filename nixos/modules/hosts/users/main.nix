@@ -20,11 +20,16 @@
         system
       ];
       documentation.enable = false;
+      virtualisation.libvirtd = {
+        enable = false;
+        onBoot = "ignore";
+        onShutdown = "shutdown";
+      };
       boot = {
         tmp.cleanOnBoot = true;
         consoleLogLevel = 3;
         kernelPackages = pkgs.linuxPackages_zen;
-        loader.timeout = 0;
+        loader.timeout = 10;
         kernelParams = [
           "random.trust_cpu=on"
         ];
