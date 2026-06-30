@@ -18,8 +18,9 @@
       imports = [ inputs.nixcord.nixosModules.nixcord ];
       programs.nixcord = {
         enable = true;
-        discord.equicord.enable = true; 
-        user = "nixboom";
+        discord = lib.mkForce { enable = false; };
+        vesktop.enable = true;
+        user = "username_right_here";
       };
     };
 }
