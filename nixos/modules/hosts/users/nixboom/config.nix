@@ -20,7 +20,7 @@
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];
         windows.location = windows_efi;
       };
-      programs = enabled [ "wshowkeys" "mango"];
+      programs = enabled [ "wshowkeys" "mangowc"];
       services.displayManager.ly.enable = true;
       environment.systemPackages = with pkgs; [
         wdisplays firefox-devedition whatsapp-electron
