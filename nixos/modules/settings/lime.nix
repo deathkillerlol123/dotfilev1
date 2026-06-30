@@ -31,7 +31,7 @@
      	   extraEntries = ''
      	     /Windows
      	       protocol: efi
-     	       path: boot():/EFI/BOOT/BOOTX64.EFI
+     	       path: ${config.lime.windows.location}
   	    '';
          };
        };
