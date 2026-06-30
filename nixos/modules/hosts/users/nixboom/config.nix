@@ -1,4 +1,5 @@
 {self, ... }: {
+  flake.homeModules.nixboom = import ./_home.nix;
   flake.nixosModules.nixboom =  { lib,pkgs,inputs, ... }:
     let
       windows_efi = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
@@ -9,7 +10,10 @@
         });
     in
     {
-      imports = with self.nixosModules; [ uxplay gaming lime main dragware inputs.mangowm.nixosModules.mango];
+      imports = with self.nixosModules; [
+        uxplay gaming lime main dragware inputs.mangowm.nixosModules.mango
+        inputs.home-manager.nixosModules.home-manager
+      ];
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];
@@ -26,5 +30,15 @@
         grim slurp swappy wl-clipboard wezterm python312 kdePackages.kdeconnect-kde
       ];
       system.stateVersion = "25.11";
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        extraSpecialArgs = { inherit inputs self; };      
+        users.nixboom = {
+          imports = [
+            self.homeModules.nixboom
+          ];
+        };
+      };
     };
 }
