@@ -49,6 +49,7 @@
       programs = enabledservices [
         "dconf"
         "kdeconnect"
+        "xwayland"
       ];
       services =
         enabledservices [

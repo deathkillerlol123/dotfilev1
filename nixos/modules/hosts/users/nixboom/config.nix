@@ -1,5 +1,5 @@
 {self, ... }: {
-  flake.nixosModules.nixboom =  { lib,pkgs, ... }:
+  flake.nixosModules.nixboom =  { lib,pkgs,inputs, ... }:
     let
       windows_efi = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
       enabled =
@@ -9,7 +9,7 @@
         });
     in
     {
-      imports = with self.nixosModules; [ uxplay gaming lime main dragware];
+      imports = with self.nixosModules; [ uxplay gaming lime main dragware inputs.mangowm.nixosModules.mango];
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0"   "snd_intel_dspcfg.dsp_driver=1" ];
