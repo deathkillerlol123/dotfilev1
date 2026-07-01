@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Game 1216669957799018608
+Exec=/nix/store/qykg8ggzhysdd9vyvzs38jmzq2xnzvhm-osu-lazer-bin-2026.624.0-lazer-extracted/usr/bin/osu! %u
+Type=Application
+NoDisplay=true
+Categories=Discord;Games;
+MimeType=x-scheme-handler/discord-1216669957799018608

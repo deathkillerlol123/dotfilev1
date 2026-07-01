@@ -27,6 +27,7 @@
         })
         libreoffice swww pywal swaynotificationcenter swaylock rofi bzmenu pwmenu copyq
         grim slurp swappy wl-clipboard wezterm python312 kdePackages.kdeconnect-kde
+        inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin
       ];
       system.stateVersion = "25.11";
     };

@@ -29,6 +29,7 @@
         fd
         statix
         yazi
+        kdePackages.dolphin
       ];
       fonts.packages =
         with pkgs;
