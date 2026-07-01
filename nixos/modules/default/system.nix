@@ -30,6 +30,7 @@
         statix
         yazi
         thunar
+        gvfs
       ];
       fonts.packages =
         with pkgs;
