@@ -29,7 +29,7 @@
         fd
         statix
         yazi
-        kdePackages.dolphin
+        thunar
       ];
       fonts.packages =
         with pkgs;
