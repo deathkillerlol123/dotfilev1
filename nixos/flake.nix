@@ -28,7 +28,7 @@
         nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
       };
       systems = [
-er ins        "x86_64-linux"
+        "x86_64-linux"
         "x86_64-darwin"
       ];
     };
