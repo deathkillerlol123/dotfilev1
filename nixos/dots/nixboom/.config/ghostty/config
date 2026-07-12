@@ -1,0 +1,15 @@
+config-file = ~/.config/ghostty/ghostty.conf
+app-notifications = false
+font-family = JetBrains Mono
+font-size = 14
+cursor-style = block
+shell-integration = fish
+working-directory = ~/dotfiles
+confirm-close-surface = false
+copy-on-select = clipboard
+clipboard-read = allow
+clipboard-write = allow
+
+keybind = ctrl+shift+%=new_split:right
+keybind = ctrl+shift+s=new_split:down
+keybind = ctrl+tab=goto_split:next
