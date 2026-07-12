@@ -57,7 +57,7 @@ in
       enable = true;
       discord = {
         openASAR.enable = true;
-        silienceNoModClientWarning = true;
+        silenceNoModClientWarning = true;
       };
       config = {
         useQuickCss = true;
