@@ -55,7 +55,10 @@ in
     home-manager.enable = true;
     nixcord = {
       enable = true;
-      discord.openASAR.enable = true;
+      discord = {
+        openASAR.enable = true;
+        silienceNoModClientWarning = true;
+      };
       config = {
         useQuickCss = true;
         autoUpdateNotification = true;
