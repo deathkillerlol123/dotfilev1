@@ -53,6 +53,16 @@ in
   };
   programs = {
     home-manager.enable = true;
+    git = {
+      enable = true;
+      settings = {
+        user = {
+          name = "deathkillerlol123";
+          email = "81639935+deathkillerlol123@users.noreply.github.com";
+        };
+        init.defaultBranch = "main";
+      };
+    };
     nixcord = {
       enable = true;
       discord = {
