@@ -37,6 +37,7 @@ in
 {
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
+    inputs.nixcord.homeModules.nixcord
   ];
   services.flatpak = {
     update.onActivation = true;
@@ -52,6 +53,18 @@ in
   };
   programs = {
     home-manager.enable = true;
+    nixcord = {
+      enable = true;
+      discord.openASAR.enable = true;
+      config = {
+        useQuickCss = true;
+        autoUpdateNotification = true;
+        themeLinks = [
+          "https://github.com/refact0r/midnight-discord/blob/0c6e4b5009df5f13fe33d9b279378378d5212330/themes/midnight.theme.css"
+        ];
+        frameless = true;
+      };
+    };
     firefox = {
       enable = true;
       configPath = "${config.xdg.configHome}/mozilla/firefox";

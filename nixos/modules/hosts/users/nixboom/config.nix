@@ -21,9 +21,6 @@
 ###      services.displayManager.ly.enable = true;
       environment.systemPackages = with pkgs; [
         wdisplays whatsapp-electron firefox
-        (discord.override {
-          withOpenASAR = true;
-        })
         libreoffice awww  waypaper pywal swaylock rofi bzmenu pwmenu copyq
         grim slurp swappy wl-clipboard ghostty python312
       ];
