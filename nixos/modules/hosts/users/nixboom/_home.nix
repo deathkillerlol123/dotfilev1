@@ -61,6 +61,7 @@ in
           email = "81639935+deathkillerlol123@users.noreply.github.com";
         };
         init.defaultBranch = "main";
+        credential.helper = "!gh auth git-credential";
       };
     };
     nixcord = {
