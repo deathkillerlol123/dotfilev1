@@ -20,7 +20,7 @@
       };
 ###      services.displayManager.ly.enable = true;
       environment.systemPackages = with pkgs; [
-        wdisplays whatsapp-electron firefox
+        wdisplays whatsapp-electron firefox ytmdesktop
         libreoffice awww  waypaper pywal swaylock rofi bzmenu pwmenu copyq
         grim slurp swappy wl-clipboard ghostty python312
       ];

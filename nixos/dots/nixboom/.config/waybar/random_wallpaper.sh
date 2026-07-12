@@ -28,5 +28,5 @@ if [ -n "$FILE" ]; then
   pkill -f rofi 
   cd ~/dotfiles/nixos/bootloader/
   rm -rf * &&
-  cp "$FILE" "$HOME/dotfiles/nixos/bootloader/image.png"
+  cp "$FILE" "$HOME/dotfiles/nixos/bootloader/"
 fi
