@@ -1,7 +1,18 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(setq package-install-upgrade-built-in t)
 (package-initialize)
+
+(use-package corfu
+  :ensure t
+  :custom
+  (corfu-auto t)
+  (corfu-auto-delay 0)
+  (corfu-auto-trigger ".")
+  :config
+  (global-corfu-mode))
+
 
 (menu-bar-mode -1) 
 (toggle-scroll-bar -1) 
@@ -18,11 +29,7 @@
       backup-by-copying      t  
       version-control        t  
       delete-old-versions    t  
-      kept-old-versions      1) 
-(setq corfu-auto t
-      corfu-auto-delay 0
-      corfu-auto-trigger "."
-      )
+      kept-old-versions      1)
 (use-package colorful-mode
   :custom 
   (colorful-use-prefix t)
@@ -101,18 +108,20 @@
 	company corfu doc-view-follow eglot-inactive-regions
 	electric-cursor evil flycheck format-all golden-ratio jinx
 	json-mode latex-extra lsp-latex lsp-pyright lsp-python-ms
-	lsp-treemacs lsp-ui lua-mode magit multiple-cursors nix-buffer
+	lsp-treemacs lsp-ui lua-mode multiple-cursors nix-buffer
 	nix-mode nixos-options nixpkgs-fmt org-beautify-theme
 	org-bullets org-mime org-pretty-tags pdf-tools python-mode
-	qml-mode rainbow-blocks rainbow-mode transpose-frame
+	qml-mode rainbow-blocks rainbow-mode transient transpose-frame
 	tree-inspector tree-sitter-indent tree-sitter-langs
 	yasnippet-classic-snippets yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
-(add-hook 'after-init-hook 'global-company-mode)
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode))
 (global-display-line-numbers-mode)
 (global-tree-sitter-mode)
-(global-corfu-mode)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

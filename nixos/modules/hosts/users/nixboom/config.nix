@@ -13,11 +13,11 @@
       imports =
         fmod [ "gaming" "lime" "main" "dragware" ] ++
         imod [ "home-manager" "mango" ];
+      programs = enabled [ "wshowkeys" "mango" ];
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
       };
-      programs = enabled [ "wshowkeys" "mango" ];
 ###      services.displayManager.ly.enable = true;
       environment.systemPackages = with pkgs; [
         wdisplays whatsapp-electron firefox
