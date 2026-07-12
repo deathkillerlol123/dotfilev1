@@ -33,7 +33,7 @@
         tmp.cleanOnBoot = true;
         consoleLogLevel = 3;
         kernelPackages = pkgs.linuxPackages_zen;
-        loader.timeout = 0;
+        loader.timeout = 5;
         kernelParams = [
           "random.trust_cpu=on"
         ];
