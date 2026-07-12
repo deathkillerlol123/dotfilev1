@@ -6,16 +6,8 @@
         generations = lib.mkOption {
           default = 3;
         };
-        wallpapers = lib.mkOption {
-          default = "${self.outPath}/bootloader";
-        };
         params = lib.mkOption {
           default = [ "" ];
-        };
-        windows = {
-          location = lib.mkOption {
-            default = "";
-          };
         };
       };
     };
@@ -27,12 +19,6 @@
           limine = {
             enable = true;
             maxGenerations = config.lime.generations;
-            style.wallpapers = lib.filesystem.listFilesRecursive config.lime.wallpapers;
-            extraEntries = ''
-                 	     /Windows
-                 	       protocol: efi
-                 	       path: ${config.lime.windows.location}
-              	    '';
           };
         };
       };

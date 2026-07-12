@@ -17,7 +17,6 @@
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
-        windows.location = windows_efi;
       };
       programs = enabled [ "wshowkeys" "mango" ];
 ###      services.displayManager.ly.enable = true;
