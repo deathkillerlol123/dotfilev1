@@ -1,7 +1,6 @@
 {self, ... }: {
   flake.nixosModules.nixboom =  { lib,pkgs,inputs, ... }:
     let
-      windows_efi = "uuid(c5a64789-c514-43f3-97ce-48d094eead3c):/EFI/Microsoft/Boot/bootmgfw.efi";
       enabled =
         names:
         lib.genAttrs names (_: {
