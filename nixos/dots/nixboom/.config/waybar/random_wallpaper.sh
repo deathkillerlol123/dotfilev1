@@ -25,7 +25,7 @@ if [ -n "$FILE" ]; then
     echo "}"
   } >"$OUTPUT"
   mv colors.rasi "${OUPUT}/rofi/colors.rasi"
-  pkill -f rofi 
+  pkill -x rofi -u "$USER" || true
   cd ~/dotfiles/nixos/bootloader/
   rm -rf * &&
   cp "$FILE" "$HOME/dotfiles/nixos/bootloader/"
