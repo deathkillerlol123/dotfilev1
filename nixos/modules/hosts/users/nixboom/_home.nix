@@ -8,8 +8,12 @@
 }:
 let
   user = "nixboom";
-  reponame = "deathkillerlol123";
-  repoemail = "81639935+deathkillerlol123@users.noreply.github.com";
+  gitsettings = {
+    user = {
+      name = "deathkillerlol123";
+      email = "81639935+deathkillerlol123@users.noreply.github.com";
+    };
+  };
   dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
   firefox_user = "declaritive";
   conf = "${dotfiles}/.config";
@@ -57,23 +61,14 @@ in
     home-manager.enable = true;
     git = {
       enable = true;
-      settings = {
-        user = {
-          name = reponame;
-          email = repoemail;
-        };
+      settings = gitsettings // {
         init.defaultBranch = "main";
         credential.helper = "!gh auth git-credential";
       };
     };
     jujutsu = {
       enable = true;
-      settings = {
-        user = {
-          name = reponame;
-          email = repoemail;
-        };
-      };
+      settings = gitsettings;
     };
     nixcord = {
       enable = true;
