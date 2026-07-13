@@ -60,18 +60,13 @@
           "flatpak"
           "libinput"
           "thermald"
+          "fstrim"
         ]
         // {
           logind.settings.Login.KillUserProcesses = true;
           fwupd.enable = false;
           xserver.wacom.enable = true;
           journald.extraConfig = "SystemMaxUse=50M";
-          tuned = {
-            enable = false;
-            settings.dynamic_tuning = true;
-            ppdSupport = true;
-            ppdSettings.main.default = "performance";
-          };
           earlyoom = {
             enable = df true;
             freeMemThreshold = df 5;
@@ -96,11 +91,9 @@
           "8.8.8.8"
         ];
       };
-      system = {
-        autoUpgrade = {
-          enable = true;
-          allowReboot = false;
-        };
+      system.autoUpgrade = {
+        enable = true;
+        allowReboot = false;
       };
       nix = {
         settings.experimental-features = [
@@ -114,8 +107,6 @@
       nixpkgs.config = {
         allowUnfree = true;
       };
-      security = {
-        pam.services.swaylock = { };
-      };
+      security.pam.services.swaylock = { };
     };
 }

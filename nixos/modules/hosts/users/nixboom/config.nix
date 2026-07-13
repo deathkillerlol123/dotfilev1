@@ -18,8 +18,7 @@
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" ];
       };
-###      services.displayManager.ly.enable = true;
-      environment.systemPackages = with pkgs; [
+     environment.systemPackages = with pkgs; [
         wdisplays whatsapp-electron firefox
         libreoffice awww  waypaper pywal swaylock rofi bzmenu pwmenu copyq
         grim slurp swappy wl-clipboard ghostty python312
