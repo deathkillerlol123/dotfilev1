@@ -28,8 +28,7 @@
             inherit inputs self;
           };
           users = lib.genAttrs cfg.users
-            (username:
-              import "${self.outPath}/modules/hosts/users/${username}/_home.nix");
+            (username: self.homeModules.${username});
         };
       };
     };
