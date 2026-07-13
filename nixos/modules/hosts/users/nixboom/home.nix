@@ -1,13 +1,14 @@
 {
-  config,
-  pkgs,
   lib,
-  inputs,
-  self,
   ...
 }:
 {
-  flake.homeModules.nixboom = { config,pkgs,inputs,self,...}:
+  flake.homeModules.nixboom =
+    {
+      config,
+      inputs,
+      ...
+    }:
     let
       user = "nixboom";
       gitidentity = {
@@ -61,6 +62,7 @@
       };
       programs = {
         home-manager.enable = true;
+        emacs.enable = true;
         git = {
           enable = true;
           settings = gitidentity // {
@@ -152,6 +154,5 @@
         // (mkdirs [
           ".local/share/applications"
         ]);
-      programs.emacs.enable = true;
     };
 }
