@@ -8,7 +8,7 @@
 }:
 let
   user = "nixboom";
-  gitsettings = {
+  gitidentity = {
     user = {
       name = "deathkillerlol123";
       email = "81639935+deathkillerlol123@users.noreply.github.com";
@@ -61,14 +61,22 @@ in
     home-manager.enable = true;
     git = {
       enable = true;
-      settings = gitsettings // {
+      settings = gitidentity // {
         init.defaultBranch = "main";
         credential.helper = "!gh auth git-credential";
       };
     };
     jujutsu = {
       enable = true;
-      settings = gitsettings;
+      settings = gitidentity // {
+        ui = {
+          default-command = [
+            "log"
+            "-r"
+            "ancestors(@,5)"
+          ];
+        };
+      };
     };
     nixcord = {
       enable = true;
