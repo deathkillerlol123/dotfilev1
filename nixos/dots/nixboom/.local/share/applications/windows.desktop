@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Windows
-Exec=/home/nixboom/dotfiles/scripts/Boot-Windows10.sh
-Terminal=false
-Type=Application
-Categories=Utility;
-

@@ -131,28 +131,30 @@
           };
         };
       };
-      home.file =
-        (mkconf [
-          "mango"
-          "swaylock"
-          "fastfetch"
-          "fish"
-          "waybar"
-          "walrus"
-          "wallust"
-          "swaync"
-          "rofi"
-          "mako"
-          "qutebrowser"
-          "ghostty"
-        ])
-        // (mkFile [
-          ".emacs"
-          ".wezterm.lua"
-          ".config/starship.toml"
-        ])
-        // (mkdirs [
-          ".local/share/applications"
-        ]);
+      home.file = {
+        ".local/share/applications" = {
+          source = "${dotfiles}/.local/share/applications";
+          recursive = true;
+        };
+      }
+      // (mkconf [
+        "mango"
+        "swaylock"
+        "fastfetch"
+        "fish"
+        "waybar"
+        "walrus"
+        "wallust"
+        "swaync"
+        "rofi"
+        "mako"
+        "qutebrowser"
+        "ghostty"
+      ])
+      // (mkFile [
+        ".emacs"
+        ".wezterm.lua"
+        ".config/starship.toml"
+      ]);
     };
 }
