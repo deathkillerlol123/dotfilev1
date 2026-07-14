@@ -1,11 +1,7 @@
 {self, ... }: {
   flake.nixosModules.nixboom =  { lib,pkgs,inputs, ... }:
     let
-      enabled =
-        names:
-        lib.genAttrs names (_: {
-          enable = true;
-        });
+      enabled = names: lib.genAttrs names (_: { enable = true; });
       imod = names: map (x: inputs.${x}.nixosModules.${x}) names;
       fmod = names: map (x: self.nixosModules.${x}) names;
     in

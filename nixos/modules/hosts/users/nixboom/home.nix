@@ -36,12 +36,6 @@
             };
           }) names
         );
-      mkdirs =
-        paths:
-        lib.genAttrs paths (path: {
-          source = "${dotfiles}/${path}";
-          recursive = true;
-        });
     in
     {
       imports = [
