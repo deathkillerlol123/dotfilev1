@@ -32,23 +32,24 @@
       boot = {
         tmp.cleanOnBoot = true;
         consoleLogLevel = 3;
+        plymouth.enable = false;
         kernelPackages = pkgs.linuxPackages_zen;
         loader.timeout = 0;
         kernelParams = [
           "random.trust_cpu=on"
         ];
+        kernel.sysctl = {
+          "vm.swappiness" = df 180;
+          "vm.watermark_boost_factor" = df 0;
+          "vm.watermark_scale_factor" = df 125;
+          "vm.page-cluster" = df 0;
+        };
       };
       zramSwap = {
         enable = true;
         algorithm = "zstd";
         priority = df 100;
         memoryPercent = df 50;
-      };
-      boot.kernel.sysctl = {
-        "vm.swappiness" = df 180;
-        "vm.watermark_boost_factor" = df 0;
-        "vm.watermark_scale_factor" = df 125;
-        "vm.page-cluster" = df 0;
       };
       programs = enabled [
         "dconf"
