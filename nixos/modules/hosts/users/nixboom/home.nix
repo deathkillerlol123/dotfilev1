@@ -79,8 +79,7 @@
         nixcord = {
           enable = true;
           discord = {
-            openASAR.enable = true;
-            silenceNoModClientWarning = true;
+            vencord.enable = true;
           };
           config = {
             useQuickCss = true;
