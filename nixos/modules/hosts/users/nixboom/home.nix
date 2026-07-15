@@ -86,7 +86,7 @@
             useQuickCss = true;
             autoUpdateNotification = true;
             themeLinks = [
-              "https://github.com/refact0r/midnight-discord/blob/0c6e4b5009df5f13fe33d9b279378378d5212330/themes/midnight.theme.css"
+              "https://raw.githubusercontent.com/refact0r/midnight-discord/0c6e4b5009df5f13fe33d9b279378378d5212330/themes/midnight.theme.css"
             ];
             frameless = true;
           };
