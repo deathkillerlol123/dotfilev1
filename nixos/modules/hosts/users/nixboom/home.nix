@@ -7,6 +7,7 @@
     {
       config,
       inputs,
+      pkgs,
       ...
     }:
     let
@@ -47,11 +48,6 @@
         packages = [
           "org.vinegarhq.Sober"
         ];
-      };
-      home = {
-        username = user;
-        homeDirectory = "/home/${user}";
-        stateVersion = "25.11";
       };
       programs = {
         home-manager.enable = true;
@@ -134,30 +130,43 @@
           };
         };
       };
-      home.file = {
-        ".local/share/applications" = {
-          source = "${dotfiles}/.local/share/applications";
-          recursive = true;
+      home = {
+        username = user;
+        homeDirectory = "/home/${user}";
+        stateVersion = "25.11";
+        file = {
+          ".local/share/applications" = {
+            source = "${dotfiles}/.local/share/applications";
+            recursive = true;
+          };
+        }
+        // (mkconf [
+          "mango"
+          "swaylock"
+          "fastfetch"
+          "fish"
+          "waybar"
+          "walrus"
+          "wallust"
+          "swaync"
+          "rofi"
+          "mako"
+          "qutebrowser"
+          "ghostty"
+        ])
+        // (mkFile [
+          ".emacs"
+          ".wezterm.lua"
+          ".config/starship.toml"
+        ]);
+      };
+      gtk = {
+        enable = true;
+        theme = {
+          name = "Tokyonight-Dark";
+          package = pkgs.tokyonight-gtk-theme;
         };
-      }
-      // (mkconf [
-        "mango"
-        "swaylock"
-        "fastfetch"
-        "fish"
-        "waybar"
-        "walrus"
-        "wallust"
-        "swaync"
-        "rofi"
-        "mako"
-        "qutebrowser"
-        "ghostty"
-      ])
-      // (mkFile [
-        ".emacs"
-        ".wezterm.lua"
-        ".config/starship.toml"
-      ]);
+        gtk4.theme = config.gtk.theme;
+      };
     };
 }
