@@ -82,6 +82,7 @@
         };
       };
       hardware.enableAllFirmware = true;
+      powerManagement.cpuFreqGovernor = "performance";
       time.timeZone = "Europe/London";
       networking = {
         hostName = "nixbtw";
