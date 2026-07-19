@@ -344,11 +344,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1784458209,
-        "narHash": "sha256-q7JT4krW6kVdDXJodARiOeiABSNo2c3QOjcgJDVIr4Q=",
+        "lastModified": 1784459605,
+        "narHash": "sha256-xHONoLYkzO3Ab8OLRWChCufW+d7tBkFfshd0rrrzrTg=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "c9ed22620006c3c891b7fc4822f93f4f4f1cc321",
+        "rev": "768c334b027ceaae77315054f92891e1920cae01",
         "type": "github"
       },
       "original": {
@@ -542,11 +542,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784457931,
-        "narHash": "sha256-NAn/wW9APs/ALqZu3LefOToHZFNPXFcDQDQ27r09yuk=",
+        "lastModified": 1784461187,
+        "narHash": "sha256-eUoBBXzv31XDd9u2fjgxw+uEwT7c2/5vzAEvm/Grt20=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "81e5874e1521cbbb59ba4a4a2a3f70469304a07b",
+        "rev": "8f26548c9522441eb4f3a3008b2a460c4bfc37aa",
         "type": "github"
       },
       "original": {
