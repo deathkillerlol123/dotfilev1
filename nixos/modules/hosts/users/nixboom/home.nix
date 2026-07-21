@@ -111,7 +111,6 @@
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 "browser.startup.homepage" = "https://search.nixos.org/packages";
                 "privacy.trackingprotection.enabled" = true;
-                "extensions.activeThemeID" = "{cebd391d-f568-473f-bb6e-698d08ec81ec}";
               };
               userChrome = ''
                 #TabsToolbar {
