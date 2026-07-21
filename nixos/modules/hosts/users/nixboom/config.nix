@@ -18,7 +18,6 @@
         wdisplays whatsapp-electron firefox
         libreoffice awww  waypaper pywal swaylock rofi bzmenu pwmenu copyq
         grim slurp swappy wl-clipboard ghostty python312
-        kdePackages.kwin
       ];
       system.stateVersion = "25.11";
     };
