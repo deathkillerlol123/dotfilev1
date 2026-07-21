@@ -47,7 +47,6 @@
         update.onActivation = true;
         packages = [
           "org.vinegarhq.Sober"
-          "page.kramo.Cartridges"
         ];
       };
       programs = {
