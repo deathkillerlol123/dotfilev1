@@ -47,6 +47,7 @@
         update.onActivation = true;
         packages = [
           "org.vinegarhq.Sober"
+          "xyz.hyperplay.HyperPlay"
         ];
       };
       programs = {
