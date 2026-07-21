@@ -20,10 +20,6 @@
       };
       dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
       firefox_user = "declaritive";
-      tokyo-night-dark-theme = pkgs.fetchurl {
-        url = "https://addons.mozilla.org/firefox/downloads/latest/tokyo-night-dark-theme/latest.xpi";
-        sha256 = "sha256-BfHcAxxSXDPoxLh1vJSIm0lca3SADMhxB1aUzQPVyPY=";
-      };
       conf = "${dotfiles}/.config";
       mkFile =
         names:
@@ -126,7 +122,6 @@
                  }
               '';
               extensions.packages = [
-                tokyo-night-dark-theme
                 inputs.firefox-addons.packages."x86_64-linux".bitwarden
                 inputs.firefox-addons.packages."x86_64-linux".ublock-origin
                 inputs.firefox-addons.packages."x86_64-linux".sidebery
