@@ -21,6 +21,7 @@
         emacs
         nixd
         nixfmt
+        alejandra
         zathura
         eza
         bat

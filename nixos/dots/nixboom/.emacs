@@ -4,6 +4,15 @@
 (setq package-install-upgrade-built-in t)
 (package-initialize)
 
+(defun jeff/format-nix-buffer ()
+  "Format the current nix file using alejadra."
+  (interactive)
+  (when (eq major-mode 'nix-mode)
+    (save-buffer)
+    (shell-command (format "alejandra %s" (shell-quote-argument buffer-file-name)))
+    (revert-buffer :ignore-auto :noconfirm)))
+(global-set-key (kbd "C-x f") #'jeff/format-nix-buffer)
+
 (use-package corfu
   :ensure t
   :custom
@@ -60,24 +69,6 @@
 (global-set-key
  (kbd "C-x k")
  'volatile-kill-buffer)
-
-(add-hook 'nix-mode-hook 'eglot-ensure)
-(global-set-key
- (kbd "C-x f")
- 'eglot-format-buffer)
-
-
-(defun mm/generate-temp-buffer (buf)
-  "A function to generate temprory buffers using either  a random name or given name"
-  (interactive "sNew temp buffer name: ")
-  (switch-to-buffer
-   (get-buffer-create
-    (concat "*tmp*"
-            (if (equal buf "")
-                (make-temp-name "")
-              buf)
-            "*")
-    )))
 
 (setq c-tab-always-indent nil)
 (setq-default case-fold-search nil)
