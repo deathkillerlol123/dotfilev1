@@ -19,6 +19,7 @@
         alias
         bash
         system
+        inputs.chaotic.nixosModules.default
       ];
       documentation = {
         enable = false;
@@ -50,6 +51,13 @@
         algorithm = "zstd";
         priority = df 100;
         memoryPercent = df 50;
+      };
+      chaotic = {
+        mesa-git.enable = true;
+        nyx = {
+          cache.enable = true;
+          overlay.enable = true;
+        };
       };
       programs = enabled [
         "dconf"
