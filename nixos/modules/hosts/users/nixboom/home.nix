@@ -34,7 +34,7 @@
   in {
     imports = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      self.homeModules.discord
+      ./discord.nix
     ];
     services.flatpak = {
       update.onActivation = true;
