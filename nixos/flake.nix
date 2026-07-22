@@ -32,7 +32,6 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         (inputs.import-tree ./modules)
-        inputs.chaotic.nixosModules.default
       ];
       flake = {
         nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
