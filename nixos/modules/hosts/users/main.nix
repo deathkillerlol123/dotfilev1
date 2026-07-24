@@ -13,17 +13,9 @@
         enable = true;
       });
     df = lib.mkDefault;
+    fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports = with self.nixosModules; [
-      sound
-      bluetooth
-      touch
-      portals
-      alias
-      bash
-      system
-      inputs.chaotic.nixosModules.default
-    ];
+    imports = fmod ["sound" "bluetooth" "touch" "portals" "alias" "bash" "system"];
     documentation = {
       enable = false;
       man.cache.enable = false;
@@ -54,13 +46,6 @@
       algorithm = "zstd";
       priority = df 100;
       memoryPercent = df 50;
-    };
-    chaotic = {
-      mesa-git.enable = true;
-      nyx = {
-        cache.enable = true;
-        overlay.enable = true;
-      };
     };
     programs = enabled [
       "dconf"
