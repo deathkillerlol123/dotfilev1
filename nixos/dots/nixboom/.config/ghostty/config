@@ -13,3 +13,5 @@ clipboard-write = allow
 keybind = ctrl+shift+%=new_split:right
 keybind = ctrl+shift+s=new_split:down
 keybind = ctrl+tab=goto_split:next
+
+background-opacity = 0.85
