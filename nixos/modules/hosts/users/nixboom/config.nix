@@ -25,7 +25,6 @@
       pywal
       awww
       waypaper
-      swaylock
       rofi
       bzmenu
       pwmenu

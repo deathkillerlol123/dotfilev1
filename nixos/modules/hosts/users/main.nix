@@ -43,10 +43,7 @@
       priority = df 100;
       memoryPercent = df 50;
     };
-    programs = enabled [
-      "dconf"
-      "xwayland"
-    ];
+    programs = enabled ["dconf" "xwayland"];
     services =
       enabled ["blueman" "flatpak" "libinput" "thermald" "fstrim"]
       // {
