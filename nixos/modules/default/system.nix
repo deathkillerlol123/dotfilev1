@@ -12,7 +12,6 @@
       brightnessctl
       borgbackup
       ntfs3g
-      graphviz
       starship
       bash
       zoxide
@@ -25,8 +24,6 @@
       bottom
       fastfetch
       fd
-      statix
-      yazi
       thunar
     ];
     fonts.packages = with pkgs.nerd-fonts; [

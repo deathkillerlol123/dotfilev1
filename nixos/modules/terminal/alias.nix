@@ -7,7 +7,6 @@
         t  = "gu && nix flake update && n && nix store gc && sudo nix store optimise && nh clean all --keep 3 && z ~/dotfiles/nixos && gu";
         ls = "eza -a --tree -L 1";
         e  = "emacs -nw";
-        s  = "statix check ~/dotfiles/nixos";
         key = "wshowkeys -a bottom -m 20 -b 00000000";
       };
     };

@@ -107,6 +107,7 @@
               "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
               "browser.startup.homepage" = "https://search.nixos.org/packages";
               "privacy.trackingprotection.enabled" = true;
+              "general.autoScroll" = true;
             };
             userChrome = ''
               #TabsToolbar {
