@@ -20,12 +20,11 @@
     };
     environment.systemPackages = with pkgs; [
       ghostty
-      wdisplays
       whatsapp-electron
       firefox
+      pywal
       awww
       waypaper
-      pywal
       swaylock
       rofi
       bzmenu

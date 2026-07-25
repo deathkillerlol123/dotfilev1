@@ -1,8 +1,4 @@
-{
-  inputs,
-  self,
-  ...
-}: {
+{self, ...}: {
   flake.nixosModules.main = {
     lib,
     pkgs,
@@ -52,13 +48,7 @@
       "xwayland"
     ];
     services =
-      enabled [
-        "blueman"
-        "flatpak"
-        "libinput"
-        "thermald"
-        "fstrim"
-      ]
+      enabled ["blueman" "flatpak" "libinput" "thermald" "fstrim"]
       // {
         logind.settings.Login.KillUserProcesses = true;
         fwupd.enable = false;
@@ -84,20 +74,14 @@
       hostName = "nixbtw";
       networkmanager.enable = true;
       firewall.enable = true;
-      nameservers = [
-        "1.1.1.1"
-        "8.8.8.8"
-      ];
+      nameservers = ["1.1.1.1" "8.8.8.8"];
     };
     system.autoUpgrade = {
       enable = true;
       allowReboot = false;
     };
     nix = {
-      settings.experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
+      settings.experimental-features = ["nix-command" "flakes"];
       optimise = {
         automatic = true;
       };
