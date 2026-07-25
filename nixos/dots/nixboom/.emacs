@@ -86,10 +86,6 @@
 (line-number-mode 1)
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(auto-save-interval 20)
  '(auto-save-timeout 3)
  '(custom-enabled-themes '(modus-vivendi-tinted))
@@ -116,96 +112,43 @@
 (global-tree-sitter-mode)
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  )
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'css-mode-hook #'aggressive-indent-mode)
 (put 'downcase-region 'disabled nil)
 
-
-;; org mode 
-(when (member "Symbola" (font-family-list))
-  (set-fontset-font "fontset-default" nil
-                    (font-spec :size 20 :name "Symbola")))
-(when (member "Symbola" (font-family-list))
-  (set-fontset-font t 'unicode "Symbola" nil 'prepend))
-(prefer-coding-system       'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
-(setq org-startup-indented t
-      org-src-tab-acts-natively t)
-(add-hook 'org-mode-hook
-          (lambda ()
-            (variable-pitch-mode 1)
-            visual-line-mode))
-(setq org-hide-emphasis-markers t
-      org-fontify-done-headline t
-      org-hide-leading-stars t
-      org-pretty-entities t
-      org-odd-levels-only t)
-(setq org-list-demote-modify-bullet
-      (quote (("+" . "-") ("-" . "+") ("*" . "-") ("1." . "-") ("1)" . "-") ("A)" . "-") ("B)" . "-")
-              ("a)" . "-") ("b)" . "-") ("A." . "-") ("B." . "-") ("a." . "-") ("b." . "-"))))
-(use-package org-bullets
-  :custom
-  (org-bullets-bullet-list '("◉" "☯" "○" "☯" "✸" "☯" "✿" "☯" "✜" "☯" "◆" "☯" "▶"))
-  (org-ellipsis "⤵")
-  :hook (org-mode . org-bullets-mode))
-(font-lock-add-keywords 'org-mode
-                        '(("^ *\\([-]\\) "
-                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-(font-lock-add-keywords 'org-mode
-                        '(("^ *\\([+]\\) "
-                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "◦"))))))
-
-
-
-
 ;; opeing docx and pdf
 (defvar-local my/docx-generated-pdf nil)
 (defvar-local my/zathura-process nil)
-
 (defun my/delete-docx-pdf ()
   (when (and my/docx-generated-pdf
              (file-exists-p my/docx-generated-pdf))
     (delete-file my/docx-generated-pdf)))
-
 (defun my/open-zathura (file delete-after)
   (setq my/zathura-process
         (start-process "zathura" nil "zathura" file))
-
   (set-process-sentinel
    my/zathura-process
    (lambda (proc event)
      (when (memq (process-status proc) '(exit signal))
        (when delete-after
          (my/delete-docx-pdf))))))
-
 (defun my/open-docx ()
   (let* ((file (expand-file-name buffer-file-name))
          (dir (file-name-directory file))
          (name (file-name-sans-extension
                 (file-name-nondirectory file)))
          (pdf (concat dir name ".pdf")))
-
     (unless (file-exists-p pdf)
       (call-process "libreoffice" nil "*docx-convert*" nil
                     "--headless"
                     "--convert-to" "pdf"
                     file))
-
     (setq my/docx-generated-pdf pdf)
     (my/open-zathura pdf t)))
-
 (defun my/open-pdf ()
   (my/open-zathura buffer-file-name nil))
-
 (defun my/doc-handler ()
   (when buffer-file-name
     (cond
@@ -213,5 +156,4 @@
       (my/open-docx))
      ((string-match "\\.pdf\\'" buffer-file-name)
       (my/open-pdf)))))
-
 (add-hook 'find-file-hook #'my/doc-handler)
