@@ -3,7 +3,6 @@
     config,
     inputs,
     pkgs,
-    self,
     ...
   }: let
     user = "nixboom";
@@ -15,6 +14,7 @@
     };
     dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
     firefox_user = "declaritive";
+    fire-addons = inputs.firefox-addons.packages."x86_64-linux";
     conf = "${dotfiles}/.config";
     mkFile = names:
       lib.genAttrs names (name: {
@@ -36,11 +36,38 @@
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
       inputs.nixcord.homeModules.nixcord
     ];
+    home = {
+      username = user;
+      homeDirectory = "/home/${user}";
+      stateVersion = "25.11";
+      packages = with pkgs; [
+        ghostty
+        whatsapp-electron
+        pywal
+        awww
+        waypaper
+        rofi
+        bzmenu
+        pwmenu
+        copyq
+        grim
+        slurp
+        swappy
+        wl-clipboard
+      ];
+      file =
+        {
+          ".local/share/applications" = {
+            source = "${dotfiles}/.local/share/applications";
+            recursive = true;
+          };
+        }
+        // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync" "rofi" "mako" "qutebrowser" "ghostty"])
+        // (mkFile [".emacs" ".wezterm.lua" ".config/starship.toml"]);
+    };
     services.flatpak = {
       update.onActivation = true;
-      packages = [
-        "org.vinegarhq.Sober"
-      ];
+      packages = ["org.vinegarhq.Sober"];
     };
     programs = {
       home-manager.enable = true;
@@ -59,11 +86,7 @@
           gitidentity
           // {
             ui = {
-              default-command = [
-                "log"
-                "-r"
-                "ancestors(@,5)"
-              ];
+              default-command = ["log" "-r" "ancestors(@,5)"];
             };
           };
       };
@@ -77,9 +100,7 @@
           useQuickCss = true;
           autoUpdateNotification = true;
           notifyAboutUpdates = true;
-          themeLinks = [
-            "https://raw.githubusercontent.com/refact0r/midnight-discord/0c6e4b5009df5f13fe33d9b279378378d5212330/themes/midnight.theme.css"
-          ];
+          themeLinks = ["https://raw.githubusercontent.com/refact0r/midnight-discord/0c6e4b5009df5f13fe33d9b279378378d5212330/themes/midnight.theme.css"];
           plugins = {
             autoDndWhilePlaying.statusToSet = "dnd";
             fakeNitro = {
@@ -118,45 +139,14 @@
                }
             '';
             extensions.packages = [
-              inputs.firefox-addons.packages."x86_64-linux".bitwarden
-              inputs.firefox-addons.packages."x86_64-linux".ublock-origin
-              inputs.firefox-addons.packages."x86_64-linux".sidebery
-              inputs.firefox-addons.packages."x86_64-linux"."2fas-two-factor-authentication"
+              fire-addons.bitwarden
+              fire-addons.ublock-origin
+              fire-addons.sidebery
+              fire-addons."2fas-two-factor-authentication"
             ];
           };
         };
       };
-    };
-    home = {
-      username = user;
-      homeDirectory = "/home/${user}";
-      stateVersion = "25.11";
-      file =
-        {
-          ".local/share/applications" = {
-            source = "${dotfiles}/.local/share/applications";
-            recursive = true;
-          };
-        }
-        // (mkconf [
-          "mango"
-          "swaylock"
-          "fastfetch"
-          "fish"
-          "waybar"
-          "walrus"
-          "wallust"
-          "swaync"
-          "rofi"
-          "mako"
-          "qutebrowser"
-          "ghostty"
-        ])
-        // (mkFile [
-          ".emacs"
-          ".wezterm.lua"
-          ".config/starship.toml"
-        ]);
     };
     gtk = {
       enable = true;

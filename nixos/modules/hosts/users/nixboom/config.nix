@@ -1,7 +1,6 @@
 {self, ...}: {
   flake.nixosModules.nixboom = {
     lib,
-    pkgs,
     inputs,
     ...
   }: let
@@ -18,22 +17,6 @@
       enable = true;
       params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];
     };
-    environment.systemPackages = with pkgs; [
-      ghostty
-      whatsapp-electron
-      firefox
-      pywal
-      awww
-      waypaper
-      rofi
-      bzmenu
-      pwmenu
-      copyq
-      grim
-      slurp
-      swappy
-      wl-clipboard
-    ];
     system.stateVersion = "25.11";
   };
 }
