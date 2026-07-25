@@ -1,6 +1,6 @@
 config-file = ~/.config/ghostty/ghostty.conf
 app-notifications = false
-font-family = JetBrains Mono
+font-family = Maple Mono NF
 font-size = 14
 cursor-style = block
 shell-integration = fish
