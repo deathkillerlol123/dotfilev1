@@ -15,7 +15,7 @@ in {
   flake.nixosModules.users = {...}: let
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports = fmod ["main-user" "home-man" "nixboom"];
+    imports = fmod ["main-user" "nixboom"];
     main-user.users = {
       nixboom = {
         enable = true;
