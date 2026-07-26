@@ -26,11 +26,5 @@ in {
         groups = ["wheel" "gamemode"];
       };
     };
-    home-man = {
-      enable = true;
-      users = [
-        "nixboom"
-      ];
-    };
   };
 }
