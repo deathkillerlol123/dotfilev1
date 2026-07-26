@@ -63,7 +63,7 @@
           };
         }
         // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync" "rofi" "mako" "qutebrowser" "ghostty"])
-        // (mkFile [".emacs" ".wezterm.lua" ".config/starship.toml"]);
+        // (mkFile [".emacs" ".config/starship.toml"]);
     };
     services.flatpak = {
       update.onActivation = true;
