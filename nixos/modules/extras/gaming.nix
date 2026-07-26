@@ -1,5 +1,9 @@
 {
-  flake.nixosModules.gaming = {pkgs, ...}: {
+  flake.nixosModules.gaming = {
+    pkgs,
+    lib,
+    ...
+  }: {
     programs = {
       gamemode.enable = true;
       gamescope = {
@@ -13,23 +17,15 @@
         gamescopeSession.enable = true;
         protontricks.enable = true;
         extest.enable = true;
+        extraCompatPackages = with pkgs; [proton-ge-bin];
       };
     };
     hardware.graphics = {
       enable = true;
       enable32Bit = true;
-      extraPackages = with pkgs; [
-        intel-media-driver
-        vpl-gpu-rt
-      ];
-      extraPackages32 = with pkgs; [
-        driversi686Linux.intel-media-driver
-      ];
+      extraPackages = with pkgs; [intel-media-driver vpl-gpu-rt];
+      extraPackages32 = with pkgs; [driversi686Linux.intel-media-driver];
     };
-    environment.systemPackages = with pkgs; [
-      mangohud
-      protonup-qt
-      heroic
-    ];
+    environment.systemPackages = with pkgs; [mangohud protonup-qt heroic];
   };
 }
