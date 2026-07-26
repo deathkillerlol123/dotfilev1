@@ -1,0 +1,41 @@
+{...}: {
+  flake.homeModules.doct = {
+    config,
+    inputs,
+    pkgs,
+    ...
+  }: let
+    user = "doct";
+    dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
+    conf = "${dotfiles}/.config";
+  in {
+    imports = [
+      inputs.nix-flatpak.homeManagerModules.nix-flatpak
+    ];
+    services.flatpak = {
+      update.onActivation = true;
+      packages = [
+        "ch.openboard.OpenBoard"
+      ];
+    };
+    home = {
+      username = user;
+      homeDirectory = "/home/${user}";
+      stateVersion = "25.11";
+      packages = with pkgs; [
+        firefox
+        anki
+        whatsapp-electron
+        libreoffice
+      ];
+    };
+    programs.home-manager.enable = true;
+    gtk = {
+      enable = true;
+      theme = {
+        package = pkgs.orchis-theme;
+        name = "Orchis-Grey-Dark";
+      };
+    };
+  };
+}
