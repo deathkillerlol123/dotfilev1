@@ -29,7 +29,7 @@
       loader.timeout = 10;
       kernelParams = ["random.trust_cpu=on"];
       kernel.sysctl = {
-        "vm.swappiness" = df 10;
+        "vm.swappiness" = df 150;
         "vm.watermark_boost_factor" = df 0;
         "vm.watermark_scale_factor" = df 125;
         "vm.page-cluster" = df 0;
@@ -77,10 +77,13 @@
       allowReboot = false;
     };
     nix = {
-      settings.experimental-features = ["nix-command" "flakes"];
-      optimise = {
-        automatic = true;
+      settings = {
+        experimental-features = ["nix-command" "flakes"];
+        auto-optimise-store = true;
+        max-jobs = "auto";
+        cores = 0;
       };
+      optimise.automatic = true;
     };
     nixpkgs.config = {
       allowUnfree = true;
