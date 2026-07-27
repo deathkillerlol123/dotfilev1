@@ -27,11 +27,9 @@
       plymouth.enable = false;
       kernelPackages = pkgs.linuxPackages_xanmod_latest;
       loader.timeout = 10;
-      kernelParams = [
-        "random.trust_cpu=on"
-      ];
+      kernelParams = ["random.trust_cpu=on"];
       kernel.sysctl = {
-        "vm.swappiness" = df 180;
+        "vm.swappiness" = df 10;
         "vm.watermark_boost_factor" = df 0;
         "vm.watermark_scale_factor" = df 125;
         "vm.page-cluster" = df 0;
@@ -87,6 +85,9 @@
     nixpkgs.config = {
       allowUnfree = true;
     };
-    security.pam.services.swaylock = {};
+    security = {
+      pam.services.swaylock = {};
+      polkit.enable = true;
+    };
   };
 }
