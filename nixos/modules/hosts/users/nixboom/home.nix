@@ -48,7 +48,7 @@
             recursive = true;
           };
         }
-        // (mkconf ["mango" "swaylock" "fastfetch" "fish" "waybar" "walrus" "wallust" "swaync" "rofi" "mako" "qutebrowser" "ghostty"])
+        // (mkconf ["mango" "swaylock" "fastfetch" "fish" "walrus" "wallust" "swaync" "rofi" "mako"  "ghostty"])
         // (mkFile [".emacs" ".config/starship.toml"]);
     };
     services.flatpak = {

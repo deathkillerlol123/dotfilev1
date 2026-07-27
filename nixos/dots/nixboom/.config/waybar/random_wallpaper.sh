@@ -2,16 +2,16 @@
 
 cd ~/dotfiles/nixos/dots/nixboom/.config/waybar/
 COLORS="$HOME/.cache/wal"
-OUPUT="$HOME/dotfiles/nixos/dots/nixboom/.config"
+FINALOUTPUT="$HOME/dotfiles/nixos/dots/nixboom/.config"
 FILE=$(find ~/Pictures/Wallpapers/ -type f -print0 | shuf -zn1 | xargs -0 echo)
 echo "$FILE"
 if [ -n "$FILE" ]; then
   wal -i "$FILE" &&
   cp ~/.cache/wal/ghostty.conf ~/dotfiles/nixos/dots/nixboom/.config/ghostty/ghostty.conf
-  cp "${COLORS}/colors-waybar.css" "${OUPUT}/waybar/colors.css"
+  cp "${COLORS}/colors-waybar.css" "${FINALOUTPUT}/waybar/colors.css"
   INPUT="colors.css"
-  OUTPUT="colors.rasi"
-  if [[ -z "$INPUT" || -z "$OUTPUT" ]]; then
+  output_rasi="colors.rasi"
+  if [[ -z "$INPUT" || -z "$output_rasi" ]]; then
     echo "Usage: $0 input_file output_file"
     exit 1
   fi  
@@ -23,8 +23,8 @@ if [ -n "$FILE" ]; then
       echo "    $name: $value;"
     done
     echo "}"
-  } >"$OUTPUT"
-  mv colors.rasi "${OUPUT}/rofi/colors.rasi"
+  } >"${output_rasi}"
+  mv "${FINALOUTPUT}/waybar/colors.rasi" "${FINALOUTPUT}/rofi/colors.rasi"
   pkill -x rofi -u "$USER" || true
   cd ~/dotfiles/nixos/bootloader/
   rm -rf * &&

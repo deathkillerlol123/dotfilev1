@@ -75,6 +75,7 @@
     };
     system.autoUpgrade = {
       enable = true;
+      runGarbageCollection = true;
       allowReboot = false;
     };
     nix = {
