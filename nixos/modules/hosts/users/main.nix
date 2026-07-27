@@ -26,7 +26,7 @@
       consoleLogLevel = 3;
       plymouth.enable = false;
       kernelPackages = pkgs.linuxPackages_xanmod_latest;
-      loader.timeout = 10;
+      loader.timeout = 0;
       kernelParams = ["random.trust_cpu=on"];
       kernel.sysctl = {
         "vm.swappiness" = df 150;
