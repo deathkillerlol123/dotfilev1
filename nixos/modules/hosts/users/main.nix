@@ -25,8 +25,8 @@
       tmp.cleanOnBoot = true;
       consoleLogLevel = 3;
       plymouth.enable = false;
-      kernelPackages = pkgs.linuxPackages_zen;
-      loader.timeout = 0;
+      kernelPackages = pkgs.linuxPackages_xanmod_latest;
+      loader.timeout = 10;
       kernelParams = [
         "random.trust_cpu=on"
       ];
