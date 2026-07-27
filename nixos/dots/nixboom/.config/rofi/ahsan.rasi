@@ -50,10 +50,9 @@ message {
     border-color:                      @border;
     padding:                           5;
     background-color:                  @background;
-    font:                              @color9;
+    font:                              @font;
     color:                             @color0;
     expand: true;
-    font: @font;
 }
 
 inputbar {
@@ -62,7 +61,7 @@ inputbar {
     background-color:                  @color0;
     border:                            2px 2px 2px 2px;
     border-color:                      @color4;
-    font:                              @color1;
+    font:                              @font;
 }
 
 entry,prompt,case-indicator {
