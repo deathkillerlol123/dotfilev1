@@ -1,14 +1,8 @@
 {self, ...}: {
-  flake.nixosModules.nixboom = {
-    lib,
-    inputs,
-    ...
-  }: let
+  flake.nixosModules.nixboom = {lib, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
-    imod = names: map (x: inputs.${x}.nixosModules.${x}) names;
-    fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports = fmod ["lime" "dragware" "intel" "gaming" "main"] ++ imod ["home-manager"];
+    imports = with self.nixosModules; [lime dragware intel gaming main];
     programs = enabled ["wshowkeys" "mango"];
     lime = {
       enable = true;

@@ -15,10 +15,7 @@
     shells =
       lib.unique (map (u: u.shell) (lib.attrValues enabledUsers));
   in {
-    imports = [
-      inputs.home-manager.nixosModules.home-manager
-    ];
-
+    imports = [inputs.home-manager.nixosModules.home-manager];
     options.main-user.users = lib.mkOption {
       type = lib.types.attrsOf (
         lib.types.submodule (
