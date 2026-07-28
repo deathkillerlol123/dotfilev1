@@ -1,12 +1,13 @@
+
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
 /* My Mostly Used waybar config incase you wonder :) */
 {
 "include": [
-  "$HOME/.config/waybar/Modules",
-  "$HOME/.config/waybar/ModulesCustom",
-  "$HOME/.config/waybar/ModulesGroups",
-  "$HOME/.config/waybar/ModulesMango",
+  "/home/nixboom/dotfiles/nixos/dots/nixboom/.config/waybar/Modules",
+  "/home/nixboom/dotfiles/nixos/dots/nixboom/.config/waybar/ModulesCustom",
+  "/home/nixboom/dotfiles/nixos/dots/nixboom/.config/waybar/ModulesGroups",
+  "/home/nixboom/dotfiles/nixos/dots/nixboom/.config/waybar/ModulesMango",
   ],
 "layer": "top",
 "reload_style_on_change": true,
