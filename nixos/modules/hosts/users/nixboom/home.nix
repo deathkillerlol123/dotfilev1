@@ -3,6 +3,7 @@
     config,
     inputs,
     pkgs,
+    self,
     ...
   }: let
     user = "nixboom";
@@ -27,6 +28,7 @@
           value = {
             source = "${conf}/${name}";
             recursive = true;
+            force = true;
           };
         })
         names
