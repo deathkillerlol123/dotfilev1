@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Uxplay Toggle
-Exec=/home/nixboom/dotfiles/nixos/dots/nixboom/scripts/uxplay-toggle.sh
+Exec=/home/nixboom/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/uxplay-toggle.sh
 Terminal=false
 Type=Application
 Icon=terminal

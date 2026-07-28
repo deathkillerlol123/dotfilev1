@@ -12,7 +12,7 @@
         email = "81639935+deathkillerlol123@users.noreply.github.com";
       };
     };
-    dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/dots/${user}/";
+    dotfiles = config.lib.file.mkOutOfStoreSymlink "/home/${user}/dotfiles/nixos/modules/hosts/users/${user}/home";
     firefox_user = "declaritive";
     fire-addons = inputs.firefox-addons.packages."x86_64-linux";
     conf = "${dotfiles}/.config";
@@ -48,8 +48,8 @@
             recursive = true;
           };
         }
-        // (mkconf ["mango" "swaylock" "fastfetch" "fish" "walrus" "wallust" "swaync" "rofi" "mako"  "ghostty"])
-        // (mkFile [".emacs" ".config/starship.toml"]);
+        // (mkconf ["mango" "starship.toml" "swaylock" "fastfetch" "fish" "swaync" "rofi" "ghostty"])
+        // (mkFile [".emacs"]);
     };
     services.flatpak = {
       update.onActivation = true;

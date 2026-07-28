@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 set -e
 exec 9>/tmp/random_wallpaper.lock
+DIRS="$HOME/dotfiles/nixos/modules/hosts/users/nixboom/home/"
+COLORS="$HOME/.cache/wal"
+FINALOUTPUT="$DIRS/.config"
 flock -n 9 || exit 0
 pkill -x rofi -u "$USER" || true
-cd "$HOME/dotfiles/nixos/dots/nixboom/.config/waybar/"
-COLORS="$HOME/.cache/wal"
-FINALOUTPUT="$HOME/dotfiles/nixos/dots/nixboom/.config"
-FILE=$(find "$HOME/Pictures/Wallpapers/" -type f -print0 | shuf -zn1 | xargs -0 echo)
+cd "$DIRS/.config/waybar/"
+FILE=$(find "$HOME/Pictures/Wallpapers/" -type f -print0 | shuf -zn1)
 echo "$FILE"
 if [ -n "$FILE" ]; then
     wal -i "$FILE"
-    cp "$HOME/.cache/wal/ghostty.conf" "$HOME/dotfiles/nixos/dots/nixboom/.config/ghostty/ghostty.conf"
-    cp "${COLORS}/colors-waybar.css" "${FINALOUTPUT}/waybar/colors.css"
+    cp "$HOME/.cache/wal/ghostty.conf" \
+       "$DIRS/.config/ghostty/ghostty.conf"
+    cp "${COLORS}/colors-waybar.css" \
+       "${FINALOUTPUT}/waybar/colors.css"
     INPUT="${FINALOUTPUT}/waybar/colors.css"
     OUTPUT_RASI="${FINALOUTPUT}/rofi/colors.rasi"
     {
