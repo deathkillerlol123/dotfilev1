@@ -2,7 +2,6 @@
   flake.nixosModules.nixboom = {
     lib,
     inputs,
-    pkgs,
     ...
   }: let
     enabled = names: lib.genAttrs names (_: {enable = true;});

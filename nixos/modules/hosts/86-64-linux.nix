@@ -8,14 +8,10 @@ in {
   flake.nixosConfigurations.${hostname} = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     specialArgs = {inherit inputs;};
-    modules = with self.nixosModules; [
-      users
-    ];
+    modules = with self.nixosModules; [users];
   };
-  flake.nixosModules.users = {...}: let
-    fmod = names: map (x: self.nixosModules.${x}) names;
-  in {
-    imports = fmod ["main-user" "nixboom"];
+  flake.nixosModules.users = {...}: {
+    imports = with self.nixosModules; [main-user nixboom];
     main-user.users = {
       nixboom = {
         enable = true;
