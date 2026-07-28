@@ -23,6 +23,10 @@
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-option-search = {
+      url = "github:ciderale/nix-option-search";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {

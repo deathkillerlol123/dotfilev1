@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.nixosModules.nixboom = {lib, ...}: let
+  flake.nixosModules.nixboom = {lib,inputs,pkgs, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
   in {
     imports = with self.nixosModules; [lime dragware intel gaming main];

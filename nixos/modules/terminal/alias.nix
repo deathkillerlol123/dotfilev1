@@ -8,6 +8,7 @@
         ls = "eza -a --tree -L 1";
         e  = "emacs -nw";
         key = "wshowkeys -a bottom -m 20 -b 00000000";
+        nps = "nix-option-search";
       };
     };
 }

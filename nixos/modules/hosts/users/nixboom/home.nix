@@ -3,7 +3,6 @@
     config,
     inputs,
     pkgs,
-    self,
     ...
   }: let
     user = "nixboom";
@@ -42,7 +41,7 @@
       username = user;
       homeDirectory = "/home/${user}";
       stateVersion = "25.11";
-      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard];
+      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard ];
       file =
         {
           ".local/share/applications" = {

@@ -336,6 +336,26 @@
         "type": "github"
       }
     },
+    "nix-option-search": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1742158448,
+        "narHash": "sha256-b1tSDvaNG+durCwfEBDvTJr1EwFYcci96SZRfO2qy4A=",
+        "owner": "ciderale",
+        "repo": "nix-option-search",
+        "rev": "6ad11194ff4df683f3650afb803affef9c04f229",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ciderale",
+        "repo": "nix-option-search",
+        "type": "github"
+      }
+    },
     "nixcord": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -564,6 +584,7 @@
         "mango": "mango",
         "nix-flatpak": "nix-flatpak",
         "nix-gaming": "nix-gaming",
+        "nix-option-search": "nix-option-search",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-wayland": "nixpkgs-wayland",
