@@ -1,9 +1,15 @@
 {self, ...}: {
-  flake.nixosModules.nixboom = {lib,inputs,pkgs, ...}: let
+  flake.nixosModules.nixboom = {
+    lib,
+    inputs,
+    pkgs,
+    ...
+  }: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
   in {
     imports = with self.nixosModules; [lime dragware intel gaming main];
-    programs = enabled ["wshowkeys" "mango"];
+    programs =
+      enabled ["wshowkeys" "mango"];
     lime = {
       enable = true;
       params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];

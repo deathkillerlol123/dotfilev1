@@ -41,15 +41,19 @@
       username = user;
       homeDirectory = "/home/${user}";
       stateVersion = "25.11";
-      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard ];
+      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard];
       file =
         {
           ".local/share/applications" = {
             source = "${dotfiles}/.local/share/applications";
             recursive = true;
           };
+
+          ".config/starship.toml" = {
+            source = "${dotfiles}/.config/starship.toml";
+          };
         }
-        // (mkconf ["mango" "starship.toml" "swaylock" "fastfetch" "fish" "swaync" "rofi" "ghostty"])
+        // (mkconf ["mango" "swaylock" "starship.toml" "fastfetch" "swaync" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {
@@ -58,6 +62,15 @@
     };
     programs = {
       home-manager.enable = true;
+      fish = {
+        enable = true;
+        interactiveShellInit = ''
+          set -U fish_greeting
+          starship init fish | source
+          zoxide init fish | source
+          cd ~/dotfiles/nixos
+        '';
+      };
       git = {
         enable = true;
         settings =
