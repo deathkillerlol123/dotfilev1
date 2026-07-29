@@ -30,7 +30,6 @@
       bottom
       fastfetch
       fd
-      inputs.nix-option-search.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
