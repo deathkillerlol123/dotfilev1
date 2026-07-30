@@ -32,12 +32,12 @@
     imports = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
     ] ++
-    (with self.homeModules.nb; [
-      git
-      firefox
-      discord
-      starship
-      fastfetch
+    (with self.homeModules; [
+      nbgit
+      nbfirefox
+      nbdiscord
+      nbstarship
+      nbfastfetch
     ]);  
     home = {
       username = user;

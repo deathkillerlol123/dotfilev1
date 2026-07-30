@@ -1,13 +1,8 @@
-{self, ...}: {
-  flake.nixosModules.nixboom = {
-    lib,
-    inputs,
-    pkgs,
-    ...
-  }: let
+{self,inputs, ...}: {
+  flake.nixosModules.nixboom = {lib, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
   in {
-    imports = with self.nixosModules; [lime dragware intel gaming main];
+    imports = [inputs.mango.nixosModules.mango] ++ (with self.nixosModules; [lime dragware intel gaming main]);
     programs =
       enabled ["wshowkeys" "mango"];
     lime = {

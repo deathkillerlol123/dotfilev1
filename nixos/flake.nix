@@ -13,7 +13,10 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    mango.url = "github:mangowm/mango";
+    mango = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,9 +40,6 @@
       flake = {
         nixpkgs.overlays = [inputs.nixpkgs-wayland.overlay];
       };
-      systems = [
-        "x86_64-linux"
-        "x86_64-darwin"
-      ];
+      systems = ["x86_64-linux" "x86_64-darwin"];
     };
 }
