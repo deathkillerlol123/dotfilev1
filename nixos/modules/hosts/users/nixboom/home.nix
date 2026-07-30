@@ -31,12 +31,14 @@
   in {
     imports = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      self.homeModules.nbgit
-      self.homeModules.nbfirefox
-      self.homeModules.nbdiscord
-      self.homeModules.nbstarship
-      self.homeModules.nbfastfetch
-    ];
+    ] ++
+    (with self.homeModules.nb; [
+      git
+      firefox
+      discord
+      starship
+      fastfetch
+    ]);  
     home = {
       username = user;
       homeDirectory = "/home/${user}";
@@ -49,7 +51,7 @@
             recursive = true;
           };
         }
-        // (mkconf ["mango" "swaylock" "swaync" "rofi" "ghostty"])
+        // (mkconf ["mango" "swaylock" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {
