@@ -27,9 +27,9 @@
   in {
     imports = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      self.homeModules.git
-      self.homeModules.firefox
-      self.homeModules.discord
+      self.homeModules.features.git
+      self.homeModules.features.firefox
+      self.homeModules.features.discord
     ];
     home = {
       username = user;

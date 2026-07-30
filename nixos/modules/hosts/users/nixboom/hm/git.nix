@@ -1,5 +1,5 @@
 {...}: {
-  flake.homeModules.git = {...}: let
+  flake.homeModules.features.git = {...}: let
     gitidentity = {
       user = {
         name = "deathkillerlol123";
