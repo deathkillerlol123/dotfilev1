@@ -35,6 +35,7 @@
       self.homeModules.nbfirefox
       self.homeModules.nbdiscord
       self.homeModules.nbstarship
+      self.homeModules.nbfastfetch
     ];
     home = {
       username = user;
@@ -48,7 +49,7 @@
             recursive = true;
           };
         }
-        // (mkconf ["mango" "swaylock" "fastfetch" "swaync" "rofi" "ghostty"])
+        // (mkconf ["mango" "swaylock" "swaync" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {
