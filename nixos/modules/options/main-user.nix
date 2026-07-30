@@ -10,10 +10,8 @@
     ...
   }: let
     cfg = config.main-user.users;
-    enabledUsers =
-      lib.filterAttrs (_: u: u.enable) cfg;
-    shells =
-      lib.unique (map (u: u.shell) (lib.attrValues enabledUsers));
+    enabledUsers = lib.filterAttrs (_: u: u.enable) cfg;
+    shells = lib.unique (map (u: u.shell) (lib.attrValues enabledUsers));
   in {
     imports = [inputs.home-manager.nixosModules.home-manager];
     options.main-user.users = lib.mkOption {
@@ -26,11 +24,13 @@
               shell = lib.mkOption {
                 type = lib.types.str;
                 default = "fish";
+                description = "shell type for the user";
               };
 
               groups = lib.mkOption {
                 type = lib.types.listOf lib.types.str;
                 default = ["wheel"];
+                description = "Groups that the user is in";
               };
             };
           }
