@@ -25,6 +25,7 @@
       nixd
       alejandra
       zathura
+      nix-inspect
       eza
       bat
       bottom

@@ -1,4 +1,8 @@
-{self,lib, ...}: {
+{
+  self,
+  lib,
+  ...
+}: {
   flake.homeModules.nixboom = {
     config,
     inputs,
@@ -27,9 +31,10 @@
   in {
     imports = [
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      self.homeModules.nixbgit
-      self.homeModules.nixbfirefox
-      self.homeModules.nixbdiscord
+      self.homeModules.nbgit
+      self.homeModules.nbfirefox
+      self.homeModules.nbdiscord
+      self.homeModules.nbstarship
     ];
     home = {
       username = user;
@@ -43,7 +48,7 @@
             recursive = true;
           };
         }
-        // (mkconf ["mango" "swaylock" "starship.toml" "fastfetch" "swaync" "rofi" "ghostty"])
+        // (mkconf ["mango" "swaylock" "fastfetch" "swaync" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {

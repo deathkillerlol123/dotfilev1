@@ -1,5 +1,5 @@
 {...}: {
-  flake.homeModules.nixbgit = {...}: let
+  flake.homeModules.nbgit = {...}: let
     gitidentity = {
       user = {
         name = "deathkillerlol123";
