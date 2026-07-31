@@ -5,8 +5,8 @@
     lib,
     ...
   }: {
-    options.sound.enable = lib.mkEnableOption "bluetooth";
-    config = lib.mkIf config.sound.enable {
+    options.tone.enable = lib.mkEnableOption "sound";
+    config = lib.mkIf config.tone.enable {
       security.rtkit.enable = true;
       services.pipewire = {
         enable = true;
