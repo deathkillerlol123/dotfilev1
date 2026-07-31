@@ -53,7 +53,6 @@
           };
         };
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [alejandra];
           shellHook = config.pre-commit.installationScript;
         };
       };

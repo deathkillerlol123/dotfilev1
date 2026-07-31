@@ -1,32 +1,13 @@
 {
   flake.nixosModules.system = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      os-prober
-      efibootmgr
-      curl
-      zip
-      git
-      jujutsu
-      gh
-      libnotify
-      brightnessctl
-      borgbackup
-      ntfs3g
-      starship
-      bash
-      zoxide
-      emacs
-      nixd
-      alejandra
-      zathura
-      eza
-      bat
-      bottom
-      fastfetch
-      fd
-      nix-search-tv
-      fzf
-    ];
+    environment.systemPackages = with pkgs;
+      [os-prober efibootmgr]
+      ++ [curl zip git jujutsu gh]
+      ++ [libnotify ntfs3g borgbackup bottom]
+      ++ [zoxide fd]
+      ++ [nix-search-tv fzf]
+      ++ [emacs nixd alejandra]
+      ++ [eza bat fastfetch];
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
       maple-mono.NF
