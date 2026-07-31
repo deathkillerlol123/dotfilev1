@@ -5,7 +5,7 @@
     config,
     ...
   }: {
-    option.gaming.enable = lib.mkEnableOption "gaming";
+    options.gaming.enable = lib.mkEnableOption "gaming";
     config = lib.mkIf config.gaming.enable {
       programs = {
         gamemode.enable = true;

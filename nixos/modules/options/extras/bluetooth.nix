@@ -1,9 +1,9 @@
-{
-  config,
-  lib,
-  ...
-}: {
+{...}: {
   flake.nixosModules.bluetooth = {
+    config,
+    lib,
+    ...
+  }: {
     options.ble.enable = lib.mkEnableOption "bluetooth";
     config = lib.mkIf config.ble.enable {
       hardware = {
