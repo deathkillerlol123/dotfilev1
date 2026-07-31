@@ -72,7 +72,6 @@
         {
           nh = {
             enable = true;
-            flake = self.outPath;
             clean = {
               enable = true;
               extraArgs = "--keep 3";

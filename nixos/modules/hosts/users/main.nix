@@ -71,11 +71,6 @@
       firewall.enable = true;
       nameservers = ["1.1.1.1" "8.8.8.8"];
     };
-    system.autoUpgrade = {
-      enable = true;
-      runGarbageCollection = true;
-      allowReboot = false;
-    };
     nix = {
       settings = {
         experimental-features = ["nix-command" "flakes"];

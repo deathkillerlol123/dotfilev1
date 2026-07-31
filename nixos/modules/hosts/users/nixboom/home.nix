@@ -74,8 +74,8 @@
     gtk = {
       enable = true;
       theme = {
-        name = "Tokyonight-Dark";
-        package = pkgs.tokyonight-gtk-theme;
+        name = "Adwaita-dark";
+        package = pkgs.gnome-themes-extra;
       };
       gtk4.theme = config.gtk.theme;
     };
