@@ -42,9 +42,6 @@
         inputs.home-manager.flakeModules.home-manager
         (inputs.import-tree ./modules)
       ];
-      flake = {
-        nixpkgs.overlays = [inputs.nixpkgs-wayland.overlay];
-      };
       perSystem = {
         config,
         pkgs,
