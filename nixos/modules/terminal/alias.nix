@@ -1,7 +1,7 @@
 {...}: {
   flake.nixosModules.alias = {
     environment.shellAliases = {
-      gu = "cd ~/dotfiles/nixos && jj describe -m 'Update' && jj bookmark set main -r @ && jj git push && jj new";
+      gu = "cd ~/dotfiles/nixos && alejandra . && jj describe -m 'Update' && jj bookmark set main -r @ && jj git push && jj new";
       w = "$HOME/dotfiles/nixos/scripts/Boot-Windows10.sh";
       n = "nh os switch $HOME/dotfiles/nixos/";
       clean = "nix store gc && sudo nix store optimise && nh clean all -k 2";
