@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.dragware = {
+  flake.nixosModules.dragonfly = {
     config,
     lib,
     pkgs,
