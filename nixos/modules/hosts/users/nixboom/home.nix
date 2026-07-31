@@ -61,6 +61,7 @@
     };
     programs = {
       home-manager.enable = true;
+      nix-search-tv.enableTelevisionIntegration = true;
       fish = {
         enable = true;
         interactiveShellInit = ''

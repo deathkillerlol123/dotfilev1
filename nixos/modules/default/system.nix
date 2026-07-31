@@ -1,11 +1,5 @@
 {
-  flake.nixosModules.system = {
-    inputs,
-    pkgs,
-    ...
-  }: {
-    imports = [inputs.nix-option-search.modules.default];
-    documentation.option-search.enable = true;
+  flake.nixosModules.system = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       os-prober
       efibootmgr
@@ -25,12 +19,13 @@
       nixd
       alejandra
       zathura
-      nix-inspect
       eza
       bat
       bottom
       fastfetch
       fd
+      nix-search-tv
+      fzf
     ];
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
