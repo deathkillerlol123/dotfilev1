@@ -86,6 +86,10 @@
 (line-number-mode 1)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(auto-save-interval 20)
  '(auto-save-timeout 3)
  '(custom-enabled-themes '(modus-vivendi-tinted))
@@ -100,7 +104,7 @@
 	org-beautify-theme org-bullets org-mime org-pretty-tags
 	pdf-tools python-mode qml-mode rainbow-blocks rainbow-mode
 	transient transpose-frame tree-inspector tree-sitter-indent
-	tree-sitter-langs yasnippet-classic-snippets
+	tree-sitter-langs yasnippet yasnippet-classic-snippets
 	yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
@@ -112,6 +116,10 @@
 (global-tree-sitter-mode)
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
