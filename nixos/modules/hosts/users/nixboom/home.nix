@@ -29,16 +29,17 @@
         names
       );
   in {
-    imports = [
-      inputs.nix-flatpak.homeManagerModules.nix-flatpak
-    ] ++
-    (with self.homeModules; [
-      nbgit
-      nbfirefox
-      nbdiscord
-      nbstarship
-      nbfastfetch
-    ]);  
+    imports =
+      [
+        inputs.nix-flatpak.homeManagerModules.nix-flatpak
+      ]
+      ++ (with self.homeModules; [
+        nbgit
+        nbfirefox
+        nbdiscord
+        nbstarship
+        nbfastfetch
+      ]);
     home = {
       username = user;
       homeDirectory = "/home/${user}";

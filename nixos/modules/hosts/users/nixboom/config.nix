@@ -1,4 +1,8 @@
-{self,inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.nixosModules.nixboom = {lib, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
   in {

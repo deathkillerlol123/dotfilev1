@@ -1,5 +1,9 @@
-{ ... }: {
-  flake.nixosModules.lime = { lib, config, ... }: {
+{...}: {
+  flake.nixosModules.lime = {
+    lib,
+    config,
+    ...
+  }: {
     options = {
       lime.enable = lib.mkEnableOption "limine";
       lime = {
@@ -8,7 +12,7 @@
           description = "How many nixos generations to show up in limine";
         };
         params = lib.mkOption {
-          default = [ "" ];
+          default = [""];
           description = "What kernel parameters are being applied";
         };
       };

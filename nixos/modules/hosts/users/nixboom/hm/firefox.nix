@@ -1,8 +1,5 @@
-{
-  inputs,
-  ...
-}: {
-  flake.homeModules.nbfirefox = {config,...}: let
+{inputs, ...}: {
+  flake.homeModules.nbfirefox = {config, ...}: let
     firefox_user = "declaritive";
     fire-addons = inputs.firefox-addons.packages."x86_64-linux";
   in {
