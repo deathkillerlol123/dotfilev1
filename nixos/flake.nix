@@ -65,6 +65,6 @@
           shellHook = config.pre-commit.installationScript;
         };
       };
-      systems = ["x86_64-linux" "x86_64-darwin"];
+      systems = ["x86_64-linux"];
     };
 }
