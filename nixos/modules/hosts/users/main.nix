@@ -11,7 +11,7 @@
     df = lib.mkDefault;
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports = fmod ["sound" "bluetooth" "gaming" "touch" "portals" "alias" "bash" "system"];
+    imports = fmod ["sound" "bluetooth" "gaming" "touch" "intel" "lime" "portals" "alias" "bash" "system"];
     documentation = {
       enable = false;
       man.cache.enable = false;
