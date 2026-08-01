@@ -1,14 +1,10 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{self, ...}: {
   flake.nixosModules.nixboom = {lib, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
     enabledModules = enabled;
   in
     {
-      imports = [inputs.mango.nixosModules.mango] ++ (with self.nixosModules; [dragonfly main]);
+      imports = with self.nixosModules; [dragonfly main];
       programs = enabled ["wshowkeys" "mango"];
       lime = {
         enable = true;

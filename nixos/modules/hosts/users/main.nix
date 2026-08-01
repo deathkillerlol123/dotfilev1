@@ -2,6 +2,7 @@
   flake.nixosModules.main = {
     lib,
     pkgs,
+    inputs,
     ...
   }: let
     enabled = names:
@@ -11,7 +12,9 @@
     df = lib.mkDefault;
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports = fmod ["sound" "bluetooth" "gaming" "touch" "intel" "lime" "portals" "alias" "bash" "system"];
+    imports =
+      fmod ["sound" "bluetooth" "gaming" "touch" "intel" "lime" "portals" "alias" "bash" "system"]
+      ++ [inputs.mango.nixosModules.mango];
     documentation = {
       enable = false;
       man.cache.enable = false;
