@@ -80,6 +80,7 @@
         auto-optimise-store = true;
         max-jobs = "auto";
         cores = 0;
+        require-sigs = true;
       };
       optimise.automatic = true;
     };
