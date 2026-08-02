@@ -26,7 +26,7 @@ if [ -n "$FILE" ]; then
         done
         echo "}"
     } > "$OUTPUT_RASI"
-    cd "$HOME/dotfiles/nixos/bootloader/"
+    cd "$HOME/dotfiles/nixos/modules/hosts/users/nixboom/home/Wallpapers/"
     rm -rf ./*
-    cp "$FILE" "$HOME/dotfiles/nixos/bootloader/"
+    cp "$FILE" "$HOME/dotfiles/nixos/modules/hosts/users/nixboom/home/Wallpapers/"
 fi
