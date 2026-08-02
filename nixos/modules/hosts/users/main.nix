@@ -46,7 +46,7 @@
     };
     programs = enabled ["dconf" "xwayland"];
     services =
-      enabled ["blueman" "flatpak" "libinput" "thermald" "fstrim"]
+      enabled ["blueman" "flatpak" "libinput" "fstrim"]
       // {
         logind.settings.Login.KillUserProcesses = true;
         fwupd.enable = false;
