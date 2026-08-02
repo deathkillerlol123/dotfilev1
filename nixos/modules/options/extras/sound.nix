@@ -33,8 +33,6 @@
         wiremix
         playerctl
         alsa-utils
-        pulseaudio
-        wireplumber
       ];
     };
   };
