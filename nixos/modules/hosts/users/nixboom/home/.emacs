@@ -28,7 +28,7 @@
 (tool-bar-mode -1) 
 
 (define-abbrev-table 'global-abbrev-table
-  '(("fx" "{config,inputs,lib,pkgs,...}:{\n  flake.nixosModules.")))
+  '(("fx" "{config,inputs,lib,pkgs,...}:{\n  flake.nixosModules.<name> = {config,inputs,lib,pkgs,...}:\n  {\n  };\n}")))
 (setq-default abbrev-mode t)
 
 (use-package eglot
