@@ -33,20 +33,14 @@
       [
         inputs.nix-flatpak.homeManagerModules.nix-flatpak
       ]
-      ++ (with self.homeModules; [nbgit nbfirefox nbdiscord nbstarship nbfastfetch]);
+      ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfastfetch]);
     home = {
       username = user;
       homeDirectory = "/home/${user}";
       stateVersion = "25.11";
       packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard zathura];
       file =
-        {
-          ".local/share/applications" = {
-            source = "${dotfiles}/.local/share/applications";
-            recursive = true;
-          };
-        }
-        // (mkconf ["mango" "swaylock" "rofi" "ghostty"])
+        (mkconf ["mango" "swaylock" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {

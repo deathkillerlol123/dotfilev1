@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Start
-Exec=sh -c 'whatsapp-electron & discord & firefox'
-Terminal=false
-Type=Application
-Icon=firefox
-Categories=Utility;
