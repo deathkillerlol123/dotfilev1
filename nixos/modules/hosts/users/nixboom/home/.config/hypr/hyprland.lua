@@ -6,12 +6,10 @@ hl.monitor({
 })
 local terminal    = "ghostty"
 local menu        = "rofi -show drun"
-
 hl.exec_cmd("~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/autostart/autostart.sh")
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-
 hl.config({
     general = {
         gaps_in  = 0,
@@ -55,7 +53,6 @@ hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}   
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 238.1191, dampening = 24.21279333 })
-
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
 hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
@@ -78,21 +75,12 @@ hl.config({
     dwindle = {
         preserve_split = true,
     },
-})
-
-hl.config({
     master = {
         new_status = "slave",
     },
-})
-
-hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
     },
-})
-
-hl.config({
     misc = {
         force_default_wallpaper = 0,  
         disable_hyprland_logo   = true
@@ -138,12 +126,10 @@ hl.bind(mainMod .. " + I", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + M", hl.dsp.window.pseudo())
 
--- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + A",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + W",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + S",  hl.dsp.focus({ direction = "down" }))
-
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.swap({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.swap({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.swap({ direction = "u" }))
@@ -166,7 +152,6 @@ hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_S
 hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
-
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })

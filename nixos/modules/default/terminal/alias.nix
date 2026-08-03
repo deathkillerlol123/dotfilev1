@@ -8,7 +8,7 @@
       t = "cd ~/dotfiles/nixos && nix flake update && n && clean && gu";
       ls = "eza -a --tree -L 1";
       e = "emacs -nw";
-      key = "wshowkeys -a bottom -m 20 -b 00000000";
+      key = "wshowkeys -a bottom -F 'Sans Bold 30' -s '#B5B520ff' -f  '#ecd29cff' -b '#201B1488' -t 3";
       tv = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history | sed 's|^[^/]*/ *||' | wl-copy";
     };
   };

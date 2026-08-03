@@ -24,13 +24,6 @@
         icon = "firefox";
         categories = ["Utility"];
       };
-      uxplay = {
-        name = "Uxplay Toggle";
-        exec = "/home/nixboom/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/uxplay-toggle.sh";
-        terminal = false;
-        icon = "terminal";
-        categories = ["Utility"];
-      };
     };
   };
 }

@@ -1,5 +1,6 @@
 {
   inputs = {
+    #must-need
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -13,6 +14,8 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    #environment
+    niri.url = "github:sodiboo/niri-flake";
     mango = {
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,12 +25,13 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #discord
     nixcord.url = "github:4evy/nixcord";
+    discord-music-rpc.url = "github:KanashiiDev/discord-music-rpc";
     nixpkgs-wayland = {
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    discord-music-rpc.url = "github:KanashiiDev/discord-music-rpc";
   };
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
