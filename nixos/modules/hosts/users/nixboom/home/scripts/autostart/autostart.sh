@@ -2,6 +2,8 @@
 
 pgrep -x copyq >/dev/null || copyq &
 pgrep -x awww-daemon >/dev/null || awww-daemon &
+discord-music-rpc &
+
 
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
