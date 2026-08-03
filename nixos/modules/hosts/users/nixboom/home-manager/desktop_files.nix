@@ -19,7 +19,7 @@
       };
       default = {
         name = "Start";
-        exec = "sh -c 'whatsapp-electron & discord & firefox'";
+        exec = "sh -c \"whatsapp-electron & discord & firefox\"";
         terminal = false;
         icon = "firefox";
         categories = ["Utility"];
