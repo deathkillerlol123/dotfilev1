@@ -2,12 +2,6 @@
   flake.homeModules.nbnu = {pkgs, ...}: {
     programs.nushell = {
       enable = true;
-      plugins = with pkgs.nushellPlugins; [
-        highlight
-        query
-        formats
-        gstat
-      ];
       shellAliases = {
         e = "emacs -nw";
       };
