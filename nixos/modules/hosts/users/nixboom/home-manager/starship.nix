@@ -2,6 +2,7 @@
   flake.homeModules.nbstarship = {...}: {
     programs.starship = {
       enable = true;
+      enableNushellIntegration = true;
       settings = {
         format = ''
           ~❯

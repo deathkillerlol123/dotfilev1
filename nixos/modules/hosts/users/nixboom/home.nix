@@ -33,7 +33,7 @@
       [
         inputs.nix-flatpak.homeManagerModules.nix-flatpak
       ]
-      ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship]);
+      ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship nbnu]);
     home = {
       username = user;
       homeDirectory = "/home/${user}";
