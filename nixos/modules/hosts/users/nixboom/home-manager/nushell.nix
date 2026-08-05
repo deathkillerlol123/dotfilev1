@@ -4,11 +4,9 @@
       enable = true;
       plugins = with pkgs.nushellPlugins; [
         highlight
-        polars
         query
         formats
         gstat
-        net
       ];
       shellAliases = {
         e = "emacs -nw";
