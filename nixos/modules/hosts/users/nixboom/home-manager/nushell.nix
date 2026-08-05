@@ -6,6 +6,7 @@
         e = "emacs -nw";
       };
       extraConfig = ''
+        cd ~/dotfiles/nixos
         def gu [] {
           cd ~/dotfiles/nixos
           alejandra .
