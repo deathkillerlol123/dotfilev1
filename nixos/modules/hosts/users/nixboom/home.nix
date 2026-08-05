@@ -50,6 +50,10 @@
     programs = {
       home-manager.enable = true;
       nix-search-tv.enableTelevisionIntegration = true;
+      zoxide = {
+        enable = true;
+        enableNushellIntegration = true;
+      };
       fish = {
         enable = true;
         interactiveShellInit = ''
