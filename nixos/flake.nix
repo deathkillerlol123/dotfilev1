@@ -27,7 +27,6 @@
     };
     #discord
     nixcord.url = "github:4evy/nixcord";
-    discord-music-rpc.url = "github:KanashiiDev/discord-music-rpc";
     nixpkgs-wayland = {
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";

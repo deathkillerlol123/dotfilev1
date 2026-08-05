@@ -33,12 +33,12 @@
       [
         inputs.nix-flatpak.homeManagerModules.nix-flatpak
       ]
-      ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfastfetch]);
+      ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship]);
     home = {
       username = user;
       homeDirectory = "/home/${user}";
       stateVersion = "25.11";
-      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard zathura];
+      packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu pwmenu copyq grim slurp swappy wl-clipboard zathura fetch];
       file =
         (mkconf ["mango" "swaylock" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
