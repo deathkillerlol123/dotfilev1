@@ -43,6 +43,8 @@
           | sed "s|^[^/]*/ *||"
           | wl-copy
         }
+
+        $env.config.show_banner = false
       '';
     };
   };
