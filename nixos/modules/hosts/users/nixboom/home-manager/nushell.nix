@@ -4,7 +4,6 @@
       enable = true;
       plugins = with pkgs.nushellPlugins; [
         highlight
-        units
         polars
         query
         formats
