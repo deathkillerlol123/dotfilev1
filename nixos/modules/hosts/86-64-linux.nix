@@ -15,6 +15,7 @@ in {
     main-user.users = {
       nixboom = {
         enable = true;
+        shell = "nushell";
         groups = ["wheel" "gamemode" "uinput"];
       };
       doct = {
