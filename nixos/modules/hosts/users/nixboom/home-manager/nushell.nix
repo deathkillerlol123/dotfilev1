@@ -1,7 +1,16 @@
 {...}: {
-  flake.homeModules.nbnu = {...}: {
+  flake.homeModules.nbnu = {pkgs, ...}: {
     programs.nushell = {
       enable = true;
+      plugins = with pkgs.nushellPlugins; [
+        highlight
+        units
+        polars
+        query
+        formats
+        gstat
+        net
+      ];
       shellAliases = {
         e = "emacs -nw";
       };
