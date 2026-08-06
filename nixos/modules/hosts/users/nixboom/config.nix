@@ -1,11 +1,10 @@
 {self, ...}: {
   flake.nixosModules.nixboom = {lib, ...}: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
-    enabledModules = enabled;
   in
     {
       imports = with self.nixosModules; [dragonfly main];
-      programs = enabled ["wshowkeys" "mango"];
+      programs.mango.enable = true;
       services.desktopManager.plasma6.enable = true;
       lime = {
         enable = true;
@@ -13,5 +12,5 @@
       };
       system.stateVersion = "25.11";
     }
-    // enabledModules ["gaming" "ble" "tone" "touch" "intel"];
+    // enabled ["gaming" "ble" "tone" "touch" "intel"];
 }

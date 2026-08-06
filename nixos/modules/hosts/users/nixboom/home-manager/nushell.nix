@@ -34,10 +34,6 @@
           gu
         }
 
-        def key [] {
-          wshowkeys -a bottom -F "Sans Bold 30" -s "#B5B520ff" -f "#ecd29cff" -b "#201B1488" -t 1
-        }
-
         def tv [] {
           nix-search-tv print
           | fzf --preview "nix-search-tv preview {}" --scheme history
