@@ -1,9 +1,17 @@
 {self, ...}: {
-  flake.nixosModules.nixboom = {lib, ...}: let
+  flake.nixosModules.nixboom = {
+    pkgs,
+    lib,
+    ...
+  }: let
     enabled = names: lib.genAttrs names (_: {enable = true;});
   in
     {
       imports = with self.nixosModules; [dragonfly main];
+      programs.mango = {
+        enable = true;
+        package = self.inputs.mango.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      };
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];

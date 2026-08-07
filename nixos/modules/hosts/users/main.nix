@@ -12,21 +12,19 @@
     df = lib.mkDefault;
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
-    imports =
-      fmod [
-        "sound"
-        "bluetooth"
-        "gaming"
-        "touch"
-        "intel"
-        "lime"
-        "portals"
-        "alias"
-        "bash"
-        "system"
-        "uxplay"
-      ]
-      ++ [inputs.mango.nixosModules.mango];
+    imports = fmod [
+      "sound"
+      "bluetooth"
+      "gaming"
+      "touch"
+      "intel"
+      "lime"
+      "portals"
+      "alias"
+      "bash"
+      "system"
+      "uxplay"
+    ];
     documentation = {
       enable = false;
       man.cache.enable = false;
