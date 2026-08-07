@@ -4,7 +4,6 @@
   in
     {
       imports = with self.nixosModules; [dragonfly main];
-      programs.mango.enable = true;
       lime = {
         enable = true;
         params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];

@@ -4,9 +4,12 @@
       enable = true;
       shellAliases = {
         e = "emacs -nw";
-        w = "$HOME/dotfiles/nixos/modules/default/terminal/scripts/Boot-Windows10.sh";
       };
       extraConfig = ''
+        def w [] {
+          run-external ($env.HOME | path join "dotfiles/nixos/modules/default/terminal/scripts/Boot-Windows10.sh")
+        }
+
         def gu [] {
           cd ~/dotfiles/nixos
           alejandra .
