@@ -4,6 +4,7 @@
       enable = true;
       shellAliases = {
         e = "emacs -nw";
+        w = "$HOME/dotfiles/nixos/modules/default/terminal/scripts/Boot-Windows10.sh";
       };
       extraConfig = ''
         def gu [] {
