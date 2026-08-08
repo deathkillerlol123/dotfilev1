@@ -16,13 +16,8 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
     #environment
     niri.url = "github:sodiboo/niri-flake";
-    #    mango = {
-    #     url = "github:mangowm/mango";
-    #    inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    #touch
     mango = {
-      url = "github:mangowm/mango?ref=refs/pull/888/head";
+      url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
