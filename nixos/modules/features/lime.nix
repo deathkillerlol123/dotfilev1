@@ -11,15 +11,10 @@
           default = 3;
           description = "How many nixos generations to show up in limine";
         };
-        params = lib.mkOption {
-          default = [""];
-          description = "What kernel parameters are being applied";
-        };
       };
     };
     config = lib.mkIf config.lime.enable {
       boot = {
-        kernelParams = config.lime.params;
         loader = {
           efi.canTouchEfiVariables = true;
           limine = {

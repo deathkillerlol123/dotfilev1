@@ -1,19 +1,10 @@
 {self, ...}: {
-  flake.nixosModules.nixboom = {
-    pkgs,
-    lib,
-    ...
-  }: let
-    enabled = names: lib.genAttrs names (_: {enable = true;});
-  in
+  flake.nixosModules.nixboom = {lib, ...}:
     {
       imports = with self.nixosModules; [dragonfly main];
       programs.mango.enable = true;
-      lime = {
-        enable = true;
-        params = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];
-      };
+      boot.kernelParams = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];
       system.stateVersion = "25.11";
     }
-    // enabled ["gaming" "ble" "tone" "touch" "intel"];
+    // lib.genAttrs ["gaming" "ble" "tone" "touch" "intel" "lime"] (_: {enable = true;});
 }
