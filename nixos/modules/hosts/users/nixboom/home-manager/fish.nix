@@ -8,6 +8,7 @@
           starship init fish | source
           zoxide init fish | source
           cd ~/dotfiles/nixos
+          nu
         '';
       };
     };
