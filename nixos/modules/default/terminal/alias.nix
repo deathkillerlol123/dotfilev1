@@ -6,7 +6,6 @@
       n = "nh os switch $HOME/dotfiles/nixos/";
       clean = "nix store gc && sudo nix store optimise && nh clean all -k 2";
       t = "cd ~/dotfiles/nixos && nix flake update && n && clean && gu";
-      ls = "eza -a --tree -L 1";
       e = "emacs -nw";
       tv = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history | sed 's|^[^/]*/ *||' | wl-copy";
     };
