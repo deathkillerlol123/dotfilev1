@@ -77,6 +77,7 @@
         nix-daemon.enable = df true;
       };
     };
+    system.autoUpgrade.runGarbageCollection = true;
     hardware.enableAllFirmware = true;
     powerManagement.cpuFreqGovernor = "performance";
     time.timeZone = "Europe/London";
