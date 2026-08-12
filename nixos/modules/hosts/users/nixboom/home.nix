@@ -30,9 +30,7 @@
       );
   in {
     imports =
-      [
-        inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      ]
+      [inputs.nix-flatpak.homeManagerModules.nix-flatpak]
       ++ (with self.homeModules; [nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfish nbnu]);
     home = {
       username = user;
