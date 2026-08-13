@@ -127,3 +127,4 @@
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'css-mode-hook #'aggressive-indent-mode)
 (put 'downcase-region 'disabled nil)
+(put 'scroll-left 'disabled nil)
