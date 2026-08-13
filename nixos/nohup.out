@@ -1,0 +1,7 @@
+gamemodeauto: 
+gamemodeauto: 
+GameMode ERROR: D-Bus error: Could not call method 'RegisterGame' on 'org.freedesktop.portal.Desktop': Could not activate remote peer 'org.freedesktop.portal.Desktop': startup job failed
+gamemodeauto: D-Bus error: Could not call method 'RegisterGame' on 'org.freedesktop.portal.Desktop': Could not activate remote peer 'org.freedesktop.portal.Desktop': startup job failed
+sober: /usr/lib/x86_64-linux-gnu/libcurl.so.4: no version information available (required by sober)
+/proc/self/exe: /usr/lib/x86_64-linux-gnu/libcurl.so.4: no version information available (required by /proc/self/exe)
+info: app: lifecycle: app_start delta=3.6999990697950125e-05ms
