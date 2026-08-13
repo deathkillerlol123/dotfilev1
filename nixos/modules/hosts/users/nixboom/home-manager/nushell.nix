@@ -42,16 +42,6 @@
           | sed "s|^[^/]*/ *||"
           | wl-copy
         }
-        def lsblk [] {
-            ^lsblk -J
-            | from json
-            | get blockdevices
-            | each {|disk|
-                [$disk] ++ ($disk.children? | default [])
-            }
-            | flatten
-            | select name size type mountpoints
-        }
 
         $env.config.show_banner = false
       '';
