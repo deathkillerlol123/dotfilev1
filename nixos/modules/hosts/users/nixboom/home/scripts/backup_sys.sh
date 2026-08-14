@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-REPO="/mnt/Backups/ArchB/BorgBackups2"
+REPO="/mnt/Backups/nixos_backups"
 BACKUP_NAME="$(date +%Y-%m-%d_%H-%M-%S)"
 
 echo "Starting Borg backup: $BACKUP_NAME"
