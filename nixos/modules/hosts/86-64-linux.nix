@@ -11,7 +11,7 @@ in {
     modules = with self.nixosModules; [users];
   };
   flake.nixosModules.users = {...}: {
-    imports = with self.nixosModules; [main-user nixboom];
+    imports = [self.nixosModules.main-user] ++ (with self.nixosModules; [nixboom]);
     main-user.users = {
       nixboom = {
         enable = true;
