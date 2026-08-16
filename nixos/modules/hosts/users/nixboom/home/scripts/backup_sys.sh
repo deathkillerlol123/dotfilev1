@@ -34,7 +34,7 @@ borg prune \
 
 echo "Updating backup list..."
 
-borg list "$REPO" > "$HOME/list.txt"
+echo borg list "$REPO"
 
 echo "Unmounting backup drive..."
 
