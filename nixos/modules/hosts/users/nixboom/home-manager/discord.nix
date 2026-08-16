@@ -4,10 +4,7 @@
     programs = {
       nixcord = {
         enable = true;
-        discord = {
-          vencord.enable = true;
-          krisp.enable = true;
-        };
+        discord.vencord.enable = true;
         config = {
           useQuickCss = true;
           autoUpdateNotification = true;
