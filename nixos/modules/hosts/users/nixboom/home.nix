@@ -38,7 +38,7 @@
       stateVersion = "25.11";
       packages = with pkgs; [ghostty whatsapp-electron pywal awww waypaper rofi bzmenu copyq grim slurp swappy wl-clipboard];
       file =
-        (mkconf ["mango" "swaylock" "rofi" "ghostty"])
+        (mkconf ["mango" "rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
     services.flatpak = {
