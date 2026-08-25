@@ -1,9 +1,9 @@
-{...}: {
-  flake.nixosModules.features = {self, ...}: {
+{self, ...}: {
+  flake.nixosModules.features = {...}: {
     imports = with self.nixosModules; [
       gaming
-      ble
-      tone
+      bluetooth
+      sound
       touch
       intel
       lime
