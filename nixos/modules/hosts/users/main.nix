@@ -14,17 +14,10 @@
   in {
     imports =
       fmod [
-        "sound"
-        "bluetooth"
-        "gaming"
-        "touch"
-        "intel"
-        "lime"
         "portals"
         "alias"
         "bash"
         "system"
-        "uxplay"
       ]
       ++ [inputs.mango.nixosModules.mango];
     documentation = {

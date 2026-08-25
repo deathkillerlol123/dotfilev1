@@ -20,13 +20,11 @@
           {name, ...}: {
             options = {
               enable = lib.mkEnableOption "enable user";
-
               shell = lib.mkOption {
                 type = lib.types.str;
                 default = "fish";
                 description = "shell type for the user";
               };
-
               groups = lib.mkOption {
                 type = lib.types.listOf lib.types.str;
                 default = ["wheel"];
