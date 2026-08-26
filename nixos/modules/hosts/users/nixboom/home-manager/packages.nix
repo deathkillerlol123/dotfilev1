@@ -20,6 +20,7 @@
         slurp
         swappy
         wl-clipboard
+        #gnome-boxes virtual machines
       ];
     };
     services.flatpak = {

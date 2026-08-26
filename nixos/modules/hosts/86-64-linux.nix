@@ -17,7 +17,7 @@ in {
     main-user.users = {
       nixboom = {
         enable = true;
-        groups = ["wheel" "gamemode" "uinput"];
+        groups = ["wheel" "gamemode" "uinput" "libvirtd" "kvm"];
       };
       doct = {
         enable = false;
