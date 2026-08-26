@@ -1,9 +1,5 @@
-{
-  self,
-  lib,
-  ...
-}: {
-  flake.homeModules.settings = {
+{...}: {
+  flake.homeModules.packages = {
     config,
     inputs,
     pkgs,
@@ -29,22 +25,6 @@
     services.flatpak = {
       update.onActivation = true;
       packages = ["org.vinegarhq.Sober"];
-    };
-    programs = {
-      home-manager.enable = true;
-      nix-search-tv.enableTelevisionIntegration = true;
-      zoxide = {
-        enable = true;
-        enableNushellIntegration = true;
-      };
-    };
-    gtk = {
-      enable = true;
-      theme = {
-        name = "Adwaita-dark";
-        package = pkgs.gnome-themes-extra;
-      };
-      gtk4.theme = config.gtk.theme;
     };
   };
 }

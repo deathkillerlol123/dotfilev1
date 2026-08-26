@@ -24,7 +24,8 @@
         names
       );
   in {
-    imports = with self.homeModules; [settings nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfish nbnu];
+    imports = with self.homeModules; [packages nbgtk nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfish nbnu];
+    programs.home-manager.enable = true;
     home = {
       username = user;
       homeDirectory = "/home/${user}";
