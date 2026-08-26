@@ -11,7 +11,9 @@ in {
     modules = with self.nixosModules; [main users {system.stateVersion = "25.11";}];
   };
   flake.nixosModules.users = {...}: {
-    imports = [self.nixosModules.main-user] ++ (with self.nixosModules; [nixboom]);
+    imports =
+      [self.nixosModules.main-user]
+      ++ (with self.nixosModules; [nixboom]);
     main-user.users = {
       nixboom = {
         enable = true;
