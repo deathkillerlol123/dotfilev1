@@ -12,7 +12,7 @@
     (shell-command (format "alejandra %s" (shell-quote-argument buffer-file-name)))
     (revert-buffer :ignore-auto :noconfirm)))
 (global-set-key (kbd "C-x f") #'jeff/format-nix-buffer)
-
+(global-set-key (kbd "C-x a") #'append-to-buffer)
 (use-package corfu
   :ensure t
   :custom
