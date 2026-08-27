@@ -20,7 +20,6 @@
         slurp
         swappy
         quickshell
-        #gnome-boxes virtual machines
       ];
     };
     services.flatpak = {
