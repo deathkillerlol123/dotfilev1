@@ -2,7 +2,6 @@
   flake.homeModules.nixboom = {
     config,
     lib,
-    inputs,
     ...
   }: let
     user = "nixboom";
@@ -25,7 +24,7 @@
         names
       );
   in {
-    imports = with self.homeModules; [packages nbgtk nbgit nbdesktop nbmango nbfirefox nbdiscord nbstarship nbfish nbnu];
+    imports = with self.homeModules; [packages nbgtk nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfish nbnu];
     programs.home-manager.enable = true;
     home = {
       username = user;
