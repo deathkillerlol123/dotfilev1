@@ -1,6 +1,5 @@
 {...}: {
   flake.homeModules.packages = {
-    config,
     inputs,
     pkgs,
     ...
@@ -16,10 +15,10 @@
         rofi
         bzmenu
         copyq
+        wl-clipboard
         grim
         slurp
         swappy
-        wl-clipboard
         #gnome-boxes virtual machines
       ];
     };
