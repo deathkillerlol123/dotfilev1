@@ -1,5 +1,5 @@
 {...}: {
-  flake.homeModules.mango = {inputs, ...}: {
+  flake.homeModules.nbmango = {inputs, ...}: {
     imports = [inputs.mango.hmModules.mango];
   };
 }
