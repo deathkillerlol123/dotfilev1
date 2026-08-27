@@ -19,6 +19,7 @@
         grim
         slurp
         swappy
+        quickshell
         #gnome-boxes virtual machines
       ];
     };
