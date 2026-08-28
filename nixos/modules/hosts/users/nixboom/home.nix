@@ -24,14 +24,14 @@
         names
       );
   in {
-    imports = with self.homeModules; [packages nbgtk nbgit nbdesktop nbfirefox nbdiscord nbstarship nbfish nbnu];
+    imports = with self.homeModules; [packages nbgtk nbgit nbdesktop nbmango nbfirefox nbdiscord nbstarship nbfish nbnu];
     programs.home-manager.enable = true;
     home = {
       username = user;
       homeDirectory = "/home/${user}";
       stateVersion = "25.11";
       file =
-        (mkconf ["mango" "rofi" "ghostty"])
+        (mkconf ["rofi" "ghostty"])
         // (mkFile [".emacs"]);
     };
   };
