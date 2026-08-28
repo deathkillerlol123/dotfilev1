@@ -19,7 +19,6 @@
         grim
         slurp
         swappy
-        quickshell
       ];
     };
     services.flatpak = {

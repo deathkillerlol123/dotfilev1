@@ -25,7 +25,7 @@
       man.cache.enable = false;
     };
     virtualisation.libvirtd = {
-      enable = true;
+      enable = false;
       onBoot = "ignore";
       onShutdown = "shutdown";
     };
@@ -49,7 +49,7 @@
       priority = df 100;
       memoryPercent = df 50;
     };
-    programs = enabled ["dconf" "xwayland" "virt-manager"];
+    programs = enabled ["dconf" "xwayland"];
     services =
       enabled ["blueman" "flatpak" "libinput" "fstrim"]
       // {
