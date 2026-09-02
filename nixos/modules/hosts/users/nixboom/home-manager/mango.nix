@@ -1,10 +1,14 @@
 {...}: {
   flake.homeModules.nbmango = {inputs, ...}: {
+    home.file.".local/bin/wayland_autostart" = {
+      source = ../home/scripts/autostart/wayland_autostart.sh;
+      executable = true;
+    };
     imports = [inputs.mango.hmModules.mango];
     wayland.windowManager.mango = {
       enable = true;
       autostart_sh = ''
-        bash ~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/autostart/autostart.sh
+        wayland_autostart
       '';
       extraConfig = ''
         bind = SUPER,r,reload_config
