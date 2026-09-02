@@ -1,5 +1,5 @@
 {...}: {
-  flake.homeModules.default = {pkgs, ...}: {
+  flake.homeModules.custom_scripts = {pkgs, ...}: {
     home.packages = [
       (pkgs.writeShellScriptBin "volume_increase" ''
         amixer set Master 5%+

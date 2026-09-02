@@ -24,7 +24,7 @@
         names
       );
   in {
-    imports = with self.homeModules; [packages default nbgtk nbgit nbdesktop nbmango nbfirefox nbdiscord nbstarship nbfish nbnu];
+    imports = with self.homeModules; [packages custom_scripts nbgtk nbgit nbdesktop nbmango nbfirefox nbdiscord nbstarship nbfish nbnu];
     programs.home-manager.enable = true;
     home = {
       username = user;
