@@ -14,15 +14,15 @@
         bind = Alt,r,spawn,ghostty
         bind = Alt,q,killclient
         bind = Alt,space,spawn,rofi -show drun
-        bind = Alt,o,spawn_shell,~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/clean_exit.sh
+        bind = Alt,o,spawn_shell,clean_exit
         bind = Alt,V,spawn_shell,copyq toggle
         bind = Alt,I,togglefloating
 
         bind = NONE,Print,spawn_shell,grim -g "$(slurp)" - | swappy -f - &
         bind = NONE,F1,spawn_shell,bash ~/dotfiles/nixos/modules/hosts/users/nixboom/home/.config/waybar/random_wallpaper.sh
-        bind = NONE,F2,spawn_shell,~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/sys_sounds/volume_decrease.sh
-        bind = NONE,F3,spawn_shell,~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/sys_sounds/volume_increase.sh
-        bind = NONE,F4,spawn_shell,~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/sys_sounds/volume_mute.sh
+        bind = NONE,F2,spawn_shell,volume_decrease
+        bind = NONE,F3,spawn_shell,volume_increase
+        bind = NONE,F4,spawn_shell,volume_mute
         bind = NONE,F5,spawn,playerctl previous
         bind = NONE,F6,spawn,playerctl next
         bind = NONE,F7,spawn,playerctl play-pause
