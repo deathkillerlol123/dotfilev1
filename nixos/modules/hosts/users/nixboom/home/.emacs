@@ -1,6 +1,9 @@
+;;; -*- lexical-binding: t; -*-
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
 (setq package-install-upgrade-built-in t)
 (package-initialize)
 
