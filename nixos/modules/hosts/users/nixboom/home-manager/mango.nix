@@ -1,15 +1,9 @@
-{...}: {
-  flake.homeModules.nbmango = {
-    inputs,
-    pkgs,
-    ...
-  }: {
-    home.packages = [
-      (pkgs.writeShellScriptBin "wayland_autostart" ''
-        ${builtins.readFile ../home/scripts/autostart/wayland_autostart.sh}
-      '')
+{self, ...}: {
+  flake.homeModules.nbmango = {inputs, ...}: {
+    imports = [
+      inputs.mango.hmModules.mango
+      self.homeModules.wayland_autostart
     ];
-    imports = [inputs.mango.hmModules.mango];
     wayland.windowManager.mango = {
       enable = true;
       autostart_sh = ''
