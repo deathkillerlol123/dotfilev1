@@ -19,7 +19,7 @@
         bind = Alt,I,togglefloating
 
         bind = NONE,Print,spawn_shell,grim -g "$(slurp)" - | swappy -f - &
-        bind = NONE,F1,spawn_shell,bash ~/dotfiles/nixos/modules/hosts/users/nixboom/home/.config/waybar/random_wallpaper.sh
+        bind = NONE,F1,spawn_shell,random-wallpaper
         bind = NONE,F2,spawn_shell,volume_decrease
         bind = NONE,F3,spawn_shell,volume_increase
         bind = NONE,F4,spawn_shell,volume_mute
