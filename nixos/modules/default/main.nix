@@ -18,6 +18,7 @@
         "alias"
         "bash"
         "system"
+        "system_scripts"
       ]
       ++ [inputs.mango.nixosModules.mango];
     documentation = {

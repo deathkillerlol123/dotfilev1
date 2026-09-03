@@ -76,9 +76,6 @@
               done
             echo "}"
           } > "$OUTPUT_RASI"
-          cd "$DIRS/Wallpapers/"
-          rm -rf ./*
-          cp "$FILE" "$DIRS/Wallpapers/"
         fi
       '')
     ];
