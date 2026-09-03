@@ -13,7 +13,8 @@ in {
   flake.nixosModules.users = {...}: {
     imports =
       [self.nixosModules.main-user]
-      ++ (with self.nixosModules; [nixboom]);
+      ++ (with self.nixosModules; [nixboom])
+      ++ (with self.nixosModules; [dragonfly]);
     main-user.users = {
       nixboom = {
         enable = true;
