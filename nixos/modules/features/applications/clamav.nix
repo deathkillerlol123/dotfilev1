@@ -2,7 +2,6 @@
   flake.nixosModules.clamav = {
     pkgs,
     lib,
-    config,
     ...
   }: let
     enabledservices = names:
@@ -10,10 +9,7 @@
         enable = true;
       });
   in {
-    options.clamav.enable = lib.mkEnableOption "clamav";
-    config = lib.mkIf config.clamav.enable {
-      environment.systemPackages = [pkgs.clamav];
-      services.clamav = enabledservices ["daemon" "updater"];
-    };
+    environment.systemPackages = [pkgs.clamav];
+    services.clamav = enabledservices ["daemon" "updater"];
   };
 }

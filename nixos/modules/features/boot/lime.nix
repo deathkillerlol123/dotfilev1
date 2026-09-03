@@ -1,26 +1,11 @@
 {...}: {
-  flake.nixosModules.lime = {
-    lib,
-    config,
-    ...
-  }: {
-    options = {
-      lime.enable = lib.mkEnableOption "limine";
-      lime = {
-        generations = lib.mkOption {
-          default = 3;
-          description = "How many nixos generations to show up in limine";
-        };
-      };
-    };
-    config = lib.mkIf config.lime.enable {
-      boot = {
-        loader = {
-          efi.canTouchEfiVariables = true;
-          limine = {
-            enable = true;
-            maxGenerations = config.lime.generations;
-          };
+  flake.nixosModules.lime = {...}: {
+    boot = {
+      loader = {
+        efi.canTouchEfiVariables = true;
+        limine = {
+          enable = true;
+          maxGenerations = 3;
         };
       };
     };
