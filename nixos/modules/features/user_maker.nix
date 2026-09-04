@@ -43,7 +43,17 @@
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs = {inherit inputs self;};
-        users = lib.mapAttrs (name: _: self.homeModules.${name}) enabledUsers;
+        users =
+          lib.mapAttrs (name: _: {
+            programs.home-manager.enable = true;
+            home = {
+              username = name;
+              homeDirectory = "/home/${name}";
+              stateVersion = "25.11";
+            };
+            imports = [self.homeModules.${name}];
+          })
+          enabledUsers;
       };
       security.sudo.extraRules =
         lib.mapAttrsToList (name: _: {
