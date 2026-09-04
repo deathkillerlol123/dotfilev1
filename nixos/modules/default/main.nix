@@ -57,7 +57,6 @@
         logind.settings.Login.KillUserProcesses = true;
         fwupd.enable = false;
         xserver.wacom.enable = true;
-        journald.extraConfig = "SystemMaxUse=50M";
         earlyoom = {
           enable = df true;
           freeMemThreshold = df 5;
