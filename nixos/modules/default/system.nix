@@ -7,7 +7,8 @@
       ++ [zoxide fd]
       ++ [nix-search-tv fzf]
       ++ [emacs nixd alejandra]
-      ++ [bat fetch];
+      ++ [bat fetch]
+      ++ [xone-dongle-firmware];
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
       maple-mono.NF
