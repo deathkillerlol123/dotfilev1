@@ -17,16 +17,13 @@
           def n [] {
             nh os switch ~/dotfiles/nixos/
           }
-          def clean [] {
-            nix store gc
-            sudo nix store optimise
-            nh clean all -k 2
-          }
           def t [] {
             cd ~/dotfiles/nixos
             nix flake update
             n
-            clean
+            nix store gc
+            sudo nix store optimise
+            nh clean all -k 2
             gu
           }
           def tv [] {
