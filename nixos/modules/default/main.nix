@@ -26,7 +26,7 @@
       man.cache.enable = false;
     };
     virtualisation.libvirtd = {
-      enable = true;
+      enable = false;
       onBoot = "ignore";
       onShutdown = "shutdown";
     };
