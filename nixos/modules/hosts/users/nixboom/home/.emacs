@@ -2,7 +2,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (setq package-install-upgrade-built-in t)
 (package-initialize)
@@ -106,11 +106,11 @@
 	hide-mode-line jinx json-mode latex-extra lsp-latex
 	lsp-pyright lsp-python-ms lsp-treemacs lsp-ui lua-mode
 	multiple-cursors nix-buffer nix-mode nixos-options nixpkgs-fmt
-	org-beautify-theme org-bullets org-mime org-pretty-tags
-	pdf-tools python-mode qml-mode rainbow-blocks rainbow-mode
-	transient transpose-frame tree-inspector tree-sitter-indent
-	tree-sitter-langs yasnippet yasnippet-classic-snippets
-	yasnippet-snippets zetteldeft)))
+	org-beautify-theme org-bullets org-mime
+	org-pretty-tags pdf-tools python-mode qml-mode rainbow-blocks
+	rainbow-mode transient transpose-frame tree-inspector
+	tree-sitter-indent tree-sitter-langs yasnippet
+	yasnippet-classic-snippets yasnippet-snippets zetteldeft)))
 (require 'nix-mode)
 (add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
 (use-package company
