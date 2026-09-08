@@ -2,6 +2,7 @@
   flake.nixosModules.system = {pkgs, ...}: {
     environment.systemPackages = with pkgs;
       [os-prober efibootmgr]
+      ++ [lix]
       ++ [curl zip git jujutsu gh]
       ++ [libnotify ntfs3g borgbackup bottom]
       ++ [zoxide fd]
