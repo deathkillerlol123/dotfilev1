@@ -9,6 +9,7 @@
       packages = with pkgs; [
         ghostty
         whatsapp-electron
+        concord-tui
         pywal
         awww
         waypaper

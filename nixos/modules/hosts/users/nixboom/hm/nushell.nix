@@ -27,10 +27,10 @@
             gu
           }
           def tv [] {
-            nix-search-tv print
-            | fzf --preview "nix-search-tv preview {}" --scheme history
-            | sed "s|^[^/]*/ *||"
-            | wl-copy
+              let x = (nix-search-tv print | fzf --preview "nix-search-tv preview {}" --scheme history)
+              let p = ($x | sed "s|^[^/]*/ *||")
+              $p | wl-copy
+              if ($x | str starts-with "nixpkgs/") { nix-shell -p $p }
           }
           $env.config.show_banner = false
         '';
