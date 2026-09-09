@@ -9,13 +9,6 @@
         icon = "blueman";
         categories = ["Utility"];
       };
-      default = {
-        name = "Start";
-        exec = "sh -c \"whatsapp-electron & discord & firefox\"";
-        terminal = false;
-        icon = "firefox";
-        categories = ["Utility"];
-      };
     };
   };
 }

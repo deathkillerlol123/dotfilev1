@@ -80,9 +80,7 @@
 
         windowrule = appid:ghostty,focused_opacity:0.85
         windowrule = appid:ghostty,unfocused_opacity:0.85
-        windowrule = appid:firefox,tags:1,isfakefullscreen:1
-        windowrule = appid:discord,tags:2
-        windowrule = appid:whatsapp-electron,tags:2
+        windowrule = appid:firefox,isfakefullscreen:1
         windowrule = isglobal:1,isoverlay:1
 
         mousebind = Alt,btn_left,moveresize,curmove
