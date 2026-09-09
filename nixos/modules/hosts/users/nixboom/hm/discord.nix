@@ -4,8 +4,13 @@
     programs = {
       nixcord = {
         enable = true;
-        discord.vencord.enable = true;
+        discord = {
+          vencord.enable = true;
+          krisp.enable = true;
+          openASAR.enable = true;
+        };
         config = {
+          autoUpdate = true;
           useQuickCss = true;
           autoUpdateNotification = true;
           notifyAboutUpdates = true;
