@@ -10,6 +10,7 @@
         ghostty
         whatsapp-electron
         concord-tui
+        mpv
         pywal
         awww
         waypaper
