@@ -666,11 +666,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788993000,
-        "narHash": "sha256-M9LIltX2JfKoXKv5UJBoCmEr9x1Vwg3P64mHHrY0ZWY=",
+        "lastModified": 1788994490,
+        "narHash": "sha256-pGTG9FYrAFO2pWakqM3XzN83lUClUmONzr1GUbu+WYY=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "6c67a8f9af8c69d7969b8b95e53d23f5e3f8842a",
+        "rev": "ff5e29b8faef1e13beec6c902b9811c33785d0a5",
         "type": "github"
       },
       "original": {
