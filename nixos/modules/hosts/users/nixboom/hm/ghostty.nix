@@ -8,7 +8,7 @@
         font-family = "Maple Mono NF";
         font-size = 14;
         cursor-style = "block";
-        shell-integration = "fish";
+        shell-integration = "nu";
         confirm-close-surface = false;
         copy-on-select = "clipboard";
         clipboard-read = "allow";
