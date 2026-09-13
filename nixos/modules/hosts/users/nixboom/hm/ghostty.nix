@@ -15,11 +15,6 @@
         clipboard-write = "allow";
         background-opacity = 0.85;
       };
-      keybindings = {
-        "ctrl+shift+%" = "new_split:right";
-        "ctrl+shift+s" = "new_split:down";
-        "ctrl+tab" = "goto_split:next";
-      };
     };
   };
 }
