@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         config-file = "~/dotfiles/nixos/modules/hosts/users/nixboom/home/.config/ghostty/ghostty.conf";
-        app-notifications = true;
+        app-notifications = false;
         font-family = "Maple Mono NF";
         font-size = 14;
         cursor-style = "block";
