@@ -1,5 +1,5 @@
 {...}: {
-  flake.homeModules.packages = {
+  flake.homeModules.nbpackages = {
     inputs,
     pkgs,
     ...
