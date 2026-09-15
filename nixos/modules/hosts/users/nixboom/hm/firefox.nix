@@ -20,6 +20,7 @@
               "browser.startup.homepage" = "https://search.nixos.org/packages";
               "privacy.trackingprotection.enabled" = true;
               "general.autoScroll" = true;
+              "media.hardwaremediakeys.enabled" = true;
             };
             userChrome = ''
               #TabsToolbar {

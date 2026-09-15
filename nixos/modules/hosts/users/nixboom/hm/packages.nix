@@ -8,7 +8,7 @@
     home = {
       packages = with pkgs; [
         ghostty
-        whatsapp-electron
+        whatsie
         concord-tui
         pywal
         awww
@@ -24,7 +24,7 @@
     };
     services.flatpak = {
       update.onActivation = true;
-      packages = ["org.vinegarhq.Sober"];
+      packages = ["org.vinegarhq.Sober" "org.kde.drawy"];
     };
   };
 }
