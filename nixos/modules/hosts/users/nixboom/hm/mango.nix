@@ -114,7 +114,7 @@
         scroller_default_proportion_single = 1.0
         scroller_proportion_preset = 0.5, 0.8, 1.0
         new_is_master = 1
-        default_mfact = 0.55
+        default_mfact = 0.6
         default_nmaster = 1
         smartgaps = 0
         hotarea_size = 10
