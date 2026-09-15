@@ -6,10 +6,9 @@
     ];
     wayland.windowManager.mango = {
       enable = true;
-      autostart_sh = ''
-        wayland_autostart
-      '';
       extraConfig = ''
+        exec=wayland_autostart
+
         bind = SUPER,r,reload_config
         bind = Alt,r,spawn,ghostty
         bind = Alt,q,killclient
