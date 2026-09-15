@@ -77,6 +77,9 @@
             echo "}"
           } > "$OUTPUT_RASI"
         fi
+        cd "$DIRS/Wallpapers"
+        rm *
+        cp "$FILE" .
       '')
     ];
   };
