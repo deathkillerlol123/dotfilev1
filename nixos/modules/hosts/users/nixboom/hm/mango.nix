@@ -104,7 +104,7 @@
 
         xwayland_persistence = 1
         touch_enable = 1
-        touch_map_to_mon = eDP-1
+        devicerule=name:Wacom HID 4924,monitor:eDP-1
 
         scroller_structs = 20
         scroller_default_proportion = 0.8
