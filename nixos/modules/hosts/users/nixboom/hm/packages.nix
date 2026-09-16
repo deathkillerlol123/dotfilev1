@@ -8,7 +8,7 @@
     home = {
       packages = with pkgs; [
         ghostty
-        whatsie
+        #        whatsie
         concord-tui
         pywal
         awww
