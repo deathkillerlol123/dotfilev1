@@ -26,8 +26,7 @@
       update.onActivation = true;
       packages = [
         "org.vinegarhq.Sober"
-        #"org.kde.drawy"
-        "io.github.maniacx.BudsLink"
+        "org.kde.drawy"
       ];
     };
   };
