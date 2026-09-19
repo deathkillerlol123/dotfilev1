@@ -9,7 +9,7 @@
         Off) wlr-randr --output "$output" --off ;;
         On)
           pos=$(wlr-randr | awk -v o="$output" '$1==o{f=1} f&&/Position:/{print $2;exit}')
-          pos=$(printf '%s' "''${pos:-0,0}" | rofi -dmenu -p "Position")
+          pos=$(printf '%s' "''${pos:-0,1080}" | rofi -dmenu -p "Position")
           [ -n "$pos" ] && wlr-randr --output "$output" --pos "$pos" --on
           ;;
       esac
