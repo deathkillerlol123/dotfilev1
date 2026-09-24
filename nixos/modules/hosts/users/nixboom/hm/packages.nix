@@ -27,7 +27,7 @@
       packages = [
         "org.vinegarhq.Sober"
         "org.kde.drawy"
-        "com.usebottles.bottles"
+        #        "com.usebottles.bottles"
       ];
     };
   };
