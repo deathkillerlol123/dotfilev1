@@ -90,8 +90,11 @@
       };
       optimise.automatic = true;
     };
-    nixpkgs.config = {
-      allowUnfree = true;
+    nixpkgs = {
+      overlays = [inputs.nur.overlays.default];
+      config = {
+        allowUnfree = true;
+      };
     };
     security = {
       pam.services.swaylock = {};
