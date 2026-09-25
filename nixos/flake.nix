@@ -32,15 +32,10 @@
   };
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      flake = {
-        overlays = [
-          inputs.nur.overlays.default
-        ];
-      };
+      systems = ["x86_64-linux"];
       imports = [
         inputs.home-manager.flakeModules.home-manager
         (inputs.import-tree ./modules)
       ];
-      systems = ["x86_64-linux"];
     };
 }

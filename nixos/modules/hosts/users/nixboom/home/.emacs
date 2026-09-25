@@ -103,7 +103,7 @@
    '(## aggressive-indent auto-complete avy-embark-collect colorful-mode
 	company consult corfu doc-view-follow eglot-inactive-regions
 	electric-cursor evil flycheck format-all golden-ratio
-	hide-mode-line jinx json-mode latex-extra lsp-latex
+	hide-mode-line jinx json-mode latex-extra lsp-java lsp-latex
 	lsp-pyright lsp-python-ms lsp-treemacs lsp-ui lua-mode
 	multiple-cursors nix-buffer nix-mode nixos-options nixpkgs-fmt
 	org-beautify-theme org-bullets org-mime org-pretty-tags
