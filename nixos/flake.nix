@@ -32,6 +32,11 @@
   };
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
+      flake = {
+        overlays = [
+          inputs.nur.overlays.default
+        ];
+      };
       imports = [
         inputs.home-manager.flakeModules.home-manager
         (inputs.import-tree ./modules)
