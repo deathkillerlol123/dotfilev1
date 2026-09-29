@@ -41,11 +41,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1790654558,
-        "narHash": "sha256-Jv5BW9mliUSDM7WHwSO6hW2UtJbREiXEMc094OANf0c=",
+        "lastModified": 1790708379,
+        "narHash": "sha256-UShpDPmypGviorjBWDwRtKWUTdVik7Zp6bt1t875jV4=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "36fb4b9637f3079092b321747a46b1f55d555e62",
+        "rev": "b549e36268fa8c975535d0405f66e013b234a0a4",
         "type": "gitlab"
       },
       "original": {
@@ -648,11 +648,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1790703588,
-        "narHash": "sha256-qPR/PDUkdF3ZcgStDFC01iAsgEqcIbrMcT/SRGmORcg=",
+        "lastModified": 1790718822,
+        "narHash": "sha256-DpFQ/Cllo+JmKD71d6vPHTJV9jeQidCUHePNIrzRbvA=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "5410af311dbcd478a5c9c5ebe74b730d60e4eb50",
+        "rev": "3295ff2ec6bfeb9ccb632b85b845c27c531406be",
         "type": "github"
       },
       "original": {
@@ -816,11 +816,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790705792,
-        "narHash": "sha256-/VqpYRx+T0w/yaZAuoPxMlLQRlRkyzO8ojo2whoxBiI=",
+        "lastModified": 1790718877,
+        "narHash": "sha256-UyjR7SJ0KZyuqfsJ677TeUJqrVn6f1OHB8FGSWsO2Ik=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "1c24f341b17c0bcf4cc9f7e24c6ba9d19f2c4ed1",
+        "rev": "8bd4292f06f1001116e418999511727a4ac9d36b",
         "type": "github"
       },
       "original": {
