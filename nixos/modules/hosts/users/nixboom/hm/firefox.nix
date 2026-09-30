@@ -21,6 +21,7 @@
               "privacy.trackingprotection.enabled" = true;
               "general.autoScroll" = true;
               "media.hardwaremediakeys.enabled" = true;
+              "sidebar.revamp" = false;
             };
             userChrome = ''
               #TabsToolbar {
