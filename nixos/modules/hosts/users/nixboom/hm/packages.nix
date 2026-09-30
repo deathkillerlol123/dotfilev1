@@ -8,7 +8,6 @@
     home = {
       packages = with pkgs; [
         ghostty
-        #        whatsie
         concord-tui
         pywal
         awww
@@ -27,7 +26,6 @@
       packages = [
         "org.vinegarhq.Sober"
         "org.kde.drawy"
-        #        "com.usebottles.bottles"
       ];
     };
   };
