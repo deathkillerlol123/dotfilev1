@@ -77,33 +77,34 @@
         bind = Alt+CTRL,left,resizewin,-50,+0
         bind = Alt+CTRL,right,resizewin,+50,+0
 
-        windowrule = appid:ghostty,focused_opacity:0.85
-        windowrule = appid:ghostty,unfocused_opacity:0.85
-        windowrule = appid:firefox,isfakefullscreen:1
-        windowrule = isglobal:1,isoverlay:1
+        window_rule = app_id:ghostty,focused_opacity:0.85
+        window_rule = app_id:ghostty,unfocused_opacity:0.85
+        window_rule = app_id:firefox,is_fake_fullscreen:1
+        window_rule = is_global:1,is_overlay:1
 
         mousebind = Alt,btn_left,moveresize,curmove
         mousebind = Alt,btn_right,moveresize,curresize
 
-        gappih = 0
-        gappiv = 0
-        gappoh = 0
-        gappov = 0
+        gap_inner_horizontal = 0
+        gap_inner_vertical = 0
+        gap_outer_horizontal = 0
+        gap_outer_vertical = 0
+
         scratchpad_width_ratio = 0.8
         scratchpad_height_ratio = 0.9
-        borderpx = 0
-        rootcolor = 0x201b14ff
-        bordercolor = 0x201b14ff
-        focuscolor = 0xfad060FF
-        maximizescreencolor = 0x89aa61ff
-        urgentcolor = 0xad401fff
-        scratchpadcolor = 0x516c93ff
-        globalcolor = 0xb153a7ff
-        overlaycolor = 0x14a57cff
+        border_px = 0
+        root_color = 0x201b14ff
+        border_color = 0x201b14ff
+        focus_color = 0xfad060FF
+        maximized_screen_color = 0x89aa61ff
+        urgent_color = 0xad401fff
+        scratchpad_color = 0x516c93ff
+        global_color = 0xb153a7ff
+        overlay_color = 0x14a57cff
 
         xwayland_persistence = 1
         touch_enable = 1
-        devicerule=name:Wacom HID 4924,monitor:eDP-1
+        device_rule=name:Wacom HID 4924,monitor:eDP-1
 
         scroller_structs = 20
         scroller_default_proportion = 0.8
@@ -113,33 +114,33 @@
         scroller_default_proportion_single = 1.0
         scroller_proportion_preset = 0.5, 0.8, 1.0
         new_is_master = 1
-        default_mfact = 0.6
-        default_nmaster = 1
-        smartgaps = 0
+        default_master_factor = 0.6
+        default_master_count = 1
+        smart_gaps = 0
         hotarea_size = 10
         enable_hotarea = 0
         hotarea_corner = 0
-        overviewgappi = 5
-        overviewgappo = 15
+        overview_gap_inner = 5
+        overview_gap_outer = 15
 
-        tagrule = id:1,layout_name:tile
-        tagrule = id:2,layout_name:tile
-        tagrule = id:3,layout_name:tile
-        tagrule = id:4,layout_name:tile
-        tagrule = id:5,layout_name:tile
-        tagrule = id:6,layout_name:tile
-        tagrule = id:7,layout_name:tile
-        tagrule = id:8,layout_name:tile
-        tagrule = id:9,layout_name:tile
+        tag_rule = id:1,layout_name:tile
+        tag_rule = id:2,layout_name:tile
+        tag_rule = id:3,layout_name:tile
+        tag_rule = id:4,layout_name:tile
+        tag_rule = id:5,layout_name:tile
+        tag_rule = id:6,layout_name:tile
+        tag_rule = id:7,layout_name:tile
+        tag_rule = id:8,layout_name:tile
+        tag_rule = id:9,layout_name:tile
 
-        syncobj_enable = 1
+        sync_obj_enable = 1
         no_border_when_single = 1
         axis_bind_apply_timeout = 100
         focus_on_activate = 0
-        idleinhibit_ignore_visible = 0
+        idle_inhibit_ignore_visible = 0
         mouse_natural_scrolling = 0
-        sloppyfocus = 1
-        warpcursor = 1
+        sloppy_focus = 1
+        warp_cursor = 1
         cursor_hide_timeout = 5
         cursor_hide_on_keypress = 0
         enable_floating_snap = 0
@@ -151,7 +152,7 @@
         scratchpad_cross_monitor = 0
         repeat_rate = 100
         repeat_delay = 300
-        numlockon = 1
+        numlock_on = 1
         xkb_rules_layout = us
 
         #trackpad
@@ -185,7 +186,7 @@
         shadows_blur = 15
         shadows_position_x = 0
         shadows_position_y = 0
-        shadowscolor = 0x000000ff
+        shadows_color = 0x000000ff
         border_radius = 0
         no_radius_when_single = 0
         focused_opacity = 1.0
@@ -199,8 +200,8 @@
         tag_animation_direction = 1
         zoom_initial_ratio = 0.3
         zoom_end_ratio = 0.8
-        fadein_begin_opacity = 0.5
-        fadeout_begin_opacity = 0.8
+        fade_in_begin_opacity = 0.5
+        fade_out_begin_opacity = 0.8
         animation_duration_move = 200
         animation_duration_open = 200
         animation_duration_tag = 350
@@ -211,8 +212,8 @@
         animation_curve_tag = 0.46, 1.0, 0.29, 1
         animation_curve_close = 0.08, 0.92, 0, 1
         animation_curve_focus = 0.46, 1.0, 0.29, 1
-        animation_curve_opafadeout = 0.5, 0.5, 0.5, 0.5
-        animation_curve_opafadein = 0.46, 1.0, 0.29, 1
+        animation_curve_opacity_fade_out = 0.5, 0.5, 0.5, 0.5
+        animation_curve_opacity_fade_in = 0.46, 1.0, 0.29, 1
       '';
     };
   };

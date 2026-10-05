@@ -15,7 +15,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     #environment
     mango = {
-      url = "github:mangowm/mango/c08ca47";
+      url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
