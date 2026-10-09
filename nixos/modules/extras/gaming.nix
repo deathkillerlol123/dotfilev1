@@ -25,6 +25,7 @@
       environment.systemPackages = with pkgs; [mangohud protonup-qt heroic];
       hardware = lib.mkIf config.gaming.xbox.enable {
         xone.enable = true;
+        xpadneo.enable = true;
         graphics = {
           enable = true;
           enable32Bit = true;
