@@ -36,7 +36,6 @@
       plymouth.enable = false;
       kernelPackages = pkgs.linuxPackages_zen;
       loader.timeout = 0;
-      kernelParams = ["random.trust_cpu=on"];
       kernel.sysctl = {
         "vm.swappiness" = df 150;
         "vm.watermark_boost_factor" = df 0;
