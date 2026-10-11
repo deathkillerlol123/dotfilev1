@@ -7,7 +7,8 @@
     wayland.windowManager.mango = {
       enable = true;
       extraConfig = ''
-        exec=wayland_autostart
+        exec_once=wayland_autostart
+        exec_once=sudo mount /dev/sda3 /mnt/Games
 
         bind = SUPER,r,reload_config
         bind = Alt,r,spawn,ghostty
