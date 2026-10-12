@@ -41,11 +41,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1791691571,
-        "narHash": "sha256-btJ4vVIAyQp3BqlARGdbJb9iq3WD7/KTSj0QW5DmvLM=",
+        "lastModified": 1791777760,
+        "narHash": "sha256-lHcmAXG2Ojsf3L8adc103rfb3Pz9wIQhbWhmioNJWtY=",
         "ref": "refs/heads/master",
-        "rev": "17a8cf0be701c3f264e42c8465368a0cc602bb18",
-        "revCount": 4986,
+        "rev": "9c5dba317695191a6812749776f120e5638cf00f",
+        "revCount": 4987,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
@@ -616,11 +616,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1791715773,
-        "narHash": "sha256-k9dlyGlhaB/UvRcEWDw2s9aL0z31a5UORp73KLpdLEM=",
+        "lastModified": 1791764863,
+        "narHash": "sha256-0l5W82KBEukdzkTsDgXquRPNAZ1f8d2qT9169jRnOOY=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "08a78c9134146ac33476337d64d49d59f9f676f4",
+        "rev": "468680e24b6cb872ebaadf9aa9948f538c1f0ab1",
         "type": "github"
       },
       "original": {
@@ -677,11 +677,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791730200,
-        "narHash": "sha256-M/DxR1WYRVfwFI/skgURb5bGLc0J265T5wA+os0VpZI=",
+        "lastModified": 1791789228,
+        "narHash": "sha256-H4oPz8lX2fHV4FOhxp9txUT/GVC/QB5mypkAkUhW31o=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "36818fa6196623f1da8c2898499188f440587330",
+        "rev": "58298812834393c79a6c1b78d5b68e3a301a0ec1",
         "type": "github"
       },
       "original": {
@@ -786,11 +786,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791740789,
-        "narHash": "sha256-zGUbT2lLI9rPHQGUr/F77bKOUwkMQLkh88Zfg74aYfs=",
+        "lastModified": 1791786343,
+        "narHash": "sha256-vIF41WzQDoUErd+fdkr5D0cEl0K5V4TkfBMQ1DA9x9s=",
         "owner": "nix-community",
         "repo": "nixpkgs-wayland",
-        "rev": "cff8621da7f690446039b0e7bfbee2737c45ec0a",
+        "rev": "77efc6d6a67ec7ead40a74bc1e73c2e425b9201e",
         "type": "github"
       },
       "original": {
@@ -836,11 +836,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791748432,
-        "narHash": "sha256-O4tMaMlUKPvV5qLKAURRuC3e41QiNHBgN7xIKzEsFgA=",
+        "lastModified": 1791797192,
+        "narHash": "sha256-Hcw9W12mO1IYukC0UGb8lKBQD9ucMEoZHvIZFAaV3rc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5d01169ff58ad9fa20006a2cc68c032d50d2a1cf",
+        "rev": "5f5819032c4db704a3a1a3a22e44163b45ec5b06",
         "type": "github"
       },
       "original": {
