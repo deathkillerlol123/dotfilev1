@@ -33,7 +33,6 @@
             '';
             extensions.packages = [
               fire-addons.bitwarden
-              fire-addons."2fas-two-factor-authentication"
               fire-addons.ublock-origin
               fire-addons.sidebery
               fire-addons.darkreader
