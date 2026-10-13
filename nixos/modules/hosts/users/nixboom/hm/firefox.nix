@@ -38,8 +38,6 @@
               fire-addons.ublock-origin
               fire-addons.sidebery
               fire-addons.darkreader
-              fire-addons.youtube-nonstop
-              fire-addons.watchmarker-for-youtube
             ];
           };
         };
