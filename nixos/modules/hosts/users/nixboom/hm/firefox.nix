@@ -33,11 +33,11 @@
             '';
             extensions.packages = [
               fire-addons.bitwarden
+              fire-addons."2fas-two-factor-authentication"
+              fire-addons.private-relay
               fire-addons.ublock-origin
               fire-addons.sidebery
-              fire-addons."2fas-two-factor-authentication"
               fire-addons.darkreader
-              fire-addons.private-relay
               fire-addons.youtube-nonstop
               fire-addons.watchmarker-for-youtube
             ];
