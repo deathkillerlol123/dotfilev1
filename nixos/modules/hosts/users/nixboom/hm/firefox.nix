@@ -40,7 +40,6 @@
               fire-addons.private-relay
               fire-addons.youtube-nonstop
               fire-addons.watchmarker-for-youtube
-              fire-addons.theater-mode-for-youtube
             ];
           };
         };
