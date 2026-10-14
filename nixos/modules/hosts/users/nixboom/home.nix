@@ -10,6 +10,5 @@
         ".config/rofi".source = "${dotfiles}/.config/rofi";
       };
     };
-    services.mpris-proxy.enable = true;
   };
 }
