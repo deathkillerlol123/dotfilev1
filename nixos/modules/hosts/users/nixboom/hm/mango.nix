@@ -15,7 +15,7 @@
         bind = Alt,q,killclient
         bind = Alt,space,spawn,rofi -show drun
         bind = Alt,o,spawn_shell,clean_exit
-        bind = Alt,V,spawn_shell,copyq toggle
+        bind = Alt,V,spawn_shell,cliphist list | rofi -dmenu | cliphist decode | wl-copy
         bind = Alt,I,togglefloating
 
         bind = NONE,Print,spawn_shell,grim -g "$(slurp)" - | swappy -f - &

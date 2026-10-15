@@ -14,7 +14,7 @@
         waypaper
         rofi
         bzmenu
-        copyq
+        cliphist
         wl-clipboard
         grim
         slurp

@@ -2,7 +2,7 @@
   flake.homeModules.wayland_autostart = {pkgs, ...}: {
     home.packages = [
       (pkgs.writeShellScriptBin "wayland_autostart" ''
-        pgrep -x copyq >/dev/null || copyq &
+        wl-paste --watch cliphist store &
         pgrep -x awww-daemon >/dev/null || awww-daemon &
         systemctl --user import-environment \
             WAYLAND_DISPLAY \
