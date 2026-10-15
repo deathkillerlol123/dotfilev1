@@ -41,11 +41,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1791950561,
-        "narHash": "sha256-FIBRdzFXWR5jIqOwTcGu7L126G/Jv2sSj6hCaKhs4s8=",
+        "lastModified": 1792036980,
+        "narHash": "sha256-y28wLbzsIbBDeToXHhAdoTs+lcH/d7/1Pky40N6/CoI=",
         "ref": "refs/heads/master",
-        "rev": "fb4681ee3a3ecd54416fc999fd410e8eb59bbb55",
-        "revCount": 4994,
+        "rev": "cbf0380669792dd8f6dbb891d3be33aae8fa4625",
+        "revCount": 4996,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
@@ -584,11 +584,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1791960140,
-        "narHash": "sha256-vD+rKSVcVLsKR/yGce1tvgcYuuxSc/7tcrtqIvTAKOA=",
+        "lastModified": 1792068190,
+        "narHash": "sha256-KHkhEGk4tCKTel6eIIS1VbR6TZpiogn56vjhpkvC+hE=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "1cfb497eea7b18a2fb8372321b7927629208436a",
+        "rev": "7ba96e3461d3489e93fd7b1c6d7ac1f234a3408c",
         "type": "github"
       },
       "original": {
@@ -645,11 +645,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792009791,
-        "narHash": "sha256-l9zdlcuyl6VUFQpUYsj/jvvSxYDZYL4LbsHmP/bNulg=",
+        "lastModified": 1792072763,
+        "narHash": "sha256-3RPlYmm4nF3UFiFWuAhHn/dgCyJUS3SQchbu7H1bZYk=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "c8e747f84f8be2d1d3737eaea8021595bdb8b7ec",
+        "rev": "bc9591b91ad2e3174f5fb53301c4221aea8b51dd",
         "type": "github"
       },
       "original": {
@@ -745,6 +745,22 @@
         "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst"
       }
     },
+    "nixpkgs-pinned": {
+      "locked": {
+        "lastModified": 1791734076,
+        "narHash": "sha256-i5qk1kLiit98rRbh1AXmWBNT9QXC/y4l5Wk/u5EdpDQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+        "type": "github"
+      }
+    },
     "nixpkgs-wayland": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -754,11 +770,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791999192,
-        "narHash": "sha256-eTym2z6Xce7WXF3SdLlCy16nNwvdJRn4Mf2pt3HaFZw=",
+        "lastModified": 1792063647,
+        "narHash": "sha256-T35jyP1m7GA/FKmRu673QVal4TxjxJfN7CG4yuvgeE8=",
         "owner": "nix-community",
         "repo": "nixpkgs-wayland",
-        "rev": "8b796cf75a7fed74873c71063219ddc2ac206554",
+        "rev": "84e7c76c2db592da2c3e3a25f6526c022229cafd",
         "type": "github"
       },
       "original": {
@@ -782,11 +798,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1791734076,
-        "narHash": "sha256-i5qk1kLiit98rRbh1AXmWBNT9QXC/y4l5Wk/u5EdpDQ=",
+        "lastModified": 1791956154,
+        "narHash": "sha256-jBYGPi4udQ9uo4KQp9m2J0546nJVQitG15gvZSaVVAs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
+        "rev": "55bfb4d7437bd4e09ab7cba58a43bd68eb310044",
         "type": "github"
       },
       "original": {
@@ -804,11 +820,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792014536,
-        "narHash": "sha256-tdJZ44PSXZpPUiHubU0uSqsQ66m6P8Wnvc01xSZ3Zf8=",
+        "lastModified": 1792076299,
+        "narHash": "sha256-+xCBm3jynwXtgdld0NEKf5McpRtWqEErsQB3GWtIpi0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "cf2194b87973809445447e4b617182992116ad80",
+        "rev": "38186992cce6611e1e8954b898404bcf006e9f08",
         "type": "github"
       },
       "original": {
@@ -850,6 +866,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
+        "nixpkgs-pinned": "nixpkgs-pinned",
         "nixpkgs-wayland": "nixpkgs-wayland",
         "nur": "nur"
       }

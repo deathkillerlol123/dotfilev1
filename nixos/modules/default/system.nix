@@ -1,8 +1,12 @@
 {
-  flake.nixosModules.system = {pkgs, ...}: {
+  flake.nixosModules.system = {
+    inputs,
+    pkgs,
+    ...
+  }: {
     environment.systemPackages = with pkgs;
       [os-prober efibootmgr]
-      ++ [lix]
+      ++ [inputs.nixpkgs-pinned.legacyPackages.${pkgs.system}.lix]
       ++ [curl zip git jujutsu gh]
       ++ [libnotify ntfs3g borgbackup bottom]
       ++ [zoxide fd]
