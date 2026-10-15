@@ -20,14 +20,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
+    #apps
     firefox-addons = {
       url = "git+https://gitlab.com/rycee/nur-expressions.git?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #discord
     nixcord.url = "github:4evy/nixcord";
-    nixpkgs-wayland = {
-      url = "github:nix-community/nixpkgs-wayland";
+    wshowkeys = {
+      url = "github:DreamMaoMao/wshowkeys";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
