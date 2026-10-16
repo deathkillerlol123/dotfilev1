@@ -41,11 +41,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1792036980,
-        "narHash": "sha256-y28wLbzsIbBDeToXHhAdoTs+lcH/d7/1Pky40N6/CoI=",
+        "lastModified": 1792123413,
+        "narHash": "sha256-US+K5frqRChi1ZLBFzWO9cohq1YbTOrV43KKX8HbpYU=",
         "ref": "refs/heads/master",
-        "rev": "cbf0380669792dd8f6dbb891d3be33aae8fa4625",
-        "revCount": 4996,
+        "rev": "61c893f4d881d8a15edaa67e295d3df7fd1d9b4d",
+        "revCount": 4998,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
@@ -286,11 +286,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1792003461,
-        "narHash": "sha256-sqWBYgjkJd5xTJKd9Jz/SbtrJfY3eTqxyqn1xfH6O00=",
+        "lastModified": 1792164938,
+        "narHash": "sha256-4JnTrBgwuVMo5cihxgumqBAk26M7YOK9R6aVc1gqhrk=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "e2ad066c9ffd45ddfbe4dc76d2de16b382fbe3eb",
+        "rev": "25f09b26f9db7dbca4a4b3c265fdb96802db122c",
         "type": "github"
       },
       "original": {
@@ -550,11 +550,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1792068190,
-        "narHash": "sha256-KHkhEGk4tCKTel6eIIS1VbR6TZpiogn56vjhpkvC+hE=",
+        "lastModified": 1792167965,
+        "narHash": "sha256-z9JENnZ8+PDtSjPIf9jKm7exwf+RG8bz6rekt7uO/Ss=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "7ba96e3461d3489e93fd7b1c6d7ac1f234a3408c",
+        "rev": "85f9fd766c3de369831f58e3b1a51d27606a3f74",
         "type": "github"
       },
       "original": {
@@ -611,11 +611,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792101489,
-        "narHash": "sha256-M6bvXUvo06dDZ2e4mxaROqmm2edZDDZOgFYRBJO0vNA=",
+        "lastModified": 1792163692,
+        "narHash": "sha256-YNgteOgCyjKmTnqIBWGJS9EWkCnXRs3tt3oQAqR3IkM=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "1f1857ad772def56e72ce75bc2cf377949627452",
+        "rev": "546647aeb9bfdf77cbb7c4abd62ebf1b1c6cb1e4",
         "type": "github"
       },
       "original": {
@@ -749,11 +749,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792103993,
-        "narHash": "sha256-bQepmch9Vu9DBAg39bQrpBwm8jQhPgXalG0qBkqVtuU=",
+        "lastModified": 1792167389,
+        "narHash": "sha256-LwuaBhd5xm0gd6PmJ30AXfIamzKK2RiqJhtPX1irwqs=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "f8302c1af1c483a94a51295667f255065cecabf0",
+        "rev": "c51f65fd90463f8f322a2caaecebabecbc96b994",
         "type": "github"
       },
       "original": {
