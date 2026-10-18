@@ -6,7 +6,7 @@
   }: {
     environment.systemPackages = with pkgs;
       [os-prober efibootmgr]
-      ++ [inputs.nixpkgs-pinned.legacyPackages.${pkgs.system}.lix]
+      ++ [lix]
       ++ [curl zip git jujutsu gh]
       ++ [libnotify ntfs3g borgbackup bottom]
       ++ [zoxide fd]

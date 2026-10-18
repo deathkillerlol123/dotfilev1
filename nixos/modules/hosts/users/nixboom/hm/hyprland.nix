@@ -8,7 +8,7 @@
       settings = {
         env = ["XCURSOR_SIZE,24" "HYPRCURSOR_SIZE,24"];
         monitor = ["HDMI-A-1,preferred,auto,auto"];
-        exec-once = ["~/dotfiles/nixos/modules/hosts/users/nixboom/home/scripts/autostart/autostart.sh"];
+        exec-once = ["wayland_autostart"];
         general = {
           gaps_in = 0;
           gaps_out = 0;
