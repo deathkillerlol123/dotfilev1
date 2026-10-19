@@ -12,7 +12,6 @@
         pywal
         awww
         waypaper
-        rofi
         bzmenu
         cliphist
         wl-clipboard

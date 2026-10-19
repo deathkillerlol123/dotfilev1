@@ -13,7 +13,7 @@
         bind = SUPER,r,reload_config
         bind = Alt,r,spawn,ghostty
         bind = Alt,q,killclient
-        bind = Alt,space,spawn,rofi -show drun
+        bind = Alt,space,spawn,fuzzel
         bind = Alt,o,spawn_shell,clean_exit
         bind = Alt,V,spawn_shell,cliphist list | rofi -dmenu | cliphist decode | wl-copy
         bind = Alt,I,togglefloating

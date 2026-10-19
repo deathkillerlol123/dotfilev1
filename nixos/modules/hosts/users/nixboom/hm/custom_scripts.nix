@@ -55,31 +55,22 @@
         FINALOUTPUT="$DIRS/.config"
         flock -n 9 || exit 0
         pkill -x rofi -u "$USER" || true
-        cd "$DIRS/.config/waybar/"
         FILE=$(find "$HOME/Pictures/Wallpapers/" -type f -print0 | shuf -zn1)
-        echo "$FILE"
-        if [ -n "$FILE" ]; then
-          wal -i "$FILE"
-          cp "$HOME/.cache/wal/ghostty.conf" \
-            "$DIRS/.config/ghostty/ghostty.conf"
-          cp "$COLORS/colors-waybar.css" \
-            "$FINALOUTPUT/waybar/colors.css"
-          INPUT="$FINALOUTPUT/waybar/colors.css"
-          OUTPUT_RASI="$FINALOUTPUT/rofi/colors.rasi"
-          {
-            echo "* {"
-            grep '@define-color' "$INPUT" |
-              while read -r line; do
-                name=$(echo "$line" | awk '{print $2}')
-                value=$(echo "$line" | awk '{print $3}' | tr -d ';')
-                echo "    $name: $value;"
-              done
-            echo "}"
-          } > "$OUTPUT_RASI"
+        if [ -z "$FILE" ]; then
+          echo "No wallpapers found" >&2
+          exit 1
         fi
+        echo "$FILE"
+        wal -i "$FILE"
+        cp "$COLORS/ghostty.conf" \
+          "$DIRS/.config/ghostty/ghostty.conf"
+        cp "$COLORS/colors-waybar.css" \
+          "$FINALOUTPUT/waybar/colors.css"
+        cp "$COLORS/colors-fuzzel.ini" \
+          "$DIRS/.config/fuzzel/fuzzel.ini"
         cd "$DIRS/Wallpapers"
-        rm *
-        cp "$FILE" .
+        rm -f -- ./*
+        cp -- "$FILE" .
       '')
     ];
   };
