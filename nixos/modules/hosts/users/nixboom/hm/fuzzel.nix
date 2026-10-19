@@ -5,7 +5,7 @@
   pkgs,
   ...
 }: {
-  flake.nixosModules.nbfuzzel = {
+  flake.homeModules.nbfuzzel = {
     config,
     inputs,
     lib,
