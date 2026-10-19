@@ -8,9 +8,9 @@
     home = {
       packages = with pkgs; [
         ghostty
-        concord-tui
         pywal
         awww
+        fuzzel
         waypaper
         bzmenu
         cliphist

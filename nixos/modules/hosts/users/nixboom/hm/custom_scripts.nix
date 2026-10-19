@@ -54,7 +54,7 @@
         COLORS="$HOME/.cache/wal"
         FINALOUTPUT="$DIRS/.config"
         flock -n 9 || exit 0
-        pkill -x rofi -u "$USER" || true
+        pkill -x fuzzel -u "$USER" || true
         FILE=$(find "$HOME/Pictures/Wallpapers/" -type f -print0 | shuf -zn1)
         if [ -z "$FILE" ]; then
           echo "No wallpapers found" >&2
