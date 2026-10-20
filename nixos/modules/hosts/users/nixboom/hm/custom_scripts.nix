@@ -51,7 +51,7 @@
         set -e
         exec 9>/tmp/random_wallpaper.lock
         DIRS="$HOME/dotfiles/nixos/modules/hosts/users/nixboom/home"
-        COLORS="$HOME/.cache/wal"
+        COLORS="$HOME/.cache/cwal"
         FINALOUTPUT="$DIRS/.config"
         flock -n 9 || exit 0
         pkill -x fuzzel -u "$USER" || true
@@ -61,8 +61,9 @@
           exit 1
         fi
         echo "$FILE"
-        wal -i "$FILE"
-        cp "$COLORS/ghostty.conf" \
+        cwal --img "$FILE"
+        awww img "$FILE"
+        cp "$COLORS/colors-ghostty.conf" \
           "$DIRS/.config/ghostty/ghostty.conf"
         cp "$COLORS/colors-waybar.css" \
           "$FINALOUTPUT/waybar/colors.css"

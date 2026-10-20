@@ -8,7 +8,7 @@
     home = {
       packages = with pkgs; [
         ghostty
-        #        pywal
+        cwal
         awww
         fuzzel
         waypaper
