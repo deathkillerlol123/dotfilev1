@@ -18,7 +18,6 @@
         grim
         slurp
         swappy
-        gnome-boxes
       ];
     };
     services.flatpak = {
