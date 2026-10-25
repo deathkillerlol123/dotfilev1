@@ -3,6 +3,7 @@
     programs = {
       nushell = {
         enable = true;
+        loadSessionVariables = true;
         shellAliases = {
           e = "emacs -nw";
         };
