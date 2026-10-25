@@ -18,13 +18,19 @@
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.home-manager.follows = "home-manager";
+    };
     #apps
     firefox-addons = {
       url = "git+https://gitlab.com/rycee/nur-expressions.git?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord.url = "github:4evy/nixcord";
+    nixcord = {
+      url = "github:4evy/nixcord";
+      inputs.home-manager.follows = "home-manager";
+    };
     wshowkeys = {
       url = "github:DreamMaoMao/wshowkeys";
       inputs.nixpkgs.follows = "nixpkgs";
