@@ -20,7 +20,6 @@
     };
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.home-manager.follows = "home-manager";
     };
     #apps
     firefox-addons = {
