@@ -11,7 +11,6 @@
         cwal
         awww
         fuzzel
-        waypaper
         bzmenu
         cliphist
         wl-clipboard
