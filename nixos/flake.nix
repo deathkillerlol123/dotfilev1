@@ -1,6 +1,7 @@
 {
   inputs = {
     #must-need
+    wrappers.url = "github:nix-community/nix-wrapper-modules";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";

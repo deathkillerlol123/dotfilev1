@@ -34,6 +34,14 @@
   '(("fx" "{config,inputs,lib,pkgs,...}:{\n  flake.nixosModules.<name> = {config,inputs,lib,pkgs,...}:\n  {\n  };\n}")))
 (define-abbrev-table 'global-abbrev-table
   '(("hx" "{config,inputs,lib,pkgs,...}:{\n  flake.homeModules.<name> = {config,inputs,lib,pkgs,...}:\n  {\n  };\n}")))
+(define-abbrev-table 'global-abbrev-table
+  '(("wp" "{inputs,moduleWithSystem,...}:{
+  flake.nixosModules.<name> = moduleWithSystem ({pkgs,self',...}: { });
+  perSystem = {pkgs,lib,...}: { };
+ };
+}
+"
+     nil 0)))
 (setq-default abbrev-mode t)
 
 (use-package eglot
@@ -102,7 +110,7 @@
  '(package-selected-packages
    '(## aggressive-indent auto-complete avy-embark-collect colorful-mode
 	company consult corfu doc-view-follow eglot-inactive-regions
-	electric-cursor evil flycheck format-all golden-ratio
+	electric-cursor empv evil flycheck format-all golden-ratio
 	hide-mode-line jinx json-mode latex-extra lsp-java lsp-latex
 	lsp-pyright lsp-python-ms lsp-treemacs lsp-ui lua-mode
 	multiple-cursors nix-buffer nix-mode nixos-options nixpkgs-fmt
