@@ -4,12 +4,8 @@
     pkgs,
     ...
   }: {
-    imports = with self.nixosModules; [gaming bluetooth sound touch intel lime];
+    imports = with self.nixosModules; [gaming bluetooth sound touch intel lime] ++ [wshowkeys];
     boot.kernelParams = ["snd_hda_intel.dmic_detect=0" "snd_intel_dspcfg.dsp_driver=1" "8250.nr_uarts=1"];
     gaming.xbox.enable = true;
-    programs.wshowkeys = {
-      enable = true;
-      package = inputs.wshowkeys.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
   };
 }
