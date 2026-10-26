@@ -30,6 +30,10 @@
       url = "github:4evy/nixcord";
       inputs.home-manager.follows = "home-manager";
     };
+    sonora = {
+      url = "github:sonorahq/sonora";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     wshowkeys = {
       url = "github:DreamMaoMao/wshowkeys";
       inputs.nixpkgs.follows = "nixpkgs";

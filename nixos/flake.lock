@@ -713,11 +713,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793037760,
-        "narHash": "sha256-kYZ9d9XvJohbBT2YWMgTruLjW2Q9mtftYm05fApjk68=",
+        "lastModified": 1793044469,
+        "narHash": "sha256-vp0giVY7daVNoj+Xk6nR+mZ09BGKP81VaQXJ27cNCZc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "2dd729c6f10de86d466d88c26baf4fe732a77bb1",
+        "rev": "f1cf4ba09219dd0fbf635281c00488097d34b47e",
         "type": "github"
       },
       "original": {
@@ -760,7 +760,29 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
         "nur": "nur",
+        "sonora": "sonora",
         "wshowkeys": "wshowkeys"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "sonora",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789196581,
+        "narHash": "sha256-yJr1Bt4fKkKIpPYbsKGqJ0VFdoDnURgRwuffmBQ2WzY=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "228ecefb6329d5a531b77b46b581a2f0c26ee056",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "scenefx": {
@@ -783,6 +805,27 @@
       "original": {
         "owner": "wlrfx",
         "repo": "scenefx",
+        "type": "github"
+      }
+    },
+    "sonora": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1792889559,
+        "narHash": "sha256-S1hgmQJUQLRfqGzpt2okMh2zYpnlowT07mDOULMatgY=",
+        "owner": "sonorahq",
+        "repo": "sonora",
+        "rev": "8bac90bbd41de8dc9c7f93c9ff3c99818932f09b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sonorahq",
+        "repo": "sonora",
         "type": "github"
       }
     },
