@@ -36,10 +36,11 @@
   '(("hx" "{config,inputs,lib,pkgs,...}:{\n  flake.homeModules.<name> = {config,inputs,lib,pkgs,...}:\n  {\n  };\n}")))
 (define-abbrev-table 'global-abbrev-table
   '(("wp" "{inputs,moduleWithSystem,...}:{
-  flake.nixosModules.<name> = moduleWithSystem ({pkgs,self',...}: { });
-  perSystem = {pkgs,lib,...}: { };
- };
-}
+   flake.nixosModules.<name> = moduleWithSystem ({pkgs,self',...}: { });
+   perSystem = {pkgs,lib,...}: { };
+   };
+   };
+   }
 "
      nil 0)))
 (setq-default abbrev-mode t)
