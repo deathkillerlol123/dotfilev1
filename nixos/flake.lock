@@ -41,11 +41,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1792987353,
-        "narHash": "sha256-j2fQBuAS17z5k4TkOktU8be7DCNuzzjbKps0CJkltIY=",
+        "lastModified": 1793073767,
+        "narHash": "sha256-zL/9I57Uk9YZ3cRK7wqesMQ5DqzGAg+Flqc32XrSh4A=",
         "ref": "refs/heads/master",
-        "rev": "058d0adf37456c70e50e52b34640d1d555ff9653",
-        "revCount": 5014,
+        "rev": "4e23b00003acb1e90bec84998185cd73e4d7487b",
+        "revCount": 5016,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
@@ -549,11 +549,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1792817697,
-        "narHash": "sha256-S823QIxWR96C1ltI+PXg1BT5cHsBv3zH19X2kT7hQkc=",
+        "lastModified": 1793078412,
+        "narHash": "sha256-SKwA0ixTBldZd+wX4EUd8NjJKk1821GI9wsYzrjuBBI=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "900b8d7e06c396a20b6d4e56f242c4e240a69dfa",
+        "rev": "6f322a3be4ff2f3d07b707e36ac130f259201140",
         "type": "github"
       },
       "original": {
@@ -612,11 +612,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1793049812,
-        "narHash": "sha256-UuxjX2E0V6LFmlD9z8nizrINWs+ytmT3ak0GplVFB7Y=",
+        "lastModified": 1793089800,
+        "narHash": "sha256-2eOpPaHhUwU084AlTUQLbyZ9BOajgep8oTWe5OGE+ro=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "a9f0632f7731461516eef1df10537936c8527ffa",
+        "rev": "f873f1e32925b870e68addeeb193fbc07e80a598",
         "type": "github"
       },
       "original": {
@@ -772,11 +772,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793053233,
-        "narHash": "sha256-IWklbc62d8OUM/IXdlbTIfFBU0O/RgrktBYapsqX7ls=",
+        "lastModified": 1793094407,
+        "narHash": "sha256-Mrbqo2Z5tgrehPjXySdp1nzR4FIebAMQODROdpeYQCc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "7f731585703e8a931bd76dcf9c927517c459be36",
+        "rev": "f939714bf48a634a637db122857c8d44f704b850",
         "type": "github"
       },
       "original": {
@@ -877,11 +877,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1793055454,
-        "narHash": "sha256-YcyrA3+RjUSud6IQsFvisGD4FVzs4Epqq7q6j6a8mqE=",
+        "lastModified": 1793093631,
+        "narHash": "sha256-CDOKMwJgDHfepT4u6lnaN8m5F3XzKNXeAMUVeUcn3MQ=",
         "owner": "sonorahq",
         "repo": "sonora",
-        "rev": "95f0f9d037bed577aafc991b0d778ec1bf50281a",
+        "rev": "0e9624ee48e274508c615d7f40a83a8afeac2566",
         "type": "github"
       },
       "original": {
