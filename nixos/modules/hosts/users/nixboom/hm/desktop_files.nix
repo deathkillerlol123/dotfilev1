@@ -26,6 +26,14 @@
         icon = "blueman";
         categories = ["Utility"];
       };
+      Sound = {
+        name = "Sound";
+        exec = "pwmenu --launcher fuzzel";
+        terminal = false;
+        type = "Application";
+        icon = "Sound";
+        categories = ["Utility"];
+      };
       Screen = {
         name = "Screen";
         exec = "${screen}/bin/screen-menu";

@@ -7,11 +7,13 @@
     imports = [inputs.nix-flatpak.homeManagerModules.nix-flatpak];
     home = {
       packages = with pkgs; [
+        concord-tui
         ghostty
         cwal
         awww
         fuzzel
         bzmenu
+        pwmenu
         cliphist
         wl-clipboard
         grim
