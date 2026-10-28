@@ -23,7 +23,7 @@
             -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) \
                 | head -n1)
                 [ -n "$img" ] && awww img "$img"
-        wshowkeys -a bottom -F 'Maple Mono NF 30' -s '#B5B520ff' -f  '#ecd29cff' -b '#201B1488' -l 600 -t 300 -U -S
+        wshowkeys -a top -a right -F 'Maple Mono NF 30' -s '#B5B520ff' -f  '#ecd29cff' -b '#201B1488' -l 600 -t 300 -U -S
       '')
     ];
   };
