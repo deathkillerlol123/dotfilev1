@@ -53,6 +53,7 @@
           })
           enabledUsers;
       };
+      system.stateVersion = "25.11";
       security.sudo.extraRules =
         lib.mapAttrsToList (name: _: {
           users = [name];
