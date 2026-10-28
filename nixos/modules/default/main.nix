@@ -13,13 +13,7 @@
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
     imports =
-      fmod [
-        "portals"
-        "alias"
-        "bash"
-        "system"
-        "system_scripts"
-      ]
+      fmod ["portals" "system" "system_scripts"]
       ++ [inputs.mango.nixosModules.mango];
     documentation = {
       enable = false;
@@ -51,7 +45,7 @@
     };
     programs = enabled ["dconf" "xwayland"];
     services =
-      enabled ["blueman" "flatpak" "libinput" "fstrim"]
+      enabled ["flatpak" "libinput" "fstrim"]
       // {
         logind.settings.Login.KillUserProcesses = true;
         fwupd.enable = false;

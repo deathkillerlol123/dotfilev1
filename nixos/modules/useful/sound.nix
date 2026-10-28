@@ -20,9 +20,7 @@
       };
     };
     environment.systemPackages = with pkgs; [
-      ncpamixer
       pamixer
-      pavucontrol
       wiremix
       playerctl
       alsa-utils
