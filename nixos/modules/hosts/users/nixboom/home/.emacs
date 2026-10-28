@@ -36,7 +36,7 @@
   '(("hx" "{config,inputs,lib,pkgs,...}:{\n  flake.homeModules.<name> = {config,inputs,lib,pkgs,...}:\n  {\n  };\n}")))
 (define-abbrev-table 'global-abbrev-table
   '(("wp" "{inputs,moduleWithSystem,...}:{
-   flake.nixosModules.<name> = moduleWithSystem ({pkgs,self',...}: { });
+   flake.nixosModules.placeholder = moduleWithSystem ({pkgs,self',...}: { });
    perSystem = {pkgs,lib,...}: { };
    }
 "
