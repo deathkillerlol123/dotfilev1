@@ -3,11 +3,7 @@
   moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.tri = moduleWithSystem ({
-    pkgs,
-    self',
-    ...
-  }: {
+  flake.nixosModules.tri = moduleWithSystem ({self', ...}: {
     programs.zsh = {
       enable = true;
       package = self'.packages.zsh;

@@ -3,18 +3,10 @@
   moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.btop = moduleWithSystem ({
-    pkgs,
-    self',
-    ...
-  }: {
+  flake.nixosModules.btop = moduleWithSystem ({self', ...}: {
     environment.systemPackages = [self'.packages.btop];
   });
-  perSystem = {
-    pkgs,
-    lib,
-    ...
-  }: {
+  perSystem = {pkgs, ...}: {
     packages.btop = inputs.wrappers.wrappers.btop.wrap {
       inherit pkgs;
       settings = {

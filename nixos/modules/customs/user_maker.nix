@@ -15,7 +15,7 @@
   in {
     imports = [inputs.home-manager.nixosModules.home-manager];
     options.main-user.users = lib.mkOption {
-      type = lib.types.attrsOf (lib.types.submodule ({name, ...}: {
+      type = lib.types.attrsOf (lib.types.submodule ({...}: {
         options = {
           enable = lib.mkEnableOption "enable user";
           shell = lib.mkOption {
@@ -31,7 +31,7 @@
     };
     config = {
       users.users =
-        lib.mapAttrs (name: u: {
+        lib.mapAttrs (_name: u: {
           isNormalUser = true;
           shell = pkgs.${u.shell};
           extraGroups = u.groups;

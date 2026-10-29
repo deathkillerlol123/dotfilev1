@@ -1,12 +1,7 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{...}: {
   flake.nixosModules.dragonfly = {
     config,
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {
