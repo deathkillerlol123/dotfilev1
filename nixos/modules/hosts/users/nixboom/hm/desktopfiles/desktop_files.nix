@@ -23,7 +23,7 @@
         exec = "bzmenu -l fuzzel";
         terminal = false;
         type = "Application";
-        icon = "blueman";
+        icon = "${./icons/bluetooth.png}";
         categories = ["Utility"];
       };
       Sound = {
@@ -31,7 +31,7 @@
         exec = "pwmenu --launcher fuzzel";
         terminal = false;
         type = "Application";
-        icon = "Sound";
+        icon = "${./icons/sound.png}";
         categories = ["Utility"];
       };
       Screen = {
@@ -39,7 +39,7 @@
         exec = "${screen}/bin/screen-menu";
         terminal = false;
         type = "Application";
-        icon = "utilities-terminal";
+        icon = "${./icons/screen.png}";
         categories = ["Utility"];
       };
     };

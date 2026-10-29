@@ -22,10 +22,6 @@
       url = "git+https://gitlab.com/rycee/nur-expressions.git?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord = {
-      url = "github:4evy/nixcord";
-      inputs.home-manager.follows = "home-manager";
-    };
     wshowkeys = {
       url = "github:DreamMaoMao/wshowkeys";
       inputs.nixpkgs.follows = "nixpkgs";
