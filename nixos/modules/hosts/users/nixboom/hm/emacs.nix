@@ -6,6 +6,10 @@
       extraConfig = ''
           (require 'package)
           (package-initialize)
+          (add-to-list 'custom-theme-load-path
+             (file-name-directory
+             (locate-library "kusanagi-theme")))
+          (load-theme 'kusanagi t)
 
           (defun jeff/format-nix-buffer ()
             "Format the current Nix file using Alejandra."
@@ -30,6 +34,7 @@
             :config
             (global-corfu-mode 1))
 
+          (setq-default left-fringe-width 0)
           (menu-bar-mode -1)
           (when (fboundp 'scroll-bar-mode)
             (scroll-bar-mode -1))
@@ -100,7 +105,7 @@
                 native-comp-async-report-warnings-errors 'silent)
 
           (line-number-mode 1)
-          (global-display-line-numbers-mode 1)
+          (global-display-line-numbers-mode -1)
 
           (require 'tree-sitter)
           (require 'tree-sitter-langs)
@@ -112,11 +117,10 @@
 
           (put 'downcase-region 'disabled nil)
           (put 'scroll-left 'disabled nil)
-
-          (load-theme 'modus-vivendi-tinted t)
       '';
       extraPackages = epkgs:
         with epkgs; [
+          kusanagi-theme
           aggressive-indent
           auto-complete
           avy-embark-collect
