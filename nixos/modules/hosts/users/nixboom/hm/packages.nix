@@ -8,7 +8,6 @@
     home = {
       packages = with pkgs; [
         concord-tui
-        ghostty
         cwal
         awww
         fuzzel
