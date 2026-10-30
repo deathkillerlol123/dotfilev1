@@ -17,11 +17,19 @@
           ${firefox_user} = {
             settings = {
               "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+              "devtools.chrome.enabled" = true;
+              "devtools.debugger.remote-enabled" = true;
               "browser.startup.homepage" = "https://search.nixos.org/packages";
+              "browser.ml.chat.enabled" = false;
+              "browser.ml.enable" = false;
+              "browser.urlbar.suggest.searches" = false;
+              "browser.tabs.groups.smart.enabled" = false;
+              "extensions.pocket.enabled" = false;
               "privacy.trackingprotection.enabled" = true;
               "general.autoScroll" = true;
               "media.hardwaremediakeys.enabled" = true;
               "sidebar.revamp" = false;
+              "network.prefetch-next" = false;
             };
             userChrome = ''
               #TabsToolbar {
