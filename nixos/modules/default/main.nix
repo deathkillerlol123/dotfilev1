@@ -13,7 +13,7 @@
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
     imports =
-      fmod ["portals" "system" "system_scripts"]
+      fmod ["portals" "system" "system_scripts" "networking"]
       ++ [inputs.mango.nixosModules.mango];
     documentation = {
       enable = false;
@@ -37,42 +37,23 @@
         "vm.page-cluster" = df 0;
       };
     };
+    system.autoUpgrade.runGarbageCollection = true;
+    hardware.enableAllFirmware = true;
+    powerManagement.cpuFreqGovernor = "performance";
+    time.timeZone = "Europe/London";
     zramSwap = {
       enable = true;
       algorithm = "zstd";
       priority = df 100;
       memoryPercent = df 50;
     };
-    programs = enabled ["dconf" "xwayland"];
-    services =
-      enabled ["flatpak" "libinput" "fstrim"]
-      // {
-        logind.settings.Login.KillUserProcesses = true;
-        fwupd.enable = false;
-        xserver.wacom.enable = true;
-        earlyoom = {
-          enable = df true;
-          freeMemThreshold = df 5;
-          freeSwapThreshold = df 10;
-          enableNotifications = df true;
-        };
-      };
     systemd = {
       services = {
         NetworkManager-wait-online.enable = false;
         nix-daemon.enable = df true;
       };
     };
-    system.autoUpgrade.runGarbageCollection = true;
-    hardware.enableAllFirmware = true;
-    powerManagement.cpuFreqGovernor = "performance";
-    time.timeZone = "Europe/London";
-    networking = {
-      hostName = "nixbtw";
-      networkmanager.enable = true;
-      firewall.enable = true;
-      nameservers = ["1.1.1.1" "8.8.8.8"];
-    };
+
     nix = {
       settings = {
         experimental-features = ["nix-command" "flakes"];
@@ -93,5 +74,19 @@
       pam.services.swaylock = {};
       polkit.enable = true;
     };
+    programs = enabled ["dconf" "xwayland"];
+    services =
+      enabled ["flatpak" "libinput" "fstrim"]
+      // {
+        logind.settings.Login.KillUserProcesses = true;
+        fwupd.enable = false;
+        xserver.wacom.enable = true;
+        earlyoom = {
+          enable = df true;
+          freeMemThreshold = df 5;
+          freeSwapThreshold = df 10;
+          enableNotifications = df true;
+        };
+      };
   };
 }
