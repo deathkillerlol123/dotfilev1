@@ -6,7 +6,7 @@
       ++ [curl zip git jujutsu gh]
       ++ [libnotify ntfs3g borgbackup bottom]
       ++ [zoxide nix-search-tv fzf]
-      ++ [nixd]
+      ++ [nixd alejandra deadnix]
       ++ [bat fetch];
     fonts.packages = with pkgs; [nerd-fonts.fira-code maple-mono.NF];
   };

@@ -13,10 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    git-hooks-nix = {
-      url = "github:cachix/git-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     mango = {
       url = "github:mangowm/mango";
@@ -34,25 +30,6 @@
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [
-        inputs.git-hooks-nix.flakeModule
-        inputs.home-manager.flakeModules.home-manager
-        (inputs.import-tree ./modules)
-      ];
-      perSystem = {
-        config,
-        pkgs,
-        ...
-      }: {
-        pre-commit.settings = {
-          hooks = {
-            deadnix.enable = true;
-            alejandra.enable = true;
-          };
-        };
-        devShells.default = pkgs.mkShell {
-          inherit (config.pre-commit) shellHook;
-        };
-      };
+      imports = [inputs.home-manager.flakeModules.home-manager (inputs.import-tree ./modules)];
     };
 }

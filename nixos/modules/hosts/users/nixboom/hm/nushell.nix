@@ -10,7 +10,8 @@
         extraConfig = ''
           def gu [] {
             cd ~/dotfiles/nixos
-            nix flake check
+            deadnix --edit .
+            alejandra --quiet .
             jj describe -m "Update"
             jj bookmark set main -r @
             jj git push
