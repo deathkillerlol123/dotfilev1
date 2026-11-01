@@ -17,13 +17,13 @@
         "8.8.4.4"
       ];
       enableIPv6 = true;
-      useDHCP = true;
-      wireless.enable = false;
     };
     services.resolved = {
       enable = true;
-      dnssec = "allow-downgrade";
-      dnsovertls = "opportunistic";
+      settings.Resolve = {
+        DNSSEC = "allow-downgrade";
+        DNSOverTLS = "opportunistic";
+      };
     };
     hardware.enableRedistributableFirmware = true;
   };
