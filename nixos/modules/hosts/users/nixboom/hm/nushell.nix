@@ -9,8 +9,8 @@
         };
         extraConfig = ''
           def gu [] {
-            cd ~/dotfiles/nixos
-            deadnix --edit .
+            cd ~/dotfiles/nixos           
+            deadnix --quiet --edit .
             alejandra --quiet .
             jj describe -m "Update"
             jj bookmark set main -r @
