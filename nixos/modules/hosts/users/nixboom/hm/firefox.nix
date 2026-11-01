@@ -17,19 +17,19 @@
           ${firefox_user} = {
             settings = {
               "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-              "devtools.chrome.enabled" = true;
-              "devtools.debugger.remote-enabled" = true;
-              "browser.startup.homepage" = "https://search.nixos.org/packages";
-              "browser.ml.chat.enabled" = false;
-              "browser.ml.enable" = false;
-              "browser.urlbar.suggest.searches" = false;
+              "privacy.trackingprotection.socialtracking.enabled" = true;
+              "browser.contentblocking.category" = "strict";
               "browser.tabs.groups.smart.enabled" = false;
-              "extensions.pocket.enabled" = false;
               "privacy.trackingprotection.enabled" = true;
-              "general.autoScroll" = true;
+              "browser.urlbar.suggest.searches" = false;
               "media.hardwaremediakeys.enabled" = true;
-              "sidebar.revamp" = false;
+              "ui.key.menuAccessKeyFocuses" = false;
+              "extensions.autoDisableScopes" = 0;
+              "browser.ml.chat.enabled" = false;
               "network.prefetch-next" = false;
+              "general.autoScroll" = true;
+              "browser.ml.enable" = false;
+              "sidebar.revamp" = false;
             };
             userChrome = ''
               #TabsToolbar {
@@ -39,12 +39,8 @@
                   max-height: 0 !important;
                }
             '';
-            extensions.packages = [
-              fire-addons.bitwarden
-              fire-addons.ublock-origin
-              fire-addons.sidebery
-              fire-addons.darkreader
-            ];
+            #https://addons.mozilla.org/en-GB/firefox/addon/voxtyper/
+            extensions.packages = with fire-addons; [bitwarden ublock-origin sidebery darkreader];
           };
         };
       };
