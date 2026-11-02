@@ -18,6 +18,7 @@
         grim
         slurp
         swappy
+        nur.repos.anas.typepper
       ];
     };
     services.flatpak = {
