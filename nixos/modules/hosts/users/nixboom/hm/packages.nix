@@ -19,7 +19,7 @@
         slurp
         swappy
         nur.repos.anas.typepper
-        mcat-unwrapped
+        #mcat-unwrapped
       ];
     };
     services.flatpak = {
