@@ -63,7 +63,7 @@
 
           (use-package eglot
             :hook (nix-mode . eglot-ensure))
-
+          (add-hook 'nix-mode-hook #'hs-minor-mode)
           (add-to-list 'auto-mode-alist '("\\\\.nix\\\\'" . nix-mode))
 
           (setq backup-directory-alist '(("." . "/tmp"))
@@ -138,7 +138,6 @@
           hide-mode-line
           jinx
           json-mode
-          latex-extra
           lsp-latex
           lsp-pyright
           lsp-python-ms
@@ -166,7 +165,6 @@
           yasnippet
           yasnippet-classic-snippets
           yasnippet-snippets
-          zetteldeft
         ];
     };
   };

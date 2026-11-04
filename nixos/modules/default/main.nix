@@ -13,7 +13,7 @@
     fmod = names: map (x: self.nixosModules.${x}) names;
   in {
     imports =
-      fmod ["portals" "system" "system_scripts" "networking"]
+      fmod ["portals" "system" "networking"]
       ++ [inputs.mango.nixosModules.mango];
     documentation = {
       enable = false;
