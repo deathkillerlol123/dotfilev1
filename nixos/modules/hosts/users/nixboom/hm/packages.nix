@@ -18,8 +18,8 @@
         grim
         slurp
         swappy
+        mcat-unwrapped
         nur.repos.anas.typepper
-        #mcat-unwrapped
       ];
     };
     services.flatpak = {
