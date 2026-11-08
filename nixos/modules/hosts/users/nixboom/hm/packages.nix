@@ -7,7 +7,10 @@
     imports = [inputs.nix-flatpak.homeManagerModules.nix-flatpak];
     home = {
       packages = with pkgs; [
-        concord-tui
+        (concord-tui.overrideAttrs (old: {
+          nativeBuildInputs = (old.nativeBuildInputs or []) ++ [pkg-config];
+          buildInputs = (old.buildInputs or []) ++ [zstd];
+        }))
         cwal
         awww
         fuzzel
@@ -18,8 +21,6 @@
         grim
         slurp
         swappy
-        mcat-unwrapped
-        nur.repos.anas.typepper
       ];
     };
     services.flatpak = {

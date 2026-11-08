@@ -118,7 +118,6 @@
           lsp-latex
           lsp-pyright
           lsp-python-ms
-          lsp-treemacs
           lua-mode
           python-mode
           multiple-cursors
