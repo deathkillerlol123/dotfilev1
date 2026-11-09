@@ -26,7 +26,10 @@
     };
     services.flatpak = {
       update.onActivation = true;
-      packages = ["org.vinegarhq.Sober" "org.kde.drawy"];
+      packages = [
+        "org.vinegarhq.Sober"
+        #"org.kde.drawy"
+      ];
     };
   };
 }
