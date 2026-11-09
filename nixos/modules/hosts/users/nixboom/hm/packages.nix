@@ -21,6 +21,7 @@
         grim
         slurp
         swappy
+        #gthumb
       ];
     };
     services.flatpak = {
