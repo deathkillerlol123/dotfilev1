@@ -28,8 +28,8 @@
       tmp.cleanOnBoot = true;
       consoleLogLevel = 3;
       plymouth.enable = false;
-      kernelPackages = pkgs.linuxPackages_zen;
-      loader.timeout = 0;
+      kernelPackages = pkgs.linuxPackages_latest;
+      loader.timeout = 5;
       kernel.sysctl = {
         "vm.swappiness" = df 150;
         "vm.watermark_boost_factor" = df 0;
