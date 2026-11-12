@@ -7,10 +7,6 @@
     imports = [inputs.nix-flatpak.homeManagerModules.nix-flatpak];
     home = {
       packages = with pkgs; [
-        (concord-tui.overrideAttrs (old: {
-          nativeBuildInputs = (old.nativeBuildInputs or []) ++ [pkg-config];
-          buildInputs = (old.buildInputs or []) ++ [zstd];
-        }))
         cwal
         awww
         fuzzel
