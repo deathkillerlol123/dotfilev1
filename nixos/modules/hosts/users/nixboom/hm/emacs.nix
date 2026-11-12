@@ -10,7 +10,6 @@
           (require 'tree-sitter-langs)
           (package-initialize)
           (golden-ratio-mode 1)
-          (hide-mode-line-mode 1)
           (line-number-mode 1)
           (global-tree-sitter-mode 1)
 
@@ -40,7 +39,7 @@
           (add-to-list 'auto-mode-alist '("\\\\.nix\\\\'" . nix-mode))
 
           (menu-bar-mode -1)
-          (when (fboundp 'scroll-bar-mode)
+        (when (fboundp 'scroll-bar-mode)
             (scroll-bar-mode -1))
           (when (fboundp 'tool-bar-mode)
             (tool-bar-mode -1))
@@ -123,7 +122,6 @@
           multiple-cursors
           nix-mode
           nixos-options
-          org-beautify-theme
           transient
           tree-inspector
           tree-sitter-indent
