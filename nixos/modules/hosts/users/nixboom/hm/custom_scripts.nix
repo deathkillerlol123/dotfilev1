@@ -65,8 +65,6 @@
         awww img "$FILE"
         cp "$COLORS/colors-ghostty.conf" \
           "$DIRS/.config/ghostty/ghostty.conf"
-        cp "$COLORS/colors-waybar.css" \
-          "$FINALOUTPUT/waybar/colors.css"
         cp "$COLORS/colors-fuzzel.ini" \
           "$DIRS/.config/fuzzel/fuzzel.ini"
         cd "$DIRS/Wallpapers"
