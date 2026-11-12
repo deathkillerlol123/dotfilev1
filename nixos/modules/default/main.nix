@@ -29,7 +29,7 @@
       consoleLogLevel = 3;
       plymouth.enable = false;
       kernelPackages = pkgs.linuxPackages_latest;
-      loader.timeout = 5;
+      loader.timeout = 3;
       kernel.sysctl = {
         "vm.swappiness" = df 150;
         "vm.watermark_boost_factor" = df 0;
