@@ -14,6 +14,9 @@
           limine = {
             enable = true;
             maxGenerations = config.lime.maxgen;
+            style = {
+              wallpapers = [./dragon.jpg];
+            };
           };
         };
       };
