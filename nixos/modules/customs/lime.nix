@@ -16,6 +16,11 @@
             maxGenerations = config.lime.maxgen;
             style = {
               wallpapers = [./dragon.jpg];
+              graphicalTerminal.background = "FF000000";
+              interface = {
+                helpHidden = true;
+                branding = "";
+              };
             };
           };
         };
