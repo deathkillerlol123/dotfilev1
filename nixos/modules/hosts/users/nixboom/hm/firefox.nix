@@ -33,13 +33,12 @@
             };
             userChrome = ''
               #TabsToolbar {
-                  visibility: collapse !important;
-                  height: 0 !important;
-                  min-height: 0 !important;
-                  max-height: 0 !important;
-               }
+                visibility: collapse !important;
+                height: 0 !important;
+                min-height: 0 !important;
+                max-height: 0 !important;
+              }
             '';
-            #https://addons.mozilla.org/en-GB/firefox/addon/voxtyper/
             extensions.packages = with fire-addons; [bitwarden ublock-origin sidebery darkreader];
           };
         };
