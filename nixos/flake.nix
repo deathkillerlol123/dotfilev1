@@ -21,7 +21,6 @@
       url = "git+https://gitlab.com/rycee/nur-expressions.git?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    textfox.url = "github:adriankarlen/textfox";
     wshowkeys = {
       url = "github:DreamMaoMao/wshowkeys";
       inputs.nixpkgs.follows = "nixpkgs";
