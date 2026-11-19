@@ -8,11 +8,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1794974661,
-        "narHash": "sha256-oAwbSLudpMl5wcjNB5PJXpuNGHUm6UXHHh9by0DWCRQ=",
+        "lastModified": 1795060987,
+        "narHash": "sha256-s6upKTApq3l2JzGsW+bhBqtAvyU8PU9zMHDTIe3UxZU=",
         "ref": "refs/heads/master",
-        "rev": "27ee25a13af7017f895b5d5af9e4c5e1fd6e0f69",
-        "revCount": 5056,
+        "rev": "928b5b572e3703f1ccaf833ca0a544c6440c598e",
+        "revCount": 5060,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
@@ -163,11 +163,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1794993074,
-        "narHash": "sha256-7hqlVEp3REaIYOyoK4JTCxbUd+CUU85ExS4rcpvAE8w=",
+        "lastModified": 1795074649,
+        "narHash": "sha256-z6vbG/1xvuF4tI8NfmDSihtK0RYVbeji0FpItU8NXbY=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "8b87008eab36e88030243f008d161a7c90c9988a",
+        "rev": "39e26f27b6ebbec3f0fcfe9ae535038acd4aba46",
         "type": "github"
       },
       "original": {
@@ -262,11 +262,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795031263,
-        "narHash": "sha256-vIIeTaW+VVc4lC2kAvpT7iXc08xnnLRTdNsizRzk2Hk=",
+        "lastModified": 1795100323,
+        "narHash": "sha256-k6avQivZW64ldCX2xhaZr3hMWpPH5BemAag8lKk6ApY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "89d5dba49a90c48ea1ac2fb88bb6aa90dfa64cf2",
+        "rev": "0b75b11b6ffe79ad867fd503db601896a88f57c4",
         "type": "github"
       },
       "original": {
