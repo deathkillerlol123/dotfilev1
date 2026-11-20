@@ -28,7 +28,7 @@
       tmp.cleanOnBoot = true;
       consoleLogLevel = 3;
       plymouth.enable = false;
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_zen;
       loader.timeout = 3;
       kernel.sysctl = {
         "vm.swappiness" = df 150;
