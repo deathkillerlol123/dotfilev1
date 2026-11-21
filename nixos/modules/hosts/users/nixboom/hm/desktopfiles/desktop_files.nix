@@ -43,5 +43,8 @@
         categories = ["Utility"];
       };
     };
+    home.file.".local/share/applications".source = pkgs.runCommand "empty-applications" {} ''
+      mkdir -p $out
+    '';
   };
 }
