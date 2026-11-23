@@ -17,7 +17,7 @@
             jj git push
           }
           def n [] {
-            nh os switch ~/dotfiles/nixos/
+            nh os switch -d auto ~/dotfiles/nixos/
           }
           def t [] {
             cd ~/dotfiles/nixos
