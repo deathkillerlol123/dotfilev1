@@ -9,7 +9,6 @@
         font-size = 14;
         cursor-style = "block";
         shell-integration = "nushell";
-        command = "nu";
         confirm-close-surface = false;
         copy-on-select = "clipboard";
         clipboard-read = "allow";
