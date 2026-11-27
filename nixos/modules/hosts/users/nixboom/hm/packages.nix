@@ -17,6 +17,7 @@
         grim
         slurp
         swappy
+        #gnumeric
         #gthumb
       ];
     };
