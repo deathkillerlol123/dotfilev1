@@ -64,7 +64,7 @@
       };
     };
     system.autoUpgrade.runGarbageCollection = true;
-    hardware.enableAllFirmware = true;
+    hardware.enableAllFirmware = false;
     powerManagement.cpuFreqGovernor = "performance";
     time.timeZone = "Europe/London";
     nix = {
