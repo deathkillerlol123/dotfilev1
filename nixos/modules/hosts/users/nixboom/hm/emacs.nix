@@ -2,7 +2,7 @@
   flake.homeModules.nbemacs = {pkgs, ...}: {
     programs.emacs = {
       enable = true;
-      package = pkgs.emacs;
+      package = pkgs.emacs-nox;
       extraConfig = ''
           (require 'package)
           (require 'multiple-cursors)
